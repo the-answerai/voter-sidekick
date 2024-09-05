@@ -5,8 +5,8 @@ const baseColor = "#ff0000"; // Example base color
 const themeColors = generateThemeColors(baseColor);
 
 const defaultConfig: ChatFullPageProps = {
-  chatflowid: "",
-  apiHost: "",
+  chatflowid: "8bde9d3f-2ea7-4380-aba9-e7ec9f07115f",
+  apiHost: "https://staging.flowise.theanswer.ai",
   chatflowConfig: {},
   observersConfig: {
     observeUserInput: (userInput: string) => {
