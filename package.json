@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "aai-embed-react": "^1.0.7",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.8"
+    "next": "14.2.8",
+    "tinycolor2": "^1.6.0"
   },
   "devDependencies": {
     "typescript": "^5",
