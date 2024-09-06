@@ -1,73 +1,12 @@
 import React, { useState, useMemo } from "react";
 import { SourceDocument } from "../types";
-
-interface SourceDocument {
-  pageContent: string;
-  metadata: {
-    "pdf.info.Title": string;
-    "pdf.info.Author": string;
-    "pdf.info.CreationDate": string;
-    "pdf.info.ModDate": string;
-    "loc.pageNumber": number;
-    url: string;
-  };
-}
+import LinkIcon from "./Icons/LinkIcon";
+import ExpandIcon from "./Icons/ExpandIcon";
+import { formatDate } from "../utils/formatDate";
 
 interface SourceDocumentsSidebarProps {
   documents: SourceDocument[];
 }
-
-const formatDate = (dateString: string): string => {
-  const cleanDateString = dateString.startsWith("D:")
-    ? dateString.slice(2)
-    : dateString;
-  const date = new Date(cleanDateString);
-  return isNaN(date.getTime())
-    ? "Invalid Date"
-    : date.toLocaleString("en-US", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        timeZoneName: "short",
-      });
-};
-
-const LinkIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="h-4 w-4 inline-block ml-2"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-    />
-  </svg>
-);
-
-const ExpandIcon = ({ isExpanded }: { isExpanded: boolean }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className={`h-4 w-4 inline-block ml-2 transition-transform ${isExpanded ? "rotate-180" : ""}`}
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M19 9l-7 7-7-7"
-    />
-  </svg>
-);
 
 const SourceDocumentCard: React.FC<{ documents: SourceDocument[] }> = ({
   documents,
@@ -147,7 +86,7 @@ const SourceDocumentCard: React.FC<{ documents: SourceDocument[] }> = ({
   );
 };
 
-const SourceDocumentsSidebar: React.FC<{ documents: SourceDocument[] }> = ({
+const SourceDocumentsSidebar: React.FC<SourceDocumentsSidebarProps> = ({
   documents,
 }) => {
   const groupedDocuments = useMemo(() => {
