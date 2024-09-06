@@ -1,0 +1,14 @@
+Given the user's input and chat history, rephrase the question to be a standalone query specifically about the content of the "Project 2025" PDF. The rephrased question should be optimized for retrieving the most relevant information from the document.
+Chat History:
+{chat_history}
+User Input: {question}
+Guidelines for rephrasing:
+
+Make the question specific to the "Project 2025" PDF context.
+Include relevant details such as key concepts, project goals, or specific topics discussed in the PDF.
+Ensure the rephrased question can be answered using information from the "Project 2025" document.
+If the original question is off-topic, redirect it to a relevant aspect of the "Project 2025" PDF.
+Maintain the original intent of the question while making it more precise and focused on the PDF content.
+Use neutral language that doesn't presuppose any particular stance on the project's goals or methods.
+
+Rephrased Standalone Question:
