@@ -1,20 +1,26 @@
-import { type ChatFullPageProps } from "../types";
+import type { ChatFullPageProps, PineconeMetadataFilter } from "../types";
 import generateThemeColors from "../utils/generateThemeColors";
+import { getChatflowConfig } from "./config/chatflowConfig";
 
-const baseColor = "#ff0000"; // Example base color
+const baseColor = "rgb(31, 41, 55)";
 const themeColors = generateThemeColors(baseColor);
+
+const defaultMetaDataFilters: PineconeMetadataFilter = {
+  // url: "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240SB1047",
+  // source: "https://s3.theanswer.ai/sb1047",
+};
 
 const defaultConfig: ChatFullPageProps = {
   chatflowid: "9ee4eee1-931d-4007-bc9f-b1431ddabfa9",
-  apiHost: "https://public.flowise.theanswer.ai/",
-  chatflowConfig: {},
+  apiHost: "https://public.flowise.theanswer.ai",
+  chatflowConfig: getChatflowConfig(defaultMetaDataFilters),
   observersConfig: {
-    observeUserInput: (userInput: string) => {
-      console.log("User input observed:", userInput);
-    },
-    observeLoading: (loading: boolean) => {
-      console.log("Loading state observed:", loading);
-    },
+    //   observeUserInput: (userInput: string) => {
+    //     // console.log("User input observed:", userInput);
+    //   },
+    //xw   observeLoading: (loading: boolean) => {
+    //     // console.log("Loading state observed:", loading);
+    //   },
     observeMessages: (messages) => {
       console.log("Messages observed again:", messages);
     },

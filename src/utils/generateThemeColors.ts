@@ -10,7 +10,7 @@ function generateThemeColors(baseColor: string) {
   };
 
   return {
-    buttonBackgroundColor: base.setAlpha(0.5).toRgbString(), // Changed to 50% opacity
+    buttonBackgroundColor: base.setAlpha(1).toRgbString(), // Changed to 50% opacity
     buttonIconColor: getContrastingColor(base),
     chatWindowBackgroundColor: base.lighten(20).toHexString(),
     chatWindowPoweredByTextColor: getContrastingColor(base.lighten(20)),
@@ -21,8 +21,8 @@ function generateThemeColors(baseColor: string) {
     textInputSendButtonColor: base.toHexString(),
     feedbackColor: base.toHexString(),
     textInputBackgroundColor: "#ffffff",
-    textInputTextColor: "#000000",
-    footerTextColor: "#000000",
+    textInputTextColor: getContrastingColor(tinycolor("#ffffff")),
+    footerTextColor: getContrastingColor(base),
   };
 }
 
