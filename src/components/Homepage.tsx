@@ -1,61 +1,78 @@
 "use client";
-import { useState, useEffect, ChangeEvent } from "react";
+import { useEffect } from "react";
 import ChatFullPage from "./ChatFullPage";
-import { type ChatFullPageProps } from "../types";
-import DynamicChatSelect from "./DynamicChatSelect";
-import chatbotFiles from "../chatbots/config/chatbotConfig";
-
-interface ChatOptions {
-  [key: string]: string;
-}
+import PineconeMetadataFilterSelect from "./PineconeMetadataFilterSelect";
+import SourceDocumentsSidebar from "./SourceDocumentsSidebar";
+import { useChatContext } from "../contexts/ChatContext";
+import { locales, topics } from "../chatbots/config/chatflowConfig";
 
 const Homepage = () => {
-  const [chatProps, setChatProps] = useState<ChatFullPageProps | null>(null);
-  const [chatOptions, setChatOptions] = useState<ChatOptions>({});
+  const {
+    chatProps,
+    addSourceDocuments,
+    sourceDocuments,
+    clearSourceDocuments,
+  } = useChatContext();
 
   useEffect(() => {
-    const loadChatbots = async () => {
-      const options: ChatOptions = {};
-      for (const key in chatbotFiles) {
-        const file = chatbotFiles[key];
-        const data = await import(`../chatbots/${file}`);
-        options[key] = data.default as ChatFullPageProps;
-      }
-      console.log("Chat options:", options); // Debugging line
-      setChatOptions(options);
-    };
+    console.log("Current chatProps:", chatProps);
+  }, [chatProps]);
 
-    loadChatbots();
-  }, []);
-
-  const handleDropdownChange = (event: ChangeEvent<HTMLSelectElement>) => {
-    const newValue = event.target.value;
-    setChatProps(chatOptions[newValue] as ChatFullPageProps | null);
-  };
+  useEffect(() => {
+    if (chatProps?.observersConfig?.observeMessages) {
+      const originalObserveMessages = chatProps.observersConfig.observeMessages;
+      chatProps.observersConfig.observeMessages = (messages) => {
+        originalObserveMessages(messages);
+        if (messages.length === 1) {
+          // Clear source documents when there's only one message
+          clearSourceDocuments();
+        } else {
+          const latestMessage = messages[messages.length - 1];
+          if (
+            latestMessage.type === "apiMessage" &&
+            latestMessage.sourceDocuments
+          ) {
+            addSourceDocuments(latestMessage.sourceDocuments);
+          }
+        }
+      };
+    }
+  }, [chatProps, addSourceDocuments, clearSourceDocuments]);
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-center w-full">
-        {/* <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        /> */}
-        <div className="text-center sm:text-center w-full p-4">
-          <p>
-            Welcome to our chatbot page! Please select an option from the
-            dropdown below to customize your experience.
-          </p>
-          <DynamicChatSelect
-            onChange={handleDropdownChange}
-            options={Object.keys(chatOptions).sort()}
-          />
-        </div>
-        {chatProps && <ChatFullPage {...chatProps} className="w-full" />}
-      </main>
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+      <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <main className="flex gap-8">
+          <div className="flex-grow flex flex-col gap-8 items-center">
+            <div className="w-full max-w-2xl bg-white dark:bg-gray-800 shadow-md rounded-lg p-6">
+              <h1 className="text-2xl font-bold text-center mb-4 text-gray-900 dark:text-white">
+                Welcome to our chatbot page!
+              </h1>
+              <h3 className="text-center text-gray-600 dark:text-gray-300 mb-6">
+                Please select a locale and a topic to customize your experience.
+              </h3>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <PineconeMetadataFilterSelect
+                  options={locales}
+                  filterKey="locale"
+                  placeholder="Select Locale"
+                />
+                <PineconeMetadataFilterSelect
+                  options={topics}
+                  filterKey="topic"
+                  placeholder="Select Topic"
+                />
+              </div>
+            </div>
+            {chatProps && (
+              <div className="w-full max-w-4xl">
+                <ChatFullPage {...chatProps} className="w-full" />
+              </div>
+            )}
+          </div>
+          <SourceDocumentsSidebar documents={sourceDocuments} />
+        </main>
+      </div>
     </div>
   );
 };

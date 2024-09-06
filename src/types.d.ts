@@ -1,7 +1,15 @@
+export interface PineconeMetadataFilter {
+  topic?: metaDataFilters.topic;
+  url?: metaDataFilters.url;
+  locale?: metaDataFilters.locale;
+  source?: metaDataFilters.source;
+}
 export interface ChatFullPageProps {
   chatflowid: string;
   apiHost: string;
-  chatflowConfig?: Record<string, unknown>;
+  chatflowConfig?: {
+    pineconeMetadataFilter?: PineconeMetadataFilter;
+  };
   observersConfig?: {
     observeUserInput?: (userInput: string) => void;
     observeLoading?: (loading: boolean) => void;
