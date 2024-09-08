@@ -14,16 +14,21 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
-model Law {
-  id          String   @id
-  title       String
-  summary     String?
-  tags        String[]
-  source_link String?
-  pdf_link    String?
-  locale      Locale
-  date_added  DateTime @default(now())
-  topics      String[]
+model Bill {
+  id                     String   @id
+  title                  String
+  summary                String?
+  tags                   String[]
+  source_link            String?
+  locale                 Locale
+  date_added             DateTime @default(now())
+  policyArea             String
+  actionsUrl             String
+  summariesUrl           String
+  latestTextVersionUrl   String
+  latestPdfVersionUrl    String
+  introducedDate         DateTime
+  lastUpdatedDate        DateTime
 }
 
 enum Locale {

@@ -1,0 +1,123 @@
+{
+    "pagination": {
+        "count": 6
+    },
+    "request": {
+        "billNumber": "897",
+        "billType": "hr",
+        "billUrl": "https://api.congress.gov/v3/bill/117/hr/897?format=json",
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    },
+    "textVersions": [
+        {
+            "date": null,
+            "formats": [
+                {
+                    "type": "Formatted Text",
+                    "url": "https://www.congress.gov/117/bills/hr897/BILLS-117hr897enr.htm"
+                },
+                {
+                    "type": "PDF",
+                    "url": "https://www.congress.gov/117/bills/hr897/BILLS-117hr897enr.pdf"
+                },
+                {
+                    "type": "Formatted XML",
+                    "url": "https://www.congress.gov/117/bills/hr897/BILLS-117hr897enr.xml"
+                }
+            ],
+            "type": "Enrolled Bill"
+        },
+        {
+            "date": "2021-12-09T05:00:00Z",
+            "formats": [
+                {
+                    "type": "Formatted Text",
+                    "url": "https://www.congress.gov/117/bills/hr897/BILLS-117hr897rfs.htm"
+                },
+                {
+                    "type": "PDF",
+                    "url": "https://www.congress.gov/117/bills/hr897/BILLS-117hr897rfs.pdf"
+                },
+                {
+                    "type": "Formatted XML",
+                    "url": "https://www.congress.gov/117/bills/hr897/BILLS-117hr897rfs.xml"
+                }
+            ],
+            "type": "Referred in Senate"
+        },
+        {
+            "date": "2021-12-08T05:00:00Z",
+            "formats": [
+                {
+                    "type": "Formatted Text",
+                    "url": "https://www.congress.gov/117/bills/hr897/BILLS-117hr897eh.htm"
+                },
+                {
+                    "type": "PDF",
+                    "url": "https://www.congress.gov/117/bills/hr897/BILLS-117hr897eh.pdf"
+                },
+                {
+                    "type": "Formatted XML",
+                    "url": "https://www.congress.gov/117/bills/hr897/BILLS-117hr897eh.xml"
+                }
+            ],
+            "type": "Engrossed in House"
+        },
+        {
+            "date": "2021-12-01T05:00:00Z",
+            "formats": [
+                {
+                    "type": "Formatted Text",
+                    "url": "https://www.congress.gov/117/bills/hr897/BILLS-117hr897rh.htm"
+                },
+                {
+                    "type": "PDF",
+                    "url": "https://www.congress.gov/117/bills/hr897/BILLS-117hr897rh.pdf"
+                },
+                {
+                    "type": "Formatted XML",
+                    "url": "https://www.congress.gov/117/bills/hr897/BILLS-117hr897rh.xml"
+                }
+            ],
+            "type": "Reported in House"
+        },
+        {
+            "date": "2021-02-05T05:00:00Z",
+            "formats": [
+                {
+                    "type": "Formatted Text",
+                    "url": "https://www.congress.gov/117/bills/hr897/BILLS-117hr897ih.htm"
+                },
+                {
+                    "type": "PDF",
+                    "url": "https://www.congress.gov/117/bills/hr897/BILLS-117hr897ih.pdf"
+                },
+                {
+                    "type": "Formatted XML",
+                    "url": "https://www.congress.gov/117/bills/hr897/BILLS-117hr897ih.xml"
+                }
+            ],
+            "type": "Introduced in House"
+        },
+        {
+            "date": "2023-01-06T04:59:59Z",
+            "formats": [
+                {
+                    "type": "Formatted Text",
+                    "url": "https://www.congress.gov/117/plaws/publ329/PLAW-117publ329.htm"
+                },
+                {
+                    "type": "PDF",
+                    "url": "https://www.congress.gov/117/plaws/publ329/PLAW-117publ329.pdf"
+                },
+                {
+                    "type": "Formatted XML",
+                    "url": "https://www.congress.gov/117/plaws/publ329/PLAW-117publ329_uslm.xml"
+                }
+            ],
+            "type": "Public Law"
+        }
+    ]
+}

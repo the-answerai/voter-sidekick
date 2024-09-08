@@ -1,0 +1,37 @@
+{
+    "pagination": {
+        "count": 5
+    },
+    "request": {
+        "billNumber": "897",
+        "billType": "hr",
+        "billUrl": "https://api.congress.gov/v3/bill/117/hr/897?format=json",
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    },
+    "subjects": {
+        "legislativeSubjects": [
+            {
+                "name": "California",
+                "updateDate": "2021-03-12T21:49:52Z"
+            },
+            {
+                "name": "Federal-Indian relations",
+                "updateDate": "2021-03-12T21:49:52Z"
+            },
+            {
+                "name": "Indian lands and resources rights",
+                "updateDate": "2021-03-12T21:49:52Z"
+            },
+            {
+                "name": "Land transfers",
+                "updateDate": "2021-03-12T21:49:52Z"
+            }
+        ],
+        "policyArea": {
+            "name": "Native Americans",
+            "updateDate": "2021-03-12T21:49:52Z"
+        }
+    }
+}

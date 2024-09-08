@@ -6,7 +6,7 @@
       "request": "launch",
       "name": "Debug Congress Loader",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/src/loaders/congress.js",
+      "program": "${workspaceFolder}/src/loaders/index.js",
       "env": {
         "NODE_ENV": "development"
       },

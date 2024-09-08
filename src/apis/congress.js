@@ -8,7 +8,7 @@ const API_KEY = process.env.CONGRESS_API_KEY;
 const BASE_URL = 'https://api.congress.gov/v3';
 
 class CongressApi {
-    constructor() {
+    constructor(defaultCongress = null, defaultBillType = null) {
         this.axiosInstance = axios.create({
             baseURL: BASE_URL,
             params: {
@@ -16,20 +16,50 @@ class CongressApi {
                 format: 'json',
             },
         });
+
+        const currentYear = new Date().getFullYear();
+        const currentCongress = Math.floor((currentYear - 1789) / 2) + 1;
+
+        this.defaultCongress = defaultCongress || currentCongress;
+        this.defaultBillType = defaultBillType;
     }
 
-    async getBills(congress, billType, billNumber, options = {}) {
-        let url = '/bill';
-        if (congress) {
-            url += `/${congress}`;
-            if (billType) {
-                url += `/${billType}`;
-                if (billNumber) {
-                    url += `/${billNumber}`;
+    async getBills(options = {}) {
+        let url = `/bill/${this.defaultCongress}/${this.defaultBillType}`;
+        return this.getPaginatedResults(url, options);
+    }
+
+    async getBill(billUrl) {
+        if (!billUrl) return {};
+        return this.makeRequest(billUrl);
+    }
+
+    async getBillTags(subjectsUrl) {
+        if (!subjectsUrl) return [];
+        const response = await this.makeRequest(subjectsUrl);
+        return response.subjects?.legislativeSubjects?.map(subject => subject.name) || [];
+    }
+
+    async getSourceContent(textVersionsUrl, type) {
+        if (!textVersionsUrl) return '';
+        try {
+            const response = await this.makeRequest(textVersionsUrl);
+            const textVersions = response.textVersions || [];
+
+            // Sort text versions by date in descending order
+            const sortedVersions = textVersions.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+            for (const version of sortedVersions) {
+                const format = version.formats.find(f => f.type.toLowerCase().includes(type.toLowerCase()));
+                if (format) {
+                    return format.url;
                 }
             }
+        } catch (err) {
+            console.error('Error getting source content', err);
         }
-        return this.getPaginatedResults(url, options);
+
+        return '';
     }
 
     async getBillActions(congress, billType, billNumber, options = {}) {
@@ -46,6 +76,13 @@ class CongressApi {
 
     async getBillSubjects(congress, billType, billNumber, options = {}) {
         return this.getPaginatedResults(`/bill/${congress}/${billType}/${billNumber}/subjects`, options);
+    }
+
+    async getLatestSummary(summariesUrl) {
+        if (!summariesUrl) return '';
+        const response = await this.makeRequest(summariesUrl);
+        const latestSummary = response.summaries.sort((a, b) => new Date(b.date) - new Date(a.date));
+        return latestSummary[0]?.text;
     }
 
     async getBillSummaries(congress, billType, billNumber, options = {}) {
@@ -79,7 +116,7 @@ class CongressApi {
 
         while (true) {
             const response = await this.makeRequest(url, { ...options, offset, limit });
-
+            console.log('NUM ITEMS', response.pagination.count);
             if (!response.bills && !response.amendments && !response.actions) {
                 // If the response doesn't have a standard structure, return it as-is
                 return response;
@@ -111,4 +148,7 @@ class CongressApi {
     }
 }
 
-export default new CongressApi();
+// Export a function to create a new instance instead of exporting a singleton
+export default function createCongressApi(defaultCongress = null, defaultBillType = null) {
+    return new CongressApi(defaultCongress, defaultBillType);
+}

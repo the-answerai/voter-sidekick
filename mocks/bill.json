@@ -1,0 +1,83 @@
+{
+    "bill": {
+        "actions": {
+            "count": 27,
+            "url": "https://api.congress.gov/v3/bill/117/hr/680/actions?format=json"
+        },
+        "cboCostEstimates": [
+            {
+                "description": "As ordered reported by the House Committee on the Judiciary on September 29, 2021\n",
+                "pubDate": "2022-01-11T16:05:28Z",
+                "title": "H.R. 680, Immigration-Relief Legislation",
+                "url": "https://www.cbo.gov/publication/57742"
+            }
+        ],
+        "committeeReports": [
+            {
+                "citation": "H. Rept. 117-237",
+                "url": "https://api.congress.gov/v3/committee-report/117/HRPT/237?format=json"
+            }
+        ],
+        "committees": {
+            "count": 2,
+            "url": "https://api.congress.gov/v3/bill/117/hr/680/committees?format=json"
+        },
+        "congress": 117,
+        "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 167, Number 18 (Monday, February 1, 2021)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. KUSTER:\nH.R. 680\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I; Section 8, Clause 1 of the United States\nConstitution, the Taxing and Spending Clause: ``The Congress\nshall have Power To lay and collect Taxes, Duties, Imposts\nand Excises, to pay the Debts and provide for the common\nDefense and general Welfare of the United States . . .''\n[Page H263]\n</pre>",
+        "introducedDate": "2021-02-01",
+        "latestAction": {
+            "actionDate": "2023-01-05",
+            "text": "Became Private Law No: 117-3."
+        },
+        "laws": [
+            {
+                "number": "117-3",
+                "type": "Private Law"
+            }
+        ],
+        "number": "680",
+        "originChamber": "House",
+        "originChamberCode": "H",
+        "sponsors": [
+            {
+                "bioguideId": "K000382",
+                "district": 2,
+                "firstName": "Ann",
+                "fullName": "Rep. Kuster, Ann M. [D-NH-2]",
+                "isByRequest": "N",
+                "lastName": "Kuster",
+                "middleName": "M.",
+                "party": "D",
+                "state": "NH",
+                "url": "https://api.congress.gov/v3/member/K000382?format=json"
+            }
+        ],
+        "subjects": {
+            "count": 1,
+            "url": "https://api.congress.gov/v3/bill/117/hr/680/subjects?format=json"
+        },
+        "summaries": {
+            "count": 4,
+            "url": "https://api.congress.gov/v3/bill/117/hr/680/summaries?format=json"
+        },
+        "textVersions": {
+            "count": 6,
+            "url": "https://api.congress.gov/v3/bill/117/hr/680/text?format=json"
+        },
+        "title": "For the relief of Arpita Kurdekar, Girish Kurdekar, and Vandana Kurdekar.",
+        "titles": {
+            "count": 2,
+            "url": "https://api.congress.gov/v3/bill/117/hr/680/titles?format=json"
+        },
+        "type": "HR",
+        "updateDate": "2024-04-17T23:42:58Z",
+        "updateDateIncludingText": "2024-04-17T23:42:58Z"
+    },
+    "request": {
+        "billNumber": "680",
+        "billType": "hr",
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}
