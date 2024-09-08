@@ -5,22 +5,23 @@
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "apis/*": ["src/apis/*"],
+      "loaders/*": ["src/loaders/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/**/*.ts",
+    "src/apis/congress.ts"
+  ],
   "exclude": ["node_modules"]
 }

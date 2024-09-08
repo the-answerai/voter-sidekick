@@ -1,0 +1,59 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Law {
+  id          String   @id
+  title       String
+  summary     String?
+  tags        String[]
+  source_link String?
+  pdf_link    String?
+  locale      Locale
+  date_added  DateTime @default(now())
+  topics      String[]
+}
+
+enum Locale {
+  FEDERAL
+  STATE
+  LOCAL
+}
+
+model UserSubmission {
+  id             Int               @id @default(autoincrement())
+  law_title      String
+  law_source     String
+  pdf_link       String
+  user_id        Int
+  status         SubmissionStatus
+  denial_reason  String?
+  date_submitted DateTime          @default(now())
+  user           User              @relation(fields: [user_id], references: [id])
+}
+
+enum SubmissionStatus {
+  NEW
+  IN_REVIEW
+  APPROVED
+  DENIED
+}
+
+model User {
+  id                Int               @id @default(autoincrement())
+  email             String            @unique
+  username          String            @unique
+  submissions       UserSubmission[]
+}

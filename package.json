@@ -6,23 +6,36 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "setup-db": "node supabase-setup.js",
+    "generate": "prisma generate",
+    "migrate": "prisma migrate dev",
+    "test:congress": "node -r dotenv/config src/loaders/congress.js"
   },
   "dependencies": {
+    "@prisma/client": "^5.19.1",
+    "@supabase/supabase-js": "^2.45.3",
     "aai-embed-react": "^1.0.7",
+    "axios": "^1.7.7",
+    "next": "14.2.8",
+    "prisma": "^5.19.1",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.8",
     "tinycolor2": "^1.6.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "-": "^0.0.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "dotenv": "^16.4.5",
     "eslint": "^8",
-    "eslint-config-next": "14.2.8"
-  }
+    "eslint-config-next": "14.2.8",
+    "postcss": "^8",
+    "supabase": "^1.191.3",
+    "tailwindcss": "^3.4.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^5"
+  },
+  "type": "module"
 }
