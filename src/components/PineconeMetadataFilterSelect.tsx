@@ -25,8 +25,13 @@ const PineconeMetadataFilterSelect: React.FC<
   const { chatProps, updateMetadataFilter, updateTopK } = useChatContext();
   const selectedValue =
     filterKey === "topK"
-      ? chatProps?.chatflowConfig?.topK || min
-      : chatProps?.chatflowConfig?.pineconeMetadataFilter?.[filterKey] || "";
+      ? (chatProps?.chatflowConfig as { topK?: number })?.topK || min
+      : (
+          chatProps?.chatflowConfig?.pineconeMetadataFilter as Record<
+            string,
+            string | number
+          >
+        )?.[filterKey] || "";
 
   const handleChange = (
     e: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>
@@ -36,7 +41,7 @@ const PineconeMetadataFilterSelect: React.FC<
       updateTopK(Number(value));
     } else {
       if (value === "") {
-        updateMetadataFilter(filterKey, undefined);
+        updateMetadataFilter(filterKey, ""); // Use empty string instead of undefined
       } else {
         updateMetadataFilter(filterKey, isNumeric ? Number(value) : value);
       }

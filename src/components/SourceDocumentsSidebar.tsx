@@ -1,113 +1,101 @@
 import React, { useState, useMemo } from "react";
-import { SourceDocument } from "../types";
+import { SourceDocument, CitedSource } from "../types";
 import LinkIcon from "./Icons/LinkIcon";
 import ExpandIcon from "./Icons/ExpandIcon";
 import { formatDate } from "../utils/formatDate";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Settings, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface SourceDocumentsSidebarProps {
-  documents: SourceDocument[];
+  groupedSources: Record<string, CitedSource & { chunks: string[] }>;
+  handleDocumentClick: (documentId: string) => void;
+  selectedDocument: any;
+  currentExcerptIndex: number;
+  handleExcerptNavigation: (direction: "prev" | "next") => void;
 }
 
-const SourceDocumentCard: React.FC<{ documents: SourceDocument[] }> = ({
-  documents,
-}) => {
-  const [showDetails, setShowDetails] = useState(false);
-  const [expandedPages, setExpandedPages] = useState<number[]>([]);
-
-  const mainDocument = documents[0];
-  const creationDate = formatDate(
-    mainDocument.metadata["pdf.info.CreationDate"]
-  );
-  const modificationDate = formatDate(
-    mainDocument.metadata["pdf.info.ModDate"]
-  );
-
-  const toggleExpand = (pageNumber: number) => {
-    setExpandedPages((prev) =>
-      prev.includes(pageNumber)
-        ? prev.filter((p) => p !== pageNumber)
-        : [...prev, pageNumber]
-    );
-  };
-
-  const sortedDocuments = useMemo(() => {
-    return [...documents].sort(
-      (a, b) => a.metadata["loc.pageNumber"] - b.metadata["loc.pageNumber"]
-    );
-  }, [documents]);
-
-  return (
-    <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-4 mb-4">
-      <h3 className="text-lg font-semibold mb-2 flex items-center">
-        {mainDocument.metadata["pdf.info.Title"]}
-        <a
-          href={mainDocument.metadata.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 hover:text-blue-700"
-        >
-          <LinkIcon />
-        </a>
-      </h3>
-      <button
-        className="text-blue-500 hover:text-blue-700"
-        onClick={() => setShowDetails(!showDetails)}
-      >
-        {showDetails ? "Hide Details" : "Show Details"}
-      </button>
-      {showDetails && (
-        <div className="mt-2 bg-gray-100 dark:bg-gray-700 p-2 rounded">
-          <p className="text-sm mb-1">
-            Author: {mainDocument.metadata["pdf.info.Author"]}
-          </p>
-          <p className="text-sm mb-1">Created: {creationDate}</p>
-          <p className="text-sm mb-2">Modified: {modificationDate}</p>
-          {sortedDocuments.map((doc, index) => {
-            const pageNumber = doc.metadata["loc.pageNumber"];
-            const isExpanded = expandedPages.includes(pageNumber);
-            return (
-              <div key={index} className="mt-2 border-t pt-2">
-                <div
-                  className="flex justify-between items-center cursor-pointer"
-                  onClick={() => toggleExpand(pageNumber)}
-                >
-                  <p className="text-sm mb-1">Page: {pageNumber}</p>
-                  <ExpandIcon isExpanded={isExpanded} />
-                </div>
-                <p className={`text-sm ${isExpanded ? "" : "line-clamp-2"}`}>
-                  {doc.pageContent}
-                </p>
-              </div>
-            );
-          })}
-        </div>
-      )}
-    </div>
-  );
+const truncateTitle = (title: string, maxLength: number = 75) => {
+  if (title.length <= maxLength) return title;
+  return title.slice(0, maxLength) + "...";
 };
 
 const SourceDocumentsSidebar: React.FC<SourceDocumentsSidebarProps> = ({
-  documents,
+  groupedSources,
+  handleDocumentClick,
+  selectedDocument,
+  currentExcerptIndex,
+  handleExcerptNavigation,
 }) => {
-  const groupedDocuments = useMemo(() => {
-    const groups: { [key: string]: SourceDocument[] } = {};
-    documents.forEach((doc) => {
-      const url = doc.metadata.url;
-      if (!groups[url]) {
-        groups[url] = [];
-      }
-      groups[url].push(doc);
-    });
-    return groups;
-  }, [documents]);
-
   return (
-    <div className="w-1/4 p-4 bg-gray-50 dark:bg-gray-900 overflow-y-auto">
-      <h2 className="text-xl font-bold mb-4">Source Documents</h2>
-      {Object.values(groupedDocuments).map((docs, index) => (
-        <SourceDocumentCard key={index} documents={docs} />
-      ))}
-    </div>
+    <Card className="flex-1">
+      <ScrollArea className="h-[calc(100vh-350px)]">
+        {Object.values(groupedSources).map((source: any) => (
+          <Card key={source.id} className="mb-4">
+            <CardContent className="p-4">
+              <h3 className="font-semibold">{truncateTitle(source.title)}</h3>
+              <p className="text-sm">Congress: {source.congress}</p>
+              <p className="text-sm">Policy Area: {source.policyArea}</p>
+              <p className="text-sm">Excerpts: {source.chunks.length}</p>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="outline" size="icon">
+                    <Settings className="h-4 w-4" />
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[425px]">
+                  <DialogHeader>
+                    <DialogTitle>Original Cited Sources</DialogTitle>
+                  </DialogHeader>
+                  <div className="mt-4">
+                    <pre className="whitespace-pre-wrap text-sm bg-gray-100 p-4 rounded-md overflow-auto max-h-[60vh]">
+                      {JSON.stringify(source, null, 2)}
+                    </pre>
+                  </div>
+                </DialogContent>
+              </Dialog>
+              <div className="mt-2">
+                {source.chunks.map((chunk: string, index: number) => (
+                  <TooltipProvider key={index}>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="mr-2 mt-2"
+                          onClick={() => handleDocumentClick(source.id)}
+                        >
+                          Excerpt {index + 1}
+                        </Button>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <div className="max-w-md whitespace-normal">
+                          {chunk}
+                        </div>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </ScrollArea>
+    </Card>
   );
 };
 

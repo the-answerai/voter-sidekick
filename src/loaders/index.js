@@ -1,14 +1,26 @@
 import getBillsFromCongress from './congress.js';
-
-const congressNumbers = [115, 116, 117, 118]; // 2017-2024
+import CongressDownloader from './downloader.js';
+// const congressNumbers = [115, 116, 117, 118]; // 2017-2024
 const billTypes = ['hr', 's', 'hjres', 'sjres'];
+const congressNumbers = [118]; // 2017-2024
+// const billTypes = ['hr'];
 
-async function fetchAllBills() {
+// async function fetchAllBills() {
+//     for (const congress of congressNumbers) {
+//         for (const billType of billTypes) {
+//             await getBillsFromCongress(congress, billType);
+//         }
+//     }
+// }
+
+async function downloadBills() {
+    const outputDir = './data/bills';
     for (const congress of congressNumbers) {
         for (const billType of billTypes) {
-            await getBillsFromCongress(congress, billType);
+            const downloader = new CongressDownloader(outputDir);
+            await downloader.downloadBills({ congress, billType });
         }
     }
 }
 
-fetchAllBills();
+downloadBills();

@@ -28,7 +28,9 @@ const TooltipContent = React.forwardRef<
 TooltipContent.displayName = TooltipPrimitive.Content.displayName;
 
 // New component that combines Tooltip with TooltipProvider
-const TooltipWrapper = ({ children, ...props }) => (
+const TooltipWrapper: React.FC<
+  React.PropsWithChildren<TooltipPrimitive.TooltipProps>
+> = ({ children, ...props }) => (
   <TooltipProvider>
     <Tooltip {...props}>{children}</Tooltip>
   </TooltipProvider>

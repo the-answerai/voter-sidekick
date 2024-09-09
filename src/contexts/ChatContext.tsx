@@ -43,14 +43,13 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({
         const prevFilter = (prevProps.chatflowConfig?.pineconeMetadataFilter ||
           {}) as PineconeMetadataFilter;
         const updatedFilter = updateFilter(prevFilter, key, value);
-        const updatedChatflowConfig = updateChatflowConfig(
-          prevProps.chatflowConfig || {},
-          updatedFilter
-        );
 
         return {
           ...prevProps,
-          chatflowConfig: updatedChatflowConfig,
+          chatflowConfig: {
+            ...prevProps.chatflowConfig,
+            pineconeMetadataFilter: updatedFilter,
+          },
         };
       });
     },

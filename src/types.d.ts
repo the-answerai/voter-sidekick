@@ -1,8 +1,10 @@
+import { ThemeProps } from "aai-embed-react";
 export interface PineconeMetadataFilter {
   topic?: metaDataFilters.topic;
   url?: metaDataFilters.url;
   locale?: metaDataFilters.locale;
   source?: metaDataFilters.source;
+  topK?: number;
 }
 export interface ChatFullPageProps {
   chatflowid: string;
@@ -15,7 +17,9 @@ export interface ChatFullPageProps {
     observeUserInput?: (userInput: string) => void;
     observeLoading?: (loading: boolean) => void;
     observeMessages?: (
-      messages: { userMessage?: string; botMessage?: string; error?: Error }[]
+      messages: {
+          [x: string]: string; userMessage?: string; botMessage?: string; error?: Error 
+}[]
     ) => void; // Updated type
   };
   style?: CSSProperties;
@@ -121,4 +125,29 @@ export interface User {
   email: string;
   username: string;
   submissions: UserSubmission[];
+}
+
+interface CitedSource {
+  id: string;
+  title: string;
+  congress: string;
+  policyArea: string;
+  chunks: string[];
+}
+
+export interface SourceDocument {
+  pageContent: string;
+  metadata: {
+    id: string;
+    title: string;
+    congress: string;
+    policyArea: string;
+    chunks: string[];
+  };
+}
+
+interface ChatflowConfig {
+  rephrasePrompt: string;
+  responsePrompt: string;
+  pineconeMetadataFilter?: Partial<PineconeMetadataFilter>;
 }

@@ -1,0 +1,3047 @@
+{
+  "bills": [
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-09-06",
+        "text": "Referred to the Committee on Natural Resources, and in addition to the Committee on Foreign Affairs, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "202",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Formally apologizing for the nuclear legacy of the United States in the Republic of the Marshall Islands and affirming the importance of free association between the Government of the United States and the Government of the Marshall Islands.",
+      "type": "HJRES",
+      "updateDate": "2024-09-07",
+      "updateDateIncludingText": "2024-09-07",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/202?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-09-03",
+        "text": "Referred to the Subcommittee on Livestock, Dairy, and Poultry."
+      },
+      "number": "167",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Disapproving the rule submitted by the Department of Agriculture relating to \"Use of Electronic Identification Eartags as Official Identification in Cattle and Bison\".",
+      "type": "HJRES",
+      "updateDate": "2024-09-07",
+      "updateDateIncludingText": "2024-09-07",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/167?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-30",
+        "text": "Referred to the House Committee on Financial Services."
+      },
+      "number": "201",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Consumer Financial Protection relating to \"Registry of Nonbank Covered Persons Subject to Certain Agency and Court Orders\".",
+      "type": "HJRES",
+      "updateDate": "2024-09-07",
+      "updateDateIncludingText": "2024-09-07",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/201?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-06",
+        "text": "Referred to the House Committee on Energy and Commerce."
+      },
+      "number": "200",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Disapproving the rule submitted by the Department of Health and Human Services relating to \"Control of Communicable Diseases; Foreign Quarantine: Importation of Dogs and Cats\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-14",
+      "updateDateIncludingText": "2024-08-14",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/200?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Energy and Commerce."
+      },
+      "number": "199",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the National Highway Traffic Safety Administration relating to \"Corporate Average Fuel Economy Standards for Passenger Cars and Light Trucks for Model Years 2027 and Beyond and Fuel Efficiency Standards for Heavy-Duty Pickup Trucks and Vans for Model Years 2030 and Beyond\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-28",
+      "updateDateIncludingText": "2024-08-28",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/199?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Financial Services."
+      },
+      "number": "195",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Consumer Financial Protection relating to \"Truth in Lending (Regulation Z); Use of Digital User Accounts to Access Buy Now, Pay Later Loans\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-07",
+      "updateDateIncludingText": "2024-08-09",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/195?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Energy and Commerce."
+      },
+      "number": "197",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Nuclear Regulatory Commission relating to \"Fee Schedules; Fee Recovery for Fiscal Year 2024\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-08",
+      "updateDateIncludingText": "2024-08-08",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/197?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Ways and Means."
+      },
+      "number": "198",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of the Treasury relating to \"Gross Proceeds and Basis Reporting by Brokers and Determination of Amount Realized and Basis for Digital Asset Transactions\".",
+      "type": "HJRES",
+      "updateDate": "2024-09-09",
+      "updateDateIncludingText": "2024-09-09",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/198?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Armed Services."
+      },
+      "number": "196",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Defense relating to \"Defense Federal Acquisition Regulation Supplement: Architect and Engineering Service Fees (DFARS Case 2024-D019)\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-03",
+      "updateDateIncludingText": "2024-08-03",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/196?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-30",
+        "text": "Placed on the Union Calendar, Calendar No. 517."
+      },
+      "number": "126",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Federal Deposit Insurance Corporation relating to \"Principles for Climate-Related Financial Risk Management for Large Financial Institutions\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-09",
+      "updateDateIncludingText": "2024-08-09",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/126?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-30",
+        "text": "Placed on the Union Calendar, Calendar No. 516."
+      },
+      "number": "122",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Consumer Financial Protection relating to \"Credit Card Penalty Fees (Regulation Z)\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-17",
+      "updateDateIncludingText": "2024-08-17",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/122?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-30",
+        "text": "Placed on the Union Calendar, Calendar No. 515."
+      },
+      "number": "124",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Office of the Comptroller of the Currency relating to \"Principles for Climate-Related Financial Risk Management for Large Financial Institutions\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-09",
+      "updateDateIncludingText": "2024-08-09",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/124?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-30",
+        "text": "Placed on the Union Calendar, Calendar No. 513."
+      },
+      "number": "127",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Securities and Exchange Commission relating to \"The Enhancement and Standardization of Climate-Related Disclosures for Investors\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-17",
+      "updateDateIncludingText": "2024-08-17",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/127?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-25",
+        "text": "Referred to the House Committee on Energy and Commerce."
+      },
+      "number": "194",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the National Highway Traffic Safety Administration entitled \"Corporate Average Fuel Economy Standards for Passenger Cars and Light Trucks for Model Years 2027 and Beyond and Fuel Efficiency Standards for Heavy-Duty Pickup Trucks and Vans for Model Years 2030 and Beyond\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-08",
+      "updateDateIncludingText": "2024-08-08",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/194?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-24",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "193",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States providing that there is no immunity from criminal prosecution for an act on the grounds that such act was within the constitutional authority or official duties of an individual, and providing that the President may not grant a pardon to himself or herself.",
+      "type": "HJRES",
+      "updateDate": "2024-09-07",
+      "updateDateIncludingText": "2024-09-07",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/193?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-23",
+        "text": "Received in the Senate. Read twice. Placed on Senate Legislative Calendar under General Orders. Calendar No. 442."
+      },
+      "number": "165",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Nondiscrimination on the Basis of Sex in Education Programs or Activities Receiving Federal Financial Assistance\".",
+      "type": "HJRES",
+      "updateDate": "2024-09-05",
+      "updateDateIncludingText": "2024-09-05",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/165?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-19",
+        "text": "Referred to the Subcommittee on Highways and Transit."
+      },
+      "number": "192",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the National Highway Traffic Safety Administration entitled \"Federal Motor Vehicle Safety Standards; Automatic Emergency Braking Systems for Light Vehicles\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-10",
+      "updateDateIncludingText": "2024-08-10",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/192?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-18",
+        "text": "Placed on the Union Calendar, Calendar No. 495."
+      },
+      "number": "148",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of the Treasury relating to \"Clean Vehicle Credits Under Sections 25E and 30D; Transfer of Credits; Critical Minerals and Battery Components; Foreign Entities of Concern\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-09",
+      "updateDateIncludingText": "2024-08-09",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/148?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-18",
+        "text": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Science, Space, and Technology, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "191",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Loan Guarantees for Clean Energy Projects\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-08",
+      "updateDateIncludingText": "2024-08-08",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/191?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-18",
+        "text": "Referred to the House Committee on Energy and Commerce."
+      },
+      "number": "189",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Energy Conservation Program: Energy Conservation Standards for Air-Cooled Commercial Package Air Conditioners and Heat Pumps\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-08",
+      "updateDateIncludingText": "2024-08-08",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/189?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-18",
+        "text": "Referred to the House Committee on Natural Resources."
+      },
+      "number": "188",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of the Interior relating to \"Conservation and Landscape Health\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-08",
+      "updateDateIncludingText": "2024-08-08",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/188?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-18",
+        "text": "Referred to the House Committee on Financial Services."
+      },
+      "number": "190",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Consumer Financial Protection relating to \"Truth in Lending (Regulation Z); Use of Digital User Accounts to Access Buy Now, Pay Later Loans\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-07",
+      "updateDateIncludingText": "2024-08-09",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/190?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-11",
+        "text": "Ordered to be Reported by the Yeas and Nays: 24 - 23."
+      },
+      "number": "164",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Commerce relating to \"Revision of Firearms License Requirements\".",
+      "type": "HJRES",
+      "updateDate": "2024-09-07",
+      "updateDateIncludingText": "2024-09-07",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/164?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-11",
+        "actionTime": "11:35:56",
+        "text": "The Chair directed the Clerk to notify the Senate of the action of the House."
+      },
+      "number": "109",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Securities and Exchange Commission relating to \"Staff Accounting Bulletin No. 121\".",
+      "type": "HJRES",
+      "updateDate": "2024-09-05",
+      "updateDateIncludingText": "2024-09-05",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/109?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-11",
+        "text": "Referred to the House Committee on Energy and Commerce."
+      },
+      "number": "184",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Energy Conservation Program: Energy Conservation Standards for Consumer Water Heaters\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-30",
+      "updateDateIncludingText": "2024-07-30",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/184?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-11",
+        "text": "Referred to the House Committee on Financial Services."
+      },
+      "number": "185",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Securities and Exchange Commission relating to \"Regulation S-P: Privacy of Consumer Financial Information and Safeguarding Customer Information\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-18",
+      "updateDateIncludingText": "2024-07-18",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/185?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-11",
+        "text": "Referred to the House Committee on Oversight and Accountability."
+      },
+      "number": "187",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Disapproving the rule submitted by the Office of Personnel Management relating to Postal Service Reform Act; Establishment of the Postal Service Health Benefits Program.",
+      "type": "HJRES",
+      "updateDate": "2024-07-12",
+      "updateDateIncludingText": "2024-07-13",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/187?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-11",
+        "text": "Referred to the House Committee on Energy and Commerce."
+      },
+      "number": "183",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Office of Energy Efficiency and Renewable Energy of the Department of Energy relating to \"Energy Conservation Program: Energy Conservation Standards for Circulator Pumps\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-30",
+      "updateDateIncludingText": "2024-07-30",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/183?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-11",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "186",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Federal Trade Commission entitled \"Non-Compete Clause Rule\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-12",
+      "updateDateIncludingText": "2024-07-13",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/186?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-10",
+        "text": "Ordered to be Reported by the Yeas and Nays: 23 - 18."
+      },
+      "number": "142",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Labor relating to \"Retirement Security Rule: Definition of an Investment Advice Fiduciary\".",
+      "type": "HJRES",
+      "updateDate": "2024-09-04",
+      "updateDateIncludingText": "2024-09-04",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/142?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-10",
+        "text": "Referred to the House Committee on Ways and Means."
+      },
+      "number": "182",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Disapproving the rule submitted by the Department of Health and Human Services relating to \"Designated Placement Requirements for LGBTQI plus Children\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-27",
+      "updateDateIncludingText": "2024-08-27",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/182?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-03",
+        "text": "Referred to the Subcommittee on Economic Development, Public Buildings, and Emergency Management."
+      },
+      "number": "180",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Clean Energy for New Federal Buildings and Major Renovations of Federal Buildings\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-10",
+      "updateDateIncludingText": "2024-08-10",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/180?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-02",
+        "text": "Referred to the House Committee on Energy and Commerce."
+      },
+      "number": "177",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"New Source Performance Standards for Greenhouse Gas Emissions From New, Modified, and Reconstructed Fossil Fuel-Fired Electric Generating Units; Emission Guidelines for Greenhouse Gas Emissions From Existing Fossil Fuel-Fired Electric Generating Units; and Repeal of the Affordable Clean Energy Rule\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-06",
+      "updateDateIncludingText": "2024-08-06",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/177?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-02",
+        "text": "Referred to the House Committee on Energy and Commerce."
+      },
+      "number": "176",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Energy Conservation Program: Energy Conservation Standards for Miscellaneous Refrigeration Products\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-05",
+      "updateDateIncludingText": "2024-07-05",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/176?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-02",
+        "text": "Referred to the House Committee on Science, Space, and Technology."
+      },
+      "number": "178",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Commerce relating to \"Preventing the Improper Use of CHIPS Act Funding\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-08",
+      "updateDateIncludingText": "2024-07-08",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/178?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-02",
+        "text": "Referred to the House Committee on Energy and Commerce."
+      },
+      "number": "175",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Statutory Updates to the Advanced Technology Vehicles Manufacturing Program\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-05",
+      "updateDateIncludingText": "2024-07-05",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/175?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-02",
+        "text": "Referred to the House Committee on Ways and Means."
+      },
+      "number": "179",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of the Treasury relating to \"Clean Vehicle Credits Under Sections 25E and 30D; Transfer of Credits; Critical Minerals and Battery Components; Foreign Entities of Concern\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-07",
+      "updateDateIncludingText": "2024-08-07",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/179?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-02",
+        "text": "Referred to the House Committee on Energy and Commerce."
+      },
+      "number": "174",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Hazardous and Solid Waste Management System: Disposal of Coal Combustion Residuals From Electric Utilities; Legacy CCR Surface Impoundments\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-06",
+      "updateDateIncludingText": "2024-08-06",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/174?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-02",
+        "text": "Referred to the House Committee on Education and the Workforce."
+      },
+      "number": "181",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Labor relating to \"Definition of 'Employer'-Association Health Plans\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-27",
+      "updateDateIncludingText": "2024-08-27",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/181?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-02",
+        "text": "Referred to the House Committee on Energy and Commerce."
+      },
+      "number": "173",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Energy Conservation Program: Energy Conservation Standards for Consumer Water Heaters\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-30",
+      "updateDateIncludingText": "2024-07-30",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/173?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-02",
+        "text": "Referred to the House Committee on Energy and Commerce."
+      },
+      "number": "172",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"National Emission Standards for Hazardous Air Pollutants: Coal- and Oil-Fired Electric Utility Steam Generating Units Review of the Residual Risk and Technology Review\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-06",
+      "updateDateIncludingText": "2024-08-06",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/172?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-06-27",
+        "text": "Referred to the House Committee on Financial Services."
+      },
+      "number": "170",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Housing and Urban Development and the Department of Agriculture relating to \"Final Determination: Adoption of Energy Efficiency Standards for New Construction of HUD- and USDA-Financed Housing\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-24",
+      "updateDateIncludingText": "2024-08-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/170?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-06-27",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "171",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the proposed rule submitted by the Office of Refugee Resettlement of the Administration for Children and Families of the Department of Health and Human Services relating to the Unaccompanied Children Program Foundational Rule.",
+      "type": "HJRES",
+      "updateDate": "2024-08-27",
+      "updateDateIncludingText": "2024-08-27",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/171?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-06-21",
+        "text": "Referred to the House Committee on Natural Resources."
+      },
+      "number": "169",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the United States Fish and Wildlife Service relating to \"Endangered and Threatened Wildlife and Plants; Endangered Species Status With Critical Habitat for Guadalupe Fatmucket, Texas Fatmucket, Guadalupe Orb, Texas Pimpleback, Balcones Spike, and False Spike, and Threatened Species Status With Section 4(d) Rule and Critical Habitat for Texas Fawnsfoot\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-03",
+      "updateDateIncludingText": "2024-07-03",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/169?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-06-18",
+        "text": "Referred to the House Committee on Natural Resources."
+      },
+      "number": "168",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Council on Environmental Quality relating to \"National Environmental Policy Act Implementing Regulations Revisions Phase 2\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-03",
+      "updateDateIncludingText": "2024-07-03",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/168?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-06-07",
+        "text": "Referred to the Subcommittee on Environment, Manufacturing, and Critical Materials."
+      },
+      "number": "163",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"New Source Performance Standards for Greenhouse Gas Emissions From New, Modified, and Reconstructed Fossil Fuel-Fired Electric Generating Units; Emission Guidelines for Greenhouse Gas Emissions From Existing Fossil Fuel-Fired Electric Generating Units; and Repeal of the Affordable Clean Energy Rule\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-14",
+      "updateDateIncludingText": "2024-08-14",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/163?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-06-05",
+        "text": "Referred to the House Committee on Education and the Workforce."
+      },
+      "number": "166",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Labor relating to \"Defining and Delimiting the Exemptions for Executive, Administrative, Professional, Outside Sales, and Computer Employees\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-24",
+      "updateDateIncludingText": "2024-08-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/166?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-31",
+        "text": "Referred to the Subcommittee on Environment, Manufacturing, and Critical Materials."
+      },
+      "number": "161",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"New Source Performance Standards for the Synthetic Organic Chemical Manufacturing Industry and National Emission Standards for Hazardous Air Pollutants for the Synthetic Organic Chemical Manufacturing Industry and Group I & II Polymers and Resins Industry\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-30",
+      "updateDateIncludingText": "2024-07-30",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/161?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-31",
+        "text": "Referred to the Subcommittee on Health."
+      },
+      "number": "160",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Health and Human Services relating to \"Nondiscrimination in Health Programs and Activities\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-20",
+      "updateDateIncludingText": "2024-08-20",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/160?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-31",
+        "text": "Referred to the Subcommittee on Communications and Technology."
+      },
+      "number": "153",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Federal Communications Commission relating to \"Safeguarding and Securing the Open Internet; Restoring Internet Freedom\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-07",
+      "updateDateIncludingText": "2024-08-07",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/153?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-31",
+        "text": "Referred to the House Committee on Natural Resources."
+      },
+      "number": "162",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the United States Fish and Wildlife Service relating to \"Endangered and Threatened Wildlife and Plants; Endangered Species Status for the Dunes Sagebrush Lizard\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-08",
+      "updateDateIncludingText": "2024-08-08",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/162?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-24",
+        "text": "Referred to the Subcommittee on Environment, Manufacturing, and Critical Materials."
+      },
+      "number": "152",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Hazardous and Solid Waste Management System: Disposal of Coal Combustion Residuals From Electric Utilities; Legacy CCR Surface Impoundments\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-06",
+      "updateDateIncludingText": "2024-08-06",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/152?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-24",
+        "text": "Referred to the Subcommittee on Environment, Manufacturing, and Critical Materials."
+      },
+      "number": "150",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"National Emission Standards for Hazardous Air Pollutants: Coal- and Oil-Fired Electric Utility Steam Generating Units Review of the Residual Risk and Technology Review\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-06",
+      "updateDateIncludingText": "2024-08-06",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/150?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-24",
+        "text": "Referred to the Subcommittee on Health."
+      },
+      "number": "146",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Centers for Medicare & Medicaid Services relating to \"Clarifying the Eligibility of Deferred Action for Childhood Arrivals (DACA) Recipients and Certain Other Noncitizens for a Qualified Health Plan through an Exchange, Advance Payments of the Premium Tax Credit, Cost-Sharing Reductions, and a Basic Health Program\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-16",
+      "updateDateIncludingText": "2024-08-16",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/146?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-24",
+        "text": "Referred to the Subcommittee on Health."
+      },
+      "number": "145",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Food and Drug Administration relating to \"Medical Devices; Laboratory Developed Tests\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-16",
+      "updateDateIncludingText": "2024-08-16",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/145?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-23",
+        "text": "Referred to the House Committee on Natural Resources."
+      },
+      "number": "154",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to \"Fluid Mineral Leases and Leasing Process\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-06",
+      "updateDateIncludingText": "2024-08-06",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/154?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-23",
+        "text": "Referred to the House Committee on Natural Resources."
+      },
+      "number": "156",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the United States Fish and Wildlife Service relating to \"Endangered and Threatened Wildlife and Plants; Regulations for Interagency Cooperation\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-06",
+      "updateDateIncludingText": "2024-08-06",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/156?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-23",
+        "text": "Referred to the House Committee on Natural Resources."
+      },
+      "number": "155",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the National Marine Fisheries Service relating to \"Endangered and Threatened Wildlife and Plants; Regulations for Interagency Cooperation\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-06",
+      "updateDateIncludingText": "2024-08-06",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/155?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-23",
+        "text": "Referred to the House Committee on Natural Resources."
+      },
+      "number": "158",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the United States Fish and Wildlife Service relating to \"Endangered and Threatened Wildlife and Plants; Listing Endangered and Threatened Species and Designating Critical Habitat\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-21",
+      "updateDateIncludingText": "2024-08-21",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/158?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-23",
+        "text": "Referred to the House Committee on Natural Resources."
+      },
+      "number": "157",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the National Marine Fisheries Service relating to \"Endangered and Threatened Wildlife and Plants; Listing Endangered and Threatened Species and Designating Critical Habitat\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-21",
+      "updateDateIncludingText": "2024-08-21",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/157?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-23",
+        "text": "Referred to the House Committee on Natural Resources."
+      },
+      "number": "159",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the United States Fish and Wildlife Service relating to \"Endangered and Threatened Wildlife and Plants; Regulations Pertaining to Endangered and Threatened Wildlife and Plants\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-06",
+      "updateDateIncludingText": "2024-08-06",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/159?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-22",
+        "text": "Referred to the Subcommittee on Water Resources and Environment."
+      },
+      "number": "151",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Supplemental Effluent Limitations Guidelines and Standards for the Steam Electric Power Generating Point Source Category\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-10",
+      "updateDateIncludingText": "2024-08-10",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/151?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-17",
+        "text": "Referred to the Subcommittee on Health."
+      },
+      "number": "139",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Centers for Medicare & Medicaid Services relating to \"Medicare and Medicaid Programs: Minimum Staffing Standards for Long-Term Care Facilities and Medicaid Institutional Payment Transparency Reporting\".",
+      "type": "HJRES",
+      "updateDate": "2024-09-07",
+      "updateDateIncludingText": "2024-09-07",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/139?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-17",
+        "text": "Referred to the Subcommittee on Health."
+      },
+      "number": "138",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Centers for Medicare & Medicaid Services relating to \"Clarifying the Eligibility of Deferred Action for Childhood Arrivals (DACA) Recipients and Certain Other Noncitizens for a Qualified Health Plan through an Exchange, Advance Payments of the Premium Tax Credit, Cost-Sharing Reductions, and a Basic Health Program\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-16",
+      "updateDateIncludingText": "2024-08-16",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/138?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-16",
+        "text": "Ordered to be Reported by the Yeas and Nays: 27 - 22."
+      },
+      "number": "100",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Securities and Exchange Commission relating to \"Cybersecurity Risk Management, Strategy, Governance, and Incident Disclosure\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-22",
+      "updateDateIncludingText": "2024-07-22",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/100?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-16",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "144",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Alcohol, Tobacco, Firearms, and Explosives, Department of Justice, relating to \"Definition of 'Engaged in the Business' as a Dealer in Firearms\".",
+      "type": "HJRES",
+      "updateDate": "2024-09-07",
+      "updateDateIncludingText": "2024-09-07",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/144?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-16",
+        "text": "Referred to the House Committee on Natural Resources."
+      },
+      "number": "149",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the United States Fish and Wildlife Service relating to \"Endangered and Threatened Wildlife and Plants; Establishment of a Nonessential Experimental Population of Grizzly Bear in the North Cascades Ecosystem, Washington State\".",
+      "type": "HJRES",
+      "updateDate": "2024-06-11",
+      "updateDateIncludingText": "2024-06-11",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/149?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-16",
+        "text": "Referred to the House Committee on Education and the Workforce."
+      },
+      "number": "147",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Occupational Safety and Health Administration relating to \"Worker Walkaround Representative Designation Process\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-01",
+      "updateDateIncludingText": "2024-07-01",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/147?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-15",
+        "text": "Referred to the House Committee on Education and the Workforce."
+      },
+      "number": "143",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Labor relating to \"Amendment to Prohibited Transaction Exemptions 75-1, 77-4, 80-83, 83-1, and 86-128\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-09",
+      "updateDateIncludingText": "2024-07-09",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/143?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-15",
+        "text": "Referred to the House Committee on Education and the Workforce."
+      },
+      "number": "141",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Labor relating to \"Amendment to Prohibited Transaction Exemption 84-24\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-09",
+      "updateDateIncludingText": "2024-07-09",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/141?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-15",
+        "text": "Referred to the House Committee on Education and the Workforce."
+      },
+      "number": "140",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Labor relating to \"Amendment to Prohibited Transaction Exemption 2020-02\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-05",
+      "updateDateIncludingText": "2024-08-05",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/140?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-10",
+        "text": "Referred to the Subcommittee on Health."
+      },
+      "number": "137",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Labor relating to \"Short-Term, Limited-Duration Insurance and Independent, Noncoordinated Excepted Benefits Coverage\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-15",
+      "updateDateIncludingText": "2024-08-15",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/137?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-07",
+        "actionTime": "17:09:37",
+        "text": "The Chair directed the Clerk to notify the Senate of the action of the House."
+      },
+      "number": "98",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the National Labor Relations Board relating to \"Standard for Determining Joint Employer Status\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-09",
+      "updateDateIncludingText": "2024-08-06",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/98?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-03",
+        "text": "Referred to the Subcommittee on Environment, Manufacturing, and Critical Materials."
+      },
+      "number": "136",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Multi-Pollutant Emissions Standards for Model Years 2027 and Later Light-Duty and Medium-Duty Vehicles\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-01",
+      "updateDateIncludingText": "2024-08-01",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/136?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-03",
+        "text": "Referred to the Subcommittee on Environment, Manufacturing, and Critical Materials."
+      },
+      "number": "133",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Greenhouse Gas Emissions Standards for Heavy-Duty Vehicles-Phase 3\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-25",
+      "updateDateIncludingText": "2024-07-25",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/133?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-03",
+        "text": "Referred to the Subcommittee on Environment, Manufacturing, and Critical Materials."
+      },
+      "number": "131",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Multi-Pollutant Emissions Standards for Model Years 2027 and Later Light-Duty and Medium-Duty Vehicles\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-01",
+      "updateDateIncludingText": "2024-08-01",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/131?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-01",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "134",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Labor relating to \"Improving Protections for Workers in Temporary Agricultural Employment in the United States\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-14",
+      "updateDateIncludingText": "2024-08-14",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/134?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-05-01",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "135",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Labor relating to \"Improving Protections for Workers in Temporary Agricultural Employment in the United States\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-14",
+      "updateDateIncludingText": "2024-08-14",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/135?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-04-29",
+        "text": "Referred to the House Committee on Oversight and Accountability."
+      },
+      "number": "132",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Defense, the General Services Administration, and the National Aeronautics and Space Administration relating to the \"Federal Acquisition Regulation: Use of Project Labor Agreements for Federal Construction Projects\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-13",
+      "updateDateIncludingText": "2024-08-13",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/132?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-04-26",
+        "text": "Referred to the Subcommittee on Health."
+      },
+      "number": "129",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Departments of Labor, the Treasury, and Health and Human Services relating to \"Short-Term, Limited-Duration Insurance and Independent, Noncoordinated Excepted Benefits Coverage\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-15",
+      "updateDateIncludingText": "2024-08-15",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/129?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-04-19",
+        "text": "Referred to the House Committee on Transportation and Infrastructure."
+      },
+      "number": "130",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Federal Railroad Administration relating to \"Train Crew Size Safety Requirements\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-05",
+      "updateDateIncludingText": "2024-08-05",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/130?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-04-17",
+        "text": "Ordered to be Reported by the Yeas and Nays: 28 - 22."
+      },
+      "number": "125",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Board of Governors of the Federal Reserve System relating to \"Principles for Climate-Related Financial Risk Management for Large Financial Institutions\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-09",
+      "updateDateIncludingText": "2024-08-09",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/125?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-04-17",
+        "text": "Ordered to be Reported by the Yeas and Nays: 28 - 22."
+      },
+      "number": "120",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Financial Stability Oversight Council related to \"Guidance on Nonbank Financial Company Determinations\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-09",
+      "updateDateIncludingText": "2024-07-09",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/120?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-04-12",
+        "text": "Referred to the Subcommittee on Environment, Manufacturing, and Critical Materials."
+      },
+      "number": "128",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Standards of Performance for New, Reconstructed, and Modified Sources and Emissions Guidelines for Existing Sources: Oil and Natural Gas Sector Climate Review\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-21",
+      "updateDateIncludingText": "2024-08-21",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/128?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-04-12",
+        "text": "Referred to the Subcommittee on Environment, Manufacturing, and Critical Materials."
+      },
+      "number": "123",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Accidental Release Prevention Requirements: Risk Management Programs Under the Clean Air Act; Safer Communities by Chemical Accident Prevention\".",
+      "type": "HJRES",
+      "updateDate": "2024-06-27",
+      "updateDateIncludingText": "2024-06-27",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/123?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-04-05",
+        "text": "Placed on the Union Calendar, Calendar No. 369."
+      },
+      "number": "116",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Labor relating to \"Employee or Independent Contractor Classification Under the Fair Labor Standards Act\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-01",
+      "updateDateIncludingText": "2024-08-01",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/116?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-03-26",
+        "text": "Referred to the House Committee on Financial Services."
+      },
+      "number": "121",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Consumer Financial Protection relating to \"Credit Card Penalty Fees (Regulation Z)\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-07",
+      "updateDateIncludingText": "2024-08-07",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/121?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-03-21",
+        "text": "Referred to the House Committee on Financial Services."
+      },
+      "number": "119",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Securities and Exchange Commission relating to \"Private Fund Advisers; Documentation of Registered Investment Adviser Compliance Reviews\".",
+      "type": "HJRES",
+      "updateDate": "2024-06-11",
+      "updateDateIncludingText": "2024-06-11",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/119?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-03-08",
+        "text": "Referred to the Subcommittee on Environment, Manufacturing, and Critical Materials."
+      },
+      "number": "117",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Reconsideration of the National Ambient Air Quality Standards for Particulate Matter\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/117?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-03-07",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "118",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to temporarily fill vacancies in the House of Representatives to further the continuity of Congress.",
+      "type": "HJRES",
+      "updateDate": "2024-07-09",
+      "updateDateIncludingText": "2024-07-09",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/118?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-02-20",
+        "text": "Referred to the House Committee on Agriculture."
+      },
+      "number": "115",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Disapproving the rule submitted by the Department of Agriculture relating to \"Importation of Fresh Beef From Paraguay\".",
+      "type": "HJRES",
+      "updateDate": "2024-06-11",
+      "updateDateIncludingText": "2024-06-11",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/115?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-02-08",
+        "text": "Referred to the Subcommittee on Highways and Transit."
+      },
+      "number": "114",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Federal Highway Administration relating to \"National Performance Management Measures; Assessing Performance of the National Highway System, Greenhouse Gas Emissions Measure\".",
+      "type": "HJRES",
+      "updateDate": "2024-06-28",
+      "updateDateIncludingText": "2024-06-28",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/114?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-02-07",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "113",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing a balanced budget amendment to the Constitution of the United States.",
+      "type": "HJRES",
+      "updateDate": "2024-06-11",
+      "updateDateIncludingText": "2024-06-11",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/113?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-02-05",
+        "text": "Referred to the House Committee on Education and the Workforce."
+      },
+      "number": "112",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Expressing support for designation of the week of February 5, 2024, through February 9, 2024, as \"National School Counseling Week\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/112?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-02-02",
+        "text": "Referred to the Subcommittee on Energy, Climate and Grid Security."
+      },
+      "number": "111",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Disapproving the rule submitted by the Department of Energy relating to \"Energy Conservation Program: Energy Conservation Standards for Consumer Furnaces\".",
+      "type": "HJRES",
+      "updateDate": "2024-06-13",
+      "updateDateIncludingText": "2024-06-13",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/111?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-02-02",
+        "text": "Referred to the Subcommittee on Communications and Technology."
+      },
+      "number": "107",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Federal Communications Commission relating to \"The Infrastructure Investment and Jobs Act: Prevention and Elimination of Digital Discrimination\".",
+      "type": "HJRES",
+      "updateDate": "2024-06-11",
+      "updateDateIncludingText": "2024-06-11",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/107?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-02-01",
+        "text": "Referred to the House Committee on Oversight and Accountability."
+      },
+      "number": "110",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of the Treasury relating to \"Coronavirus State and Local Fiscal Recovery Funds\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-09",
+      "updateDateIncludingText": "2024-07-09",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/110?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-01-30",
+        "text": "Referred to the House Committee on Foreign Affairs."
+      },
+      "number": "108",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval of the proposed foreign military sale to the Republic of Kosovo of certain defense articles and services.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/108?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-01-11",
+        "text": "Referred to the Subcommittee on Nutrition, Foreign Agriculture, and Horticulture."
+      },
+      "number": "92",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Food and Nutrition Service relating to \"Application of Bostock v. Clayton County to Program Discrimination Complaint Processing-Policy Update\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/92?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-01-02",
+        "text": "Referred to the House Committee on Foreign Affairs."
+      },
+      "number": "106",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval of the proposed foreign military sale to the Kingdom of Saudi Arabia of certain defense articles and services.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/106?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-01-02",
+        "text": "Referred to the House Committee on Foreign Affairs."
+      },
+      "number": "105",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval of the proposed foreign military sale to the United Arab Emirates of certain defense articles and services.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/105?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-12-21",
+        "text": "Became Public Law No: 118-30."
+      },
+      "number": "64",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for the reappointment of Roger W. Ferguson as a citizen regent of the Board of Regents of the Smithsonian Institution.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-27",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/64?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-12-21",
+        "text": "Became Public Law No: 118-29."
+      },
+      "number": "63",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for the appointment of Antoinette Bush as a citizen regent of the Board of Regents of the Smithsonian Institution.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/63?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-12-21",
+        "text": "Became Public Law No: 118-28."
+      },
+      "number": "62",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for the reappointment of Michael Govan as a citizen regent of the Board of Regents of the Smithsonian Institution.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/62?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-12-11",
+        "text": "Received in the Senate. Read twice. Placed on Senate Legislative Calendar under General Orders. Calendar No. 270."
+      },
+      "number": "88",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Improving Income Driven Repayment for the William D. Ford Federal Direct Loan Program and the Federal Family Education Loan (FFEL) Program\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/88?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-11-29",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "104",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing a Federal debt limit amendment to the Constitution of the United States.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/104?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-11-28",
+        "text": "Placed on the Union Calendar, Calendar No. 224."
+      },
+      "number": "66",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Disapproving the rule submitted by the Consumer Financial Protection Bureau relating to \"Small Business Lending Under the Equal Credit Opportunity Act (Regulation B)\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/66?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-11-15",
+        "text": "Referred to the House Committee on Education and the Workforce."
+      },
+      "number": "103",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Labor relating to \"Updating the Davis-Bacon and Related Acts Regulation\".",
+      "type": "HJRES",
+      "updateDate": "2024-06-11",
+      "updateDateIncludingText": "2024-06-11",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/103?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-11-15",
+        "text": "Referred to the House Committee on Foreign Affairs."
+      },
+      "number": "102",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval of the issuance of a license to export with respect to the proposed export of defense articles, including technical data, and defense services to the Government of Israel.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/102?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-11-13",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "101",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to prohibit Members of Congress from receiving compensation for any period during which a Government shutdown is in effect.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/101?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-11-10",
+        "text": "Referred to the Subcommittee on Health."
+      },
+      "number": "99",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend the Federal Food, Drug, and Cosmetic Act to exempt the premium cigar industry from certain regulations.",
+      "type": "HJRES",
+      "updateDate": "2024-06-11",
+      "updateDateIncludingText": "2024-06-11",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/99?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-11-08",
+        "text": "Ordered to be Reported by Unanimous Consent."
+      },
+      "number": "96",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Compact of Free Association Amendments Act of 2023",
+      "type": "HJRES",
+      "updateDate": "2024-07-09",
+      "updateDateIncludingText": "2024-07-09",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/96?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-11-07",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "97",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Justice relating to \"Office of the Attorney General; Home Confinement Under the Coronavirus Aid, Relief, and Economic Security (CARES) Act\".",
+      "type": "HJRES",
+      "updateDate": "2024-06-11",
+      "updateDateIncludingText": "2024-06-11",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/97?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-10-25",
+        "text": "Referred to the House Committee on Foreign Affairs."
+      },
+      "number": "95",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Declaring a state of war between certain cartels and the United States of America and making provision to prosecute the same.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/95?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-09-29",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "94",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States limiting pay for Members of Congress and requiring legislation to reduce the national debt.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/94?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-09-28",
+        "text": "Motion to Report Measure Defeated by the Yeas and Nays:: 17 - 19."
+      },
+      "number": "11",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to limit the number of terms that a Member of Congress may serve.",
+      "type": "HJRES",
+      "updateDate": "2024-06-11",
+      "updateDateIncludingText": "2024-06-11",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/11?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-09-27",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "93",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to prohibit Members of Congress from receiving compensation for any period during which a Government shutdown is in effect.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/93?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-09-22",
+        "text": "Referred to the Subcommittee on Energy, Climate and Grid Security."
+      },
+      "number": "91",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to the \"Energy Conservation Program: Test Procedure for Consumer Water Heaters and Residential-Duty Commercial Water Heaters\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-16",
+      "updateDateIncludingText": "2024-08-16",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/91?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-09-18",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "90",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing a balanced budget amendment to the Constitution of the United States.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/90?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-09-14",
+        "text": "Referred to the Committee on Foreign Affairs, and in addition to the Committee on Rules, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "89",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Requiring the advice and consent of the Senate or an Act of Congress to suspend, terminate, or withdraw the United States from the North Atlantic Treaty and authorizing related litigation, and for other purposes.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/89?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-09-05",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "87",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to establish an upper limit on the age of eligibility for service as President, Vice President, or Member of Congress.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/87?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-09-05",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "86",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to limit the number of years during which an individual may serve as a Member of Congress.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/86?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-08-25",
+        "text": "Referred to the House Committee on Financial Services."
+      },
+      "number": "85",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Consumer Financial Protection relating to \"Small Business Lending Under the Equal Credit Opportunity Act (Regulation B)\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/85?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-08-01",
+        "text": "Referred to the House Committee on Oversight and Accountability."
+      },
+      "number": "84",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Original Slavery Remembrance Day Resolution",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/84?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-07-27",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "83",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by U.S. Citizenship and Immigration Services and the Executive Officer for Immigration Review relating to \"Circumvention of Lawful Pathways\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-01",
+      "updateDateIncludingText": "2024-08-01",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/83?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-07-18",
+        "actionTime": "18:19:58",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "number": "79",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Relating to a national emergency declared by the President on May 11, 2004.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/79?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-07-18",
+        "actionTime": "18:13:56",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "number": "71",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Relating to a national emergency declared by the President on May 22, 2003.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/71?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-07-18",
+        "actionTime": "18:07:54",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "number": "74",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Relating to a national emergency declared by the President on May 16, 2012.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/74?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-07-18",
+        "actionTime": "18:01:54",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "number": "70",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Relating to a national emergency declared by the President on February 25, 2011.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/70?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-07-18",
+        "actionTime": "17:55:50",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "number": "68",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Relating to a national emergency declared by the President on October 27, 2006.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/68?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-07-18",
+        "text": "Motion to Discharge Committee filed by Ms. Pressley. Petition No: 118-6. (<a href=\"https://clerk.house.gov/DischargePetition/2023062106?CongressNum=118\">Discharge petition</a> text with signatures.)"
+      },
+      "number": "25",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Removing the deadline for the ratification of the equal rights amendment.",
+      "type": "HJRES",
+      "updateDate": "2024-08-03",
+      "updateDateIncludingText": "2024-08-03",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/25?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-07-14",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "82",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Expressing the sense of Congress that the article of amendment commonly known as the \"Equal Rights Amendment\" has been validly ratified and is enforceable as the Twenty-Eighth Amendment to the United States Constitution, and the Archivist of the United States must certify and publish the Equal Rights Amendment as the Twenty-Eighth Amendment without delay.",
+      "type": "HJRES",
+      "updateDate": "2024-08-31",
+      "updateDateIncludingText": "2024-08-31",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/82?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-07-13",
+        "text": "Sponsor introductory remarks on measure. (CR H3601)"
+      },
+      "number": "80",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing a balanced budget amendment to the Constitution of the United States.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/80?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-07-11",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "81",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to require that the Supreme Court be composed of not more than nine justices.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/81?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-06-22",
+        "text": "Message on Senate action sent to the House."
+      },
+      "number": "44",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Alcohol, Tobacco, Firearms, and Explosives relating to \"Factoring Criteria for Firearms with Attached 'Stabilizing Braces'\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/44?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-06-22",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "78",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to set limits on Federal campaign contributions and spending, prohibit corporate spending in the political process, require Congress to develop a system of public campaign financing for all Federal candidates who qualify for the ballot, and allow the States to set reasonable limits on campaign contributions and spending in State and local elections, and for other purposes.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/78?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-06-21",
+        "actionTime": "18:05:10",
+        "text": "The Chair directed the Clerk to notify the Senate of the action of the House."
+      },
+      "number": "45",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Waivers and Modifications of Federal Student Loans\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/45?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-06-21",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "77",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States limiting the pardon power of the President.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/77?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-06-21",
+        "text": "Referred to the Committee on Veterans' Affairs, and in addition to the Committee on Armed Services, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "76",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Redesignating the Robert E. Lee Memorial in Arlington National Cemetery as the \"Arlington House National Historic Site\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-23",
+      "updateDateIncludingText": "2024-07-23",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/76?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-06-16",
+        "text": "Referred to the Subcommittee on Environment, Manufacturing, and Critical Materials."
+      },
+      "number": "69",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Federal 'Good Neighbor Plan' for the 2015 Ozone National Ambient Air Quality Standards\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/69?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-06-15",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "75",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States requiring that the Federal budget be balanced.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/75?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-06-14",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "72",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to prohibit the use of slavery and involuntary servitude as a punishment for a crime.",
+      "type": "HJRES",
+      "updateDate": "2024-08-10",
+      "updateDateIncludingText": "2024-08-10",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/72?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-06-14",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "73",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States giving Congress power to prohibit the physical desecration of the flag of the United States.",
+      "type": "HJRES",
+      "updateDate": "2024-07-31",
+      "updateDateIncludingText": "2024-07-31",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/73?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-06-13",
+        "actionTime": "17:52:27",
+        "text": "The Chair directed the Clerk to notify the Senate of the action of the House."
+      },
+      "number": "42",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Disapproving the action of the District of Columbia Council in approving the Comprehensive Policing and Justice Reform Amendment Act of 2022.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/42?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-06-09",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "67",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States requiring that the Federal budget be balanced.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/67?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-06-05",
+        "text": "Placed on the Union Calendar, Calendar No. 73."
+      },
+      "number": "49",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the United States Fish and Wildlife Service relating to \"Endangered and Threatened Wildlife and Plants; Endangered Species Status for Northern Long-Eared Bat\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/49?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-06-05",
+        "text": "Placed on the Union Calendar, Calendar No. 72."
+      },
+      "number": "46",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the National Marine Fisheries Service relating to \"Endangered and Threatened Wildlife and Plants; Regulations for Listing Endangered and Threatened Species and Designating Critical Habitat\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-09",
+      "updateDateIncludingText": "2024-08-09",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/46?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-06-05",
+        "text": "Placed on the Union Calendar, Calendar No. 71."
+      },
+      "number": "29",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the United States Fish and Wildlife Service relating to \"Endangered and Threatened Wildlife and Plants; Lesser Prairie-Chicken; Threatened Status With Section 4(d) Rule for the Northern Distinct Population Segment and Endangered Status for the Southern Distinct Population Segment\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/29?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-05-25",
+        "text": "Referred to the House Committee on Oversight and Accountability."
+      },
+      "number": "65",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Designating November 9th of each year as \"Gold Star Father's Day\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/65?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-05-24",
+        "actionTime": "17:07:57",
+        "text": "The Chair directed the Clerk to notify the Senate of the action of the House."
+      },
+      "number": "39",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Disapproving the rule submitted by the Department of Commerce relating to \"Procedures Covering Suspension of Liquidation, Duties and Estimated Duties in Accord With Presidential Proclamation 10414\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/39?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-05-11",
+        "text": "Referred to the House Committee on Education and the Workforce."
+      },
+      "number": "61",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the final rule of the Department of Labor relating to \"Rescission of Implementing Legal Requirements Regarding the Equal Opportunity Clause's Religious Exemption Rule\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/61?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-04-27",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "60",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to require the United States and the States to jointly ensure a high-quality education to all persons within the United States.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/60?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-04-26",
+        "text": "Sponsor introductory remarks on measure. (CR H2058)"
+      },
+      "number": "52",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Authorization for Use of Military Force Resolution of 2023",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/52?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-04-25",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "59",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Labor relating to \"Adverse Effect Wage Rate Methodology for the Temporary Employment of H-2A Nonimmigrants in Non-Range Occupations in the United States\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-03",
+      "updateDateIncludingText": "2024-08-03",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/59?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-04-18",
+        "actionTime": "17:34:06",
+        "text": "The Chair directed the Clerk to notify the Senate of the action of the House."
+      },
+      "number": "27",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of the Army, Corps of Engineers, Department of Defense and the Environmental Protection Agency relating to \"Revised Definition of 'Waters of the United States'\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-21",
+      "updateDateIncludingText": "2024-08-21",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/27?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-04-18",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "55",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing a balanced budget amendment to the Constitution of the United States.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/55?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-04-18",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "57",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States relative to the election of Senators.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/57?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-04-18",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "58",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to repeal the sixteenth article of amendment.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/58?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-04-18",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "56",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to require three-fifths majorities for bills increasing taxes.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/56?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-04-14",
+        "text": "Referred to the Subcommittee on Environment, Manufacturing, and Critical Materials."
+      },
+      "number": "53",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Control of Air Pollution From New Motor Vehicles: Heavy-Duty Engine and Vehicle Standards\".",
+      "type": "HJRES",
+      "updateDate": "2024-06-13",
+      "updateDateIncludingText": "2024-06-13",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/53?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-04-14",
+        "text": "Referred to the Subcommittee on Indian and Insular Affairs ."
+      },
+      "number": "43",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Prince Jonah Kūhiō Kalaniana‘ole Protecting Family Legacies Act",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/43?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-04-10",
+        "text": "Became Public Law No: 118-3."
+      },
+      "number": "7",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Relating to a national emergency declared by the President on March 13, 2020.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/7?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-04-10",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "54",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States providing that the rights protected and extended by the Constitution are the rights of natural persons only.",
+      "type": "HJRES",
+      "updateDate": "2024-06-13",
+      "updateDateIncludingText": "2024-06-13",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/54?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-04-06",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "51",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to limit the number of consecutive terms that a Member of Congress may serve.",
+      "type": "HJRES",
+      "updateDate": "2024-06-11",
+      "updateDateIncludingText": "2024-06-11",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/51?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-04-03",
+        "text": "Referred to the House Committee on Financial Services."
+      },
+      "number": "50",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Consumer Financial Protection relating to \"Small Business Lending Under the Equal Credit Opportunity Act (Regulation B)\".",
+      "type": "HJRES",
+      "updateDate": "2024-06-24",
+      "updateDateIncludingText": "2024-06-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/50?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-03-30",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "48",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States providing that the rights extended by the Constitution are the rights of natural persons only.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/48?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-03-30",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "47",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to repeal the sixteenth article of amendment.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/47?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-03-23",
+        "actionTime": "18:07:36",
+        "text": "The Chair directed the Clerk to notify the Senate of the action of the House."
+      },
+      "number": "30",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Labor relating to \"Prudence and Loyalty in Selecting Plan Investments and Exercising Shareholder Rights\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/30?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-03-20",
+        "text": "Became Public Law No: 118-1."
+      },
+      "number": "26",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Disapproving the action of the District of Columbia Council in approving the Revised Criminal Code Act of 2022.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/26?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-03-08",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "41",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Disapproving of the rule submitted by the Department of Homeland Security relating to \"Public Charge Ground of Inadmissibility\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/41?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-03-07",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "40",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to prohibit voting in Federal, State, or local elections by individuals who are not citizens of the United States.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/40?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-03-01",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "38",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States relating to parental rights.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/38?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-03-01",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "36",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing a balanced budget amendment to the Constitution of the United States.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/36?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-03-01",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "37",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to provide that Representatives shall be apportioned among the several States according to their respective numbers, counting the number of persons in each State who are citizens of the United States.",
+      "type": "HJRES",
+      "updateDate": "2024-06-11",
+      "updateDateIncludingText": "2024-06-11",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/37?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-02-21",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "35",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to require individuals to demonstrate cognitive competence as a condition of holding the office of President or Vice President.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/35?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-02-17",
+        "text": "Referred to the Committee on Veterans' Affairs, and in addition to the Committee on Education and the Workforce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "33",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To acknowledge the courage and sacrifice of veterans of the Vietnam War and formally apologize for the treatment they received upon returning home.",
+      "type": "HJRES",
+      "updateDate": "2024-06-11",
+      "updateDateIncludingText": "2024-06-11",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/33?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-02-17",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "34",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Expressing the sense of Congress that a woman's ability to travel out of State to receive services available in that State which would otherwise not be available in the State that they reside in, is protected under Article IV of the Constitution.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/34?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-02-13",
+        "text": "Received in the Senate and Read twice and referred to the Committee on Homeland Security and Governmental Affairs."
+      },
+      "number": "24",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Disapproving the action of the District of Columbia Council in approving the Local Resident Voting Rights Amendment Act of 2022.",
+      "type": "HJRES",
+      "updateDate": "2024-09-09",
+      "updateDateIncludingText": "2024-09-09",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/24?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-02-09",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "32",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to limit the number of consecutive terms that a Member of Congress may serve.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/32?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-02-07",
+        "text": "Referred to the House Committee on Veterans' Affairs."
+      },
+      "number": "31",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Veterans Affairs relating to \"Reproductive Health Services\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/31?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-02-06",
+        "text": "Referred to the House Committee on Education and the Workforce."
+      },
+      "number": "28",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Expressing support for designation of the week of February 6, 2023, through February 10, 2023, as \"National School Counseling Week\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/28?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-31",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "23",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States providing that the Senate is made more representative by adding twelve Senators to be elected nationwide through ranked choice voting, and providing for twelve Electors at-large for President and Vice President, who shall cast their ballots for the respective winners of the national popular vote.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/23?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-26",
+        "text": "Referred to the House Committee on Ways and Means."
+      },
+      "number": "22",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Disapproving the rule submitted by the Department of Commerce relating to \"Procedures Covering Suspension of Liquidation, Duties and Estimated Duties in Accord With Presidential Proclamation 10414\".",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/22?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-12",
+        "text": "Referred to the House Committee on Oversight and Accountability."
+      },
+      "number": "17",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Disapproving the action of the District of Columbia Council in approving the Local Resident Voting Rights Amendment Act of 2022.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/17?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-12",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "21",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing a balanced budget amendment to the Constitution of the United States.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/21?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-12",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "20",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to limit the number of consecutive terms that a Member of Congress may serve.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/20?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-12",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "19",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing a balanced budget amendment to the Constitution requiring that each agency and department's funding is justified.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/19?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-12",
+        "text": "Referred to the House Committee on Foreign Affairs."
+      },
+      "number": "18",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "AUMF CARTEL Influence Resolution",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/18?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-11",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "16",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States extending the right to vote to citizens sixteen years of age or older.",
+      "type": "HJRES",
+      "updateDate": "2024-06-12",
+      "updateDateIncludingText": "2024-06-12",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/16?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-11",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "15",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing a balanced budget amendment to the Constitution of the United States.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/15?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-10",
+        "text": "Referred to the House Committee on Oversight and Accountability."
+      },
+      "number": "14",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Amending title 36, United States Code, to direct the President to issue an annual proclamation establishing Democracy Day.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/14?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-09",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "2",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States relative to balancing the budget.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/2?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-09",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "12",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing a balanced budget amendment to the Constitution of the United States.",
+      "type": "HJRES",
+      "updateDate": "2024-06-12",
+      "updateDateIncludingText": "2024-06-12",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/12?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-09",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "10",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to provide certain line item veto authority to the President.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/10?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-09",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "9",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States prohibiting the United States Government from increasing its debt except for a specific purpose by law adopted by three-fourths of the membership of each House of Congress.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/9?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-09",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "13",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States relating to the authority of Congress and the States to regulate contributions and expenditures intended to affect elections and to enact public financing systems for political campaigns.",
+      "type": "HJRES",
+      "updateDate": "2024-08-14",
+      "updateDateIncludingText": "2024-08-14",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/13?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-09",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "3",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to limit the number of terms that a Member of Congress may serve.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/3?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-09",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "6",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to provide for balanced budgets for the Government.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/6?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-09",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "5",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to limit the number of terms an individual may serve as a Member of Congress.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/5?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-09",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "4",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to prohibit Members of Congress from receiving compensation during a fiscal year unless both Houses of Congress have agreed to a concurrent resolution on the budget for that fiscal year prior to the beginning of that fiscal year.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/4?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-09",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "1",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to require that the Supreme Court of the United States be composed of nine justices.",
+      "type": "HJRES",
+      "updateDate": "2024-07-24",
+      "updateDateIncludingText": "2024-07-24",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/1?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-09",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "8",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to require that the Supreme Court of the United States be composed of nine justices.",
+      "type": "HJRES",
+      "updateDate": "2024-09-07",
+      "updateDateIncludingText": "2024-09-07",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/8?format=json"
+    }
+  ],
+  "offset": 202
+}

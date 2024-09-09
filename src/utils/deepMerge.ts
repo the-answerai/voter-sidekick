@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export const deepMerge = (...objects: any[]): any => {
   const output: any = {};
 

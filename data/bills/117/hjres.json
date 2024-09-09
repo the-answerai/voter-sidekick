@@ -1,0 +1,1595 @@
+{
+  "bills": [
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-12-23",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "106",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing a balanced budget amendment to the Constitution of the United States.",
+      "type": "HJRES",
+      "updateDate": "2023-08-16",
+      "updateDateIncludingText": "2023-08-16",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/106?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-12-21",
+        "text": "Referred to the House Committee on Natural Resources."
+      },
+      "number": "105",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the United States Fish and Wildlife Service relating to \"Endangered and Threatened Wildlife and Plants; Lesser Prairie-Chicken; Threatened Status With Section 4(d) Rule for the Northern Distinct Population Segment and Endangered Status for the Southern Distinct Population Segment\".",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/105?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-12-20",
+        "text": "Referred to the House Committee on Education and Labor."
+      },
+      "number": "104",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Labor relating to \"Prudence and Loyalty in Selecting Plan Investments and Exercising Shareholder Rights\".",
+      "type": "HJRES",
+      "updateDate": "2024-02-06",
+      "updateDateIncludingText": "2024-02-06",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/104?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-12-15",
+        "text": "Referred to the House Committee on Education and Labor."
+      },
+      "number": "103",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Labor relating to \"Prudence and Loyalty in Selecting Plan Investments and Exercising Shareholder Rights\".",
+      "type": "HJRES",
+      "updateDate": "2024-02-06",
+      "updateDateIncludingText": "2024-02-06",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/103?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-12-13",
+        "text": "Referred to the House Committee on Veterans' Affairs."
+      },
+      "number": "102",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Veterans Affairs relating to \"Reproductive Health Services\".",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/102?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-12-08",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "101",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States regarding the permissible sources of funding for elections for public office and State ballot measures.",
+      "type": "HJRES",
+      "updateDate": "2022-12-29",
+      "updateDateIncludingText": "2022-12-29",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/101?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-12-02",
+        "text": "Became Public Law No: 117-216."
+      },
+      "number": "100",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To provide for a resolution with respect to the unresolved disputes between certain railroads represented by the National Carriers' Conference Committee of the National Railway Labor Conference and certain of their employees.",
+      "type": "HJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/100?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on Crime, Terrorism, and Homeland Security."
+      },
+      "number": "86",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of a rule submitted by the Department of Justice relating to \"Definition of 'Frame or Receiver' and Identification of Firearms\".",
+      "type": "HJRES",
+      "updateDate": "2023-08-09",
+      "updateDateIncludingText": "2023-08-09",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/86?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "85",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to clarify the authority of Congress and the States to regulate corporations, limited liability companies, and other corporate entities established by the laws of any State, the United States, or any foreign state.",
+      "type": "HJRES",
+      "updateDate": "2022-12-29",
+      "updateDateIncludingText": "2022-12-29",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/85?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "84",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of a rule submitted by the National Highway Traffic Safety Administration relating to civil penalties.",
+      "type": "HJRES",
+      "updateDate": "2022-12-29",
+      "updateDateIncludingText": "2022-12-29",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/84?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on Immigration and Citizenship."
+      },
+      "number": "82",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Disapproving of the rule submitted by the Department of Justice and the Department of Homeland Security relating to \"Procedures for Credible Fear Screening and Consideration of Asylum, Withholding of Removal, and CAT Protection Claims by Asylum Officers\".",
+      "type": "HJRES",
+      "updateDate": "2022-12-29",
+      "updateDateIncludingText": "2022-12-29",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/82?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "80",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States relating to the authority of Congress and the States to regulate contributions and expenditures in political campaigns and to enact public financing systems for such campaigns.",
+      "type": "HJRES",
+      "updateDate": "2024-08-08",
+      "updateDateIncludingText": "2024-08-08",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/80?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "78",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing a balanced budget amendment to the Constitution of the United States.",
+      "type": "HJRES",
+      "updateDate": "2023-01-30",
+      "updateDateIncludingText": "2023-01-30",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/78?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "77",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing a balanced budget amendment to the Constitution of the United States.",
+      "type": "HJRES",
+      "updateDate": "2022-12-29",
+      "updateDateIncludingText": "2022-12-29",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/77?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "48",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States providing that the rights extended by the Constitution are the rights of natural persons only.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/48?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "60",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to limit the number of consecutive terms that a Member of Congress may serve.",
+      "type": "HJRES",
+      "updateDate": "2023-01-02",
+      "updateDateIncludingText": "2023-01-02",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/60?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "74",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States prohibiting the United States Government from increasing its debt except for a specific purpose by law adopted by three-fourths of the membership of each House of Congress.",
+      "type": "HJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/74?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "71",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to limit the number of terms that a Member of Congress may serve.",
+      "type": "HJRES",
+      "updateDate": "2023-04-26",
+      "updateDateIncludingText": "2023-04-26",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/71?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "69",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to limit the number of terms that a Member of Congress may serve.",
+      "type": "HJRES",
+      "updateDate": "2023-04-26",
+      "updateDateIncludingText": "2023-04-26",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/69?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "53",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to prohibit the use of slavery and involuntary servitude as a punishment for a crime.",
+      "type": "HJRES",
+      "updateDate": "2022-12-30",
+      "updateDateIncludingText": "2022-12-30",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/53?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "47",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to require three-fifths majorities for bills increasing taxes.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/47?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "98",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States regarding the right to vote.",
+      "type": "HJRES",
+      "updateDate": "2022-12-29",
+      "updateDateIncludingText": "2022-12-29",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/98?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on Immigration and Citizenship."
+      },
+      "number": "97",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Disapproving of the rule submitted by the Department of Homeland Security relating to \"Public Charge Ground of Inadmissibility\".",
+      "type": "HJRES",
+      "updateDate": "2023-08-14",
+      "updateDateIncludingText": "2023-08-14",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/97?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "66",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to limit the number of terms that a Member of Congress may serve.",
+      "type": "HJRES",
+      "updateDate": "2022-12-30",
+      "updateDateIncludingText": "2023-01-01",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/66?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "93",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to require the United States and the States to jointly ensure a high-quality education to all persons within the United States.",
+      "type": "HJRES",
+      "updateDate": "2022-12-24",
+      "updateDateIncludingText": "2022-12-24",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/93?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "51",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States giving Congress power to prohibit the physical desecration of the flag of the United States.",
+      "type": "HJRES",
+      "updateDate": "2022-12-30",
+      "updateDateIncludingText": "2022-12-30",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/51?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "92",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to repeal the sixteenth article of amendment.",
+      "type": "HJRES",
+      "updateDate": "2023-05-01",
+      "updateDateIncludingText": "2023-05-01",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/92?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "61",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to repeal the sixteenth article of amendment.",
+      "type": "HJRES",
+      "updateDate": "2023-01-02",
+      "updateDateIncludingText": "2023-01-02",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/61?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "89",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States relating to contributions and expenditures with respect to Federal elections.",
+      "type": "HJRES",
+      "updateDate": "2022-12-29",
+      "updateDateIncludingText": "2022-12-29",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/89?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-10-18",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "99",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States relating to parental rights.",
+      "type": "HJRES",
+      "updateDate": "2023-03-29",
+      "updateDateIncludingText": "2023-03-29",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/99?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-15",
+        "text": "Referred to the House Committee on Natural Resources."
+      },
+      "number": "96",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Approving the location of a memorial to commemorate America's commitment to a free press by honoring journalists who sacrificed their lives in service to that cause.",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/96?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-15",
+        "text": "Referred to the Subcommittee on Railroads, Pipelines, and Hazardous Materials."
+      },
+      "number": "95",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To provide for the resolution of issues in a railway labor-management dispute, and for other purposes.",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/95?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-09",
+        "text": "Referred to the House Committee on Education and Labor."
+      },
+      "number": "94",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Final Priorities, Requirements, Definitions, and Selection Criteria-Expanding Opportunity Through Quality Charter Schools Program (CSP)-Grants to State Entities (State Entity Grants); Grants to Charter Management Organizations for the Replication and Expansion of High-Quality Charter Schools (CMO Grants); and Grants to Charter School Developers for the Opening of New Charter Schools and for the Replication and Expansion of High-Quality Charter Schools (Developer Grants)\".",
+      "type": "HJRES",
+      "updateDate": "2024-02-06",
+      "updateDateIncludingText": "2024-02-06",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/94?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-08-16",
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs."
+      },
+      "number": "90",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Redesignating the Robert E. Lee Memorial in Arlington National Cemetery as the \"Arlington House National Historic Site\".",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/90?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-07-19",
+        "text": "Referred to the House Committee on Natural Resources."
+      },
+      "number": "91",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Council on Environmental Quality relating to \"National Environmental Policy Act Implementing Regulations Revisions\".",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/91?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-06-15",
+        "text": "Referred to the House Committee on Financial Services."
+      },
+      "number": "88",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Securities and Exchange Commission related to \"The Enhancement and Standardization of Climate-Related Disclosures for Investors\".",
+      "type": "HJRES",
+      "updateDate": "2024-05-10",
+      "updateDateIncludingText": "2024-05-10",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/88?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-05-31",
+        "text": "Referred to the House Committee on Foreign Affairs."
+      },
+      "number": "87",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Directing the removal of United States Armed Forces from hostilities in the Republic of Yemen that have not been authorized by Congress.",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/87?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-04-28",
+        "text": "Referred to the House Committee on Foreign Affairs."
+      },
+      "number": "83",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Authorization for Use of Military Force to defend America’s Allies Resolution of 2022",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/83?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-04-21",
+        "text": "Referred to the House Committee on Education and Labor."
+      },
+      "number": "81",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Health and Human Services relating to \"Vaccine and Mask Requirements To Mitigate the Spread of COVID-19 in Head Start Programs\".",
+      "type": "HJRES",
+      "updateDate": "2024-02-06",
+      "updateDateIncludingText": "2024-02-06",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/81?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-03-25",
+        "text": "Referred to the Subcommittee on Health."
+      },
+      "number": "79",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of the Treasury and the Centers for Medicare & Medicaid Services relating to \"Patient Protection and Affordable Care Act; Updating Payment Parameters, Section 1332 Waiver Implementing Regulations, and Improving Health Insurance Markets for 2022 and Beyond\".",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/79?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-03-17",
+        "text": "Referred to the Subcommittee on Health."
+      },
+      "number": "76",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Health and Human Services relating to \"Ensuring Access to Equitable, Affordable, Client-Centered, Quality Family Planning Services\".",
+      "type": "HJRES",
+      "updateDate": "2024-02-05",
+      "updateDateIncludingText": "2024-02-05",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/76?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-03-16",
+        "text": "Motion to Discharge Committee filed by Mr. Gosar. Petition No: 117-12. (<a href=\"https://clerk.house.gov/DischargePetition/2022031612?Page=2&CongressNum=117\">Discharge petition</a> text with signatures.)"
+      },
+      "number": "46",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Relating to a national emergency declared by the President on March 13, 2020.",
+      "type": "HJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/46?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-03-11",
+        "text": "Became Public Law No: 117-95."
+      },
+      "number": "75",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Extension of Continuing Appropriations Act, 2022",
+      "type": "HJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/75?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-03-01",
+        "text": "Referred to the Committee on Natural Resources, and in addition to the Committee on Foreign Affairs, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "73",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Formally apologizing for the nuclear legacy of the United States in the Republic of the Marshall Islands and affirming the importance of free association between the Government of the United States and the Government of the Marshall Islands.",
+      "type": "HJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/73?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-02-28",
+        "text": "Motion to Discharge Committee filed by Mr. Duncan. Petition No: 117-10. (<a href=\"https://clerk.house.gov/DischargePetition/20220228?CongressNum=117\">Discharge petition</a> text with signatures.)"
+      },
+      "number": "67",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Centers for Medicare & Medicaid Services relating to \"Medicare and Medicaid Programs; Omnibus COVID-19 Health Care Staff Vaccination\".",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/67?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-02-21",
+        "text": "Referred to the Subcommittee on Health."
+      },
+      "number": "72",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by Centers for Disease Control and Prevention relating to \"Requirement for Persons To Wear Masks While on Conveyances and at Transportation Hubs\".",
+      "type": "HJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/72?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-02-07",
+        "text": "Referred to the House Committee on Education and Labor."
+      },
+      "number": "70",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Expressing support for designation of the week of February 7, 2022, through February 11, 2022, as \"National School Counseling Week\".",
+      "type": "HJRES",
+      "updateDate": "2024-02-06",
+      "updateDateIncludingText": "2024-02-06",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/70?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-01-11",
+        "text": "Referred to the House Committee on Oversight and Reform."
+      },
+      "number": "68",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Amending title 36, United States Code, to direct the President to issue an annual proclamation establishing Democracy Day.",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/68?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-11-17",
+        "text": "Referred to the House Committee on Oversight and Reform."
+      },
+      "number": "64",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Original Slavery Remembrance Day Resolution",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/64?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-11-17",
+        "text": "Referred to the House Committee on Education and Labor."
+      },
+      "number": "65",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Labor relating to \"COVID-19 Vaccination and Testing; Emergency Temporary Standard\".",
+      "type": "HJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/65?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-11-12",
+        "text": "Referred to the House Committee on Foreign Affairs."
+      },
+      "number": "63",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval of the proposed direct commercial sale to the Kingdom of Saudi Arabia of certain weaponry and munitions.",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/63?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-11-05",
+        "text": "Referred to the House Committee on Education and Labor."
+      },
+      "number": "62",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the interim final rule of the Occupational Safety and Health Administration relating to \"COVID-19 Vaccination and Testing; Emergency Temporary Standard\".",
+      "type": "HJRES",
+      "updateDate": "2024-02-06",
+      "updateDateIncludingText": "2024-02-06",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/62?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-10-25",
+        "text": "Referred to the Subcommittee on Oversight and Investigations."
+      },
+      "number": "59",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To acknowledge the courage and sacrifice of veterans of the Vietnam war and formally apologize for the treatment they received upon returning home.",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/59?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-10-19",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "45",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to clarify the presidential pardoning power.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/45?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-10-19",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "44",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States regarding health care.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/44?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-10-19",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "43",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to require that the Supreme Court of the United States be composed of nine justices.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/43?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-10-19",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "42",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to provide that a new State may only be admitted into the Union upon a vote of two-thirds of each House of Congress.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/42?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-10-19",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "40",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to require that the Supreme Court of the United States be composed of nine justices.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/40?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-10-19",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "39",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to require that the Supreme Court be composed of not more than nine justices.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/39?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-10-05",
+        "text": "Subcommittee Hearings Held."
+      },
+      "number": "55",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Prince Jonah Kūhiō Kalaniana‘ole Protecting Family Legacies Act",
+      "type": "HJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/55?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-09-14",
+        "text": "Referred to the House Committee on Armed Services."
+      },
+      "number": "58",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Ulysses S. Grant Bicentennial Recognition Act",
+      "type": "HJRES",
+      "updateDate": "2023-05-01",
+      "updateDateIncludingText": "2023-05-01",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/58?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-08-27",
+        "text": "Referred to the House Committee on Foreign Affairs."
+      },
+      "number": "57",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Authorization for Use of Military Force To Save Americans Stranded in Afghanistan",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/57?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-08-20",
+        "text": "Referred to the House Committee on Oversight and Reform."
+      },
+      "number": "56",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Expressing support for designation of September 2021 as \"Gospel Music Heritage Month\" and honoring gospel music for its valuable and longstanding contributions to the culture of the United States.",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/56?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-07-01",
+        "text": "Referred to the Committee on Appropriations, and in addition to the Committee on the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "54",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Emergency Supplemental Appropriations Resolution, 2021",
+      "type": "HJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/54?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-06-23",
+        "text": "Became Public Law No: 117-19."
+      },
+      "number": "27",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for the appointment of Barbara Barrett as a citizen regent of the Board of Regents of the Smithsonian Institution.",
+      "type": "HJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/27?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-06-17",
+        "text": "Referred to the Subcommittee on Economic Development, Public Buildings, and Emergency Management."
+      },
+      "number": "52",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Relating to a national emergency declared by the President on March 13, 2020.",
+      "type": "HJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/52?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-06-17",
+        "text": "Placed on the Union Calendar, Calendar No. 45."
+      },
+      "number": "34",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of a rule submitted by the Environmental Protection Agency relating to \"Oil and Natural Gas Sector: Emission Standards for New, Reconstructed, and Modified Sources Review\".",
+      "type": "HJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/34?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-06-08",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "50",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Recognizing that Article I, Section 10 of the United States Constitution explicitly reserves to the States the sovereign power to repel an invasion and defend their citizenry from the overwhelming and \"imminent danger\" posed by paramilitary, narco-terrorist cartels who have seized control of our southern border.",
+      "type": "HJRES",
+      "updateDate": "2022-12-30",
+      "updateDateIncludingText": "2022-12-30",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/50?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-05-20",
+        "text": "Referred to the House Committee on Foreign Affairs."
+      },
+      "number": "49",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval of the proposed direct commercial sale to Israel of certain weaponry and munitions.",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/49?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-05-18",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "31",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States relative to equal rights for men and women.",
+      "type": "HJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/31?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-05-18",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "30",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing a balanced budget amendment to the Constitution of the United States.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/30?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-04-28",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "28",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States relative to equal rights for men and women.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/28?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-04-28",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "26",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States requiring that the Federal budget be balanced.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/26?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-04-23",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "24",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to provide that Representatives shall be apportioned among the several States according to their respective numbers, counting the number of persons in each State who are citizens of the United States.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/24?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-04-23",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "23",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States extending the right to vote to citizens sixteen years of age or older.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/23?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-04-16",
+        "text": "Referred to the House Committee on Rules."
+      },
+      "number": "41",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "National Committee on Fiscal Responsibility and Reform Act of 2021",
+      "type": "HJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/41?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-04-01",
+        "text": "Referred to the Subcommittee on Social Security."
+      },
+      "number": "38",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Disapproving the rule submitted by the Social Security Administration relating to hearings held by Administrative Appeals Judges of the Appeals Council.",
+      "type": "HJRES",
+      "updateDate": "2024-07-11",
+      "updateDateIncludingText": "2024-07-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/38?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-30",
+        "text": "Referred to the Subcommittee on Health."
+      },
+      "number": "37",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Health and Human Services relating to \"Securing Updated and Necessary Statutory Evaluations Timely\".",
+      "type": "HJRES",
+      "updateDate": "2024-02-05",
+      "updateDateIncludingText": "2024-02-05",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/37?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-26",
+        "text": "Referred to the House Committee on Financial Services."
+      },
+      "number": "36",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Securities and Exchange Commission relating to \"Procedural Requirements and Resubmission Thresholds Under Exchange Act Rule 14a-8\".",
+      "type": "HJRES",
+      "updateDate": "2024-02-06",
+      "updateDateIncludingText": "2024-02-06",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/36?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-26",
+        "text": "Referred to the House Committee on Financial Services."
+      },
+      "number": "35",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Office of the Comptroller of the Currency relating to \"National Banks and Federal Savings Associations as Lenders\".",
+      "type": "HJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/35?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-23",
+        "text": "Referred to the House Committee on Education and Labor."
+      },
+      "number": "33",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Equal Employment Opportunity Commission relating to \"Update of Commission's Conciliation Procedures\".",
+      "type": "HJRES",
+      "updateDate": "2024-02-06",
+      "updateDateIncludingText": "2024-02-06",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/33?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-23",
+        "text": "Read the second time. Placed on Senate Legislative Calendar under General Orders. Calendar No. 12."
+      },
+      "number": "17",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Removing the deadline for the ratification of the equal rights amendment.",
+      "type": "HJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/17?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-19",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "32",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing a balanced budget amendment to the Constitution of the United States.",
+      "type": "HJRES",
+      "updateDate": "2023-01-30",
+      "updateDateIncludingText": "2023-01-30",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/32?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-08",
+        "text": "Referred to the Committee on Foreign Affairs, and in addition to the Committee on Rules, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "29",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "War Powers Amendments of 2021",
+      "type": "HJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/29?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-05",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "19",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to repeal the twenty-third article of amendment to the Constitution of the United States.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/19?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-05",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "18",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to limit the number of terms that a Member of Congress may serve.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/18?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-04",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "14",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to abolish the electoral college and to provide for the direct election of the President and Vice President of the United States.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/14?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-04",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "13",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing a balanced budget amendment to the Constitution requiring that each agency and department's funding is justified.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/13?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-04",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "12",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to limit the number of terms that a Member of Congress may serve.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/12?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-04",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "11",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to require that the Supreme Court of the United States be composed of nine justices.",
+      "type": "HJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/11?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-04",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "9",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to limit the number of terms that a Member of Congress may serve to four in the House of Representatives and two in the Senate.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/9?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-04",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "8",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to provide for balanced budgets for the Government.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/8?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-04",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "7",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to prohibit Members of Congress from receiving compensation during a fiscal year unless both Houses of Congress have agreed to a concurrent resolution on the budget for that fiscal year prior to the beginning of that fiscal year.",
+      "type": "HJRES",
+      "updateDate": "2024-01-10",
+      "updateDateIncludingText": "2024-01-10",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/7?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-04",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "6",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to limit the number of terms an individual may serve as a Member of Congress.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/6?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-04",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "5",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States protecting the right of citizens to vote.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/5?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-04",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "4",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States limiting the pardon power of the President.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/4?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-04",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "3",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing a balanced budget amendment to the Constitution of the United States.",
+      "type": "HJRES",
+      "updateDate": "2023-01-30",
+      "updateDateIncludingText": "2023-01-30",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/3?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-04",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "2",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States relative to balancing the budget.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/2?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-04",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "number": "1",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States relating to contributions and expenditures intended to affect elections.",
+      "type": "HJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/1?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-02-11",
+        "text": "Referred to the House Committee on Oversight and Reform."
+      },
+      "number": "25",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Disapproving the action of the District of Columbia Council in approving the Minor Consent for Vaccinations Amendment Act of 2020.",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/25?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-01-28",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "21",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States giving Congress power to regulate campaign contributions for Federal elections.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/21?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-01-28",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "20",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States recognizing and securing the fundamental right to life, liberty, and property, which includes housing, health care, education, and nutrition.",
+      "type": "HJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/20?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-01-28",
+        "text": "Referred to the House Committee on Education and Labor."
+      },
+      "number": "22",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Expressing support for designation of the week of February 1, 2021, through February 5, 2021, as \"National School Counseling Week\".",
+      "type": "HJRES",
+      "updateDate": "2024-02-06",
+      "updateDateIncludingText": "2024-02-06",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/22?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-01-15",
+        "text": "Referred to the House Committee on Foreign Affairs."
+      },
+      "number": "16",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval of the proposed transfer to the Kingdom of Saudi Arabia, the United Kingdom of Great Britain and Northern Ireland, the Kingdom of Spain, and the Italian Republic of certain defense articles and services.",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/16?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-01-15",
+        "text": "Referred to the House Committee on Foreign Affairs."
+      },
+      "number": "15",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval of the proposed foreign military sale to the Kingdom of Saudi Arabia of certain defense articles and services.",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/15?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-01-04",
+        "text": "Referred to the House Committee on Oversight and Reform."
+      },
+      "number": "10",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Expressing support for designation of September 2021 as \"Gospel Music Heritage Month\" and honoring gospel music for its valuable and longstanding contributions to the culture of the United States.",
+      "type": "HJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/117/hjres/10?format=json"
+    }
+  ],
+  "offset": 106
+}

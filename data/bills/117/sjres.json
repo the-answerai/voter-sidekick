@@ -1,0 +1,1058 @@
+{
+  "bills": [
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-12-21",
+        "text": "Read twice and referred to the Committee on Environment and Public Works."
+      },
+      "number": "70",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the United States Fish and Wildlife Service relating to \"Endangered and Threatened Wildlife and Plants; Lesser Prairie-Chicken; Threatened Status With Section 4(d) Rule for the Northern Distinct Population Segment and Endangered Status for the Southern Distinct Population Segment\".",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/70?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-12-15",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "69",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States to abolish the electoral college and to provide for the direct election of the President and Vice President of the United States.",
+      "type": "SJRES",
+      "updateDate": "2023-01-05",
+      "updateDateIncludingText": "2024-06-06",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/69?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-12-15",
+        "text": "Read twice and referred to the Committee on Health, Education, Labor, and Pensions."
+      },
+      "number": "68",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Labor relating to \"Prudence and Loyalty in Selecting Plan Investments and Exercising Shareholder Rights\".",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/68?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-12-15",
+        "text": "Read twice and referred to the Committee on the Judiciary. (text: CR S7259-7260)"
+      },
+      "number": "67",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States relative to the fundamental right to vote.",
+      "type": "SJRES",
+      "updateDate": "2022-12-23",
+      "updateDateIncludingText": "2022-12-23",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/67?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-12-14",
+        "text": "Failed of passage in Senate by Yea-Nay Vote. 49 - 49. Record Vote Number: 390."
+      },
+      "number": "60",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Final Priorities, Requirements, Definitions, and Selection Criteria-Expanding Opportunity Through Quality Charter Schools Program (CSP)-Grants to State Entities (State Entity Grants); Grants to Charter Management Organizations for the Replication and Expansion of High-Quality Charter Schools (CMO Grants); and Grants to Charter School Developers for the Opening of New Charter Schools and for the Replication and Expansion of High-Quality Charter Schools (Developer Grants)\".",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/60?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-12-13",
+        "text": "Read twice and referred to the Committee on Veterans' Affairs."
+      },
+      "number": "66",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Veterans Affairs relating to \"Reproductive Health Services\".",
+      "type": "SJRES",
+      "updateDate": "2024-03-12",
+      "updateDateIncludingText": "2024-03-12",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/66?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-12-01",
+        "text": "Read twice and referred to the Committee on Health, Education, Labor, and Pensions."
+      },
+      "number": "65",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Labor relating to \"Prudence and Loyalty in Selecting Plan Investments and Exercising Shareholder Rights\".",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/65?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-12-01",
+        "text": "Committee on Energy and Natural Resources. Hearings held."
+      },
+      "number": "62",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution approving the location of a memorial to commemorate the commitment of the United States to a free press by honoring journalists who sacrificed their lives in service to that cause.",
+      "type": "SJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/62?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-16",
+        "actionTime": "16:08:39",
+        "text": "Held at the desk."
+      },
+      "number": "63",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution relating to a national emergency declared by the President on March 13, 2020.",
+      "type": "SJRES",
+      "updateDate": "2023-11-13",
+      "updateDateIncludingText": "2023-11-13",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/63?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-11-14",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "64",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution disapproving of the rule submitted by the Department of Homeland Security relating to \"Public Charge Ground of Inadmissibility\".",
+      "type": "SJRES",
+      "updateDate": "2024-03-11",
+      "updateDateIncludingText": "2024-03-11",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/64?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-21",
+        "text": "Star Print ordered on the joint resolution."
+      },
+      "number": "55",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Council on Environmental Quality relating to \"National Environmental Policy Act Implementing Regulations Revisions\".",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/55?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-21",
+        "text": "Committee on Energy and Natural Resources Subcommittee on National Parks. Hearings held."
+      },
+      "number": "57",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution redesignating the Robert E. Lee Memorial in Arlington National Cemetery as the \"Arlington House National Historic Site\".",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/57?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-12",
+        "text": "Read twice and referred to the Committee on Health, Education, Labor, and Pensions."
+      },
+      "number": "61",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution to provide for the resolution of issues in a railway labor-management dispute, and for other purposes.",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/61?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-08-04",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "58",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Kingdom of Saudi Arabia of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/58?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-08-04",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "59",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Government of the United Arab Emirates of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/59?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-07-14",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "56",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution directing the removal of United States Armed Forces from hostilities in the Republic of Yemen that have not been authorized by Congress.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/56?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-06-23",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "54",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Alcohol, Tobacco, Firearms, and Explosives relating to Definition of \"Frame or Receiver\" and Identification of Firearms.",
+      "type": "SJRES",
+      "updateDate": "2024-03-13",
+      "updateDateIncludingText": "2024-03-13",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/54?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-06-23",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "53",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Government of Australia of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/53?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-06-07",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "52",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Government of Egypt of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/52?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-06-06",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "50",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Government of Egypt of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/50?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-06-06",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "51",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Government of Egypt of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/51?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-06-06",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "49",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Government of Australia of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/49?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-05-26",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "48",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Government of Egypt of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/48?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-05-26",
+        "text": "Motion by Senator McConnell to reconsider the vote by which S.J. Res. 46 failed of passage (Record Vote No. 211) entered in Senate."
+      },
+      "number": "46",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Justice and the Department of Homeland Security relating to \"Procedures for Credible Fear Screening and Consideration of Asylum, Withholding of Removal, and CAT Protection Claims by Asylum Officers\".",
+      "type": "SJRES",
+      "updateDate": "2022-12-29",
+      "updateDateIncludingText": "2022-12-29",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/46?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-05-19",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "47",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution directing the Federal Trade Commission to investigate and report on anticompetitive practices and violations of antitrust law in the beef packing industry.",
+      "type": "SJRES",
+      "updateDate": "2022-12-29",
+      "updateDateIncludingText": "2022-12-29",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/47?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-05-06",
+        "actionTime": "10:12:35",
+        "text": "Held at the desk."
+      },
+      "number": "39",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Health and Human Services relating to \"Vaccine and Mask Requirements To Mitigate the Spread of COVID-19 in Head Start Programs.",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/39?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-04-27",
+        "text": "Motion to proceed to consideration of measure rejected in Senate by Yea-Nay Vote. 49 - 49. Record Vote Number: 140."
+      },
+      "number": "41",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Health and Human Services relating to \"Ensuring Access to Equitable, Affordable, Client-Centered, Quality Family Planning Services\".",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/41?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-04-27",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "45",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Alcohol, Tobacco, Firearms, and Explosives relating to \"Definition of 'Frame or Receiver' and Identification of Firearms\".",
+      "type": "SJRES",
+      "updateDate": "2024-03-13",
+      "updateDateIncludingText": "2024-03-13",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/45?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-04-06",
+        "text": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 337."
+      },
+      "number": "17",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution requiring the advice and consent of the Senate or an Act of Congress to suspend, terminate, or withdraw the United States from the North Atlantic Treaty and authorizing related litigation, and for other purposes.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/17?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-03-30",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "44",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution relating to the disapproval of the proposed sale to the Government of Bahrain of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/44?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-03-23",
+        "text": "Read twice and referred to the Committee on Health, Education, Labor, and Pensions."
+      },
+      "number": "43",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of the Treasury and the Centers for Medicare & Medicaid Services relating to \"Patient Protection and Affordable Care Act; Updating Payment Parameters, Section 1332 Waiver Implementing Regulations, and Improving Health Insurance Markets for 2022 and Beyond\".",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/43?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-03-17",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "42",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing a balanced budget amendment to the Constitution of the United States.",
+      "type": "SJRES",
+      "updateDate": "2022-12-29",
+      "updateDateIncludingText": "2022-12-29",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/42?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-03-15",
+        "text": "Passed Senate without amendment by Yea-Nay Vote. 57 - 40. Record Vote Number: 81. (text: CR S1171)"
+      },
+      "number": "37",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by Centers for Disease Control and Prevention relating to \"Requirement for Persons To Wear Masks While on Conveyances and at Transportation Hubs\".",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/37?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-03-10",
+        "text": "Motion to discharge Senate Committee on Foreign Relations rejected by Yea-Nay Vote. 19 - 80. Record Vote Number: 73. (CR S1095)"
+      },
+      "number": "35",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Government of Egypt of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/35?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-03-03",
+        "text": "Passed Senate without amendment by Yea-Nay Vote. 48 - 47. Record Vote Number: 68. (text: CR S982)"
+      },
+      "number": "38",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution relating to a national emergency declared by the President on March 13, 2020.",
+      "type": "SJRES",
+      "updateDate": "2022-12-29",
+      "updateDateIncludingText": "2022-12-29",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/38?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-03-02",
+        "text": "Passed Senate without amendment by Yea-Nay Vote. 49 - 44. Record Vote Number: 67. (text: CR S936)"
+      },
+      "number": "32",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Centers for Medicare & Medicaid Services relating to \"Medicare and Medicaid Programs; Omnibus COVID-19 Health Care Staff Vaccination\".",
+      "type": "SJRES",
+      "updateDate": "2022-12-30",
+      "updateDateIncludingText": "2022-12-30",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/32?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-03-01",
+        "text": "Read twice and referred to the Committee on Energy and Natural Resources. (Sponsor introductory remarks on measure: CR S885-886)"
+      },
+      "number": "40",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution formally apologizing for the nuclear legacy of the United States in the Republic of the Marshall Islands and affirming the importance of the free association between the Government of the United States and the Government of the Marshall Islands.",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/40?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-02-07",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "36",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Government of Egypt of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/36?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-01-19",
+        "text": "Read twice and referred to the Committee on Homeland Security and Governmental Affairs."
+      },
+      "number": "34",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution disapproving the action of the District of Columbia Council in approving the Coronavirus Immunization of School Students and Early Childhood Workers Amendment Act of 2021.",
+      "type": "SJRES",
+      "updateDate": "2024-02-23",
+      "updateDateIncludingText": "2024-02-23",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/34?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-12-16",
+        "text": "Became Public Law No: 117-73."
+      },
+      "number": "33",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution relating to increasing the debt limit",
+      "type": "SJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/33?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-12-09",
+        "actionTime": "12:56:11",
+        "text": "Held at the desk."
+      },
+      "number": "29",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Labor relating to \"COVID-19 Vaccination and Testing; Emergency Temporary Standard\".",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/29?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-12-07",
+        "text": "Motion to discharge Senate Committee on Foreign Relations rejected by Yea-Nay Vote. 30 - 67. Record Vote Number: 484. (consideration: CR S8955)"
+      },
+      "number": "31",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Kingdom of Saudi Arabia of certain defense articles.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/31?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-11-17",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "30",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "Original Slavery Remembrance Day Resolution",
+      "type": "SJRES",
+      "updateDate": "2022-12-30",
+      "updateDateIncludingText": "2023-01-02",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/30?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-10-07",
+        "text": "Read twice and referred to the Committee on the Judiciary. (text: CR S2283-2284)"
+      },
+      "number": "28",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States relative to equal rights for men and women.",
+      "type": "SJRES",
+      "updateDate": "2023-01-01",
+      "updateDateIncludingText": "2023-01-01",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/28?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-10-06",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "27",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States relative to limiting the number of terms that a Member of Congress may serve.",
+      "type": "SJRES",
+      "updateDate": "2023-01-01",
+      "updateDateIncludingText": "2023-01-01",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/27?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-09-22",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "26",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "Ulysses S. Grant Bicentennial Recognition Act",
+      "type": "SJRES",
+      "updateDate": "2023-01-02",
+      "updateDateIncludingText": "2023-01-02",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/26?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-09-20",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "25",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States relating to contributions and expenditures intended to affect elections.",
+      "type": "SJRES",
+      "updateDate": "2023-01-02",
+      "updateDateIncludingText": "2023-01-02",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/25?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-08-10",
+        "text": "Read twice and referred to the Committee on Health, Education, Labor, and Pensions."
+      },
+      "number": "24",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by Centers for Disease Control and Prevention relating to \"Temporary Halt in Residential Evictions in Communities with Substantial or High Transmission of COVID-19 To Prevent the Further Spread of COVID-19\".",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/24?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-08-10",
+        "text": "Read twice and referred to the Committee on Health, Education, Labor, and Pensions."
+      },
+      "number": "23",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by Centers for Disease Control and Prevention relating to \"Temporary Halt in Residential Evictions in Communities with Substantial or High Transmission of COVID-19 To Prevent the Further Spread of COVID-19\".",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/23?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-08-09",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "22",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution to prospectively repeal the 2001 Authorization for Use of Military Force.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/22?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-08-04",
+        "text": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 117."
+      },
+      "number": "10",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution to repeal the authorizations for use of military force against Iraq, and for other purposes.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/10?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-06-30",
+        "text": "Became Public Law No: 117-24."
+      },
+      "number": "15",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Office of the Comptroller of Currency relating to \"National Banks and Federal Savings Associations as Lenders\".",
+      "type": "SJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/15?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-06-30",
+        "text": "Became Public Law No: 117-23."
+      },
+      "number": "14",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Oil and Natural Gas Sector: Emission Standards for New, Reconstructed, and Modified Sources Review\".",
+      "type": "SJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/14?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-06-30",
+        "text": "Became Public Law No: 117-22."
+      },
+      "number": "13",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Equal Employment Opportunity Commission relating to \"Update of Commission's Conciliation Procedures\".",
+      "type": "SJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/13?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-06-17",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "21",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States to prohibit the use of slavery and involuntary servitude as a punishment for a crime.",
+      "type": "SJRES",
+      "updateDate": "2022-12-31",
+      "updateDateIncludingText": "2022-12-31",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/21?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-06-14",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "20",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States authorizing the Congress to prohibit the physical desecration of the flag of the United States.",
+      "type": "SJRES",
+      "updateDate": "2022-12-31",
+      "updateDateIncludingText": "2022-12-31",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/20?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-05-20",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "19",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed transfer to Israel of certain defense articles, including defense services and technical data.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/19?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-04-22",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "18",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States to repeal the twenty-third article of amendment to the Constitution of the United States.",
+      "type": "SJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/18?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-25",
+        "text": "Read twice and referred to the Committee on Banking, Housing, and Urban Affairs."
+      },
+      "number": "16",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Securities and Exchange Commission relating to \"Procedural Requirements and Resubmission Thresholds Under Exchange Act Rule 14a-8\".",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/16?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-18",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "12",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States which requires (except during time of war and subject to suspension by Congress) that the total amount of money expended by the United States during any fiscal year not exceed the amount of certain revenue received by the United States during such fiscal year and not exceed 20 percent of the gross domestic product of the United States during the previous calendar year.",
+      "type": "SJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/12?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-15",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "11",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States to clarify the authority of Congress and the States to regulate corporations, limited liability companies, and other corporate entities established by the laws of any State, the United States, or any foreign state.",
+      "type": "SJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/11?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-03",
+        "text": "Star Print ordered on the joint resolution."
+      },
+      "number": "1",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution removing the deadline for the ratification of the equal rights amendment.",
+      "type": "SJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/1?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-03-01",
+        "text": "Read the second time. Placed on Senate Legislative Calendar under General Orders. Calendar No. 8."
+      },
+      "number": "9",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States to require that the Supreme Court of the United States be composed of nine justices.",
+      "type": "SJRES",
+      "updateDate": "2021-12-16",
+      "updateDateIncludingText": "2023-01-01",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/9?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-02-23",
+        "text": "Read twice and referred to the Committee on Rules and Administration."
+      },
+      "number": "8",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for the appointment of Barbara M. Barrett as a citizen regent of the Board of Regents of the Smithsonian Institution.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/8?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-02-08",
+        "text": "Read twice and referred to the Committee on Homeland Security and Governmental Affairs."
+      },
+      "number": "7",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution disapproving the action of the District of Columbia Council in approving the Minor Consent for Vaccinations Amendment Act of 2020.",
+      "type": "SJRES",
+      "updateDate": "2024-02-23",
+      "updateDateIncludingText": "2024-02-23",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/7?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-02-03",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "6",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States relative to balancing the budget.",
+      "type": "SJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/6?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-01-22",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "5",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States requiring that the Federal budget be balanced.",
+      "type": "SJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/5?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-01-22",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "4",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States to require that the Supreme Court of the United States be composed of not more than 9 justices.",
+      "type": "SJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/4?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-01-22",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "3",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States relative to limiting the number of terms that a Member of Congress may serve.",
+      "type": "SJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/3?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2021-01-22",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "2",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing amendments to the Constitution of the United States relative to the line item veto, a limitation on the number of terms that a Member of Congress may serve, and requiring a vote of two-thirds of the membership of both Houses of Congress on any legislation raising or imposing new taxes or fees.",
+      "type": "SJRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/117/sjres/2?format=json"
+    }
+  ],
+  "offset": 70
+}

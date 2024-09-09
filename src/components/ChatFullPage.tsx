@@ -18,8 +18,9 @@ const ChatFullPage: React.FC<ChatFullPageProps> = ({
           <FullPageChat
             chatflowid={chatflowid}
             apiHost={apiHost}
+            {...restProps}
+            // @ts-expect-error theme is not typed
             theme={theme}
-            {...restProps} // Pass additional props
           />
         </div>
       </div>

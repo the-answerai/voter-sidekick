@@ -49,8 +49,8 @@ async function getBillsFromCongress(congressNumber = null, billType = null) {
     console.log(`Fetching bills from the ${currentCongress}th Congress (${lastYear}-${currentYear})...`);
 
     let offset = 0;
-    const limit = 5; // Adjust as needed
-    const isTestingMode = true;
+    const limit = 250; // Adjust as needed
+    const isTestingMode = false;
 
     // Create a new CongressApi instance with the provided congress number and bill type
     const CongressApi = createCongressApi(currentCongress, billType);

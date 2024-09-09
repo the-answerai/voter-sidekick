@@ -1,0 +1,1255 @@
+{
+  "bills": [
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2021-01-01",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "82",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution relating to the disapproval of the proposed export to the Government of the Kingdom of Saudi Arabia of certain defense articles.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/82?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2020-12-09",
+        "text": "Motion to discharge Senate Committee on Foreign Relations rejected by Yea-Nay Vote. 47 - 49. Record Vote Number: 262."
+      },
+      "number": "78",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign  military sale to the United Arab Emirates of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/78?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2020-12-09",
+        "text": "Motion to discharge Senate Committee on Foreign Relations rejected by Yea-Nay Vote. 46 - 50. Record Vote Number: 261."
+      },
+      "number": "77",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the United Arab Emirates of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/77?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2020-12-02",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "81",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States to prohibit the use of slavery and involuntary servitude as a punishment for a crime.",
+      "type": "SJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/81?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2020-11-18",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "80",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the United Arab Emirates of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/80?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2020-11-18",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "79",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing congressional disapproval of the proposed foreign military sale to the United Arab Emirates of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/79?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2020-11-09",
+        "text": "Read the second time. Placed on Senate Legislative Calendar under General Orders. Calendar No. 583."
+      },
+      "number": "76",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States to require that the Supreme Court of the United States be composed of nine justices.",
+      "type": "SJRES",
+      "updateDate": "2021-12-29",
+      "updateDateIncludingText": "2023-01-01",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/76?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2020-08-14",
+        "actionTime": "14:27:07",
+        "text": "Held at the desk."
+      },
+      "number": "74",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution requesting the Secretary of the Interior to authorize a unique and 1-time arrangement for certain displays on Mount Rushmore National Memorial relating to the centennial of the ratification of the 19th Amendment to the Constitution of the United States during the period beginning August 18, 2020, and ending on September 30, 2020.",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/74?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2020-08-04",
+        "text": "Read twice and referred to the Committee on the Judiciary. (Sponsor introductory remarks on measure: CR S4734-4735; text: CR S4735)"
+      },
+      "number": "75",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States relative to the fundamental right to vote.",
+      "type": "SJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/75?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2020-05-21",
+        "text": "Senate vitiated previous discharge from the Senate Committee on Rules and Administration."
+      },
+      "number": "72",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for the reappointment of Michael M. Lynton as a citizen regent of the Board of Regents of the Smithsonian Institution.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/72?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2020-05-11",
+        "text": "Read twice and referred to the Committee on Rules and Administration."
+      },
+      "number": "73",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for the appointment of Franklin D. Raines as a citizen regent of the Board of Regents of the Smithsonian Institution.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/73?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2020-05-07",
+        "text": "Read twice and referred to the Committee on Finance."
+      },
+      "number": "71",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution withdrawing approval of the Agreement Establishing the World Trade Organization.",
+      "type": "SJRES",
+      "updateDate": "2023-01-11",
+      "updateDateIncludingText": "2023-01-11",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/71?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2020-05-07",
+        "text": "Failed of passage in Senate over veto by Yea-Nay Vote. 49 - 44. Record Vote Number: 84."
+      },
+      "number": "68",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution to direct the removal of United States Armed Forces from hostilities against the Islamic Republic of Iran that have not been authorized by Congress.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/68?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2020-04-10",
+        "text": "Became Public Law No: 116-138."
+      },
+      "number": "66",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for the appointment of Denise O'Leary as a citizen regent of the Board of Regents of the Smithsonian Institution.",
+      "type": "SJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/66?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2020-03-11",
+        "text": "Indefinitely postponed by Senate by Unanimous Consent."
+      },
+      "number": "56",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Borrower Defense Institutional Accountability\".",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/56?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2020-03-02",
+        "text": "Became Public Law No: 116-119."
+      },
+      "number": "67",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for the reappointment of Risa Lavizzo-Mourey as a citizen regent of the Board of Regents of the Smithsonian Institution.",
+      "type": "SJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/67?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2020-03-02",
+        "text": "Became Public Law No: 116-118."
+      },
+      "number": "65",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for the reappointment of John Fahey as a citizen regent of the Board of Regents of the Smithsonian Institution.",
+      "type": "SJRES",
+      "updateDate": "2024-02-07",
+      "updateDateIncludingText": "2024-02-07",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/65?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2020-02-13",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "70",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States relative to the voting threshold for impeachment.",
+      "type": "SJRES",
+      "updateDate": "2022-02-08",
+      "updateDateIncludingText": "2022-02-08",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/70?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2020-01-16",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "69",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution to direct the removal of United States Armed Forces from hostilities against the Islamic Republic of Iran that have not been authorized by Congress.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/69?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2020-01-08",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "64",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution relating to the use of military force against the Islamic Republic of Iran.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/64?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2020-01-03",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "63",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution to direct the removal of United States Armed Forces from hostilities against the Islamic Republic of Iran that have not been authorized by Congress.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/63?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-12-17",
+        "text": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 335."
+      },
+      "number": "4",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution requiring the advice and consent of the Senate or an Act of Congress to suspend, terminate, or withdraw the United States from the North Atlantic Treaty and authorizing related litigation, and for other purposes.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/4?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-12-12",
+        "text": "Read twice and referred to the Committee on Commerce, Science, and Transportation."
+      },
+      "number": "62",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution disapproving the recommendation of the Administrator of the Federal Aviation Administration to realign Binghamton, NY (BGM) TRACON operations and Elmira, NY (ELM) TRACON operations to Wilkes-Barre/Scranton, PA (AVP) TRACON.",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/62?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-12-12",
+        "text": "Read twice and referred to the Committee on Veterans' Affairs."
+      },
+      "number": "61",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution approving the request of the Secretary of Veterans Affairs for a waiver under section 1703E(f) of title 38, United States Code.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/61?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-11-13",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "60",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "War Powers Reform Resolution",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/60?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-10-30",
+        "text": "Failed of passage in Senate by Yea-Nay Vote. 43 - 52. Record Vote Number: 337."
+      },
+      "number": "52",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Secretary of the Treasury and the Secretary of Health and Human Services relating to \"State Relief and Empowerment Waivers\".",
+      "type": "SJRES",
+      "updateDate": "2022-11-01",
+      "updateDateIncludingText": "2022-11-01",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/52?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-10-23",
+        "text": "Failed of passage in Senate by Yea-Nay Vote. 43 - 52. Record Vote Number: 331."
+      },
+      "number": "50",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Internal Revenue Service, Department of the Treasury, relating to \"Contributions in Exchange for State or Local Tax Credits\".",
+      "type": "SJRES",
+      "updateDate": "2022-11-01",
+      "updateDateIncludingText": "2022-11-01",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/50?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-10-23",
+        "text": "Read the second time. Placed on Senate Legislative Calendar under General Orders. Calendar No. 259."
+      },
+      "number": "59",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution expressing the sense of Congress on the precipitous withdrawal of United States Armed Forces from Syria and Afghanistan, and Turkey's unprovoked incursion into Syria.",
+      "type": "SJRES",
+      "updateDate": "2022-02-02",
+      "updateDateIncludingText": "2022-10-31",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/59?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-10-17",
+        "text": "Failed of passage in Senate over veto by Yea-Nay Vote. 53 - 36. Record Vote Number: 325."
+      },
+      "number": "54",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution relating to a national emergency declared by the President on February 15, 2019.",
+      "type": "SJRES",
+      "updateDate": "2024-02-08",
+      "updateDateIncludingText": "2024-02-08",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/54?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-10-17",
+        "text": "Failed of passage in Senate by Yea-Nay Vote. 41 - 53. Record Vote Number: 324."
+      },
+      "number": "53",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Repeal of the Clean Power Plan; Emission Guidelines for Greenhouse Gas Emissions From Existing Electric Utility Generating Units; Revisions to Emission Guidelines Implementing Regulations\".",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/53?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-10-17",
+        "text": "Read the second time. Placed on Senate Legislative Calendar under General Orders. Calendar No. 245."
+      },
+      "number": "58",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution expressing support for freedom of conscience.",
+      "type": "SJRES",
+      "updateDate": "2022-02-02",
+      "updateDateIncludingText": "2022-10-31",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/58?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-10-15",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "57",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution opposing the decision to end certain United States efforts to prevent Turkish military operations against Syrian Kurdish forces in Northeast Syria.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/57?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-09-24",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "55",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Acting Secretary of Homeland Security relating to \"Immigrant Investor Program Modernization\"",
+      "type": "SJRES",
+      "updateDate": "2022-11-01",
+      "updateDateIncludingText": "2022-11-01",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/55?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-07-30",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "51",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States relating to contributions and expenditures intended to affect elections.",
+      "type": "SJRES",
+      "updateDate": "2022-11-01",
+      "updateDateIncludingText": "2022-11-01",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/51?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-07-29",
+        "text": "Failed of passage in Senate over veto by Yea-Nay Vote. 46 - 41. Record Vote Number: 233."
+      },
+      "number": "38",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed export to the Kingdom of Saudi Arabia and the United Kingdom of Great Britain and Northern Ireland of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/38?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-07-29",
+        "text": "Failed of passage in Senate over veto by Yea-Nay Vote. 45 - 39. Record Vote Number: 232."
+      },
+      "number": "37",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed export to the United Arab Emirates, the United Kingdom of Great Britain and Northern Ireland, and the Republic of France of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/37?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-07-29",
+        "text": "Failed of passage in Senate over veto by Yea-Nay Vote. 45 - 40. Record Vote Number: 231."
+      },
+      "number": "36",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed transfer to the Kingdom of Saudi Arabia, the United Kingdom of Great Britain and Northern Ireland, the Kingdom of Spain, and the Italian Republic of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/36?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-20",
+        "actionTime": "16:33:27",
+        "text": "Held at the desk."
+      },
+      "number": "48",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed transfer to the United Arab Emirates certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/48?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-20",
+        "actionTime": "16:33:21",
+        "text": "Held at the desk."
+      },
+      "number": "47",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed transfer to the Kingdom of Saudi Arabia certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/47?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-20",
+        "actionTime": "16:33:14",
+        "text": "Held at the desk."
+      },
+      "number": "46",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed transfer to the United Arab Emirates certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/46?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-20",
+        "actionTime": "16:32:25",
+        "text": "Held at the desk."
+      },
+      "number": "45",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed transfer to the Kingdom of Saudi Arabia certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/45?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-20",
+        "actionTime": "16:31:35",
+        "text": "Held at the desk."
+      },
+      "number": "44",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed retransfer of certain defense articles from the United Arab Emirates to the Hashemite Kingdom of Jordan.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/44?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-20",
+        "actionTime": "16:31:26",
+        "text": "Held at the desk."
+      },
+      "number": "43",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed transfer to the Kingdom of Saudi Arabia certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/43?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-20",
+        "actionTime": "16:31:20",
+        "text": "Held at the desk."
+      },
+      "number": "42",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed export to the United Arab Emirates and the United Kingdom of Great Britain and Northern Ireland of certain defense articles, including technical data and defense services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/42?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-20",
+        "actionTime": "16:31:13",
+        "text": "Held at the desk."
+      },
+      "number": "41",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed export to the Government of Saudi Arabia and the United Arab Emirates and the United Kingdom of Great Britain and Northern Ireland of technical data and defense services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/41?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-20",
+        "actionTime": "16:31:07",
+        "text": "Held at the desk."
+      },
+      "number": "40",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed export to India, Israel, Republic of Korea, and Kingdom of Saudi Arabia of certain defense articles, including technical data and defense services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/40?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-20",
+        "actionTime": "16:31:01",
+        "text": "Held at the desk."
+      },
+      "number": "39",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed export to the United Arab Emirates and United Kingdom of certain defense articles, including technical data and defense services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/39?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-20",
+        "actionTime": "16:30:32",
+        "text": "Held at the desk."
+      },
+      "number": "35",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the United Arab Emirates of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/35?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-20",
+        "actionTime": "16:28:21",
+        "text": "Held at the desk."
+      },
+      "number": "34",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the United Arab Emirates of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/34?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-20",
+        "actionTime": "16:28:12",
+        "text": "Held at the desk."
+      },
+      "number": "33",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the United Arab Emirates of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/33?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-20",
+        "actionTime": "16:28:06",
+        "text": "Held at the desk."
+      },
+      "number": "32",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Kingdom of Saudi Arabia certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/32?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-20",
+        "actionTime": "16:27:58",
+        "text": "Held at the desk."
+      },
+      "number": "31",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Kingdom of Saudi Arabia certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/31?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-20",
+        "actionTime": "16:27:51",
+        "text": "Held at the desk."
+      },
+      "number": "30",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the United Arab Emirates of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/30?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-20",
+        "actionTime": "16:27:44",
+        "text": "Held at the desk."
+      },
+      "number": "29",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Kingdom of Saudi Arabia certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/29?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-20",
+        "actionTime": "16:27:37",
+        "text": "Held at the desk."
+      },
+      "number": "28",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the United Arab Emirates of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/28?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-20",
+        "actionTime": "16:27:28",
+        "text": "Held at the desk."
+      },
+      "number": "27",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution providing for congressional disapproval of the proposed transfer to the United Arab Emirates, United Kingdom and Australia certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/27?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-13",
+        "text": "Read twice and referred to the Committee on the Judiciary. (text: CR S3483)"
+      },
+      "number": "49",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States authorizing the Congress to prohibit the physical desecration of the flag of the United States.",
+      "type": "SJRES",
+      "updateDate": "2022-11-01",
+      "updateDateIncludingText": "2022-11-01",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/49?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-13",
+        "text": "Motion to discharge Senate Committee on Foreign Relations rejected by Yea-Nay Vote. 42 - 57. Record Vote Number: 162. (consideration: CR S3462)"
+      },
+      "number": "26",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution relating to the disapproval of the proposed sale to the Government of Qatar of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/26?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-06-13",
+        "text": "Motion to discharge Senate Committee on Foreign Relations rejected by Yea-Nay Vote. 43 - 56. Record Vote Number: 161. (consideration: CR S3461-3462)"
+      },
+      "number": "20",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution relating to the disapproval of the proposed sale to the Government of Bahrain of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/20?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-05-14",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "22",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution relating to the disapproval of the proposed sale to the Government of Bahrain of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/22?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-05-14",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "23",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution relating to the disapproval of the proposed sale to the Government of the Czech Republic of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/23?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-05-14",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "24",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution relating to the disapproval of the proposed sale to the Government of the Czech Republic of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/24?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-05-14",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "25",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution relating to the disapproval of the proposed sale to the Government of the United Arab Emirates of certain defense articles and services.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/25?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-05-14",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "21",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing amendments to the Constitution of the United States relative to the line item veto, a limitation on the number of terms that a Member of Congress may serve, and requiring a vote of two-thirds of the membership of both Houses of Congress on any legislation raising or imposing new taxes or fees.",
+      "type": "SJRES",
+      "updateDate": "2022-02-08",
+      "updateDateIncludingText": "2022-02-08",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/21?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-05-02",
+        "text": "Failed of passage in Senate over veto by Yea-Nay Vote. 53 - 45. Record Vote Number: 94."
+      },
+      "number": "7",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution to direct the removal of United States Armed Forces from hostilities in the Republic of Yemen that have not been authorized by Congress.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/7?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-05-02",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "19",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States to require (except during time of war and subject to suspension by Congress) that the total amount of money expended by the United States during any fiscal year not exceed the amount of certain revenue received by the United States during such fiscal year and not exceed 20 percent of the gross domestic product of the United States during the previous calendar year.",
+      "type": "SJRES",
+      "updateDate": "2022-02-09",
+      "updateDateIncludingText": "2022-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/19?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-04-04",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "18",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing a balanced budget amendment to the Constitution of the United States.",
+      "type": "SJRES",
+      "updateDate": "2022-11-01",
+      "updateDateIncludingText": "2022-11-01",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/18?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-04-02",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "17",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States to abolish the electoral college and to provide for the direct election of the President and Vice President of the United States.",
+      "type": "SJRES",
+      "updateDate": "2022-11-01",
+      "updateDateIncludingText": "2022-11-01",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/17?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-03-28",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "16",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States to abolish the electoral college and to provide for the direct election of the President and Vice President of the United States.",
+      "type": "SJRES",
+      "updateDate": "2022-11-01",
+      "updateDateIncludingText": "2022-11-01",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/16?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-03-27",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "15",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States relative to equal rights for men and women.",
+      "type": "SJRES",
+      "updateDate": "2022-11-01",
+      "updateDateIncludingText": "2022-11-05",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/15?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-03-26",
+        "text": "Cloture on the motion to proceed to the measure not invoked in Senate by Yea-Nay Vote. 0 - 57. Record Vote Number: 52. (CR S1971)"
+      },
+      "number": "8",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution recognizing the duty of the Federal Government to create a Green New Deal.",
+      "type": "SJRES",
+      "updateDate": "2022-02-02",
+      "updateDateIncludingText": "2022-11-01",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/8?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-03-25",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "14",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States to require that the Supreme Court of the United States be composed of not more than 9 justices.",
+      "type": "SJRES",
+      "updateDate": "2022-11-01",
+      "updateDateIncludingText": "2022-11-05",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/14?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-03-06",
+        "text": "Read twice and referred to the Committee on Foreign Relations. (Sponsor introductory remarks on measure: CR S1709-1710)"
+      },
+      "number": "13",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution to repeal the authorizations for use of military force against Iraq, and for other purposes.",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/13?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-03-04",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "12",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "AFGHAN Service Act",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/12?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-02-28",
+        "text": "Read twice and referred to the Committee on Foreign Relations."
+      },
+      "number": "11",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "Prohibiting Unauthorized Military Action in Venezuela Resolution of 2019",
+      "type": "SJRES",
+      "updateDate": "2024-02-09",
+      "updateDateIncludingText": "2024-02-09",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/11?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-02-28",
+        "text": "Read twice and referred to the Committee on Armed Services. (Sponsor introductory remarks on measure: CR S1600-1601)"
+      },
+      "number": "10",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution relating to a national emergency declared by the President on February 15, 2019.",
+      "type": "SJRES",
+      "updateDate": "2024-02-08",
+      "updateDateIncludingText": "2024-02-08",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/10?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-02-28",
+        "text": "Read twice and referred to the Committee on Environment and Public Works."
+      },
+      "number": "9",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution calling on the United States and Congress to take immediate action to address the challenge of climate change.",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/9?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-01-25",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "6",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution removing the deadline for the ratification of the equal rights amendment.",
+      "type": "SJRES",
+      "updateDate": "2022-11-01",
+      "updateDateIncludingText": "2022-11-01",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/6?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-01-24",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "5",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States requiring that the Federal budget be balanced.",
+      "type": "SJRES",
+      "updateDate": "2022-11-01",
+      "updateDateIncludingText": "2022-11-01",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/5?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-01-16",
+        "text": "Returned to the Calendar. Calendar No. 13."
+      },
+      "number": "2",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution disapproving the President's proposal to take an action relating to the application of certain sanctions with respect to the Russian Federation.",
+      "type": "SJRES",
+      "updateDate": "2024-02-16",
+      "updateDateIncludingText": "2024-02-16",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/2?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-01-04",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "3",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States relative to balancing the budget.",
+      "type": "SJRES",
+      "updateDate": "2022-11-01",
+      "updateDateIncludingText": "2022-11-01",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/3?format=json"
+    },
+    {
+      "congress": 116,
+      "latestAction": {
+        "actionDate": "2019-01-03",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "1",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A joint resolution proposing an amendment to the Constitution of the United States relative to limiting the number of terms that a Member of Congress may serve.",
+      "type": "SJRES",
+      "updateDate": "2022-11-01",
+      "updateDateIncludingText": "2022-11-01",
+      "url": "https://api.congress.gov/v3/bill/116/sjres/1?format=json"
+    }
+  ],
+  "offset": 82
+}

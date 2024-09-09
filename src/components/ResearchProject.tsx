@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useState, useEffect } from "react";
 import ChatFullPage from "./ChatFullPage";
@@ -8,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
+import { CitedSource, SourceDocument } from "../types";
 import { Tooltip } from "@/components/ui/tooltip";
 import { Settings } from "lucide-react";
 import {
@@ -17,13 +19,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import {
-  Collapsible,
-  CollapsibleTrigger,
-  CollapsibleContent,
-} from "@/components/ui/collapsible";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import PineconeMetadataFilterSelect from "./PineconeMetadataFilterSelect";
+import SourceDocumentsSidebar from "./SourceDocumentsSidebar";
 import {
   congressSessions,
   initializeTopics,
@@ -39,7 +37,7 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
     addSourceDocuments,
     clearSourceDocuments,
   } = useChatContext();
-  const [projectTitle, setProjectTitle] = useState("New Research Project");
+  const [projectTitle] = useState("New Research Project");
   const [showingSources, setShowingSources] = useState(false);
   const [savedDocuments, setSavedDocuments] = useState([
     {
@@ -57,7 +55,7 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
       status: "Ratified",
     },
   ]);
-  const [citedSources, setCitedSources] = useState([]);
+  const [citedSources, setCitedSources] = useState<CitedSource[]>([]);
   const [topics, setTopics] = useState(new Map());
   const [overrideConfig, setOverrideConfig] = useState({});
   const [followUpQuestions, setFollowUpQuestions] = useState<string[]>([]);
@@ -90,18 +88,18 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
           const latestMessage = messages[messages.length - 1];
           if (
             latestMessage.type === "apiMessage" &&
-            latestMessage.sourceDocuments
+            latestMessage.sourceDocuments &&
+            Array.isArray(latestMessage.sourceDocuments)
           ) {
             addSourceDocuments(latestMessage.sourceDocuments);
-            const newCitedSources = latestMessage.sourceDocuments.map(
-              (doc) => ({
+            const newCitedSources: CitedSource[] =
+              latestMessage.sourceDocuments.map((doc: SourceDocument) => ({
                 id: doc.metadata.id,
                 title: doc.metadata.title || "Unknown Title",
                 congress: doc.metadata.congress || "Unknown Congress",
                 policyArea: doc.metadata.policyArea || "Unknown policyArea",
                 chunks: [doc.pageContent],
-              })
-            );
+              }));
             setCitedSources(newCitedSources);
             setShowingSources(true);
             const followUpQuestions = await getFollowUpQuestions(
@@ -228,7 +226,9 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
 
   useEffect(() => {
     if (citedSources.length > 0) {
-      const grouped = citedSources.reduce((acc, source) => {
+      const grouped = citedSources.reduce<
+        Record<string, CitedSource & { chunks: string[] }>
+      >((acc, source) => {
         if (!acc[source.id]) {
           acc[source.id] = { ...source, chunks: [] };
         }
@@ -416,145 +416,35 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
             </CardHeader>
             <CardContent>
               <ScrollArea className="h-[calc(100vh-350px)]">
-                {showingSources
-                  ? Object.values(groupedSources).map((source: any) => (
-                      <Card key={source.id} className="mb-4">
-                        <CardContent className="p-4">
-                          <h3 className="font-semibold">
-                            {truncateTitle(source.title)}
-                          </h3>
-                          <p className="text-sm">Congress: {source.congress}</p>
-                          <p className="text-sm">
-                            Policy Area: {source.policyArea}
-                          </p>
-                          <p className="text-sm">
-                            Excerpts: {source.chunks.length}
-                          </p>
-                          <Dialog>
-                            <DialogTrigger asChild>
-                              <Button variant="outline" size="icon">
-                                <Settings className="h-4 w-4" />
-                              </Button>
-                            </DialogTrigger>
-                            <DialogContent className="sm:max-w-[425px]">
-                              <DialogHeader>
-                                <DialogTitle>
-                                  Original Cited Sources
-                                </DialogTitle>
-                              </DialogHeader>
-                              <div className="mt-4">
-                                <pre className="whitespace-pre-wrap text-sm bg-gray-100 p-4 rounded-md overflow-auto max-h-[60vh]">
-                                  {JSON.stringify(citedSources, null, 2)}
-                                </pre>
-                              </div>
-                            </DialogContent>
-                          </Dialog>
-                          <div className="mt-2">
-                            {source.chunks.map(
-                              (chunk: string, index: number) => (
-                                <Tooltip
-                                  key={index}
-                                  content={
-                                    <div className="max-w-md whitespace-normal">
-                                      {chunk}
-                                    </div>
-                                  }
-                                >
-                                  <Dialog>
-                                    <DialogTrigger asChild>
-                                      <Button
-                                        variant="outline"
-                                        size="sm"
-                                        className="mr-2 mt-2"
-                                        onClick={() =>
-                                          handleDocumentClick(source.id)
-                                        }
-                                      >
-                                        Excerpt {index + 1}
-                                      </Button>
-                                    </DialogTrigger>
-                                    <DialogContent className="max-w-3xl bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100">
-                                      <DialogHeader>
-                                        <DialogTitle className="text-xl font-semibold">
-                                          {source.title}
-                                        </DialogTitle>
-                                      </DialogHeader>
-                                      <div className="mt-4 flex">
-                                        <div className="w-1/2 pr-4">
-                                          <h4 className="font-semibold mb-2">
-                                            Document Details
-                                          </h4>
-                                          {selectedDocument && (
-                                            <>
-                                              <p className="text-sm">
-                                                {" "}
-                                                Congress:{" "}
-                                                {selectedDocument.congress}
-                                              </p>
-                                              <p className="text-sm">
-                                                Policy Area:{" "}
-                                                {selectedDocument.policyArea}
-                                              </p>
-                                              {/* Add more document details as needed */}
-                                            </>
-                                          )}
-                                        </div>
-                                        <div className="w-1/2 pl-4">
-                                          <h4 className="font-semibold mb-2">
-                                            Excerpt
-                                          </h4>
-                                          <p className="text-sm bg-gray-100 dark:bg-gray-700 p-3 rounded-md">
-                                            {source.chunks[currentExcerptIndex]}
-                                          </p>
-                                          {source.chunks.length > 1 && (
-                                            <div className="flex justify-between mt-4">
-                                              <Button
-                                                variant="outline"
-                                                size="sm"
-                                                onClick={() =>
-                                                  handleExcerptNavigation(
-                                                    "prev"
-                                                  )
-                                                }
-                                              >
-                                                <ChevronLeft className="h-4 w-4 mr-2" />
-                                                Previous
-                                              </Button>
-                                              <Button
-                                                variant="outline"
-                                                size="sm"
-                                                onClick={() =>
-                                                  handleExcerptNavigation(
-                                                    "next"
-                                                  )
-                                                }
-                                              >
-                                                Next
-                                                <ChevronRight className="h-4 w-4 ml-2" />
-                                              </Button>
-                                            </div>
-                                          )}
-                                        </div>
-                                      </div>
-                                    </DialogContent>
-                                  </Dialog>
-                                </Tooltip>
-                              )
-                            )}
-                          </div>
-                        </CardContent>
-                      </Card>
-                    ))
-                  : savedDocuments.map((doc) => (
-                      <Card key={doc.id} className="mb-4">
-                        <CardContent className="p-4">
-                          <h3 className="font-semibold">{doc.title}</h3>
-                          <p className="text-sm">Date: {doc.date}</p>
-                          <p className="text-sm">Authors: {doc.authors}</p>
-                          <p className="text-sm">Status: {doc.status}</p>
-                        </CardContent>
-                      </Card>
-                    ))}
+                {showingSources ? (
+                  <SourceDocumentsSidebar
+                    groupedSources={groupedSources}
+                    handleDocumentClick={handleDocumentClick}
+                    selectedDocument={selectedDocument}
+                    currentExcerptIndex={currentExcerptIndex}
+                    handleExcerptNavigation={handleExcerptNavigation}
+                  />
+                ) : (
+                  <Card className="flex-1">
+                    <CardHeader>
+                      <CardTitle>Saved Documents</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <ScrollArea className="h-[calc(100vh-350px)]">
+                        {savedDocuments.map((doc) => (
+                          <Card key={doc.id} className="mb-4">
+                            <CardContent className="p-4">
+                              <h3 className="font-semibold">{doc.title}</h3>
+                              <p className="text-sm">Date: {doc.date}</p>
+                              <p className="text-sm">Authors: {doc.authors}</p>
+                              <p className="text-sm">Status: {doc.status}</p>
+                            </CardContent>
+                          </Card>
+                        ))}
+                      </ScrollArea>
+                    </CardContent>
+                  </Card>
+                )}
               </ScrollArea>
             </CardContent>
           </Card>

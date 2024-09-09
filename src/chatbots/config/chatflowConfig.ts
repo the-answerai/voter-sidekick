@@ -1,4 +1,4 @@
-import { type PineconeMetadataFilter } from "@/types";
+import { PineconeMetadataFilter, ChatflowConfig } from "@/types";
 import { getUniquePolicyAreas } from '@/utils/supabaseClient';
 import { getPolicyAreaSlug } from '@/utils/getPolicyAreaSlug';
 export const topics = new Map<string, string>();
@@ -35,7 +35,7 @@ export const getChatflowConfig = (metaDataFilters: PineconeMetadataFilter) => {
     }
   });
 
-  const config = {
+  const config: ChatflowConfig = {
     rephrasePrompt: `
         You are an AI assistant designed to rephrase user queries about legal documents into clear, focused questions. Your task is to create a standalone query that will retrieve the most relevant information from a database of federal, state, and local laws.
 
