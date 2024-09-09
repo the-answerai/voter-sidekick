@@ -14,6 +14,20 @@
       "runtimeExecutable": "node",
       "runtimeArgs": ["-r", "dotenv/config"],
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Upsert Vector Documents",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/src/loaders/upsertVectorDocuments.js",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "console": "integratedTerminal",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["-r", "dotenv/config"],
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     }
   ]
 }

@@ -1,4 +1,8 @@
-export const formatDate = (dateString: string): string => {
+export const formatDate = (dateString: string | undefined | null): string => {
+  if (!dateString) {
+    return "Invalid Date";
+  }
+
   const cleanDateString = dateString.startsWith("D:")
     ? dateString.slice(2)
     : dateString;
@@ -15,3 +19,10 @@ export const formatDate = (dateString: string): string => {
         timeZoneName: "short",
       });
 };
+
+// Add a comment explaining the function's behavior
+/**
+ * Formats a date string into a localized string representation.
+ * @param dateString - The input date string, which may start with "D:". Can be undefined or null.
+ * @returns A formatted date string or "Invalid Date" if the input is invalid.
+ */

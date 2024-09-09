@@ -1,26 +1,22 @@
 import { type PineconeMetadataFilter } from "@/types";
+import { getUniquePolicyAreas } from '@/utils/supabaseClient';
 
-export const topics = new Map([
-  ["economy-taxes", "Economy & Taxes"],
-  ["technology", "Technology"],
-  ["climate-change-energy", "Climate Change & Energy"],
-  ["cryptocurrency", "Cryptocurrency"],
-  ["immigration", "Immigration & Border Security"],
-  ["healthcare", "Healthcare"],
-  ["social-security-medicare", "Social Security & Medicare"],
-  ["crime-safety", "Crime & Safety"],
-  ["gun-control", "Gun Control"],
-  ["voting-rights-election-integrity", "Voting Rights & Election Integrity"],
-  ["judiciary-supreme-court", "Judiciary and Supreme Court"],
-  ["foreign-policy", "Foreign Policy"],
-  ["abortion", "Abortion"],
-]);
+export const topics = new Map<string, string>();
 
-export const locales = new Map([
-  ["local", "Local"],
-  ["state", "State"],
-  ["federal", "Federal"],
-  ["tribal", "Tribal"],
+export async function initializeTopics() {
+  const policyAreas = await getUniquePolicyAreas();
+  const topicsMap = new Map<string, string>();
+  policyAreas.forEach(area => {
+    topicsMap.set(area.toLowerCase().replace(/\s+/g, '-'), area);
+  });
+  return topicsMap;
+}
+
+export const congressSessions = new Map([
+  ["118", "118th Congress (2023-2025)"],
+  ["117", "117th Congress (2021-2023)"],
+  ["116", "116th Congress (2019-2021)"],
+  ["115", "115th Congress (2017-2019)"],
 ]);
 
 export const getChatflowConfig = (metaDataFilters: PineconeMetadataFilter) => {

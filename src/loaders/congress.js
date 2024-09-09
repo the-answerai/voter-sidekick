@@ -30,7 +30,7 @@ const normalizeBill = async (billUrl, CongressApi) => {
     source_link: billUrl,
     locale: 'FEDERAL',
     date_added: new Date().toISOString(),
-    policyArea: bill?.policyArea ? [bill.policyArea.name] : [],
+    policyArea: bill?.policyArea ? bill.policyArea.name : 'Unknown',
     actionsUrl: bill?.actions?.url || '',
     summariesUrl: bill?.summaries?.url || '',
     latestTextVersionUrl: latestTextVersionUrl,

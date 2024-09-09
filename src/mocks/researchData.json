@@ -1,0 +1,30 @@
+{
+    "chatHistory": [
+        {
+            "content": "What are the main goals of the Paris Agreement?",
+            "role": "user"
+        },
+        {
+            "content": "The main goals of the Paris Agreement are...",
+            "role": "assistant"
+        }
+    ],
+    "documents": [
+        {
+            "authors": "United Nations",
+            "date": "2015-12-12",
+            "id": 1,
+            "status": "Ratified",
+            "title": "Paris Agreement"
+        },
+        {
+            "authors": "US Congress",
+            "date": "1990-11-15",
+            "id": 2,
+            "status": "Enacted",
+            "title": "Clean Air Act Amendments"
+        }
+    ],
+    "projectId": 1,
+    "title": "Climate Change Policy Research"
+}

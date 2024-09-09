@@ -11,9 +11,17 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "apis/*": ["src/apis/*"],
-      "loaders/*": ["src/loaders/*"]
-    }
+      "@/*": ["src/*"]
+    },
+    "incremental": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
@@ -21,7 +29,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/**/*.ts",
-    "src/apis/congress.ts"
+    "src/apis/congress.ts",
+    "src/app/research-projects/page.tsx"
   ],
   "exclude": ["node_modules"]
 }

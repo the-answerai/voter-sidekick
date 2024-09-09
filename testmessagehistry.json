@@ -1,0 +1,130 @@
+{
+    "chatId": "01eed2c5-1b10-4e04-9203-b3de9bb70c49",
+    "chatHistory": [
+        {
+            "message": "Hello! Welcome to the chatbot! This is a custom welcome message",
+            "type": "apiMessage"
+        },
+        {
+            "message": "hello",
+            "type": "userMessage",
+            "fileUploads": []
+        },
+        {
+            "message": "Hello! How can I assist you today with information about laws, legal documents, or policy proposals?",
+            "type": "apiMessage",
+            "messageId": "a05e2a0f-b13b-4ddd-bfb5-f673dfd0b8c5",
+            "sourceDocuments": [
+                {
+                    "pageContent": "``(1) whose government is democratically elected;\\n            ``(2) whose government has not repeatedly provided support \\n        for acts of international terrorism;\\n            ``(3) whose government is not failing to cooperate on \\n        international narcotics control matters;\\n            ``(4) whose government (including its military or other \\n        security forces) does not engage in a consistent pattern of \\n        gross violations of internationally recognized human rights;\\n            ``(5) &lt;&lt;NOTE: President. Determinations.&gt;&gt;  that has in \\n        effect, has received approval for, or is making significant \\n        progress toward--\\n                    ``(A) an International Monetary Fund standby \\n                arrangement, extended Fund arrangement, or an \\n                arrangement under the structural adjustment facility or \\n                enhanced structural adjustment facility, or a Fund \\n                monitored program, or is",
+                    "metadata": {
+                        "id": "f28634f7ef5fae43c6e3326cf22852ff",
+                        "introducedDate": "2017-05-03T00:00:00",
+                        "lastUpdatedDate": "2024-06-10T19:48:22",
+                        "loc.lines.from": 1,
+                        "loc.lines.to": 1,
+                        "policyArea": "International Affairs",
+                        "summary": " <p><strong>Tropical Forest Conservation Reauthorization Act of 2017</strong></p> <p>This bill renames the Tropical Forest Conservation Act of 1998 as the Tropical Forest Conservation Reauthorization Act of 2017.</p> <p>Non-tropical forests and coral reef ecosystems are included within the scope of, and made eligible for benefits under, the Tropical Forest Conservation Reauthorization Act of 2017.</p> <p>The Tropical Forest Facility is renamed the Conservation Facility.</p> <p>One or more individuals appointed by the U.S. government may serve on oversight bodies for grants from a debt-for-nature swap or debt buyback regardless of whether the United States is a party to any agreement between the eligible purchaser and the government of the beneficiary country.</p> <p>The Tropical Forest Fund is renamed the Conservation Fund.</p> <p>A grant of more than $250,000 from a fund must be approved by the U.S. government and the government of the beneficiary country.</p> <p>The Foreign Assistance Act of 1961 is amended to revise International Monetary Fund criteria for country eligibility.</p>",
+                        "tags": [
+                            "Aquatic ecology",
+                            "Foreign aid and international relief",
+                            "Foreign loans and debt",
+                            "Forests, forestry, trees",
+                            "International law and treaties",
+                            "International organizations and cooperation",
+                            "Land transfers",
+                            "Land use and conservation",
+                            "Marine and coastal resources, fisheries",
+                            "Multilateral development programs",
+                            "Wildlife conservation and habitat protection"
+                        ],
+                        "title": "An act to reauthorize the Tropical Forest Conservation Act of 1998 through fiscal year 2021, and for other purposes",
+                        "url": "https://www.congress.gov/115/plaws/publ440/PLAW-115publ440.htm"
+                    }
+                },
+                {
+                    "pageContent": "\"<html><body><pre>\\n[Congressional Bills 116th Congress]\\n[From the U.S. Government Publishing Office]\\n[S.J. Res. 78 Introduced in Senate (IS)]\\n\\n&lt;DOC&gt;\\n\\n\\n\\n\\n\\n\\n116th CONGRESS\\n  2d Session\\nS. J. RES. 78\\n\\n    Providing for congressional disapproval of the proposed foreign \\n military sale to the United Arab Emirates of certain defense articles \\n                             and services.\\n\\n\\n_______________________________________________________________________\\n\\n\\n                   IN THE SENATE OF THE UNITED STATES\\n\\n                           November 18, 2020\\n\\n  Mr. Menendez (for himself, Mr. Paul, and Mr. Murphy) introduced the \\n following joint resolution; which was read twice and referred to the \\n                     Committee on Foreign Relations\\n\\n_______________________________________________________________________\\n\\n                            JOINT RESOLUTION\\n\\n\\n \\n    Providing for congressional disapproval of the proposed foreign \\n military",
+                    "metadata": {
+                        "id": "694b1d416813683d17787618d2448a67",
+                        "introducedDate": "2020-11-18T00:00:00",
+                        "lastUpdatedDate": "2024-02-09T17:08:30",
+                        "loc.lines.from": 1,
+                        "loc.lines.to": 1,
+                        "policyArea": "International Affairs",
+                        "summary": " <p>This joint resolution prohibits the proposed foreign military sale of specified defense articles to the United Arab Emirates.</p>",
+                        "tags": [
+                            "Congressional oversight",
+                            "Foreign aid and international relief",
+                            "Middle East",
+                            "Military assistance, sales, and agreements",
+                            "Trade restrictions",
+                            "United Arab Emirates"
+                        ],
+                        "title": "A joint resolution providing for congressional disapproval of the proposed foreign  military sale to the United Arab Emirates of certain defense articles and services.",
+                        "url": "https://www.congress.gov/116/bills/sjres78/BILLS-116sjres78is.htm"
+                    }
+                },
+                {
+                    "pageContent": "permit;\\n                    (D) the proposed project poses a low risk to the \\n                environment, as determined by the Administrator;\\n                    (E) to the satisfaction of the Administrator, the \\n                person--\\n                            (i) possesses, or has the ability to \\n                        secure, the financial and other resources \\n                        necessary--\\n                                    (I) to complete the permitted work, \\n                                as determined by the Administrator; and\\n                                    (II) to address any contingencies \\n                                identified in the Good Samaritan permit \\n                                application described in subsection \\n                                (c);\\n                            (ii) possesses the proper and appropriate \\n                        experience and capacity to complete the \\n                        permitted work;",
+                    "metadata": {
+                        "id": "587cbd34f197f32053252dd3ef2364b3",
+                        "introducedDate": "2023-09-13T00:00:00",
+                        "lastUpdatedDate": "2024-08-14T13:30:27",
+                        "loc.lines.from": 1,
+                        "loc.lines.to": 1,
+                        "policyArea": "Environmental Protection",
+                        "summary": " <p><b>Good Samaritan Remediation of Abandoned Hardrock Mines Act of 2023</b></p> <p>This bill promotes the remediation of abandoned hardrock mine sites by Good Samaritans. A <i>Good Samaritan</i> means a person that is (1) not a past or current owner or operator of the abandoned site; (2) had no role in the creation of the historic mine residue; and (3) is not potentially liable under any law for the remediation, treatment, or control of the historic mine residue.</p> <p>The bill requires the Environmental Protection Agency (EPA) to establish a Good Samaritan pilot program. Under the program, the EPA may issue permits to allow Good Samaritans to remediate historic mine residue at abandoned hardrock mine sites without being subject to enforcement or liability under specified environmental laws for past, present, or future releases, threats of releases, or discharges of hazardous substances or other contaminants at or from the abandoned mine site. </p> <p>In addition, the bill establishes a Good Samaritan Mine Remediation Fund for land management agencies that authorize Good Samaritans to conduct remediation projects on federal land.</p>",
+                        "tags": [
+                            "Congressional oversight",
+                            "Environmental assessment, monitoring, research",
+                            "Government information and archives",
+                            "Government trust funds",
+                            "Hazardous wastes and toxic substances",
+                            "Intergovernmental relations",
+                            "Land use and conservation",
+                            "Licensing and registrations",
+                            "Mining",
+                            "Pollution liability",
+                            "Social work, volunteer service, charitable organizations",
+                            "Soil pollution",
+                            "State and local government operations",
+                            "Water quality"
+                        ],
+                        "title": "Good Samaritan Remediation of Abandoned Hardrock Mines Act of 2024",
+                        "url": "https://www.congress.gov/118/bills/s2781/BILLS-118s2781es.htm"
+                    }
+                },
+                {
+                    "pageContent": "permit;\\n                    (D) the proposed project poses a low risk to the \\n                environment, as determined by the Administrator;\\n                    (E) to the satisfaction of the Administrator, the \\n                person--\\n                            (i) possesses, or has the ability to \\n                        secure, the financial and other resources \\n                        necessary--\\n                                    (I) to complete the permitted work, \\n                                as determined by the Administrator; and\\n                                    (II) to address any contingencies \\n                                identified in the Good Samaritan permit \\n                                application described in subsection \\n                                (c);\\n                            (ii) possesses the proper and appropriate \\n                        experience and capacity to complete the \\n                        permitted work;",
+                    "metadata": {
+                        "id": "587cbd34f197f32053252dd3ef2364b3",
+                        "introducedDate": "2023-09-13T00:00:00",
+                        "lastUpdatedDate": "2024-08-14T13:30:27",
+                        "loc.lines.from": 1,
+                        "loc.lines.to": 1,
+                        "policyArea": "[\"Environmental Protection\"]",
+                        "summary": " <p><b>Good Samaritan Remediation of Abandoned Hardrock Mines Act of 2023</b></p> <p>This bill promotes the remediation of abandoned hardrock mine sites by Good Samaritans. A <i>Good Samaritan</i> means a person that is (1) not a past or current owner or operator of the abandoned site; (2) had no role in the creation of the historic mine residue; and (3) is not potentially liable under any law for the remediation, treatment, or control of the historic mine residue.</p> <p>The bill requires the Environmental Protection Agency (EPA) to establish a Good Samaritan pilot program. Under the program, the EPA may issue permits to allow Good Samaritans to remediate historic mine residue at abandoned hardrock mine sites without being subject to enforcement or liability under specified environmental laws for past, present, or future releases, threats of releases, or discharges of hazardous substances or other contaminants at or from the abandoned mine site. </p> <p>In addition, the bill establishes a Good Samaritan Mine Remediation Fund for land management agencies that authorize Good Samaritans to conduct remediation projects on federal land.</p>",
+                        "tags": [
+                            "Congressional oversight",
+                            "Environmental assessment, monitoring, research",
+                            "Government information and archives",
+                            "Government trust funds",
+                            "Hazardous wastes and toxic substances",
+                            "Intergovernmental relations",
+                            "Land use and conservation",
+                            "Licensing and registrations",
+                            "Mining",
+                            "Pollution liability",
+                            "Social work, volunteer service, charitable organizations",
+                            "Soil pollution",
+                            "State and local government operations",
+                            "Water quality"
+                        ],
+                        "title": "Good Samaritan Remediation of Abandoned Hardrock Mines Act of 2024",
+                        "url": "https://www.congress.gov/118/bills/s2781/BILLS-118s2781es.htm"
+                    }
+                }
+            ]
+        }
+    ]
+}

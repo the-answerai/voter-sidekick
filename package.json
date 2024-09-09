@@ -14,13 +14,23 @@
   },
   "dependencies": {
     "@prisma/client": "^5.19.1",
+    "@radix-ui/react-collapsible": "^1.1.0",
+    "@radix-ui/react-progress": "^1.1.0",
+    "@radix-ui/react-scroll-area": "^1.1.0",
+    "@radix-ui/react-slot": "^1.1.0",
     "@supabase/supabase-js": "^2.45.3",
     "aai-embed-react": "^1.0.7",
     "axios": "^1.7.7",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.439.0",
     "next": "14.2.8",
+    "next-themes": "^0.3.0",
     "prisma": "^5.19.1",
     "react": "^18",
     "react-dom": "^18",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7",
     "tinycolor2": "^1.6.0"
   },
   "devDependencies": {

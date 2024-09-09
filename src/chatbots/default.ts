@@ -12,6 +12,7 @@ const defaultMetaDataFilters: PineconeMetadataFilter = {
 
 const defaultConfig: ChatFullPageProps = {
   chatflowid: "9ee4eee1-931d-4007-bc9f-b1431ddabfa9",
+  // chatflowid: "5d6a7f89-3133-40bb-a0f6-30f75ae43a69", // Tool Call
   apiHost: "https://public.flowise.theanswer.ai",
   chatflowConfig: getChatflowConfig(defaultMetaDataFilters),
   observersConfig: {
