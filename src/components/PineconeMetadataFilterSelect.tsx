@@ -1,37 +1,77 @@
 import React from "react";
 import { useChatContext } from "../contexts/ChatContext";
-// Remove this import if it exists:
-// import { topics, locales } from "../chatbots/config/chatbotConfig";
 
 interface PineconeMetadataFilterSelectProps {
-  options: Map<string, string>;
+  options?: Map<string, string>;
   filterKey: string;
-  placeholder: string;
+  placeholder?: string;
+  isNumeric?: boolean;
+  isSlider?: boolean;
+  min?: number;
+  max?: number;
 }
 
 const PineconeMetadataFilterSelect: React.FC<
   PineconeMetadataFilterSelectProps
-> = ({ options, filterKey, placeholder }) => {
-  const { chatProps, updateMetadataFilter } = useChatContext();
+> = ({
+  options,
+  filterKey,
+  placeholder,
+  isNumeric = false,
+  isSlider = false,
+  min = 4,
+  max = 30,
+}) => {
+  const { chatProps, updateMetadataFilter, updateTopK } = useChatContext();
   const selectedValue =
-    chatProps?.chatflowConfig?.pineconeMetadataFilter?.[filterKey] || "";
+    filterKey === "topK"
+      ? chatProps?.chatflowConfig?.topK || min
+      : chatProps?.chatflowConfig?.pineconeMetadataFilter?.[filterKey] || "";
 
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    updateMetadataFilter(filterKey, e.target.value);
+  const handleChange = (
+    e: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>
+  ) => {
+    const value = e.target.value;
+    if (filterKey === "topK") {
+      updateTopK(Number(value));
+    } else {
+      if (value === "") {
+        updateMetadataFilter(filterKey, undefined);
+      } else {
+        updateMetadataFilter(filterKey, isNumeric ? Number(value) : value);
+      }
+    }
   };
+
+  if (isSlider) {
+    return (
+      <div>
+        <input
+          type="range"
+          min={min}
+          max={max}
+          value={selectedValue || min}
+          onChange={handleChange}
+          className="slider"
+        />
+        <span>{selectedValue || min}</span>
+      </div>
+    );
+  }
 
   return (
     <select
       onChange={handleChange}
-      value={selectedValue}
+      value={selectedValue.toString()}
       className="select-dropdown"
     >
       <option value="">{placeholder}</option>
-      {Array.from(options).map(([value, label]) => (
-        <option key={value} value={value}>
-          {label}
-        </option>
-      ))}
+      {options &&
+        Array.from(options).map(([value, label]) => (
+          <option key={value} value={value}>
+            {label}
+          </option>
+        ))}
     </select>
   );
 };

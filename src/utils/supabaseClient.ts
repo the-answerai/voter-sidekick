@@ -15,7 +15,6 @@ export async function getUniquePolicyAreas() {
     .select('policyArea')
     .not('policyArea', 'is', null)
     .order('policyArea');
-
   
   if (error) {
     console.error('Error fetching policy areas:', error);

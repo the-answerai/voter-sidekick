@@ -5,18 +5,24 @@ CREATE TYPE "Locale" AS ENUM ('FEDERAL', 'STATE', 'LOCAL');
 CREATE TYPE "SubmissionStatus" AS ENUM ('NEW', 'IN_REVIEW', 'APPROVED', 'DENIED');
 
 -- CreateTable
-CREATE TABLE "Law" (
-    "id" SERIAL NOT NULL,
+CREATE TABLE "Bill" (
+    "id" TEXT NOT NULL,
     "title" TEXT NOT NULL,
-    "summary" TEXT NOT NULL,
+    "summary" TEXT,
     "tags" TEXT[],
-    "source_link" TEXT NOT NULL,
-    "pdf_link" TEXT NOT NULL,
+    "source_link" TEXT,
     "locale" "Locale" NOT NULL,
     "date_added" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "topics" TEXT[],
+    "policyArea" TEXT NOT NULL,
+    "actionsUrl" TEXT NOT NULL,
+    "summariesUrl" TEXT NOT NULL,
+    "latestTextVersionUrl" TEXT NOT NULL,
+    "latestPdfVersionUrl" TEXT NOT NULL,
+    "introducedDate" TIMESTAMP(3) NOT NULL,
+    "lastUpdatedDate" TIMESTAMP(3) NOT NULL,
+    "congress" INTEGER NOT NULL,
 
-    CONSTRAINT "Law_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "Bill_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable

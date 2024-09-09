@@ -1,13 +1,13 @@
 import { type PineconeMetadataFilter } from "@/types";
 import { getUniquePolicyAreas } from '@/utils/supabaseClient';
-
+import { getPolicyAreaSlug } from '@/utils/getPolicyAreaSlug';
 export const topics = new Map<string, string>();
 
 export async function initializeTopics() {
   const policyAreas = await getUniquePolicyAreas();
   const topicsMap = new Map<string, string>();
   policyAreas.forEach(area => {
-    topicsMap.set(area.toLowerCase().replace(/\s+/g, '-'), area);
+    topicsMap.set(getPolicyAreaSlug(area), area);
   });
   return topicsMap;
 }
@@ -25,7 +25,13 @@ export const getChatflowConfig = (metaDataFilters: PineconeMetadataFilter) => {
   // Only add non-empty filter values
   Object.entries(metaDataFilters).forEach(([key, value]) => {
     if (value && value.trim() !== "") {
-      pineconeMetadataFilter[key as keyof PineconeMetadataFilter] = value;
+      if (key === 'introducedDate' || key === 'lastUpdatedDate') {
+        pineconeMetadataFilter[key as keyof PineconeMetadataFilter] = new Date(value);
+      } else if (key === 'congress') {
+        pineconeMetadataFilter[key as keyof PineconeMetadataFilter] = Number(value);
+      } else {
+        pineconeMetadataFilter[key as keyof PineconeMetadataFilter] = value;
+      }
     }
   });
 

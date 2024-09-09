@@ -12,7 +12,7 @@ const ChatFullPage: React.FC<ChatFullPageProps> = ({
   if (!chatflowid || !apiHost) return null;
 
   return (
-    <div data-testid="ChatFullPage" className="flex flex-col h-full w-fulls">
+    <div data-testid="ChatFullPage" className="flex flex-col">
       <div className="flex-grow flex flex-col">
         <div className="flex-grow">
           <FullPageChat

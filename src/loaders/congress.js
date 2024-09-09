@@ -37,6 +37,7 @@ const normalizeBill = async (billUrl, CongressApi) => {
     latestPdfVersionUrl: latestPdfVersionUrl,
     introducedDate: bill?.introducedDate || null,
     lastUpdatedDate: bill?.updateDate || null,
+    congress: bill?.congress || null,
   }
 }
 async function getBillsFromCongress(congressNumber = null, billType = null) {

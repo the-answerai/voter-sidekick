@@ -9,6 +9,7 @@ export interface ChatFullPageProps {
   apiHost: string;
   chatflowConfig?: {
     pineconeMetadataFilter?: PineconeMetadataFilter;
+    handleUserMessage?: (userMessage: string) => void;
   };
   observersConfig?: {
     observeUserInput?: (userInput: string) => void;

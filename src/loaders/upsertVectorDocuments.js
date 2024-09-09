@@ -1,7 +1,18 @@
 import { createClient } from '@supabase/supabase-js';
 import axios from 'axios';
 
+// TODO: move this to the utils file couldnt figure out the typescript issue
+const getPolicyAreaSlug = (input) => {
+    return input
+        .toLowerCase()
+        .replace(/[^\w\s-]/g, '') // Remove special characters
+        .replace(/\s+/g, '-') // Replace spaces with hyphens
+        .replace(/-+/g, '-') // Replace multiple hyphens with a single hyphen
+        .trim(); // Trim leading and trailing spaces or hyphens
+}
+
 // Initialize Supabase client
+
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
 
 // Initialize TheAnswer API client
@@ -29,8 +40,10 @@ async function upsertVectorDocuments() {
                 introducedDate: bill.introducedDate,
                 lastUpdatedDate: bill.lastUpdatedDate,
                 tags: bill.tags,
-                policyArea: bill.policyArea,
-                id: bill.id
+                policyArea: getPolicyAreaSlug(bill.policyArea),
+                id: bill.id,
+                congress: bill.congress,
+                source_link: bill.source_link
             };
 
             // Prepare override config

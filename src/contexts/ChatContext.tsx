@@ -1,4 +1,4 @@
-"use client"; // Add this line at the top of the file
+"use client";
 
 import React, {
   createContext,
@@ -18,7 +18,8 @@ import { updateChatflowConfig } from "../utils/updateChatflowConfig";
 
 interface ChatContextType {
   chatProps: ChatFullPageProps | null;
-  updateMetadataFilter: (key: string, value: string) => void;
+  updateMetadataFilter: (key: string, value: string | number) => void;
+  updateTopK: (value: number) => void;
   sourceDocuments: SourceDocument[];
   addSourceDocuments: (newDocuments: SourceDocument[]) => void;
   clearSourceDocuments: () => void;
@@ -34,23 +35,37 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({
   );
   const [sourceDocuments, setSourceDocuments] = useState<SourceDocument[]>([]);
 
-  const updateMetadataFilter = useCallback((key: string, value: string) => {
+  const updateMetadataFilter = useCallback(
+    (key: string, value: string | number) => {
+      setChatProps((prevProps) => {
+        if (!prevProps) return null;
+
+        const prevFilter = (prevProps.chatflowConfig?.pineconeMetadataFilter ||
+          {}) as PineconeMetadataFilter;
+        const updatedFilter = updateFilter(prevFilter, key, value);
+        const updatedChatflowConfig = updateChatflowConfig(
+          prevProps.chatflowConfig || {},
+          updatedFilter
+        );
+
+        return {
+          ...prevProps,
+          chatflowConfig: updatedChatflowConfig,
+        };
+      });
+    },
+    []
+  );
+
+  const updateTopK = useCallback((value: number) => {
     setChatProps((prevProps) => {
       if (!prevProps) return null;
-
-      const prevFilter = (prevProps.chatflowConfig?.pineconeMetadataFilter ||
-        {}) as PineconeMetadataFilter;
-      const updatedFilter = updateFilter(prevFilter, key, value);
-      const updatedChatflowConfig = updateChatflowConfig(
-        prevProps.chatflowConfig || {},
-        updatedFilter
-      );
 
       return {
         ...prevProps,
         chatflowConfig: {
           ...prevProps.chatflowConfig,
-          pineconeMetadataFilter: updatedFilter,
+          topK: value,
         },
       };
     });
@@ -84,6 +99,7 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({
       value={{
         chatProps,
         updateMetadataFilter,
+        updateTopK,
         sourceDocuments,
         addSourceDocuments,
         clearSourceDocuments,

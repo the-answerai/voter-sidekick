@@ -6,7 +6,7 @@ export const updateFilter = (
   value: string
 ): Record<string, string> => {
   const updatedFilter = { ...prevFilter };
-  if (isNonEmptyString(value)) {
+  if (typeof value === "number" || isNonEmptyString(value)) {
     updatedFilter[key] = value;
   } else {
     delete updatedFilter[key];
