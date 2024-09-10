@@ -1,15 +1,18 @@
 import { isNonEmptyString } from "./isNonEmptyString";
+import { PineconeMetadataFilter } from "../types";
 
 export const updateFilter = (
-  prevFilter: Record<string, string>,
+  prevFilter: PineconeMetadataFilter,
   key: string,
-  value: string
-): Record<string, string> => {
+  value: string | number | string[]
+): PineconeMetadataFilter => {
   const updatedFilter = { ...prevFilter };
-  if (typeof value === "number" || isNonEmptyString(value)) {
-    updatedFilter[key] = value;
+
+  if (value === "" || (Array.isArray(value) && value.length === 0)) {
+    delete updatedFilter[key as keyof PineconeMetadataFilter];
   } else {
-    delete updatedFilter[key];
+    updatedFilter[key as keyof PineconeMetadataFilter] = value;
   }
+
   return updatedFilter;
 };

@@ -31,13 +31,16 @@ const normalizeBill = async (billUrl, CongressApi) => {
     locale: 'FEDERAL',
     date_added: new Date().toISOString(),
     policyArea: bill?.policyArea ? bill.policyArea.name : 'Unknown',
-    actionsUrl: bill?.actions?.url || '',
-    summariesUrl: bill?.summaries?.url || '',
     latestTextVersionUrl: latestTextVersionUrl,
     latestPdfVersionUrl: latestPdfVersionUrl,
-    introducedDate: bill?.introducedDate || null,
-    lastUpdatedDate: bill?.updateDate || null,
+    introducedDate: bill?.introducedDate ? new Date(bill.introducedDate).toISOString() : null,
+    lastUpdatedDate: bill?.updateDate ? new Date(bill.updateDate).toISOString() : null,
     congress: bill?.congress || null,
+    isLaw: Array.isArray(bill?.laws) && bill.laws.length > 0,
+    originChamber: bill?.originChamber || '',
+    billType: bill?.type || '',
+    billNumber: bill?.number || '',
+    fullBillJson: bill,
   }
 }
 async function getBillsFromCongress(congressNumber = null, billType = null) {
@@ -49,8 +52,8 @@ async function getBillsFromCongress(congressNumber = null, billType = null) {
     console.log(`Fetching bills from the ${currentCongress}th Congress (${lastYear}-${currentYear})...`);
 
     let offset = 0;
-    const limit = 250; // Adjust as needed
-    const isTestingMode = false;
+    const limit = 5; // Adjust as needed
+    const isTestingMode = true;
 
     // Create a new CongressApi instance with the provided congress number and bill type
     const CongressApi = createCongressApi(currentCongress, billType);

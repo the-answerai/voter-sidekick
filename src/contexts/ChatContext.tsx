@@ -14,11 +14,13 @@ import {
 } from "../types";
 import defaultChatProps from "../chatbots/default";
 import { updateFilter } from "../utils/updateFilter";
-import { updateChatflowConfig } from "../utils/updateChatflowConfig";
 
 interface ChatContextType {
   chatProps: ChatFullPageProps | null;
-  updateMetadataFilter: (key: string, value: string | number) => void;
+  updateMetadataFilter: (
+    key: string,
+    value: string | number | string[]
+  ) => void;
   updateTopK: (value: number) => void;
   sourceDocuments: SourceDocument[];
   addSourceDocuments: (newDocuments: SourceDocument[]) => void;
@@ -30,13 +32,20 @@ const ChatContext = createContext<ChatContextType | undefined>(undefined);
 export const ChatProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [chatProps, setChatProps] = useState<ChatFullPageProps | null>(
-    defaultChatProps
-  );
+  const [chatProps, setChatProps] = useState<ChatFullPageProps | null>(() => ({
+    ...defaultChatProps,
+    chatflowConfig: {
+      ...defaultChatProps.chatflowConfig,
+      pineconeNamespace: process.env.NEXT_PUBLIC_PINECONE_NAMESPACE,
+      pineconeMetadataFilter: {
+        ...defaultChatProps.chatflowConfig?.pineconeMetadataFilter,
+      },
+    },
+  }));
   const [sourceDocuments, setSourceDocuments] = useState<SourceDocument[]>([]);
 
   const updateMetadataFilter = useCallback(
-    (key: string, value: string | number) => {
+    (key: string, value: string | number | string[]) => {
       setChatProps((prevProps) => {
         if (!prevProps) return null;
 

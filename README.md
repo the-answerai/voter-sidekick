@@ -1,103 +1,123 @@
-# Coding Objectives for the AI Policy Researcher
+# AI Policy Researcher: Empowering an Informed Electorate
 
-Day 1: Core Backend and Law Import Automation
+## Introduction
 
-Hour 1-2: Supabase Schema Setup
-• Objective: Define the schema in Supabase to store laws, topics, and user interactions.
-• Tasks:
-• In Supabase, create the following tables:
-• Laws Table: id, title, summary, tags, source_link, federal/state/local, date_added, topics
-• User_Submissions Table: id, law_title, law_source, user_id, status, date_submitted
-• Users Table: id, email, username
-• Make sure tags are saved as an array (for flexibility in assigning multiple topics).
-• Set up relationships between users and their submissions.
-• Outcome: A database schema ready for storing laws, user submissions, and user-specific interactions.
+In an era of information overload and media bias, the AI Policy Researcher aims to solve a critical problem: making it easy for everyone to research laws and government representatives without the need for the lens of the media. This tool empowers citizens to actually do their own research and make informed decisions about their governance.
 
-Hour 3-4: Law Importing with API Integration
-• Objective: Automate the importing of laws from APIs like ProPublica or Open States.
-• Tasks:
-• Write a script that pulls laws based on topics and regions (e.g., healthcare, immigration) and stores them in Supabase.
-• Use basic tagging (e.g., “federal”, “state”, “immigration”) to categorize laws as they are imported.
-• Ensure this script can be run on-demand (or on a schedule later) to keep the database updated.
-• Outcome: Automatically populate the Supabase database with relevant laws.
+> "An educated citizenry is a vital requisite for our survival as a free people." - Thomas Jefferson
 
-Hour 5-6: AnswerAI Integration (Basic Chatbot Functionality)
-• Objective: Improve chatbot responses by pulling data from the Supabase database.
-• Tasks:
-• Link the chatbot with Supabase to retrieve and display laws based on user queries.
-• Use AnswerAI for basic document chunking and summarization of long laws into short chatbot responses.
-• Ensure the chatbot responds with laws based on the topic and locale filters the user selects.
-• Outcome: The chatbot dynamically pulls law data and delivers relevant, concise responses.
+> "A republic, if you can keep it." - Benjamin Franklin
 
-Hour 7-8: User Submission Form (Airtable Integration)
-• Objective: Allow users to submit new laws or sources.
-• Tasks:
-• Create an Airtable form where users can submit law sources (title, link, topic, description).
-• Use a tool like Zapier or Integromat to automate the process of transferring data from Airtable to Supabase after a quick review.
-• Add a status field in Supabase (pending, approved) to track user-submitted sources.
-• Outcome: User-submitted laws are automatically added to the Supabase database after review.
+Franklin's quote reminds us of the responsibility we bear in maintaining our democratic system. The AI Policy Researcher is designed to help citizens fulfill this responsibility by providing easy access to unbiased, comprehensive information about laws and representatives.
 
-Hour 9-10: Front-End Improvements
-• Objective: Enhance the React front-end for better user experience and law search capabilities.
-• Tasks:
-• Improve UI for law search (topics, locale dropdowns) using Tailwind for clean visuals.
-• Ensure that when users select a topic/locale, the chatbot automatically queries relevant laws from Supabase.
-• Add user feedback (loading spinners, success messages) to the UI when laws are retrieved.
-• Outcome: Smooth user experience with better interactivity and visual feedback.
+## Current Capabilities
 
-Hour 11-12: Initial Testing and Debugging
-• Objective: Test the entire flow to ensure everything is working properly.
-• Tasks:
-• Test chatbot responses for accuracy when fetching laws from Supabase.
-• Submit a test law via the Airtable form and confirm it gets added to Supabase after review.
-• Check error handling (e.g., what happens when a law isn’t found).
-• Outcome: The app is functional, with law importing, chatbot interaction, and user submissions all working correctly.
+- Start a new research project or explore existing communities
+- Ask questions about U.S. congressional laws
+- Receive explanations of laws in plain language
+- Save documents and clips for easy sharing across social media and the community
+- Receive suggested follow-up questions to deepen your understanding
+- Access a database of U.S. congressional laws (with plans to expand to all levels of government)
 
-Day 2: User-Specific Features and Final Deployment
-Hour 1-2: Saving and Retrieving User Data
-• Objective: Allow users to save and retrieve their favorite laws.
-• Tasks:
-• Implement functionality that lets users save laws to their session (store them temporarily in local storage or cookies).
-• Prepare the database to save these preferences for later integration with Auth0.
-• Outcome: Users can save laws temporarily in the app.
-Hour 3-4: Auth0 Setup (Authentication)
-• Objective: Implement user authentication using Auth0.
-• Tasks:
-• Set up Auth0 for basic user login (Google, email/password).
-• Protect user-specific routes (e.g., saved laws, submission history).
-• Ensure that user data (e.g., saved laws) is stored in Supabase under their profile.
-• Outcome: Auth0 integrated for user login, and users can save their laws after authentication.
-Hour 5-6: Document Chunking and Enhancing the Chatbot
-• Objective: Improve chatbot responses with more advanced document chunking.
-• Tasks:
-• Use AnswerAI to break long documents into chunks that are returned one at a time to avoid overwhelming the user.
-• Enhance chatbot prompts by including context-based follow-up questions (e.g., “Would you like to see related laws?”).
-• Outcome: Chatbot is more user-friendly, delivering responses in digestible chunks with contextual follow-ups.
-Hour 7-8: Final Testing of Airtable Submissions and Supabase
-• Objective: Ensure Airtable submissions work smoothly and are reflected in Supabase.
-• Tasks:
-• Test multiple submissions via Airtable to confirm correct tagging and approval process.
-• Make sure user-submitted laws appear in the chatbot responses after approval.
-• Outcome: Airtable integration is working perfectly, and user submissions are showing up in the chatbot.
-Hour 9-10: Vercel Deployment (Final Touches)
-• Objective: Redeploy the app on Vercel with all final changes.
-• Tasks:
-• Redeploy with environment variables (Supabase keys, Airtable API keys, Auth0 credentials) properly configured.
-• Perform one last round of debugging and browser testing (desktop and mobile).
-• Outcome: The app is fully deployed and functional on Vercel.
-Hour 11-12: Go Live and Post-Launch Testing
-• Objective: Final deployment and live testing.
-• Tasks:
-• Ensure everything is functional with real users testing the app.
-• Collect initial feedback from users (test saving laws, querying the chatbot).
-• Set up monitoring tools (like Google Analytics or Vercel Analytics) to track user interactions.
-• Outcome: The app is live and ready for use, with post-launch testing in place.
+Our goal is to make it easy to access information from all levels of government, including session transcripts, and to collect data that enables the public to make informed decisions about their representatives.
 
-Follow-Up Actions (Post Beta Release)
+## Local Setup Guide
 
-1. Add Advanced Filtering: Improve the filtering system to allow users to search laws by more detailed criteria (e.g., sponsor, status, date).
-2. User Notifications: Add email notifications for users when their submissions are approved or when new laws are added to their topics of interest.
-3. Mobile Optimization: Refine the UI for better mobile responsiveness and user experience.
-4. Improve Analytics: Track specific chatbot queries, drop-offs, and other engagement metrics to continuously improve the app.
-5. Multi-Language Support: Consider adding multi-language support if your audience expands to non-English speakers.
-   This plan allows you to focus on critical features while stretching the workload over two days. You’ll end with a functional MVP ready for user testing and iteration. How does this revised plan align with your vision? Let me know if you’d like to tweak anything further!
+1. Clone the repository
+2. Install dependencies:
+
+   ```
+   pnpm i
+   ```
+
+3. Set up environment variables:
+   - Copy `.env.example` to `.env`
+   - Fill in the required API keys and database URLs
+4. Set up the database:
+
+   ```
+   pnpm run setup-db
+   ```
+
+5. Run migrations:
+
+   ```
+   pnpm run migrate
+   ```
+
+6. Start the development server:
+
+   ```
+   pnpm run dev
+   ```
+
+Go to [http://localhost:3000](http://localhost:3000) to access the application.
+
+## Tech Stack
+
+- Next.js
+- React
+- Prisma
+- Supabase
+- Tailwind CSS
+- TypeScript
+
+## Data Loaders
+
+Our project uses a set of loaders to fetch, process, and store data from various sources. Here's an overview of how our loaders work:
+
+### Congress Downloader
+
+The Congress Downloader is responsible for fetching bills from the U.S. Congress API and storing them locally. It can download bills for specific congresses and bill types. We download them to get around the rate limits of the Congress API.
+
+Key features:
+
+- Resumes downloads from where it left off
+- Saves bills in JSON format
+- Handles pagination automatically
+
+Usage:
+
+```javascript
+const downloader = new CongressDownloader("./data/bills");
+await downloader.downloadBills({ congress: 118, billType: "hr" });
+```
+
+### Bill Normalizer and Upserter
+
+This loader fetches detailed information about each bill, normalizes the data, and upserts it into our Supabase database.
+
+Key features:
+
+- Fetches full bill details, including tags and text versions
+- Generates a unique hash ID for each bill
+- Upserts data to avoid duplicates
+
+Usage:
+
+```javascript
+await getBillsFromCongress(118, "hr");
+```
+
+## Roadmap
+
+- [ ] User authentication and profiles
+- [ ] Integration of state and local government data
+- [ ] Social sharing features
+- [ ] Integration of campaign finance data
+- [ ] Desktop app development for private research
+- [ ] Multi-language support
+
+## Live Coding Sessions
+
+We will be live streaming coding sessions every day from now until the election. Our goal is to provide the electorate with a free tool they can use to get information about politicians, ballot initiatives, and most importantly, who is behind them and what their motivations are.
+
+Join us in our mission to create a more informed and engaged citizenry!
+
+## Contributing
+
+We welcome contributions from developers, researchers, and citizens passionate about transparency in governance. Please see our [CONTRIBUTING.md](CONTRIBUTING.md) file for more information on how to get involved.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.

@@ -5,6 +5,7 @@ import ChatFullPage from "./ChatFullPage";
 import { useChatContext } from "../contexts/ChatContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -18,7 +19,22 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  DialogFooter,
 } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogCancel,
+  AlertDialogAction,
+} from "@/components/ui/alert-dialog";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import PineconeMetadataFilterSelect from "./PineconeMetadataFilterSelect";
 import SourceDocumentsSidebar from "./SourceDocumentsSidebar";
@@ -28,7 +44,17 @@ import {
 } from "../chatbots/config/chatflowConfig";
 import getFollowUpQuestions from "@/utils/getFollwUpQuestions";
 import getUserIntent from "@/utils/getUserIntentGoal"; // Add this import
-import { supabase } from "@/utils/supabaseClient"; // Make sure to import your Supabase client
+import { getResearchProject, getBill } from "@/utils/supabaseClient"; // Make sure to import your Supabase client
+import { updateResearchProject } from "@/utils/supabaseClient"; // Add this import
+import { Wand2 } from "lucide-react"; // Import the magic wand icon
+import { cn } from "@/utils/tailwindMerge";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
   const {
@@ -37,7 +63,6 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
     addSourceDocuments,
     clearSourceDocuments,
   } = useChatContext();
-  const [projectTitle] = useState("New Research Project");
   const [showingSources, setShowingSources] = useState(false);
   const [savedDocuments, setSavedDocuments] = useState([
     {
@@ -60,10 +85,54 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
   const [overrideConfig, setOverrideConfig] = useState({});
   const [followUpQuestions, setFollowUpQuestions] = useState<string[]>([]);
   const [userIntent, setUserIntent] = useState<string>("");
+  const [isEditingIntent, setIsEditingIntent] = useState(false);
 
   const [groupedSources, setGroupedSources] = useState<Record<string, any>>({});
   const [selectedDocument, setSelectedDocument] = useState<any>(null);
   const [currentExcerptIndex, setCurrentExcerptIndex] = useState(0);
+
+  const [projectTitle, setProjectTitle] = useState("Loading...");
+  const [projectDescription, setProjectDescription] = useState("");
+
+  const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
+  const [editedTitle, setEditedTitle] = useState("");
+  const [editedDescription, setEditedDescription] = useState("");
+  const [editedVisibility, setEditedVisibility] = useState("PRIVATE");
+  const [isPublicConfirmationOpen, setIsPublicConfirmationOpen] =
+    useState(false);
+
+  const [selectedFilters, setSelectedFilters] = useState<{
+    [key: string]: string[];
+  }>({});
+
+  const [topk, setTopk] = useState(5);
+
+  useEffect(() => {
+    const fetchProjectDetails = async () => {
+      const project = await getResearchProject(projectId);
+      if (project) {
+        setProjectTitle(project.title);
+        setProjectDescription(project.description || "");
+        setUserIntent(project.intent || "");
+        if (project.filters) {
+          setOverrideConfig(JSON.parse(project.filters));
+          // Parse the filters and set the selectedFilters state
+          const parsedFilters = JSON.parse(project.filters);
+          const filters: { [key: string]: string[] } = {};
+          Object.entries(parsedFilters).forEach(([key, value]) => {
+            if (Array.isArray(value)) {
+              filters[key] = value;
+            } else if (typeof value === "string" || typeof value === "number") {
+              filters[key] = [value.toString()];
+            }
+          });
+          setSelectedFilters(filters);
+        }
+      }
+    };
+
+    fetchProjectDetails();
+  }, [projectId]);
 
   useEffect(() => {
     const loadTopics = async () => {
@@ -73,49 +142,48 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
     loadTopics();
   }, []);
 
+  const handleMessageObservation = async (messages: any[]) => {
+    if (messages.length === 1) {
+      clearSourceDocuments();
+      setCitedSources([]);
+      setShowingSources(false);
+      setFollowUpQuestions([]);
+      // Don't reset user intent here
+    } else {
+      const latestMessage = messages[messages.length - 1];
+      if (
+        latestMessage.type === "apiMessage" &&
+        latestMessage.sourceDocuments &&
+        Array.isArray(latestMessage.sourceDocuments)
+      ) {
+        addSourceDocuments(latestMessage.sourceDocuments);
+        const newCitedSources: CitedSource[] =
+          latestMessage.sourceDocuments.map((doc: SourceDocument) => ({
+            id: doc.metadata.id,
+            title: doc.metadata.title || "Unknown Title",
+            congress: doc.metadata.congress || "Unknown Congress",
+            policyArea: doc.metadata.policyArea || "Unknown policyArea",
+            chunks: [doc.pageContent],
+          }));
+        setCitedSources(newCitedSources);
+        setShowingSources(true);
+        const followUpQuestions = await getFollowUpQuestions(
+          messages.slice(0, -1),
+          latestMessage.message
+        );
+        setFollowUpQuestions(followUpQuestions);
+
+        // Don't generate user intent here
+      }
+    }
+  };
+
   useEffect(() => {
     if (chatProps?.observersConfig?.observeMessages) {
       const originalObserveMessages = chatProps.observersConfig.observeMessages;
       chatProps.observersConfig.observeMessages = async (messages) => {
         originalObserveMessages(messages);
-        if (messages.length === 1) {
-          clearSourceDocuments();
-          setCitedSources([]);
-          setShowingSources(false);
-          setFollowUpQuestions([]);
-          setUserIntent(""); // Reset user intent
-        } else {
-          const latestMessage = messages[messages.length - 1];
-          if (
-            latestMessage.type === "apiMessage" &&
-            latestMessage.sourceDocuments &&
-            Array.isArray(latestMessage.sourceDocuments)
-          ) {
-            addSourceDocuments(latestMessage.sourceDocuments);
-            const newCitedSources: CitedSource[] =
-              latestMessage.sourceDocuments.map((doc: SourceDocument) => ({
-                id: doc.metadata.id,
-                title: doc.metadata.title || "Unknown Title",
-                congress: doc.metadata.congress || "Unknown Congress",
-                policyArea: doc.metadata.policyArea || "Unknown policyArea",
-                chunks: [doc.pageContent],
-              }));
-            setCitedSources(newCitedSources);
-            setShowingSources(true);
-            const followUpQuestions = await getFollowUpQuestions(
-              messages.slice(0, -1),
-              latestMessage.message
-            );
-            setFollowUpQuestions(followUpQuestions);
-
-            // Get and set user intent
-            const intent = await getUserIntent(
-              messages.slice(0, -1),
-              latestMessage.message
-            );
-            setUserIntent(intent);
-          }
-        }
+        await handleMessageObservation(messages);
       };
     }
   }, [chatProps, addSourceDocuments, clearSourceDocuments]);
@@ -241,16 +309,7 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
 
   const handleDocumentClick = async (documentId: string) => {
     // Fetch full document details from Supabase
-    const { data, error } = await supabase
-      .from("documents")
-      .select("*")
-      .eq("id", documentId)
-      .single();
-
-    if (error) {
-      console.error("Error fetching document:", error);
-      return;
-    }
+    const data = await getBill(documentId);
 
     setSelectedDocument(data);
     setCurrentExcerptIndex(0);
@@ -276,6 +335,124 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
     return title.slice(0, maxLength) + "...";
   };
 
+  const handleEditClick = () => {
+    setEditedTitle(projectTitle);
+    setEditedDescription(projectDescription);
+    setIsEditDialogOpen(true);
+  };
+
+  const handleSaveEdit = async () => {
+    if (editedVisibility === "PUBLIC") {
+      setIsPublicConfirmationOpen(true);
+    } else {
+      await saveProjectChanges();
+    }
+  };
+
+  const handlePublicConfirmation = async () => {
+    setIsPublicConfirmationOpen(false);
+    await saveProjectChanges();
+  };
+
+  const saveProjectChanges = async () => {
+    try {
+      const updatedProject = await updateResearchProject(projectId, {
+        title: editedTitle,
+        description: editedDescription,
+        visibility: editedVisibility,
+      });
+      if (updatedProject) {
+        setProjectTitle(updatedProject.title || "");
+        setProjectDescription(updatedProject.description || "");
+        setIsEditDialogOpen(false);
+      } else {
+        console.error("Failed to update project");
+      }
+    } catch (error) {
+      console.error("Error updating project:", error);
+    }
+  };
+
+  const handleGenerateIntent = async () => {
+    const messages = chatProps?.messages || [];
+    const latestMessage = messages[messages.length - 1];
+    const intent = await getUserIntent(
+      messages.slice(0, -1),
+      latestMessage?.message
+    );
+    setUserIntent(intent);
+    // Save the generated intent to the database
+    await updateResearchProject(projectId, { intent: intent });
+  };
+
+  const handleIntentChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setUserIntent(e.target.value);
+  };
+
+  const handleIntentBlur = async () => {
+    setIsEditingIntent(false);
+    // Save the updated intent to the database
+    await updateResearchProject(projectId, { intent: userIntent });
+  };
+
+  const handleFilterSelect = async (
+    key: string,
+    value: string | number | string[]
+  ) => {
+    const updatedFilters = { ...selectedFilters };
+    if (key === "topK") {
+      updatedFilters[key] = value as number;
+    } else {
+      updatedFilters[key] = value as string[];
+    }
+    setSelectedFilters(updatedFilters);
+    await updateFiltersInDatabase(updatedFilters);
+  };
+
+  const handleFilterRemove = async (key: string, value: string) => {
+    const updatedFilters = { ...selectedFilters };
+    if (Array.isArray(updatedFilters[key])) {
+      updatedFilters[key] = (updatedFilters[key] as string[]).filter(
+        (v) => v !== value
+      );
+      if ((updatedFilters[key] as string[]).length === 0) {
+        delete updatedFilters[key];
+      }
+    }
+    setSelectedFilters(updatedFilters);
+    await updateFiltersInDatabase(updatedFilters);
+  };
+
+  const updateFiltersInDatabase = async (filters: {
+    [key: string]: string[] | number;
+  }) => {
+    const updatedConfig = { ...overrideConfig };
+    updatedConfig.pineconeMetadataFilter = {};
+
+    Object.entries(filters).forEach(([key, value]) => {
+      if (key === "topK") {
+        updatedConfig.topK = value as number;
+      } else if (key === "congress" || key === "policyArea") {
+        if (Array.isArray(value) && value.length > 0) {
+          // Use $in operator for congress and policyArea
+          updatedConfig.pineconeMetadataFilter[key] = { $in: value };
+        }
+      } else {
+        // For other fields, keep the original format
+        updatedConfig.pineconeMetadataFilter[key] = value;
+      }
+    });
+
+    setOverrideConfig(updatedConfig);
+    try {
+      await updateResearchProject(projectId, {
+        filters: JSON.stringify(updatedConfig),
+      });
+    } catch (error) {
+      console.error("Error updating filters:", error);
+    }
+  };
+
   return (
     <div className="flex flex-col h-screen">
       {/* Research Summary */}
@@ -283,6 +460,7 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
         <CardContent className="flex items-center justify-between py-4">
           <div className="flex-1">
             <h2 className="text-2xl font-bold">{projectTitle}</h2>
+            <p className="text-sm text-gray-500">{projectDescription}</p>
           </div>
           <div className="flex space-x-8">
             <div className="text-center">
@@ -310,6 +488,9 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
               {sourceDocuments.length} of 10 recommended documents added
             </p>
           </div>
+          <Button onClick={handleEditClick} className="ml-4">
+            Edit Project
+          </Button>
         </CardContent>
       </Card>
 
@@ -320,10 +501,29 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
             {/* User Intent */}
             <Card className="flex-1">
               <CardHeader>
-                <CardTitle>User Intent</CardTitle>
+                <CardTitle className="flex items-center justify-between">
+                  User Intent
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={handleGenerateIntent}
+                    title="Generate new intent"
+                  >
+                    <Wand2 className="h-4 w-4" />
+                  </Button>
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p>{userIntent}</p>
+                {isEditingIntent ? (
+                  <Textarea
+                    value={userIntent}
+                    onChange={handleIntentChange}
+                    onBlur={handleIntentBlur}
+                    className="w-full"
+                  />
+                ) : (
+                  <p onClick={() => setIsEditingIntent(true)}>{userIntent}</p>
+                )}
               </CardContent>
             </Card>
 
@@ -379,24 +579,41 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <PineconeMetadataFilterSelect
-                options={congressSessions}
-                filterKey="congress"
-                placeholder="Select Congress"
-                isNumeric={true}
-              />
-              <PineconeMetadataFilterSelect
-                options={topics}
-                filterKey="policyArea"
-                placeholder="Select Topic"
-              />
-              <PineconeMetadataFilterSelect
-                filterKey="topK"
-                isNumeric={true}
-                isSlider={true}
-                min={4}
-                max={30}
-              />
+              <div className="space-y-4">
+                <PineconeMetadataFilterSelect
+                  options={congressSessions}
+                  updateFilter={handleFilterSelect}
+                  removeFilter={handleFilterRemove}
+                  filterKey="congress"
+                  placeholder="Select Congress"
+                  isNumeric={true}
+                  isMulti={true}
+                  selectedValues={selectedFilters.congress || []}
+                />
+                <PineconeMetadataFilterSelect
+                  options={topics}
+                  updateFilter={handleFilterSelect}
+                  removeFilter={handleFilterRemove}
+                  filterKey="policyArea"
+                  placeholder="Select Topic"
+                  isMulti={true}
+                  selectedValues={selectedFilters.policyArea || []}
+                />
+                <PineconeMetadataFilterSelect
+                  filterKey="topK"
+                  updateFilter={handleFilterSelect}
+                  removeFilter={handleFilterRemove}
+                  isNumeric={true}
+                  isSlider={true}
+                  min={4}
+                  max={30}
+                  selectedValues={
+                    selectedFilters.topK
+                      ? [selectedFilters.topK.toString()]
+                      : []
+                  }
+                />
+              </div>
             </CardContent>
           </Card>
           <Card className="flex-1">
@@ -450,6 +667,79 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
           </Card>
         </div>
       </div>
+
+      <Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
+        <DialogContent className={cn("dialog-content")}>
+          <DialogHeader>
+            <DialogTitle>Edit Research Project</DialogTitle>
+          </DialogHeader>
+          <div className="grid gap-4 py-4">
+            <div className="grid grid-cols-4 items-center gap-4">
+              <Label htmlFor="title" className="text-right">
+                Title
+              </Label>
+              <Input
+                id="title"
+                value={editedTitle}
+                onChange={(e) => setEditedTitle(e.target.value)}
+                className="col-span-3"
+              />
+            </div>
+            <div className="grid grid-cols-4 items-center gap-4">
+              <Label htmlFor="description" className="text-right">
+                Description
+              </Label>
+              <Textarea
+                id="description"
+                value={editedDescription}
+                onChange={(e) => setEditedDescription(e.target.value)}
+                className="col-span-3"
+              />
+            </div>
+            <div className="grid grid-cols-4 items-center gap-4">
+              <Label className="text-right">Visibility</Label>
+              <RadioGroup
+                value={editedVisibility}
+                onValueChange={setEditedVisibility}
+                className="col-span-3"
+              >
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem value="PRIVATE" id="private" />
+                  <Label htmlFor="private">Private</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem value="PUBLIC" id="public" />
+                  <Label htmlFor="public">Public</Label>
+                </div>
+              </RadioGroup>
+            </div>
+          </div>
+          <DialogFooter>
+            <Button onClick={handleSaveEdit}>Save changes</Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      <AlertDialog
+        open={isPublicConfirmationOpen}
+        onOpenChange={setIsPublicConfirmationOpen}
+      >
+        <AlertDialogContent className={cn("alert-dialog-content")}>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Make Project Public?</AlertDialogTitle>
+            <AlertDialogDescription>
+              Making your project public will allow anyone to view it. Are you
+              sure you want to proceed?
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction onClick={handlePublicConfirmation}>
+              Confirm
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 };

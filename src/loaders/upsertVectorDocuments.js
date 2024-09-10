@@ -43,12 +43,16 @@ async function upsertVectorDocuments() {
                 policyArea: getPolicyAreaSlug(bill.policyArea),
                 id: bill.id,
                 congress: bill.congress,
-                source_link: bill.source_link
+                isLaw: bill.isLaw,
+                originChamber: bill.originChamber,
+                billType: bill.billType,
+                billNumber: bill.billNumber,
             };
 
             // Prepare override config
             const overrideConfig = {
                 url: bill.latestTextVersionUrl,
+                pineconeNamespace: process.env.NEXT_PUBLIC_PINECONE_NAMESPACE,
                 metadata: metadata
             };
 

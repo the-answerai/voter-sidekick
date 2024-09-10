@@ -19,7 +19,6 @@ const getUserIntentGoal = async (chatHistory: any[], latestMessage: string) => {
     if (!response.ok) {
       throw new Error('Failed to fetch intent and goals');
     }
-    debugger
 
     const data = await response.json();
 

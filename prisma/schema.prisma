@@ -23,13 +23,16 @@ model Bill {
   locale                 Locale
   date_added             DateTime @default(now())
   policyArea             String
-  actionsUrl             String
-  summariesUrl           String
   latestTextVersionUrl   String
   latestPdfVersionUrl    String
   introducedDate         DateTime
   lastUpdatedDate        DateTime
   congress               Int
+  isLaw                  Boolean
+  originChamber          String
+  billType               String
+  billNumber             String
+  fullBillJson           Json
 }
 
 enum Locale {
@@ -62,4 +65,27 @@ model User {
   email             String            @unique
   username          String            @unique
   submissions       UserSubmission[]
+  researchProjects ResearchProject[]
+}
+
+model ResearchProject {
+  id              Int      @id @default(autoincrement())
+  title           String
+  description     String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt @default(now())
+  intent          String?
+  userId          Int?
+  user            User?    @relation(fields: [userId], references: [id])
+  savedDocuments  String[] // Array of Bill IDs
+  savedExcerpts   Json[]   // Array of JSON objects
+  overrideConfig  Json?    // New field for full chatbot configuration
+  tags            String[]
+  visibility      Visibility @default(PRIVATE)
+}
+
+enum Visibility {
+  PRIVATE
+  PUBLIC
+  SHARED
 }
