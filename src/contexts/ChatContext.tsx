@@ -25,6 +25,7 @@ interface ChatContextType {
   sourceDocuments: SourceDocument[];
   addSourceDocuments: (newDocuments: SourceDocument[]) => void;
   clearSourceDocuments: () => void;
+  updateChatflowID: (chatflowID: string) => void;
 }
 
 const ChatContext = createContext<ChatContextType | undefined>(undefined);
@@ -102,6 +103,17 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({
     setSourceDocuments([]);
   }, []);
 
+  const updateChatflowID = useCallback((chatflowID: string) => {
+    setChatProps((prevProps) => {
+      if (!prevProps) return null;
+
+      return {
+        ...prevProps,
+        chatflowid: chatflowID,
+      };
+    });
+  }, []);
+
   return (
     <ChatContext.Provider
       value={{
@@ -111,6 +123,7 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({
         sourceDocuments,
         addSourceDocuments,
         clearSourceDocuments,
+        updateChatflowID,
       }}
     >
       {children}

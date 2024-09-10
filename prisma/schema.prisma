@@ -82,6 +82,8 @@ model ResearchProject {
   overrideConfig  Json?    // New field for full chatbot configuration
   tags            String[]
   visibility      Visibility @default(PRIVATE)
+  chatflowid      String
+  hasFilters      Boolean  @default(false)
 }
 
 enum Visibility {

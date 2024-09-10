@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import { supabase } from "@/utils/supabaseClient";
 
 console.log("Supabase URL:", process.env.NEXT_PUBLIC_SUPABASE_URL);
@@ -21,15 +22,22 @@ interface ResearchProject {
   id: number;
   title: string;
   description: string | null;
+  chatflowid: string | null;
+  hasFilters: boolean;
 }
 
 const Homepage: React.FC = () => {
   const [projects, setProjects] = useState<ResearchProject[]>([]);
   const [newProjectTitle, setNewProjectTitle] = useState("");
   const [newProjectDescription, setNewProjectDescription] = useState("");
+  const [newProjectChatflowId, setNewProjectChatflowId] = useState("");
+  const [newProjectHasFilters, setNewProjectHasFilters] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
     fetchProjects();
+    // Check if the user is an admin
+    setIsAdmin(process.env.NEXT_PUBLIC_IS_ADMIN === "true");
   }, []);
 
   const fetchProjects = async () => {
@@ -46,7 +54,12 @@ const Homepage: React.FC = () => {
       const { data, error } = await supabase
         .from("ResearchProject")
         .insert([
-          { title: newProjectTitle, description: newProjectDescription },
+          {
+            title: newProjectTitle,
+            description: newProjectDescription,
+            chatflowid: newProjectChatflowId,
+            hasFilters: newProjectHasFilters,
+          },
         ])
         .select();
 
@@ -57,6 +70,8 @@ const Homepage: React.FC = () => {
         console.log("Project created successfully:", data);
         setNewProjectTitle("");
         setNewProjectDescription("");
+        setNewProjectChatflowId("");
+        setNewProjectHasFilters(false);
         fetchProjects();
       }
     } catch (error) {
@@ -69,29 +84,46 @@ const Homepage: React.FC = () => {
     <div className="container mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold">Research Projects</h1>
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button>New Research Project</Button>
-          </DialogTrigger>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Create New Research Project</DialogTitle>
-            </DialogHeader>
-            <div className="space-y-4">
-              <Input
-                placeholder="Project Title"
-                value={newProjectTitle}
-                onChange={(e) => setNewProjectTitle(e.target.value)}
-              />
-              <Textarea
-                placeholder="Project Description"
-                value={newProjectDescription}
-                onChange={(e) => setNewProjectDescription(e.target.value)}
-              />
-              <Button onClick={handleCreateProject}>Create Project</Button>
-            </div>
-          </DialogContent>
-        </Dialog>
+        {isAdmin && (
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button>New Research Project</Button>
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>Create New Research Project</DialogTitle>
+              </DialogHeader>
+              <div className="space-y-4">
+                <Input
+                  placeholder="Project Title"
+                  value={newProjectTitle}
+                  onChange={(e) => setNewProjectTitle(e.target.value)}
+                />
+                <Textarea
+                  placeholder="Project Description"
+                  value={newProjectDescription}
+                  onChange={(e) => setNewProjectDescription(e.target.value)}
+                />
+                <Input
+                  placeholder="Chatflow ID"
+                  value={newProjectChatflowId}
+                  onChange={(e) => setNewProjectChatflowId(e.target.value)}
+                />
+                <div className="flex items-center space-x-2">
+                  <Checkbox
+                    id="hasFilters"
+                    checked={newProjectHasFilters}
+                    onCheckedChange={(checked) =>
+                      setNewProjectHasFilters(checked as boolean)
+                    }
+                  />
+                  <label htmlFor="hasFilters">Has Filters</label>
+                </div>
+                <Button onClick={handleCreateProject}>Create Project</Button>
+              </div>
+            </DialogContent>
+          </Dialog>
+        )}
       </div>
       <div className="grid grid-cols-2 gap-4">
         {projects.map((project) => (
@@ -107,6 +139,12 @@ const Homepage: React.FC = () => {
             </CardHeader>
             <CardContent>
               <p>{project.description}</p>
+              {isAdmin && (
+                <div className="mt-2">
+                  <p>Chatflow ID: {project.chatflowid || "Not set"}</p>
+                  <p>Has Filters: {project.hasFilters ? "Yes" : "No"}</p>
+                </div>
+              )}
             </CardContent>
           </Card>
         ))}

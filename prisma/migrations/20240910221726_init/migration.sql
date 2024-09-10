@@ -65,9 +65,11 @@ CREATE TABLE "ResearchProject" (
     "userId" INTEGER,
     "savedDocuments" TEXT[],
     "savedExcerpts" JSONB[],
-    "filters" JSONB,
+    "overrideConfig" JSONB,
     "tags" TEXT[],
     "visibility" "Visibility" NOT NULL DEFAULT 'PRIVATE',
+    "chatflowid" TEXT NOT NULL,
+    "hasFilters" BOOLEAN NOT NULL DEFAULT false,
 
     CONSTRAINT "ResearchProject_pkey" PRIMARY KEY ("id")
 );

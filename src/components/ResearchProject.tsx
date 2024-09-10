@@ -106,33 +106,52 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
   }>({});
 
   const [topk, setTopk] = useState(5);
+  const [chatflowid, setChatflowID] = useState<string | null>(null);
+  const [hasFilters, setHasFilters] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchProjectDetails = async () => {
-      const project = await getResearchProject(projectId);
-      if (project) {
-        setProjectTitle(project.title);
-        setProjectDescription(project.description || "");
-        setUserIntent(project.intent || "");
-        if (project.filters) {
-          setOverrideConfig(JSON.parse(project.filters));
-          // Parse the filters and set the selectedFilters state
-          const parsedFilters = JSON.parse(project.filters);
-          const filters: { [key: string]: string[] } = {};
-          Object.entries(parsedFilters).forEach(([key, value]) => {
-            if (Array.isArray(value)) {
-              filters[key] = value;
-            } else if (typeof value === "string" || typeof value === "number") {
-              filters[key] = [value.toString()];
-            }
-          });
-          setSelectedFilters(filters);
+      setIsLoading(true);
+      try {
+        const project = await getResearchProject(projectId);
+        console.log("Fetched project:", project);
+        if (project) {
+          setProjectTitle(project.title);
+          setProjectDescription(project.description || "");
+          setUserIntent(project.intent || "");
+          setChatflowID(project.chatflowid || null);
+          setHasFilters(project.hasFilters || false);
+          if (project.filters) {
+            // Parse the filters and set the selectedFilters state
+            const parsedFilters = JSON.parse(project.filters);
+            const filters: { [key: string]: string[] } = {};
+            Object.entries(parsedFilters).forEach(([key, value]) => {
+              if (Array.isArray(value)) {
+                filters[key] = value;
+              } else if (
+                typeof value === "string" ||
+                typeof value === "number"
+              ) {
+                filters[key] = [value.toString()];
+              }
+            });
+            setSelectedFilters(filters);
+          }
         }
+      } catch (error) {
+        console.error("Error fetching project details:", error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
     fetchProjectDetails();
   }, [projectId]);
+
+  useEffect(() => {
+    console.log("chatflowid state updated:", chatflowid);
+  }, [chatflowid]);
 
   useEffect(() => {
     const loadTopics = async () => {
@@ -158,13 +177,15 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
       ) {
         addSourceDocuments(latestMessage.sourceDocuments);
         const newCitedSources: CitedSource[] =
-          latestMessage.sourceDocuments.map((doc: SourceDocument) => ({
-            id: doc.metadata.id,
-            title: doc.metadata.title || "Unknown Title",
-            congress: doc.metadata.congress || "Unknown Congress",
-            policyArea: doc.metadata.policyArea || "Unknown policyArea",
-            chunks: [doc.pageContent],
-          }));
+          latestMessage.sourceDocuments.map((doc: SourceDocument) => {
+            const { id, title, ...otherMetadata } = doc.metadata;
+            return {
+              id: id || "Unknown ID",
+              title: title || "Unknown Title",
+              ...otherMetadata,
+              chunks: [doc.pageContent],
+            };
+          });
         setCitedSources(newCitedSources);
         setShowingSources(true);
         const followUpQuestions = await getFollowUpQuestions(
@@ -550,72 +571,80 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
           </div>
 
           {/* Chatbot */}
-          {chatProps && (
-            <ChatFullPage {...chatProps} className="w-full flex-1" />
+          {!isLoading && chatProps && chatflowid ? (
+            <ChatFullPage
+              {...chatProps}
+              chatflowid={chatflowid}
+              className="w-full flex-1"
+            />
+          ) : (
+            <div>Loading chat...</div>
           )}
         </div>
         <div className="w-1/4 p-4 bg-gray-100 overflow-y-auto">
-          <Card className="mb-4">
-            <CardHeader>
-              <CardTitle className="flex justify-between items-center">
-                Filters
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button variant="outline" size="icon">
-                      <Settings className="h-4 w-4" />
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-[425px]">
-                    <DialogHeader>
-                      <DialogTitle>Override Config</DialogTitle>
-                    </DialogHeader>
-                    <div className="mt-4">
-                      <pre className="whitespace-pre-wrap text-sm bg-gray-100 p-4 rounded-md overflow-auto max-h-[60vh]">
-                        {JSON.stringify(overrideConfig, null, 2)}
-                      </pre>
-                    </div>
-                  </DialogContent>
-                </Dialog>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <PineconeMetadataFilterSelect
-                  options={congressSessions}
-                  updateFilter={handleFilterSelect}
-                  removeFilter={handleFilterRemove}
-                  filterKey="congress"
-                  placeholder="Select Congress"
-                  isNumeric={true}
-                  isMulti={true}
-                  selectedValues={selectedFilters.congress || []}
-                />
-                <PineconeMetadataFilterSelect
-                  options={topics}
-                  updateFilter={handleFilterSelect}
-                  removeFilter={handleFilterRemove}
-                  filterKey="policyArea"
-                  placeholder="Select Topic"
-                  isMulti={true}
-                  selectedValues={selectedFilters.policyArea || []}
-                />
-                <PineconeMetadataFilterSelect
-                  filterKey="topK"
-                  updateFilter={handleFilterSelect}
-                  removeFilter={handleFilterRemove}
-                  isNumeric={true}
-                  isSlider={true}
-                  min={4}
-                  max={30}
-                  selectedValues={
-                    selectedFilters.topK
-                      ? [selectedFilters.topK.toString()]
-                      : []
-                  }
-                />
-              </div>
-            </CardContent>
-          </Card>
+          {hasFilters && (
+            <Card className="mb-4">
+              <CardHeader>
+                <CardTitle className="flex justify-between items-center">
+                  Filters
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="outline" size="icon">
+                        <Settings className="h-4 w-4" />
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-[425px]">
+                      <DialogHeader>
+                        <DialogTitle>Override Config</DialogTitle>
+                      </DialogHeader>
+                      <div className="mt-4">
+                        <pre className="whitespace-pre-wrap text-sm bg-gray-100 p-4 rounded-md overflow-auto max-h-[60vh]">
+                          {JSON.stringify(overrideConfig, null, 2)}
+                        </pre>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <PineconeMetadataFilterSelect
+                    options={congressSessions}
+                    updateFilter={handleFilterSelect}
+                    removeFilter={handleFilterRemove}
+                    filterKey="congress"
+                    placeholder="Select Congress"
+                    isNumeric={true}
+                    isMulti={true}
+                    selectedValues={selectedFilters.congress || []}
+                  />
+                  <PineconeMetadataFilterSelect
+                    options={topics}
+                    updateFilter={handleFilterSelect}
+                    removeFilter={handleFilterRemove}
+                    filterKey="policyArea"
+                    placeholder="Select Topic"
+                    isMulti={true}
+                    selectedValues={selectedFilters.policyArea || []}
+                  />
+                  <PineconeMetadataFilterSelect
+                    filterKey="topK"
+                    updateFilter={handleFilterSelect}
+                    removeFilter={handleFilterRemove}
+                    isNumeric={true}
+                    isSlider={true}
+                    min={4}
+                    max={30}
+                    selectedValues={
+                      selectedFilters.topK
+                        ? [selectedFilters.topK.toString()]
+                        : []
+                    }
+                  />
+                </div>
+              </CardContent>
+            </Card>
+          )}
           <Card className="flex-1">
             <CardHeader className="flex flex-row items-center justify-between">
               <CardTitle>
