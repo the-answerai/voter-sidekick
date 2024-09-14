@@ -60,6 +60,7 @@ export async function updateResearchProject(projectId: number, updates: {
   description?: string;
   visibility?: string;
   intent?: string;
+  savedExcerpts?: any[]; // Add this line
 }) {
   const { data, error } = await supabase
     .from('ResearchProject')

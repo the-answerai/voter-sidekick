@@ -1,17 +1,10 @@
-import React from "react";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import React, { useEffect } from "react";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
-import { X, Check } from "lucide-react";
+import { X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface PineconeMetadataFilterSelectProps {
   options?: Map<string, string>;
@@ -23,8 +16,7 @@ interface PineconeMetadataFilterSelectProps {
   max?: number;
   isMulti?: boolean;
   updateFilter: (key: string, value: string | number | string[]) => void;
-  removeFilter: (key: string, value: string) => void;
-  selectedValues: string[];
+  selectedValues: string | string[] | { $in: string[] };
 }
 
 const PineconeMetadataFilterSelect: React.FC<
@@ -39,125 +31,109 @@ const PineconeMetadataFilterSelect: React.FC<
   max = 30,
   isMulti = false,
   updateFilter,
-  removeFilter,
   selectedValues,
 }) => {
-  const handleChange = (value: string | string[]) => {
-    if (isSlider) {
-      updateFilter(filterKey, Number(value));
-    } else if (Array.isArray(value)) {
-      updateFilter(filterKey, value);
-    } else {
-      if (selectedValues.includes(value)) {
-        const newValues = selectedValues.filter((v) => v !== value);
-        updateFilter(filterKey, newValues);
-      } else {
-        updateFilter(filterKey, [...selectedValues, value]);
+  const [localSelectedValues, setLocalSelectedValues] = React.useState<
+    string[]
+  >([]);
+
+  useEffect(() => {
+    const valuesArray = Array.isArray(selectedValues)
+      ? selectedValues
+      : selectedValues &&
+          typeof selectedValues === "object" &&
+          "$in" in selectedValues
+        ? selectedValues.$in
+        : [selectedValues].filter(Boolean);
+    setLocalSelectedValues(valuesArray);
+  }, [selectedValues]);
+
+  const handleCheckboxChange = (value: string, checked: boolean) => {
+    let updatedValues = [...localSelectedValues];
+    if (checked) {
+      if (!updatedValues.includes(value)) {
+        updatedValues.push(value);
       }
+    } else {
+      updatedValues = updatedValues.filter((v) => v !== value);
     }
+    setLocalSelectedValues(updatedValues);
+    updateFilter(filterKey, updatedValues);
   };
 
-  const handleRemove = (value: string) => {
-    removeFilter(filterKey, value);
+  const handleClearFilter = () => {
+    setLocalSelectedValues([]);
+    updateFilter(filterKey, []);
   };
 
   if (isSlider) {
+    const sliderValue =
+      typeof selectedValues === "number"
+        ? selectedValues
+        : Number(selectedValues) || min;
+
     return (
       <div className="space-y-2">
-        <Label htmlFor={filterKey}>Top K: {selectedValues[0] || min}</Label>
+        <Label htmlFor={filterKey}>Top K: {sliderValue}</Label>
         <Slider
           id={filterKey}
           min={min}
           max={max}
           step={1}
-          value={[Number(selectedValues[0] || min)]}
-          onValueChange={(value) => handleChange(value[0].toString())}
+          value={[sliderValue]}
+          onValueChange={(value) => updateFilter(filterKey, value[0])}
         />
       </div>
     );
   }
 
-  const selectedOptions = selectedValues.map((value) => [
-    value,
-    options?.get(value) || value,
-  ]);
-  const unselectedOptions = Array.from(options || []).filter(
-    ([value]) => !selectedValues.includes(value)
-  );
-
-  return (
-    <div className="space-y-2">
-      <Select
-        onValueChange={handleChange}
-        value={selectedValues}
-        multiple={isMulti}
-      >
-        <SelectTrigger className="w-full">
-          <SelectValue placeholder={placeholder} />
-        </SelectTrigger>
-        <SelectContent className="bg-white border border-gray-200 shadow-md">
-          <SelectGroup>
-            {selectedOptions.length > 0 && (
-              <>
-                <SelectLabel className="px-2 py-1.5 text-sm font-semibold text-gray-900 bg-gray-100">
-                  Selected {filterKey}
-                </SelectLabel>
-                {selectedOptions.map(([value, label]) => (
-                  <SelectItem
-                    key={value}
-                    value={value}
-                    className="flex items-center px-2 py-1.5 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    <div className="flex items-center w-full">
-                      <Check className="mr-2 h-4 w-4 text-blue-500 flex-shrink-0" />
-                      <span className="flex-grow">{label}</span>
-                    </div>
-                  </SelectItem>
-                ))}
-              </>
-            )}
-            {unselectedOptions.length > 0 && (
-              <>
-                <SelectLabel className="px-2 py-1.5 text-sm font-semibold text-gray-900 bg-gray-100">
-                  {selectedOptions.length > 0
-                    ? `Other ${filterKey}`
-                    : filterKey}
-                </SelectLabel>
-                {unselectedOptions.map(([value, label]) => (
-                  <SelectItem
-                    key={value}
-                    value={value}
-                    className="flex items-center px-2 py-1.5 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    <div className="flex items-center w-full">
-                      <div className="w-4 h-4 mr-2 flex-shrink-0" />{" "}
-                      {/* Placeholder for alignment */}
-                      <span className="flex-grow">{label}</span>
-                    </div>
-                  </SelectItem>
-                ))}
-              </>
-            )}
-          </SelectGroup>
-        </SelectContent>
-      </Select>
-      {selectedValues.length > 0 && (
-        <div className="flex flex-wrap gap-2 mt-2">
-          {selectedValues.map((value) => (
-            <Badge
-              key={value}
-              variant="secondary"
-              className="flex items-center"
-            >
-              {options?.get(value) || value}
-              <X
-                className="ml-1 h-3 w-3 cursor-pointer"
-                onClick={() => handleRemove(value)}
+  if (isMulti) {
+    return (
+      <div className="space-y-2">
+        <Label>{placeholder || filterKey}</Label>
+        <div className="flex flex-col max-h-64 overflow-y-auto">
+          {Array.from(options || []).map(([value, label]) => (
+            <div key={value} className="flex items-center">
+              <Checkbox
+                checked={localSelectedValues.includes(value)}
+                onCheckedChange={(checked) =>
+                  handleCheckboxChange(value, checked as boolean)
+                }
+                id={`${filterKey}-${value}`}
               />
-            </Badge>
+              <Label htmlFor={`${filterKey}-${value}`} className="ml-2">
+                {label}
+              </Label>
+            </div>
           ))}
         </div>
-      )}
+        {localSelectedValues.length > 0 && (
+          <Button variant="secondary" onClick={handleClearFilter}>
+            Clear {filterKey} Filter
+          </Button>
+        )}
+      </div>
+    );
+  }
+
+  // Single Select (if needed)
+  return (
+    <div className="space-y-2">
+      <Label>{placeholder || filterKey}</Label>
+      <div className="flex items-center">
+        {Array.from(options || []).map(([value, label]) => (
+          <div key={value} className="flex items-center">
+            <Radio
+              checked={selectedValues === value}
+              onChange={() => updateFilter(filterKey, value)}
+              id={`${filterKey}-${value}`}
+            />
+            <Label htmlFor={`${filterKey}-${value}`} className="ml-2">
+              {label}
+            </Label>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

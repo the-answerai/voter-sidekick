@@ -1,0 +1,57 @@
+{
+    "chatflowid": "climate-change-analysis-chatflow",
+    "createdAt": "2023-04-15T10:30:00Z",
+    "description": "An in-depth study of recent climate change bills and their potential impact.",
+    "hasFilters": true,
+    "id": 1,
+    "intent": "Analyze the effectiveness of proposed climate change legislation",
+    "overrideConfig": {
+        "pineconeMetadataFilter": {
+            "congress": {
+                "$in": [
+                    116,
+                    117
+                ]
+            },
+            "policyArea": {
+                "$in": [
+                    "Environment",
+                    "Energy"
+                ]
+            }
+        },
+        "topK": 20
+    },
+    "savedDocuments": [
+        "BILL-001",
+        "BILL-002",
+        "BILL-003"
+    ],
+    "savedExcerpts": [
+        {
+            "metadata": {
+                "billId": "BILL-001",
+                "page": 5,
+                "section": "Emissions Targets"
+            },
+            "pageContent": "The bill proposes a 50% reduction in carbon emissions by 2030."
+        },
+        {
+            "metadata": {
+                "billId": "BILL-002",
+                "page": 12,
+                "section": "Funding Allocation"
+            },
+            "pageContent": "Funding for renewable energy projects will be increased by $10 billion annually."
+        }
+    ],
+    "tags": [
+        "climate change",
+        "legislation",
+        "environmental policy"
+    ],
+    "title": "Climate Change Legislation Analysis",
+    "updatedAt": "2023-04-16T14:45:00Z",
+    "userId": 123,
+    "visibility": "PRIVATE"
+}

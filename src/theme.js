@@ -31,6 +31,9 @@ const config = {
                     900: '#0f172a',
                     950: '#020617',
                 },
+                modal: {
+                    background: '#FF0000', // Bright red color for modal background
+                },
             },
             fontFamily: {
                 sans: ['Inter var', ...fontFamily.sans],

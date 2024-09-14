@@ -1,5 +1,5 @@
 import React from "react";
-import ResearchProject from "./ResearchProject";
+import ResearchProject from "./ResearchProject/ProjectDetails";
 
 interface ProjectResearchProps {
   projectId: number;
