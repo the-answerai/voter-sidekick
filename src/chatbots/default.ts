@@ -2,13 +2,16 @@ import type { ChatFullPageProps, PineconeMetadataFilter } from "../types";
 import generateThemeColors from "../utils/generateThemeColors";
 import { getChatflowConfig } from "./config/chatflowConfig";
 
-const baseColor = "rgb(31, 41, 55)";
+// Change the chatbot theme color here
+const baseColor = "rgb(107, 114, 128)";
 const themeColors = generateThemeColors(baseColor);
 
 const defaultMetaDataFilters: PineconeMetadataFilter = {
   // url: "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240SB1047",
   // source: "https://s3.theanswer.ai/sb1047",
 };
+
+// const fontSize = 16;
 
 const defaultConfig: ChatFullPageProps = {
   chatflowid: "9ee4eee1-931d-4007-bc9f-b1431ddabfa9",
@@ -38,10 +41,10 @@ const defaultConfig: ChatFullPageProps = {
       right: 10,
     },
     chatWindow: {
-      showTitle: true,
-      title: "Default Bot Here",
-      titleAvatarSrc:
-        "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
+      // showTitle: false,
+      // title: "Default Bot Here",
+      // titleAvatarSrc:
+      //   "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
       showAgentMessages: true,
       welcomeMessage:
         "Hello! Welcome to the chatbot! This is a custom welcome message",
@@ -49,12 +52,13 @@ const defaultConfig: ChatFullPageProps = {
       backgroundColor: themeColors.chatWindowBackgroundColor,
       height: 700,
       width: -1,
-      fontSize: 12,
+      //fontSize,
       poweredByTextColor: themeColors.chatWindowPoweredByTextColor,
       botMessage: {
         backgroundColor: themeColors.botMessageBackgroundColor,
         textColor: themeColors.botMessageTextColor,
         showAvatar: true,
+        //fontSize,
         avatarSrc:
           "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png",
       },
@@ -62,6 +66,7 @@ const defaultConfig: ChatFullPageProps = {
         backgroundColor: themeColors.userMessageBackgroundColor,
         textColor: themeColors.userMessageTextColor,
         showAvatar: true,
+        //fontSize,
         avatarSrc:
           "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
       },
@@ -71,6 +76,7 @@ const defaultConfig: ChatFullPageProps = {
         textColor: themeColors.textInputTextColor,
         sendButtonColor: themeColors.textInputSendButtonColor,
         maxChars: 200,
+        //fontSize,
         maxCharsWarningMessage: "You have exceeded the character limit.",
         autoFocus: true,
         sendMessageSound: true,
@@ -81,9 +87,9 @@ const defaultConfig: ChatFullPageProps = {
       },
       footer: {
         textColor: themeColors.footerTextColor,
-        text: "Powered by Flowise",
-        company: "Flowise",
-        companyLink: "https://flowiseai.com",
+        // text: "Powered by Flowise",
+        // company: "Flowise",
+        // companyLink: "https://flowiseai.com",
       },
     },
   },

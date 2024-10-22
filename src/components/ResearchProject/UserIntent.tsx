@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardSubTitle,
+  CardContent,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { Wand2 } from "lucide-react";
+import { Wand2, Loader } from "lucide-react";
 
 interface UserIntentProps {
   userIntent: string;
@@ -19,6 +24,7 @@ const UserIntent: React.FC<UserIntentProps> = ({
 }) => {
   const [isEditingIntent, setIsEditingIntent] = useState(false);
   const [editedIntent, setEditedIntent] = useState(userIntent);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     setEditedIntent(userIntent);
@@ -35,34 +41,51 @@ const UserIntent: React.FC<UserIntentProps> = ({
     }
   };
 
+  const handleGenerateIntentClick = async () => {
+    setIsLoading(true);
+    await handleGenerateIntent();
+    setIsLoading(false);
+  };
+
   return (
-    <Card>
+    <Card className="w-full">
       <CardHeader>
-        <CardTitle className="flex items-center justify-between">
+        <CardSubTitle className="flex text-center items-center justify-between">
           User Intent
           <Button
             variant="ghost"
             size="sm"
-            onClick={handleGenerateIntent}
+            onClick={handleGenerateIntentClick}
             title="Generate new intent"
           >
-            <Wand2 className="h-4 w-4" />
+            {isLoading ? (
+              <Loader className="h-4 w-4 animate-spin" />
+            ) : (
+              <Wand2 className="h-4 w-4" />
+            )}
           </Button>
-        </CardTitle>
+        </CardSubTitle>
       </CardHeader>
+
       <CardContent>
-        {isEditingIntent ? (
-          <Textarea
-            value={editedIntent}
-            onChange={handleIntentChange}
-            onBlur={handleIntentBlur}
-            className="w-full"
-          />
-        ) : (
-          <p onClick={() => setIsEditingIntent(true)}>
-            {editedIntent || "Click to add user intent"}
-          </p>
-        )}
+        <Textarea
+          value={editedIntent}
+          onChange={handleIntentChange}
+          onBlur={handleIntentBlur}
+          className={`w-full text-sm bg-gray-100 border-none ${isEditingIntent ? "" : "hidden"}`}
+        />
+        <p className={`text-sm ${isEditingIntent ? "hidden" : ""}`}>
+          <a
+            onClick={(e) => {
+              e.preventDefault();
+              setIsEditingIntent(true);
+            }}
+          >
+            {editedIntent || (
+              <div className="text-center">Click to add user intent</div>
+            )}
+          </a>
+        </p>
       </CardContent>
     </Card>
   );

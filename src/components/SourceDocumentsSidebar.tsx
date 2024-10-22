@@ -1,6 +1,6 @@
 import React from "react";
 import { CitedSource } from "../types";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
   Tooltip,
@@ -33,6 +33,47 @@ const truncateTitle = (title: string, maxLength: number = 75) => {
   return title.slice(0, maxLength) + "...";
 };
 
+// Helper function to uncamel case and titlecase a string
+const uncamelCaseAndTitleCase = (str: string) => {
+  return str
+    .replace(/([a-z])([A-Z])/g, "$1 $2") // Insert space between camel case words
+    .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitalize the first letter of each word
+};
+
+// Helper function to format values
+const formatValue = (value: any) => {
+  if (typeof value === "boolean") {
+    return value ? "Yes" : "No";
+  }
+  if (typeof value === "string") {
+    // Check if the string is a valid date
+    const date = new Date(value);
+    if (!isNaN(date.getTime()) && value.length >= 10) {
+      return date.toLocaleDateString(); // Returns YYYY-MM-DD
+    }
+
+    // Check if the string is a URL
+    try {
+      const url = new URL(value);
+      return (
+        <a href={url.href} target="_blank" rel="noopener noreferrer">
+          {url.href}
+        </a>
+      );
+    } catch (_) {
+      // Not a valid URL
+    }
+    // Check if the string starts with an HTML tag
+    if (value.trim().startsWith("<")) {
+      return (
+        <div className="p-4" dangerouslySetInnerHTML={{ __html: value }} />
+      );
+    }
+  }
+
+  return String(value).replace(/,(?!\s)/g, ", ");
+};
+
 const SourceDocumentsSidebar: React.FC<SourceDocumentsSidebarProps> = ({
   groupedSources,
   handleDocumentClick,
@@ -52,35 +93,40 @@ const SourceDocumentsSidebar: React.FC<SourceDocumentsSidebarProps> = ({
   };
 
   // Helper function to render metadata fields
-  const renderMetadata = (source: any) => {
+  const renderMetadata = (source: any, showAll?: Boolean) => {
     const excludeFields = ["id", "chunks", "title"];
     const metadataEntries = Object.entries(source).filter(
       ([key, value]) =>
         !excludeFields.includes(key) && value !== undefined && value !== null
     );
 
-    const visibleMetadata = metadataEntries.slice(0, 5);
-    const hiddenMetadata = metadataEntries.slice(5);
+    const slideCount = !!showAll ? 100 : 5;
+
+    const visibleMetadata = metadataEntries.slice(0, slideCount);
+    if (!visibleMetadata.length) return null;
+
+    // const hiddenMetadata = metadataEntries.slice(slideCount);
 
     return (
-      <>
+      <div className="flex flex-col space-y-1">
         {visibleMetadata.map(([key, value]) => (
-          <p key={key} className="text-sm">
-            <strong>{key.charAt(0).toUpperCase() + key.slice(1)}:</strong>{" "}
-            {String(value)}
+          <p key={key} className="text-xs text-gray-600">
+            <strong>{uncamelCaseAndTitleCase(key)}:</strong>{" "}
+            {formatValue(value)}
           </p>
         ))}
-        {hiddenMetadata.length > 0 && (
+
+        {/* {!!hiddenMetadata?.length && (
           <TooltipProvider>
             <Tooltip delayDuration={300}>
               <TooltipTrigger asChild>
-                <Button variant="ghost" size="sm" className="p-0">
+                <Button variant="ghost" size="sm" className="p-0 mr-auto">
                   <MoreHorizontal className="h-4 w-4" />
                 </Button>
               </TooltipTrigger>
               <TooltipContent className="bg-white p-2 rounded-md shadow-md border border-gray-200">
                 {hiddenMetadata.map(([key, value]) => (
-                  <p key={key} className="text-sm">
+                  <p key={key} className="text-xs">
                     <strong>
                       {key.charAt(0).toUpperCase() + key.slice(1)}:
                     </strong>{" "}
@@ -90,163 +136,116 @@ const SourceDocumentsSidebar: React.FC<SourceDocumentsSidebarProps> = ({
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
-        )}
-      </>
+        )} */}
+      </div>
     );
   };
 
-  const numDocuments = Object.keys(groupedSources).length;
+  // const numDocuments = Object.keys(groupedSources).length;
 
   return (
     <ScrollArea className="h-full">
-      {numDocuments === 1
-        ? // Render each chunk as its own card
-          Object.values(groupedSources).map((source: any) =>
-            source.chunks.map((chunk: string, index: number) => (
-              <Card key={`${source.id}-${index}`} className="mb-4">
-                <CardContent className="p-4">
-                  <h3 className="font-semibold">
-                    {truncateTitle(source.title)}
-                  </h3>
-                  {renderMetadata(source)}
-                  <p className="text-sm">Excerpt {index + 1}</p>
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button
-                        variant="outline"
-                        size="icon"
-                        onClick={() => {
-                          handleDocumentClick(source.id);
-                          setSelectedExcerpt({
-                            sourceId: source.id,
-                            index,
-                          });
-                        }}
-                      >
-                        <Settings className="h-4 w-4" />
-                      </Button>
-                    </DialogTrigger>
-                    <DialogContent className="sm:max-w-[800px] max-h-[80vh] overflow-auto flex flex-col">
-                      <DialogHeader>
-                        <DialogTitle>Excerpt {index + 1}</DialogTitle>
-                      </DialogHeader>
-                      <div className="mt-4 bg-white p-4 rounded-md flex-grow overflow-auto">
-                        <h4 className="font-semibold mb-2">{source.title}</h4>
-                        <div className="mb-4">{renderMetadata(source)}</div>
-                        <div className="p-4 bg-gray-100 rounded-md">
-                          <ScrollArea className="h-64">
-                            <pre className="text-sm whitespace-pre-wrap font-sans">
-                              {formatText(chunk)}
-                            </pre>
-                          </ScrollArea>
-                        </div>
-                      </div>
-                      {/* Add DialogFooter with Save Button */}
-                      <DialogFooter>
-                        <Button
-                          onClick={() => handleSaveExcerpt(source.id, chunk)}
-                        >
-                          Save Excerpt
-                        </Button>
-                      </DialogFooter>
-                    </DialogContent>
-                  </Dialog>
-                </CardContent>
-              </Card>
-            ))
-          )
-        : // Render as before
-          Object.values(groupedSources).map((source: any) => (
-            <Card key={source.id} className="mb-4">
-              <CardContent className="p-4">
-                <h3 className="font-semibold">{truncateTitle(source.title)}</h3>
-                {renderMetadata(source)}
-                <p className="text-sm">Excerpts: {source.chunks.length}</p>
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button variant="outline" size="icon">
-                      <Settings className="h-4 w-4" />
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-[800px] max-h-[80vh] overflow-auto flex flex-col">
-                    <DialogHeader>
-                      <DialogTitle>Original Cited Sources</DialogTitle>
-                    </DialogHeader>
-                    <div className="mt-4 flex-grow overflow-auto">
-                      <ScrollArea className="h-full">
-                        <pre className="whitespace-pre-wrap text-sm bg-gray-100 p-4 rounded-md">
-                          {JSON.stringify(source, null, 2)}
-                        </pre>
-                      </ScrollArea>
-                    </div>
-                  </DialogContent>
-                </Dialog>
-                <div className="mt-2">
-                  {source.chunks.map((chunk: string, index: number) => (
-                    <TooltipProvider key={index}>
-                      <Tooltip>
-                        <TooltipTrigger asChild>
-                          <Dialog>
-                            <DialogTrigger asChild>
-                              <Button
-                                variant="outline"
-                                size="sm"
-                                className="mr-2 mt-2"
-                                onClick={() => {
-                                  handleDocumentClick(source.id);
-                                  setSelectedExcerpt({
-                                    sourceId: source.id,
-                                    index,
-                                  });
-                                }}
-                              >
-                                Excerpt {index + 1}
-                              </Button>
-                            </DialogTrigger>
-                            <DialogContent className="sm:max-w-[800px] max-h-[80vh] overflow-auto flex flex-col">
-                              <DialogHeader>
-                                <DialogTitle>Excerpt {index + 1}</DialogTitle>
-                              </DialogHeader>
-                              <div className="mt-4 bg-white p-4 rounded-md flex-grow overflow-auto">
-                                <h4 className="font-semibold mb-2">
-                                  {source.title}
-                                </h4>
-                                <div className="mb-4">
-                                  {renderMetadata(source)}
-                                </div>
-                                <div className="p-4 bg-gray-100 rounded-md">
-                                  <ScrollArea className="h-64">
-                                    <pre className="text-sm whitespace-pre-wrap font-sans">
-                                      {formatText(chunk)}
-                                    </pre>
-                                  </ScrollArea>
-                                </div>
+      {Object.values(groupedSources).map((source: any) => (
+        <Card key={source.id} className="mb-2 p-2">
+          <CardHeader>
+            <p className="font-semibold text-xs mb-2">
+              {truncateTitle(source.title)}
+            </p>
+            {renderMetadata(source)}
+          </CardHeader>
+
+          <CardContent>
+            <div className="mt-2 flex space-x-1 items-center">
+              <div className="text-xs font-semibold">Excerpts: </div>
+
+              {source.chunks.map((chunk: string, index: number) => (
+                <TooltipProvider key={index}>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button
+                            variant="outline"
+                            size="xs"
+                            onClick={() => {
+                              handleDocumentClick(source.id);
+                              setSelectedExcerpt({
+                                sourceId: source.id,
+                                index,
+                              });
+                            }}
+                          >
+                            {index + 1}
+                          </Button>
+                        </DialogTrigger>
+                        <DialogContent className="sm:max-w-[90vw] max-h-[90vh] overflow-auto flex flex-col">
+                          <DialogHeader>
+                            <DialogTitle>Excerpt {index + 1}</DialogTitle>
+                          </DialogHeader>
+                          <div className="mt-4 bg-white p-4 rounded-md flex-grow overflow-auto">
+                            <h4 className="font-semibold mb-2">
+                              {source.title}
+                            </h4>
+                            <div className="flex space-x-4">
+                              <div className="p-4 bg-gray-100 flex-1 rounded-md">
+                                <ScrollArea className="h-100">
+                                  <pre className="text-sm whitespace-pre-wrap font-sans">
+                                    {formatText(chunk)}
+                                  </pre>
+                                </ScrollArea>
                               </div>
-                              {/* Add DialogFooter with Save Button */}
-                              <DialogFooter>
-                                <Button
-                                  onClick={() =>
-                                    handleSaveExcerpt(source.id, chunk)
-                                  }
-                                >
-                                  Save Excerpt
-                                </Button>
-                              </DialogFooter>
-                            </DialogContent>
-                          </Dialog>
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <div className="max-w-md whitespace-pre-wrap">
-                            {formatText(chunk)}
+                              <div className="p-4 bg-gray-100 flex-1 rounded-md">
+                                {renderMetadata(source, true)}
+                              </div>
+                            </div>
                           </div>
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+
+                          <DialogFooter>
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              onClick={() =>
+                                handleSaveExcerpt(source.id, chunk)
+                              }
+                            >
+                              Save Excerpt
+                            </Button>
+                          </DialogFooter>
+                        </DialogContent>
+                      </Dialog>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <div className="max-w-md whitespace-pre-wrap">
+                        {formatText(chunk)}
+                      </div>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              ))}
+
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="outline" size="xs">
+                    <Settings className="h-4 w-4" />
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[90vw] max-h-[90vh] overflow-auto flex flex-col">
+                  <DialogHeader>
+                    <DialogTitle>Original Cited Sources</DialogTitle>
+                  </DialogHeader>
+                  <div className="mt-4 flex-grow overflow-auto">
+                    <ScrollArea className="h-full">
+                      <pre className="whitespace-pre-wrap text-sm bg-gray-100 p-4 rounded-md">
+                        {JSON.stringify(source, null, 2)}
+                      </pre>
+                    </ScrollArea>
+                  </div>
+                </DialogContent>
+              </Dialog>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
     </ScrollArea>
   );
 };

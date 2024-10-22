@@ -40,7 +40,7 @@ export default function ClientLayout({
                   />
                 </Link>
               </div>
-              <div className="flex items-center space-x-4">
+              {/* <div className="flex items-center space-x-4">
                 <button
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                   className="p-2 rounded-md text-secondary-400 hover:text-secondary-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
@@ -76,8 +76,7 @@ export default function ClientLayout({
                     </svg>
                   )}
                 </button>
-                {/* Profile dropdown placeholder */}
-                <div className="relative">
+               <div className="relative">
                   <button
                     className="flex items-center text-sm font-medium text-secondary-500 hover:text-secondary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
                     aria-label="User menu"
@@ -92,9 +91,8 @@ export default function ClientLayout({
                       height={32}
                     />
                   </button>
-                  {/* Dropdown menu would go here */}
                 </div>
-              </div>
+              </div> */}
             </div>
           </nav>
         </header>

@@ -1,7 +1,13 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -14,9 +20,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { supabase } from "@/utils/supabaseClient";
-
-console.log("Supabase URL:", process.env.NEXT_PUBLIC_SUPABASE_URL);
-console.log("Supabase client:", supabase);
 
 interface ResearchProject {
   id: number;
@@ -81,13 +84,15 @@ const Homepage: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="flex h-screen flex-col">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold">Research Projects</h1>
         {isAdmin && (
           <Dialog>
             <DialogTrigger asChild>
-              <Button>New Research Project</Button>
+              <Button variant="outline" size="sm">
+                New Research Project
+              </Button>
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
@@ -138,14 +143,21 @@ const Homepage: React.FC = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p>{project.description}</p>
-              {isAdmin && (
-                <div className="mt-2">
-                  <p>Chatflow ID: {project.chatflowid || "Not set"}</p>
-                  <p>Has Filters: {project.hasFilters ? "Yes" : "No"}</p>
-                </div>
-              )}
+              <p className="text-sm">{project.description}</p>
             </CardContent>
+
+            {isAdmin && (
+              <CardFooter>
+                <div className="mt-2">
+                  <p className="text-xs text-gray-500">
+                    Chatflow ID: {project.chatflowid || "Not set"}
+                  </p>
+                  <p className="text-xs text-gray-500">
+                    Has Filters: {project.hasFilters ? "Yes" : "No"}
+                  </p>
+                </div>
+              </CardFooter>
+            )}
           </Card>
         ))}
       </div>

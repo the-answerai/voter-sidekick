@@ -2,9 +2,8 @@ import React, { useEffect } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Label } from "@/components/ui/label";
-import { Badge } from "@/components/ui/badge";
-import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 interface PineconeMetadataFilterSelectProps {
   options?: Map<string, string>;
@@ -120,20 +119,19 @@ const PineconeMetadataFilterSelect: React.FC<
   return (
     <div className="space-y-2">
       <Label>{placeholder || filterKey}</Label>
-      <div className="flex items-center">
+      <RadioGroup
+        value={selectedValues as string}
+        onValueChange={(value) => updateFilter(filterKey, value)}
+      >
         {Array.from(options || []).map(([value, label]) => (
           <div key={value} className="flex items-center">
-            <Radio
-              checked={selectedValues === value}
-              onChange={() => updateFilter(filterKey, value)}
-              id={`${filterKey}-${value}`}
-            />
+            <RadioGroupItem value={value} id={`${filterKey}-${value}`} />
             <Label htmlFor={`${filterKey}-${value}`} className="ml-2">
               {label}
             </Label>
           </div>
         ))}
-      </div>
+      </RadioGroup>
     </div>
   );
 };

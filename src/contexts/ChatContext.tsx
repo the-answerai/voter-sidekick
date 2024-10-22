@@ -52,7 +52,8 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({
 
         const prevFilter = (prevProps.chatflowConfig?.pineconeMetadataFilter ||
           {}) as PineconeMetadataFilter;
-        const updatedFilter = updateFilter(prevFilter, key, value);
+        const formattedValue = Array.isArray(value) ? { $in: value } : value;
+        const updatedFilter = updateFilter(prevFilter, key, formattedValue);
 
         return {
           ...prevProps,
@@ -89,6 +90,7 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({
             doc.metadata.url === newDoc.metadata.url &&
             doc.metadata["loc.pageNumber"] === newDoc.metadata["loc.pageNumber"]
         );
+
         if (existingDocIndex === -1) {
           updatedDocuments.push(newDoc);
         } else {

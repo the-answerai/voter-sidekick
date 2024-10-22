@@ -1,5 +1,10 @@
 import React from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardSubTitle,
+  CardContent,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 interface FollowUpQuestionsProps {
@@ -11,10 +16,12 @@ const FollowUpQuestions: React.FC<FollowUpQuestionsProps> = ({
   followUpQuestions,
   handleFollowUpQuestion,
 }) => {
+  if (!followUpQuestions?.length) return null;
+
   return (
     <Card>
-      <CardHeader>
-        <CardTitle>Suggested Follow-up Questions</CardTitle>
+      <CardHeader className="mb-2">
+        <CardSubTitle>Suggested Follow-up Questions</CardSubTitle>
       </CardHeader>
       <CardContent>
         <div className="flex flex-wrap gap-2">
