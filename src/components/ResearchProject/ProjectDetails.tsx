@@ -9,6 +9,7 @@ import ResearchHeader from "./ResearchHeader";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { motion, AnimatePresence } from "framer-motion";
 import { Wand2 } from "lucide-react";
 import {
   Dialog,
@@ -35,13 +36,8 @@ import {
   congressSessions,
   initializeTopics,
 } from "../../chatbots/config/chatflowConfig";
-import getFollowUpQuestions from "@/utils/getFollwUpQuestions";
 import getUserIntent from "@/utils/getUserIntentGoal";
-import {
-  getResearchProject,
-  getBill,
-  updateResearchProject,
-} from "@/utils/supabaseClient";
+import { getBill, updateResearchProject } from "@/utils/supabaseClient";
 import { cn } from "@/utils/tailwindMerge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import SavedDocuments from "./SavedDocuments";
@@ -49,6 +45,7 @@ import { fetchProjectDetails } from "@/utils/fetchProjectDetails";
 import { handleMessageObservation } from "@/utils/handleMessageObservation";
 import { handleFollowUpQuestion } from "@/utils/handleFollowUpQuestion";
 import { updateFiltersInDatabase } from "@/utils/updateFiltersInDatabase";
+import { getFollowUpQuestions } from "@/utils/getFollowUpQuestions";
 import { Checkbox } from "@/components/ui/checkbox";
 
 const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
@@ -66,7 +63,6 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
   const [userIntent, setUserIntent] = useState<string>("");
   const [isEditingIntent, setIsEditingIntent] = useState(false);
 
-  const [groupedSources, setGroupedSources] = useState<Record<string, any>>({});
   const [selectedDocument, setSelectedDocument] = useState<any>(null);
   const [currentExcerptIndex, setCurrentExcerptIndex] = useState(0);
 
@@ -153,21 +149,6 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
     }
   }, [chatProps]);
 
-  useEffect(() => {
-    if (citedSources.length > 0) {
-      const grouped = citedSources.reduce<
-        Record<string, any & { chunks: string[] }>
-      >((acc, source) => {
-        if (!acc[source.id]) {
-          acc[source.id] = { ...source, chunks: [] };
-        }
-        acc[source.id].chunks.push(...source.chunks);
-        return acc;
-      }, {});
-      setGroupedSources(grouped);
-    }
-  }, [citedSources]);
-
   const handleFollowUpQuestionWrapper = (question: string) => {
     try {
       handleFollowUpQuestion(question, chatProps);
@@ -182,11 +163,20 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
     setCurrentExcerptIndex(0);
   };
 
-  const handleSaveExcerpt = async (sourceId: string, chunk: string) => {
+  const handleSaveExcerpt = async (
+    sourceId: string,
+    chunk: string,
+    documentName: string,
+    validity: string,
+    metadata: any
+  ) => {
     const excerpt = {
       sourceId,
       chunk,
       savedAt: new Date().toISOString(),
+      documentName,
+      validity,
+      metadata,
     };
 
     const exists = savedExcerpts.some(
@@ -212,10 +202,32 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
     }
   };
 
+  const handleRemoveExcerpt = async (excerptToRemove: any) => {
+    const updatedSavedExcerpts = savedExcerpts.filter(
+      (excerpt) =>
+        excerpt.sourceId !== excerptToRemove.sourceId ||
+        excerpt.chunk !== excerptToRemove.chunk
+    );
+    setSavedExcerpts(updatedSavedExcerpts);
+
+    try {
+      const updatedProject = await updateResearchProject(projectId, {
+        savedExcerpts: updatedSavedExcerpts,
+      });
+      if (!updatedProject) {
+        console.error("Failed to update project");
+      }
+    } catch (error) {
+      console.error("Error removing excerpt:", error);
+    }
+  };
+
   const handleExcerptNavigation = (direction: "prev" | "next") => {
     if (!selectedDocument) return;
 
-    const totalExcerpts = groupedSources[selectedDocument.id].chunks.length;
+    const totalExcerpts = citedSources.find(
+      (source) => source.id === selectedDocument.id
+    )?.chunks.length;
     if (direction === "prev") {
       setCurrentExcerptIndex((prev) =>
         prev > 0 ? prev - 1 : totalExcerpts - 1
@@ -311,29 +323,8 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
 
   return (
     <div className="flex flex-col h-screen">
-      <ResearchHeader
-        projectTitle={projectTitle}
-        projectDescription={projectDescription}
-        sourceDocuments={sourceDocuments}
-        savedDocuments={savedDocuments}
-        handleEditClick={handleEditClick}
-      />
-
       <div className="flex flex-1 overflow-hidden">
-        <div className="w-3/4 p-4 flex flex-col">
-          <div className="flex mb-4 space-x-4">
-            <UserIntent
-              userIntent={userIntent}
-              updateUserIntent={updateUserIntent}
-              handleGenerateIntent={handleGenerateIntent}
-              messages={chatProps?.messages || []}
-            />
-            <FollowUpQuestions
-              followUpQuestions={followUpQuestions}
-              handleFollowUpQuestion={handleFollowUpQuestionWrapper}
-            />
-          </div>
-
+        <div className="w-3/4 p-4 flex flex-col chatarea relative">
           {!isLoading && chatProps && chatflowid ? (
             <ChatFullPage
               {...chatProps}
@@ -343,8 +334,32 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
           ) : (
             <div>Loading chat...</div>
           )}
+
+          <AnimatePresence>
+            {followUpQuestions.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.3 }}
+                className="follow-up-questions fixed bottom-4 left-4 right-4 mb-4 space-x-4 z-10"
+              >
+                <FollowUpQuestions
+                  followUpQuestions={followUpQuestions}
+                  handleFollowUpQuestion={handleFollowUpQuestionWrapper}
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
         <div className="w-1/4 p-4 bg-gray-100 overflow-y-auto">
+          <ResearchHeader
+            projectTitle={projectTitle}
+            projectDescription={projectDescription}
+            sourceDocuments={sourceDocuments}
+            savedDocuments={savedExcerpts.length}
+            handleEditClick={handleEditClick}
+          />
           {hasFilters && (
             <Card className="mb-4">
               <CardContent>
@@ -386,20 +401,20 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
           <Tabs defaultValue="cited" className="w-full">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="cited">Cited Sources</TabsTrigger>
-              <TabsTrigger value="saved">Saved Documents</TabsTrigger>
+              <TabsTrigger value="saved">Saved Excerpts</TabsTrigger>
             </TabsList>
             <TabsContent value="cited">
               <CitedSources
-                groupedSources={groupedSources}
+                citedSources={citedSources}
                 handleDocumentClick={handleDocumentClick}
-                selectedDocument={selectedDocument}
-                currentExcerptIndex={currentExcerptIndex}
-                handleExcerptNavigation={handleExcerptNavigation}
                 handleSaveExcerpt={handleSaveExcerpt}
               />
             </TabsContent>
             <TabsContent value="saved">
-              <SavedDocuments savedExcerpts={savedExcerpts} />
+              <SavedDocuments
+                savedExcerpts={savedExcerpts}
+                onRemoveExcerpt={handleRemoveExcerpt}
+              />
             </TabsContent>
           </Tabs>
         </div>

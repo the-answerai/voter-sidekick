@@ -1,39 +1,72 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import SourceDocumentsSidebar from "../SourceDocumentsSidebar";
-import { getBill } from "@/utils/supabaseClient";
+import DocumentCard from "./DocumentCard";
 
 interface CitedSourcesProps {
-  groupedSources: Record<string, any>;
+  citedSources: any[];
   handleDocumentClick: (documentId: string) => void;
-  selectedDocument: any;
-  currentExcerptIndex: number;
-  handleExcerptNavigation: (direction: "prev" | "next") => void;
-  handleSaveExcerpt: (sourceId: string, chunk: string) => void; // New prop
+  handleSaveExcerpt: (sourceId: string, chunk: string) => void;
+}
+
+interface GroupedSource {
+  id: string;
+  title: string;
+  author: string;
+  date: string;
+  isValid: boolean;
+  relevance: number;
+  excerpts: { text: string; page: number }[];
+  pdfUrl: string;
 }
 
 const CitedSources: React.FC<CitedSourcesProps> = ({
-  groupedSources,
+  citedSources,
   handleDocumentClick,
-  selectedDocument,
-  currentExcerptIndex,
-  handleExcerptNavigation,
-  handleSaveExcerpt, // Destructure the new prop
+  handleSaveExcerpt,
 }) => {
-  const hasSourcesContent = Object.keys(groupedSources).length > 0;
+  const [groupedSources, setGroupedSources] = useState<GroupedSource[]>([]);
+
+  useEffect(() => {
+    const grouped = citedSources.reduce<Record<string, GroupedSource>>(
+      (acc, source) => {
+        if (!acc[source.id]) {
+          acc[source.id] = {
+            id: source.id,
+            title: source.title || "Untitled",
+            author: source.author || "Unknown",
+            date: source.date || "No date",
+            isValid: source.isValid !== false,
+            relevance: source.relevance || 0,
+            excerpts: [],
+            pdfUrl: source.pdfUrl || "",
+          };
+        }
+        acc[source.id].excerpts.push(
+          ...(source.chunks || []).map((chunk: string) => ({
+            text: chunk,
+            page: source.page || 0,
+          }))
+        );
+        return acc;
+      },
+      {}
+    );
+
+    setGroupedSources(Object.values(grouped));
+  }, [citedSources]);
 
   return (
     <Card className="flex-1">
       <CardContent>
-        {hasSourcesContent ? (
-          <SourceDocumentsSidebar
-            groupedSources={groupedSources}
-            handleDocumentClick={handleDocumentClick}
-            selectedDocument={selectedDocument}
-            currentExcerptIndex={currentExcerptIndex}
-            handleExcerptNavigation={handleExcerptNavigation}
-            handleSaveExcerpt={handleSaveExcerpt} // Pass it down
-          />
+        {groupedSources.length > 0 ? (
+          groupedSources.map((source) => (
+            <DocumentCard
+              key={source.id}
+              document={source}
+              onDocumentClick={() => handleDocumentClick(source.id)}
+              onSaveExcerpt={(excerpt) => handleSaveExcerpt(source.id, excerpt)}
+            />
+          ))
         ) : (
           <div className="p-4 text-center text-gray-500">
             <h3 className="font-semibold mb-2">No Cited Sources Yet</h3>

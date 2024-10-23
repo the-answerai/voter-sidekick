@@ -1,5 +1,5 @@
 import { SourceDocument, CitedSource } from "../types";
-import getFollowUpQuestions from "./getFollwUpQuestions";
+import getFollowUpQuestions from "./getFollowUpQuestions";
 
 export async function handleMessageObservation(
   messages: any[],

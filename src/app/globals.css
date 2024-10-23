@@ -1,24 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Override dialog/modal background */
-.dialog-content,
-[role="dialog"] {
-  background-color: hsl(var(--background)) !important;
-  color: hsl(var(--foreground)) !important;
-}
-
-/* Override tooltip background */
-.tooltip-content,
-[role="tooltip"] {
-  background-color: hsl(var(--popover)) !important;
-  color: hsl(var(--popover-foreground)) !important;
-}
-
-/* Override alert dialog background */
-.alert-dialog-content,
-[role="alertdialog"] {
-  background-color: hsl(var(--background)) !important;
-  color: hsl(var(--foreground)) !important;
-}

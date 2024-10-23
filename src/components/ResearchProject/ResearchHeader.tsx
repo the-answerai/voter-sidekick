@@ -9,8 +9,6 @@ interface ResearchHeaderProps {
   sourceDocuments: any[];
   savedDocuments: any[];
   handleEditClick: () => void;
-  createdAt: string;
-  updatedAt: string;
 }
 
 const ResearchHeader: React.FC<ResearchHeaderProps> = ({
@@ -21,41 +19,37 @@ const ResearchHeader: React.FC<ResearchHeaderProps> = ({
   handleEditClick,
 }) => {
   return (
-    <Card className="mb-4 mx-4 mt-4">
-      <CardContent className="flex items-center justify-between py-4">
-        <div className="flex-1">
-          <h2 className="text-2xl font-bold">{projectTitle}</h2>
-          <p className="text-sm text-gray-500">{projectDescription}</p>
+    <Card className="mb-4">
+      <CardContent className="p-4">
+        <div className="flex justify-between items-center mb-2">
+          <h2 className="text-lg font-bold">{projectTitle}</h2>
+          <Button onClick={handleEditClick} size="sm">
+            Edit
+          </Button>
         </div>
-        <div className="flex space-x-8">
-          <div className="text-center">
-            <p className="text-sm text-gray-500">Hello Reviewed</p>
-            <p className="text-lg font-semibold">{sourceDocuments.length}</p>
+        <p className="text-xs text-gray-500 mb-3">{projectDescription}</p>
+        <div className="grid grid-cols-2 gap-2 text-sm mb-3">
+          <div>
+            <p className="text-gray-500">Docs Reviewed</p>
+            <p className="font-semibold">{sourceDocuments.length}</p>
           </div>
-          <div className="text-center">
-            <p className="text-sm text-gray-500">Documents Saved</p>
-            <p className="text-lg font-semibold">{savedDocuments.length}</p>
+          <div>
+            <p className="text-gray-500">Docs Saved</p>
+            <p className="font-semibold">{savedDocuments.length}</p>
           </div>
-          <div className="text-center">
-            <p className="text-sm text-gray-500">Key Excerpts</p>
-            <p className="text-lg font-semibold">
-              {sourceDocuments.length * 2}
-            </p>
+          <div>
+            <p className="text-gray-500">Key Excerpts</p>
+            <p className="font-semibold">{sourceDocuments.length * 2}</p>
           </div>
-          <div className="text-center">
-            <p className="text-sm text-gray-500">Overall Progress</p>
-            <p className="text-lg font-semibold">85%</p>
+          <div>
+            <p className="text-gray-500">Progress</p>
+            <p className="font-semibold">85%</p>
           </div>
         </div>
-        <div className="ml-8 flex-shrink-0">
-          <Progress value={sourceDocuments.length * 10} className="w-40" />
-          <p className="text-sm mt-1">
-            {sourceDocuments.length} of 10 recommended documents added
-          </p>
-        </div>
-        <Button onClick={handleEditClick} className="ml-4">
-          Edit Project
-        </Button>
+        <Progress value={sourceDocuments.length * 10} className="w-full mb-1" />
+        <p className="text-xs text-gray-500">
+          {sourceDocuments.length} of 10 recommended documents added
+        </p>
       </CardContent>
     </Card>
   );

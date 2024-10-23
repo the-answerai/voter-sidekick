@@ -1,45 +1,103 @@
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Trash2, ChevronDown, ChevronUp } from "lucide-react";
 
-interface SavedDocumentsProps {
-  savedExcerpts: any[];
+interface SavedExcerpt {
+  sourceId: string;
+  chunk: string;
+  savedAt: string;
+  documentName: string;
+  validity: string;
+  metadata?: {
+    [key: string]: string;
+  };
 }
 
-const SavedDocuments: React.FC<SavedDocumentsProps> = ({ savedExcerpts }) => {
+interface SavedDocumentsProps {
+  savedExcerpts: SavedExcerpt[];
+  onRemoveExcerpt: (excerpt: SavedExcerpt) => void;
+}
+
+const SavedDocuments: React.FC<SavedDocumentsProps> = ({
+  savedExcerpts,
+  onRemoveExcerpt,
+}) => {
+  const [expandedExcerpts, setExpandedExcerpts] = React.useState<Set<number>>(
+    new Set()
+  );
+
+  const toggleExpand = (index: number) => {
+    const newExpanded = new Set(expandedExcerpts);
+    if (newExpanded.has(index)) {
+      newExpanded.delete(index);
+    } else {
+      newExpanded.add(index);
+    }
+    setExpandedExcerpts(newExpanded);
+  };
+
+  const truncateText = (text: string | undefined, maxLength: number) => {
+    if (!text) return "";
+    if (text.length <= maxLength) return text;
+    return text.slice(0, maxLength) + "...";
+  };
+
   return (
-    <Card className="flex-1">
-      <CardContent>
-        {savedExcerpts?.length > 0 ? (
-          <ScrollArea className="h-[calc(100vh-350px)]">
-            {savedExcerpts.map((excerpt, index) => (
-              <div key={index} className="mb-4 p-2 border-b">
-                <h4 className="font-semibold">Excerpt {index + 1}</h4>
-                <p className="text-sm">Source ID: {excerpt.sourceId}</p>
-                <div className="mt-2 p-2 bg-gray-100 rounded-md">
-                  <pre className="text-sm whitespace-pre-wrap font-sans">
-                    {excerpt.chunk}
-                  </pre>
-                </div>
-              </div>
-            ))}
-          </ScrollArea>
-        ) : (
-          <div className="p-4 text-center text-gray-500">
-            <h3 className="font-semibold mb-2">No Saved Documents</h3>
-            <p>
-              Documents you save during your research will appear here. This
-              allows you to keep track of important sources and easily access
-              them later.
-            </p>
-            <p className="mt-2">
-              To use: Save documents you find relevant to your research. You can
-              review and manage your saved documents from this panel.
-            </p>
-          </div>
-        )}
-      </CardContent>
-    </Card>
+    <div className="space-y-4">
+      {savedExcerpts.map((excerpt, index) => (
+        <Card key={index}>
+          <CardHeader>
+            <CardTitle className="text-sm font-medium">
+              {excerpt.documentName}
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="p-4">
+            <div className="mb-2">
+              <p className="text-sm">
+                {expandedExcerpts.has(index)
+                  ? excerpt.chunk
+                  : truncateText(excerpt.chunk, 100)}
+              </p>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => toggleExpand(index)}
+                className="mt-1"
+              >
+                {expandedExcerpts.has(index) ? (
+                  <>
+                    <ChevronUp className="w-4 h-4 mr-1" /> Show Less
+                  </>
+                ) : (
+                  <>
+                    <ChevronDown className="w-4 h-4 mr-1" /> Show More
+                  </>
+                )}
+              </Button>
+            </div>
+            <div className="text-xs text-gray-500 space-y-1">
+              <p>Validity: {excerpt.validity}</p>
+              <p>Saved on: {new Date(excerpt.savedAt).toLocaleString()}</p>
+              {excerpt.metadata &&
+                Object.entries(excerpt.metadata).map(([key, value]) => (
+                  <p key={key}>{`${key}: ${value}`}</p>
+                ))}
+            </div>
+            <div className="mt-2 flex justify-end">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => onRemoveExcerpt(excerpt)}
+              >
+                <Trash2 className="w-4 h-4 mr-2" />
+                Remove
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
   );
 };
 
