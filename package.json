@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && nnext build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "setup-db": "node supabase-setup.js",
