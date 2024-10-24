@@ -1,7 +1,13 @@
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import {
+  Card,
+  // CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
+// import { Progress } from "@/components/ui/progress";
 
 interface ResearchHeaderProps {
   projectTitle: string;
@@ -9,27 +15,37 @@ interface ResearchHeaderProps {
   sourceDocuments: any[];
   savedDocuments: any[];
   handleEditClick: () => void;
-  createdAt: string;
-  updatedAt: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 const ResearchHeader: React.FC<ResearchHeaderProps> = ({
   projectTitle,
   projectDescription,
-  sourceDocuments,
-  savedDocuments,
+  // sourceDocuments,
+  // savedDocuments,
   handleEditClick,
 }) => {
   return (
-    <Card className="mb-4 mx-4 mt-4">
-      <CardContent className="flex items-center justify-between py-4">
-        <div className="flex-1">
-          <h2 className="text-2xl font-bold">{projectTitle}</h2>
-          <p className="text-sm text-gray-500">{projectDescription}</p>
+    <Card className="mb-4">
+      <CardHeader className="flex items-center justify-between">
+        <div className="flex items-center justify-between w-full">
+          <div>
+            <CardTitle>{projectTitle}</CardTitle>
+            <CardDescription>
+              <div className="text-gray-500">{projectDescription}</div>
+            </CardDescription>
+          </div>
+          <Button variant="outline" size="sm" onClick={handleEditClick}>
+            Edit Project
+          </Button>
         </div>
+      </CardHeader>
+
+      {/* <CardContent className="flex items-center justify-between py-4">
         <div className="flex space-x-8">
           <div className="text-center">
-            <p className="text-sm text-gray-500">Hello Reviewed</p>
+            <p className="text-sm text-gray-500">Reviewed</p>
             <p className="text-lg font-semibold">{sourceDocuments.length}</p>
           </div>
           <div className="text-center">
@@ -53,10 +69,7 @@ const ResearchHeader: React.FC<ResearchHeaderProps> = ({
             {sourceDocuments.length} of 10 recommended documents added
           </p>
         </div>
-        <Button onClick={handleEditClick} className="ml-4">
-          Edit Project
-        </Button>
-      </CardContent>
+      </CardContent> */}
     </Card>
   );
 };

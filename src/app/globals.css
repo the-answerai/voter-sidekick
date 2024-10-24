@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 /* Override dialog/modal background */
-.dialog-content,
+/* .dialog-content,
 [role="dialog"] {
-  background-color: hsl(var(--background)) !important;
+  background-color: 0, 0%, 100% !important;
   color: hsl(var(--foreground)) !important;
-}
+} */
 
 /* Override tooltip background */
 .tooltip-content,
@@ -16,9 +16,13 @@
   color: hsl(var(--popover-foreground)) !important;
 }
 
+.chatbot {
+  zoom: 0.9;
+}
+
 /* Override alert dialog background */
-.alert-dialog-content,
+/* .alert-dialog-content,
 [role="alertdialog"] {
   background-color: hsl(var(--background)) !important;
   color: hsl(var(--foreground)) !important;
-}
+} */

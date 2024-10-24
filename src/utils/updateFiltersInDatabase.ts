@@ -1,9 +1,10 @@
+import { PineconeMetadataFilter } from "@/types";
 import { updateResearchProject } from "./supabaseClient";
 
 export async function updateFiltersInDatabase(
   projectId: number,
   filters: { [key: string]: string | string[] | number },
-  overrideConfig: any
+  overrideConfig: any,
 ) {
   try {
     const updatedConfig = { ...overrideConfig };
@@ -19,7 +20,11 @@ export async function updateFiltersInDatabase(
 
     // Remove any existing filter keys that are not in the new filters
     Object.keys(updatedConfig.pineconeMetadataFilter).forEach((key) => {
-      if (!filters[key] || filters[key].length === 0) {
+      const curKey = filters[key as keyof PineconeMetadataFilter];
+      if (
+        !curKey ||
+        (Array.isArray(curKey) && !curKey.length)
+      ) {
         delete updatedConfig.pineconeMetadataFilter[key];
       }
     });

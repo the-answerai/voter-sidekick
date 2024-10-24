@@ -1,10 +1,13 @@
- import { updateResearchProject } from "@/utils/supabaseClient";
+import {
+  updateResearchProject,
+  VisibilityOptions,
+} from "@/utils/supabaseClient";
 
 export const saveProjectChanges = async (
   projectId: number,
   editedTitle: string,
   editedDescription: string,
-  editedVisibility: string
+  editedVisibility: VisibilityOptions,
 ) => {
   try {
     const updatedProject = await updateResearchProject(projectId, {

@@ -18,12 +18,16 @@ export interface ChatFullPageProps {
     observeLoading?: (loading: boolean) => void;
     observeMessages?: (
       messages: {
-          [x: string]: string; userMessage?: string; botMessage?: string; error?: Error 
-}[]
+        [x: string]: string;
+        userMessage?: string;
+        botMessage?: string;
+        error?: Error;
+      }[],
     ) => void; // Updated type
   };
   style?: CSSProperties;
   className?: string;
+  messages?: any[];
   theme?: {
     button?: {
       size?: "medium" | "large";
@@ -96,9 +100,9 @@ export interface Law {
 }
 
 export enum Locale {
-  FEDERAL = 'FEDERAL',
-  STATE = 'STATE',
-  LOCAL = 'LOCAL'
+  FEDERAL = "FEDERAL",
+  STATE = "STATE",
+  LOCAL = "LOCAL",
 }
 
 export interface UserSubmission {
@@ -114,10 +118,10 @@ export interface UserSubmission {
 }
 
 export enum SubmissionStatus {
-  NEW = 'NEW',
-  IN_REVIEW = 'IN_REVIEW',
-  APPROVED = 'APPROVED',
-  DENIED = 'DENIED'
+  NEW = "NEW",
+  IN_REVIEW = "IN_REVIEW",
+  APPROVED = "APPROVED",
+  DENIED = "DENIED",
 }
 
 export interface User {
@@ -131,6 +135,7 @@ interface CitedSource {
   id: string;
   title: string;
   congress: string;
+  url?: string;
   policyArea: string;
   chunks: string[];
 }
@@ -141,8 +146,10 @@ export interface SourceDocument {
     id: string;
     title: string;
     congress: string;
+    url?: string;
     policyArea: string;
     chunks: string[];
+    "loc.pageNumber"?: number;
   };
 }
 

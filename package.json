@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "setup-db": "node supabase-setup.js",
@@ -38,7 +38,7 @@
     "prisma": "^5.19.1",
     "react": "^18",
     "react-dom": "^18",
-    "tailwind-merge": "^2.5.2",
+    "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
     "tinycolor2": "^1.6.0"
   },
@@ -47,6 +47,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/tinycolor2": "^1.4.6",
     "dotenv": "^16.4.5",
     "eslint": "^8",
     "eslint-config-next": "14.2.8",

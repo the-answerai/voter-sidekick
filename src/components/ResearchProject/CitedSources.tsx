@@ -1,7 +1,7 @@
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
 import SourceDocumentsSidebar from "../SourceDocumentsSidebar";
-import { getBill } from "@/utils/supabaseClient";
+import { ScrollArea } from "@/components/ui/scroll-area";
+// import { getBill } from "@/utils/supabaseClient";
 
 interface CitedSourcesProps {
   groupedSources: Record<string, any>;
@@ -20,36 +20,35 @@ const CitedSources: React.FC<CitedSourcesProps> = ({
   handleExcerptNavigation,
   handleSaveExcerpt, // Destructure the new prop
 }) => {
-  const hasSourcesContent = Object.keys(groupedSources).length > 0;
-
   return (
-    <Card className="flex-1">
-      <CardContent>
-        {hasSourcesContent ? (
+    <>
+      {!!Object.keys(groupedSources)?.length ? (
+        <ScrollArea className="h-[calc(100vh-350px)]">
           <SourceDocumentsSidebar
             groupedSources={groupedSources}
             handleDocumentClick={handleDocumentClick}
             selectedDocument={selectedDocument}
             currentExcerptIndex={currentExcerptIndex}
             handleExcerptNavigation={handleExcerptNavigation}
-            handleSaveExcerpt={handleSaveExcerpt} // Pass it down
+            handleSaveExcerpt={handleSaveExcerpt}
           />
-        ) : (
-          <div className="p-4 text-center text-gray-500">
-            <h3 className="font-semibold mb-2">No Cited Sources Yet</h3>
-            <p>
-              As you conduct your research, sources cited in your project will
-              appear here. You'll be able to view and navigate through document
-              excerpts, making it easy to reference and review your sources.
-            </p>
-            <p className="mt-2">
-              To use: Click on a source to view its details and navigate through
-              excerpts using the provided controls.
-            </p>
-          </div>
-        )}
-      </CardContent>
-    </Card>
+        </ScrollArea>
+      ) : (
+        <div className="p-4 text-gray-500">
+          <h4 className="font-semibold mb-4">No Cited Sources Yet</h4>
+          <p className="text-xs">
+            As you conduct your research, sources cited in your project will
+            appear here. You&apos;ll be able to view and navigate through
+            document excerpts, making it easy to reference and review your
+            sources.
+            <br />
+            <br />
+            To use: Click on a source to view its details and navigate through
+            excerpts using the provided controls.
+          </p>
+        </div>
+      )}
+    </>
   );
 };
 
