@@ -93,7 +93,7 @@ const SourceDocumentsSidebar: React.FC<SourceDocumentsSidebarProps> = ({
   };
 
   // Helper function to render metadata fields
-  const renderMetadata = (source: any, showAll?: Boolean) => {
+  const renderMetadata = (source: any, showAll?: boolean) => {
     const excludeFields = ["id", "chunks", "title"];
     const metadataEntries = Object.entries(source).filter(
       ([key, value]) =>

@@ -35,7 +35,7 @@ import {
   congressSessions,
   initializeTopics,
 } from "../../chatbots/config/chatflowConfig";
-import getFollowUpQuestions from "@/utils/getFollwUpQuestions";
+// import getFollowUpQuestions from "@/utils/getFollwUpQuestions";
 import getUserIntent from "@/utils/getUserIntentGoal";
 import {
   getResearchProject,
@@ -46,12 +46,12 @@ import {
 } from "@/utils/supabaseClient";
 import { cn } from "@/utils/tailwindMerge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import SavedDocuments from "./SavedDocuments";
+// import SavedDocuments from "./SavedDocuments";
 import { fetchProjectDetails } from "@/utils/fetchProjectDetails";
 import { handleMessageObservation } from "@/utils/handleMessageObservation";
 import { handleFollowUpQuestion } from "@/utils/handleFollowUpQuestion";
 import { updateFiltersInDatabase } from "@/utils/updateFiltersInDatabase";
-import { PineconeMetadataFilter } from "@/types";
+// import { PineconeMetadataFilter } from "@/types";
 import { Loader } from "lucide-react"; // Import the Loader icon
 
 type Excerpt = {
@@ -73,7 +73,7 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
   const [overrideConfig, setOverrideConfig] = useState({});
   const [followUpQuestions, setFollowUpQuestions] = useState<string[]>([]);
   const [userIntent, setUserIntent] = useState<string>("");
-  const [isEditingIntent, setIsEditingIntent] = useState(false);
+  // const [isEditingIntent, setIsEditingIntent] = useState(false);
 
   const [groupedSources, setGroupedSources] = useState<Record<string, any>>({});
   const [selectedDocument, setSelectedDocument] = useState<any>(null);
@@ -136,22 +136,22 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
     loadTopics();
   }, []);
 
-  const handleMessageObservationWrapper = async (messages: any[]) => {
-    try {
-      const { citedSources, followUpQuestions } =
-        await handleMessageObservation(
-          messages,
-          addSourceDocuments,
-          clearSourceDocuments
-        );
-      setCitedSources(citedSources);
-      setFollowUpQuestions(followUpQuestions);
-    } catch (error) {
-      console.error("Error in message observation:", error);
-    }
-  };
-
   useEffect(() => {
+    const handleMessageObservationWrapper = async (messages: any[]) => {
+      try {
+        const { citedSources, followUpQuestions } =
+          await handleMessageObservation(
+            messages,
+            addSourceDocuments,
+            clearSourceDocuments
+          );
+        setCitedSources(citedSources);
+        setFollowUpQuestions(followUpQuestions);
+      } catch (error) {
+        console.error("Error in message observation:", error);
+      }
+    };
+
     if (chatProps?.observersConfig?.observeMessages) {
       const originalObserveMessages = chatProps.observersConfig.observeMessages;
       chatProps.observersConfig.observeMessages = async (messages) => {
@@ -390,7 +390,7 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
           )}
         </div>
         <div className="w-1/4 p-4 bg-gray-100 overflow-y-auto rounded-md">
-          {hasFilters && (
+          {/* {hasFilters && (
             <Card className="mb-4">
               <CardContent>
                 <div className="space-y-4">
@@ -435,7 +435,7 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
                 </div>
               </CardContent>
             </Card>
-          )}
+          )} */}
           <Tabs defaultValue="cited" className="w-full">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger

@@ -57,7 +57,7 @@ const defaultConfig: ChatFullPageProps = {
       botMessage: {
         backgroundColor: themeColors.botMessageBackgroundColor,
         textColor: themeColors.botMessageTextColor,
-        showAvatar: true,
+        showAvatar: false,
         //fontSize,
         avatarSrc:
           "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png",
@@ -65,7 +65,7 @@ const defaultConfig: ChatFullPageProps = {
       userMessage: {
         backgroundColor: themeColors.userMessageBackgroundColor,
         textColor: themeColors.userMessageTextColor,
-        showAvatar: true,
+        showAvatar: false,
         //fontSize,
         avatarSrc:
           "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
