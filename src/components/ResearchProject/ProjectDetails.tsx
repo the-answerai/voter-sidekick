@@ -8,40 +8,6 @@ import FollowUpQuestions from "./FollowUpQuestions";
 import CitedSources from "./CitedSources";
 import ResearchHeader from "./ResearchHeader";
 
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogFooter,
-} from "@/components/ui/dialog";
-
-import {
-  AlertDialog,
-  AlertDialogContent,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogCancel,
-  AlertDialogAction,
-} from "@/components/ui/alert-dialog";
-
-// import PineconeMetadataFilterSelect from "../PineconeMetadataFilterSelect";
-
-// import {
-//   congressSessions,
-//   initializeTopics,
-// } from "../../chatbots/config/chatflowConfig";
-
-// import getFollowUpQuestions from "@/utils/getFollwUpQuestions";
 import getUserIntent from "@/utils/getUserIntentGoal";
 
 import {
@@ -50,8 +16,6 @@ import {
   type ProjectObj,
   VisibilityOptions,
 } from "@/utils/supabaseClient";
-
-import { cn } from "@/utils/tailwindMerge";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -78,7 +42,7 @@ type Excerpt = {
 const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
   const {
     chatProps,
-    sourceDocuments,
+    // sourceDocuments,
     addSourceDocuments,
     clearSourceDocuments,
   } = useChatContext();
@@ -270,10 +234,10 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
     }
   };
 
-  const handlePublicConfirmation = async () => {
-    setIsPublicConfirmationOpen(false);
-    await saveProjectChanges();
-  };
+  // const handlePublicConfirmation = async () => {
+  //   setIsPublicConfirmationOpen(false);
+  //   await saveProjectChanges();
+  // };
 
   const saveProjectChanges = async () => {
     try {
@@ -357,244 +321,80 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
   //   }
   // };
 
-  const handleSaveEditClick = async () => {
-    setIsSaving(true);
-    await handleSaveEdit();
-    setIsSaving(false);
-  };
+  // const handleSaveEditClick = async () => {
+  //   setIsSaving(true);
+  //   await handleSaveEdit();
+  //   setIsSaving(false);
+  // };
 
   return (
-    <div className="flex flex-col h-screen">
-      <div className="flex space-x-4 flex-1">
-        <div className="w-1/4 p-4 bg-gray-100 overflow-y-auto rounded-md flex flex-col gap-2">
-          {/* {hasFilters && (
-            <Card className="mb-4">
-              <CardContent>
-                <div className="space-y-4">
-                  <PineconeMetadataFilterSelect
-                    options={congressSessions}
-                    
-                    updateFilter={updateFiltersInDatabaseWrapper}
-                    filterKey="congress"
-                    placeholder="Select Congress"
-                    isNumeric={true}
-                    isMulti={true}
-                    selectedValues={
-                      Array.isArray(selectedFilters.congress)
-                        ? selectedFilters.congress
-                        : []
-                    }
-                  />
-                  <PineconeMetadataFilterSelect
-                    options={topics}
-                    updateFilter={updateFiltersInDatabaseWrapper}
-                    filterKey="policyArea"
-                    placeholder="Select Topic"
-                    isMulti={true}
-                    selectedValues={
-                      Array.isArray(selectedFilters.policyArea)
-                        ? selectedFilters.policyArea
-                        : []
-                    }
-                  />
-                  <PineconeMetadataFilterSelect
-                    filterKey="topK"
-                    updateFilter={updateFiltersInDatabaseWrapper}
-                    isNumeric={true}
-                    isSlider={true}
-                    min={minTopK}
-                    max={maxTopK}
-                    selectedValues={
-                      typeof selectedFilters.topK === "number"
-                        ? selectedFilters.topK
-                        : minTopK
-                    }
-                  />
-                </div>
-              </CardContent>
-            </Card>
-          )} */}
-          <ResearchHeader
-            title={projectTitle}
-            description={projectDescription}
-            // sourceDocuments={sourceDocuments}
-            // savedDocuments={savedDocuments}
-            handleEditClick={handleEditClick}
-          />
-
-          <Tabs defaultValue="intent" className="w-full">
-            <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger
-                value="intent"
-                className="text-xs data-[state=inactive]:text-gray-500"
-              >
-                User Intent
-              </TabsTrigger>
-
-              <TabsTrigger
-                value="cited"
-                className="text-xs data-[state=inactive]:text-gray-500"
-              >
-                Cited Sources
-              </TabsTrigger>
-
-              {/* <TabsTrigger
-                value="saved"
-                className="text-xs data-[state=inactive]:text-gray-500"
-              >
-                Saved Documents
-              </TabsTrigger> */}
-            </TabsList>
-
-            <TabsContent value="intent">
-              <UserIntent
-                userIntent={userIntent}
-                updateUserIntent={updateUserIntent}
-                handleGenerateIntent={handleGenerateIntent}
-                messages={chatProps?.messages || []}
-              />
-            </TabsContent>
-
-            <TabsContent value="cited">
-              <CitedSources
-                groupedSources={groupedSources}
-                handleDocumentClick={handleDocumentClick}
-                selectedDocument={selectedDocument}
-                currentExcerptIndex={currentExcerptIndex}
-                handleExcerptNavigation={handleExcerptNavigation}
-                handleSaveExcerpt={handleSaveExcerpt}
-              />
-            </TabsContent>
-
-            {/* <TabsContent value="saved">
-              <SavedDocuments savedExcerpts={savedExcerpts} />
-            </TabsContent> */}
-          </Tabs>
-        </div>
-
-        <div className="w-3/4 flex flex-grow h-full">
-          {!isLoading && chatProps && chatflowid ? (
-            <div className="flex flex-col w-full gap-4">
-              <div className="w-full flex-grow">
-                <ChatFullPage
-                  {...chatProps}
-                  chatflowid={chatflowid}
-                  className="w-full chatbot inline-block "
-                />
-              </div>
-
-              <div className="w-full h-full flex-grow">
-                {!!followUpQuestions?.length && (
-                  <FollowUpQuestions
-                    followUpQuestions={followUpQuestions}
-                    handleFollowUpQuestion={handleFollowUpQuestionWrapper}
-                  />
-                )}
-              </div>
-            </div>
-          ) : (
-            <div>Loading chat...</div>
-          )}
-        </div>
+    <div className="grid grid-cols-12 grid-rows-[1fr_auto] gap-4 h-[87vh]">
+      <div className="col-span-3 row-span-2 p-4 bg-gray-100 overflow-y-auto rounded-md flex flex-col gap-2 sticky top-0 max-h-full">
+        <ResearchHeader
+          title={projectTitle}
+          description={projectDescription}
+          handleEditClick={handleEditClick}
+        />
+        <Tabs defaultValue="intent" className="w-full">
+          <TabsList className="grid w-full grid-cols-2">
+            <TabsTrigger
+              value="intent"
+              className="text-xs data-[state=inactive]:text-gray-500"
+            >
+              User Intent
+            </TabsTrigger>
+            <TabsTrigger
+              value="cited"
+              className="text-xs data-[state=inactive]:text-gray-500"
+            >
+              Cited Sources
+            </TabsTrigger>
+          </TabsList>
+          <TabsContent value="intent">
+            <UserIntent
+              userIntent={userIntent}
+              updateUserIntent={updateUserIntent}
+              handleGenerateIntent={handleGenerateIntent}
+              messages={chatProps?.messages || []}
+            />
+          </TabsContent>
+          <TabsContent value="cited">
+            <CitedSources
+              groupedSources={groupedSources}
+              handleDocumentClick={handleDocumentClick}
+              selectedDocument={selectedDocument}
+              currentExcerptIndex={currentExcerptIndex}
+              handleExcerptNavigation={handleExcerptNavigation}
+              handleSaveExcerpt={handleSaveExcerpt}
+            />
+          </TabsContent>
+        </Tabs>
       </div>
 
-      <Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
-        <DialogContent className={cn("dialog-content")}>
-          <DialogHeader>
-            <DialogTitle>Edit Research Project</DialogTitle>
-          </DialogHeader>
-
-          <div className="grid gap-4 py-4">
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="title" className="text-right">
-                Title
-              </Label>
-
-              <Input
-                id="title"
-                value={editedTitle}
-                onChange={(e) => setEditedTitle(e.target.value)}
-                className="col-span-3"
+      <div className="col-span-9 row-span-1 overflow-scroll max-h-full">
+        {!isLoading && chatProps && chatflowid ? (
+          <div className="flex flex-col w-full gap-4">
+            <div className="h-full w-full">
+              <ChatFullPage
+                {...chatProps}
+                chatflowid={chatflowid}
+                className="w-full chatbot  inline-block"
               />
-            </div>
-
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="description" className="text-right">
-                Description
-              </Label>
-
-              <Textarea
-                id="description"
-                value={editedDescription}
-                onChange={(e) => setEditedDescription(e.target.value)}
-                className="col-span-3"
-              />
-            </div>
-
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label className="text-right">Visibility</Label>
-
-              <RadioGroup
-                value={editedVisibility}
-                onValueChange={(value: string) =>
-                  setEditedVisibility(value as VisibilityOptions)
-                }
-                className="col-span-3"
-              >
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="PRIVATE" id="private" />
-                  <Label htmlFor="private">Private</Label>
-                </div>
-
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="PUBLIC" id="public" />
-                  <Label htmlFor="public">Public</Label>
-                </div>
-              </RadioGroup>
             </div>
           </div>
+        ) : (
+          <div>Loading chat...</div>
+        )}
+      </div>
 
-          <DialogFooter>
-            <div className="text-right">
-              <Button variant="outline" size="sm" onClick={handleSaveEditClick}>
-                {isSaving ? (
-                  <Loader className="h-4 w-4 animate-spin" />
-                ) : (
-                  "Save changes"
-                )}
-              </Button>
-
-              {errorMessage && (
-                <div className="text-red-500 mt-2 text-xs">{errorMessage}</div>
-              )}
-            </div>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
-
-      <AlertDialog
-        open={isPublicConfirmationOpen}
-        onOpenChange={setIsPublicConfirmationOpen}
-      >
-        <AlertDialogContent className={cn("alert-dialog-content")}>
-          <AlertDialogHeader>
-            <AlertDialogTitle>Make Project Public?</AlertDialogTitle>
-
-            <AlertDialogDescription>
-              Making your project public will allow anyone to view it. Are you
-              sure you want to proceed?
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-
-          <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
-
-            <AlertDialogAction onClick={handlePublicConfirmation}>
-              Confirm
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+      {!!followUpQuestions?.length && (
+        <div className="col-span-9">
+          <FollowUpQuestions
+            followUpQuestions={followUpQuestions}
+            handleFollowUpQuestion={handleFollowUpQuestionWrapper}
+          />
+        </div>
+      )}
     </div>
   );
 };
