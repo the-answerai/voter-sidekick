@@ -414,9 +414,9 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
             </Card>
           )} */}
           <ResearchHeader
-            projectTitle={projectTitle}
-            projectDescription={projectDescription}
-            sourceDocuments={sourceDocuments}
+            title={projectTitle}
+            description={projectDescription}
+            // sourceDocuments={sourceDocuments}
             // savedDocuments={savedDocuments}
             handleEditClick={handleEditClick}
           />

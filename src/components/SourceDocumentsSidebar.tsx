@@ -1,5 +1,5 @@
 import React from "react";
-import { CitedSource } from "../types";
+import { CitedSource, ResearchProject } from "../types";
 
 import { ScrollArea } from "@/components/ui/scroll-area";
 import DocumentCard from "./ResearchProject/DocumentCard";
@@ -11,7 +11,7 @@ interface SourceDocumentsSidebarProps {
   currentExcerptIndex: number;
   handleExcerptNavigation: (direction: "prev" | "next") => void;
   handleSaveExcerpt: (sourceId: string, chunk: string) => void; // New prop
-  researchProject: ResearchProject; // Add this line
+  researchProject?: ResearchProject;
 }
 
 const SourceDocumentsSidebar: React.FC<SourceDocumentsSidebarProps> = ({
@@ -34,7 +34,7 @@ const SourceDocumentsSidebar: React.FC<SourceDocumentsSidebarProps> = ({
         <DocumentCard
           key={source.id}
           document={source}
-          researchProject={researchProject} // Pass the prop here
+          researchProject={researchProject}
           onDocumentClick={handleDocumentClick}
           // onSaveExcerpt,
           // isSaved = false,

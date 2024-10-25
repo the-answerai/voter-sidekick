@@ -55,6 +55,7 @@ const UserIntent: React.FC<UserIntentProps> = ({
           <Button
             variant="ghost"
             size="sm"
+            className="p-0"
             onClick={handleGenerateIntentClick}
             title="Generate new intent"
           >

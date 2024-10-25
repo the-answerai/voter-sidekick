@@ -22,7 +22,6 @@ import {
 
 import {
   // Bookmark,
-
   ChevronLeft,
   ChevronRight,
   ExternalLink,
@@ -32,6 +31,7 @@ import getFollowUpQuestions from "@/utils/getFollwUpQuestions";
 import { formatText } from "@/utils/formatText";
 import { truncateTitle } from "@/utils/truncateTitle";
 import { uncamelCaseAndTitleCase } from "@/utils/uncamelCaseAndTitleCase";
+import { ResearchProject } from "@/types";
 
 interface Excerpt {
   id: string;
@@ -53,15 +53,15 @@ interface Document {
   url?: string;
 }
 
-interface ResearchProject {
-  id: string;
-  title: string;
-  description: string;
-}
+// interface ResearchProject {
+//   id: string;
+//   title: string;
+//   description: string;
+// }
 
 interface DocumentCardProps {
   document: Document;
-  researchProject: ResearchProject;
+  researchProject?: ResearchProject;
   onDocumentClick: (documentId: string) => void;
   onSaveExcerpt?: (excerpt: string) => void;
   isSaved?: boolean;
@@ -146,7 +146,7 @@ const DocumentCard: React.FC<DocumentCardProps> = ({
       const chatHistory = [
         {
           role: "system",
-          content: `Research Project: ${researchProject.title}\nDescription: ${researchProject.description}`,
+          content: `Research Project: ${researchProject?.title}\nDescription: ${researchProject?.description}`,
         },
         { role: "user", content: excerpt }, // Use excerpt.text
       ];
@@ -159,7 +159,12 @@ const DocumentCard: React.FC<DocumentCardProps> = ({
       }
     };
 
-    if (!isDialogOpen || !currentExcerptIndex || !document?.chunks?.length) {
+    if (
+      !researchProject ||
+      !isDialogOpen ||
+      !currentExcerptIndex ||
+      !document?.chunks?.length
+    ) {
       return;
     }
 
@@ -233,9 +238,9 @@ const DocumentCard: React.FC<DocumentCardProps> = ({
                           "noopener,noreferrer"
                         )
                       }
-                      className="flex-shrink self-top text-blue-500  hover:text-blue-700"
+                      className="flex-shrink py-0 min-h-auto text-blue-500  hover:text-blue-700"
                     >
-                      <ExternalLink size="18" />
+                      <ExternalLink className="w-4 h-4" />
                     </Button>
                   </DialogTitle>
                 </DialogHeader>

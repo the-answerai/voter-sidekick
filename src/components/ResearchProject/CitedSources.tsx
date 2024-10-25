@@ -1,6 +1,7 @@
 import React from "react";
 import SourceDocumentsSidebar from "../SourceDocumentsSidebar";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { ResearchProject } from "@/types";
 // import { getBill } from "@/utils/supabaseClient";
 
 interface CitedSourcesProps {
@@ -10,6 +11,7 @@ interface CitedSourcesProps {
   currentExcerptIndex: number;
   handleExcerptNavigation: (direction: "prev" | "next") => void;
   handleSaveExcerpt: (sourceId: string, chunk: string) => void;
+  researchProject?: ResearchProject;
 }
 
 const CitedSources: React.FC<CitedSourcesProps> = ({

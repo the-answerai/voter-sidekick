@@ -159,7 +159,6 @@ interface ChatflowConfig {
   pineconeMetadataFilter?: Partial<PineconeMetadataFilter>;
 }
 
-//Add these to the ResearchProject as typescript
 export interface ResearchProject {
   id: number;
   title: string;
