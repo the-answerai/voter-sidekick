@@ -1,10 +1,10 @@
-import { SourceDocument, CitedSource } from "../types";
+import { CitedSource, SourceDocument } from "../types";
 import getFollowUpQuestions from "./getFollwUpQuestions";
 
 export async function handleMessageObservation(
   messages: any[],
   addSourceDocuments: (docs: SourceDocument[]) => void,
-  clearSourceDocuments: () => void
+  clearSourceDocuments: () => void,
 ) {
   try {
     if (messages.length === 1) {
@@ -19,19 +19,22 @@ export async function handleMessageObservation(
       Array.isArray(latestMessage.sourceDocuments)
     ) {
       addSourceDocuments(latestMessage.sourceDocuments);
-      const newCitedSources: CitedSource[] = latestMessage.sourceDocuments.map((doc: SourceDocument) => {
-        const { id, title, ...otherMetadata } = doc.metadata;
-        return {
-          id: id || "Unknown ID",
-          title: title || "Unknown Title",
-          ...otherMetadata,
-          chunks: [doc.pageContent],
-        };
-      });
+      const newCitedSources: CitedSource[] = latestMessage.sourceDocuments.map(
+        (doc: SourceDocument) => {
+          const { id, title, ...otherMetadata } = doc.metadata;
+          console.log({ doc });
+          return {
+            id: id || "Unknown ID",
+            title: title || "Unknown Title",
+            ...otherMetadata,
+            chunks: [doc.pageContent],
+          };
+        },
+      );
 
       const followUpQuestions = await getFollowUpQuestions(
         messages.slice(0, -1),
-        latestMessage.message
+        latestMessage.message,
       );
 
       return { citedSources: newCitedSources, followUpQuestions };

@@ -1,14 +1,19 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useChatContext } from "../../contexts/ChatContext";
+
 import ChatFullPage from "../ChatFullPage";
 import UserIntent from "./UserIntent";
 import FollowUpQuestions from "./FollowUpQuestions";
 import CitedSources from "./CitedSources";
 import ResearchHeader from "./ResearchHeader";
-import { Card, CardContent } from "@/components/ui/card";
+
+import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 import {
   Dialog,
@@ -17,9 +22,7 @@ import {
   DialogTitle,
   DialogFooter,
 } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+
 import {
   AlertDialog,
   AlertDialogContent,
@@ -30,28 +33,40 @@ import {
   AlertDialogCancel,
   AlertDialogAction,
 } from "@/components/ui/alert-dialog";
-import PineconeMetadataFilterSelect from "../PineconeMetadataFilterSelect";
-import {
-  congressSessions,
-  initializeTopics,
-} from "../../chatbots/config/chatflowConfig";
+
+// import PineconeMetadataFilterSelect from "../PineconeMetadataFilterSelect";
+
+// import {
+//   congressSessions,
+//   initializeTopics,
+// } from "../../chatbots/config/chatflowConfig";
+
 // import getFollowUpQuestions from "@/utils/getFollwUpQuestions";
 import getUserIntent from "@/utils/getUserIntentGoal";
+
 import {
-  getResearchProject,
   getBill,
   updateResearchProject,
   type ProjectObj,
   VisibilityOptions,
 } from "@/utils/supabaseClient";
+
 import { cn } from "@/utils/tailwindMerge";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 // import SavedDocuments from "./SavedDocuments";
+
 import { fetchProjectDetails } from "@/utils/fetchProjectDetails";
+
 import { handleMessageObservation } from "@/utils/handleMessageObservation";
+
 import { handleFollowUpQuestion } from "@/utils/handleFollowUpQuestion";
+
 import { updateFiltersInDatabase } from "@/utils/updateFiltersInDatabase";
+
 // import { PineconeMetadataFilter } from "@/types";
+
 import { Loader } from "lucide-react"; // Import the Loader icon
 
 type Excerpt = {
@@ -67,9 +82,9 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
     addSourceDocuments,
     clearSourceDocuments,
   } = useChatContext();
-  const [savedDocuments, setSavedDocuments] = useState([]);
+  // const [savedDocuments, setSavedDocuments] = useState([]);
   const [citedSources, setCitedSources] = useState<any[]>([]);
-  const [topics, setTopics] = useState(new Map());
+  // const [topics, setTopics] = useState(new Map());
   const [overrideConfig, setOverrideConfig] = useState({});
   const [followUpQuestions, setFollowUpQuestions] = useState<string[]>([]);
   const [userIntent, setUserIntent] = useState<string>("");
@@ -91,17 +106,17 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
   const [isPublicConfirmationOpen, setIsPublicConfirmationOpen] =
     useState(false);
 
-  const [selectedFilters, setSelectedFilters] = useState<{
-    [key: string]: string[] | number;
-  }>({});
+  // const [selectedFilters, setSelectedFilters] = useState<{
+  //   [key: string]: string[] | number;
+  // }>({});
 
   const [chatflowid, setChatflowID] = useState<string | null>(null);
-  const [hasFilters, setHasFilters] = useState(false);
+  // const [hasFilters, setHasFilters] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [savedExcerpts, setSavedExcerpts] = useState<Excerpt[]>([]);
 
-  const minTopK = 4;
-  const maxTopK = 30;
+  // const minTopK = 4;
+  // const maxTopK = 30;
 
   const [isSaving, setIsSaving] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -115,8 +130,8 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
         setProjectDescription(projectDetails.description);
         setUserIntent(projectDetails.intent || "");
         setChatflowID(projectDetails.chatflowid);
-        setHasFilters(projectDetails.hasFilters);
-        setSelectedFilters(projectDetails.filters);
+        // setHasFilters(projectDetails.hasFilters);
+        // setSelectedFilters(projectDetails.filters);
         setSavedExcerpts(projectDetails.savedExcerpts || []);
       } catch (error) {
         console.error("Error loading project details:", error);
@@ -128,13 +143,13 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
     loadProjectDetails();
   }, [projectId]);
 
-  useEffect(() => {
-    const loadTopics = async () => {
-      const topicsMap = await initializeTopics();
-      setTopics(topicsMap);
-    };
-    loadTopics();
-  }, []);
+  // useEffect(() => {
+  //   const loadTopics = async () => {
+  //     const topicsMap = await initializeTopics();
+  //     setTopics(topicsMap);
+  //   };
+  //   loadTopics();
+  // }, []);
 
   useEffect(() => {
     const handleMessageObservationWrapper = async (messages: any[]) => {
@@ -320,27 +335,27 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
   //   await updateResearchProject(projectId, { intent: userIntent });
   // };
 
-  const updateFiltersInDatabaseWrapper = async (
-    key: string, // Change from keyof PineconeMetadataFilter to string
-    value: string | number | string[]
-  ) => {
-    try {
-      const updatedFilters = {
-        ...selectedFilters,
-        [key]:
-          Array.isArray(value) || typeof value === "number" ? value : [value],
-      };
-      const updatedConfig = await updateFiltersInDatabase(
-        projectId,
-        updatedFilters,
-        overrideConfig
-      );
-      setOverrideConfig(updatedConfig);
-      setSelectedFilters(updatedFilters);
-    } catch (error) {
-      console.error("Error updating filters:", error);
-    }
-  };
+  // const updateFiltersInDatabaseWrapper = async (
+  //   key: string, // Change from keyof PineconeMetadataFilter to string
+  //   value: string | number | string[]
+  // ) => {
+  //   try {
+  //     const updatedFilters = {
+  //       ...selectedFilters,
+  //       [key]:
+  //         Array.isArray(value) || typeof value === "number" ? value : [value],
+  //     };
+  //     const updatedConfig = await updateFiltersInDatabase(
+  //       projectId,
+  //       updatedFilters,
+  //       overrideConfig
+  //     );
+  //     setOverrideConfig(updatedConfig);
+  //     setSelectedFilters(updatedFilters);
+  //   } catch (error) {
+  //     console.error("Error updating filters:", error);
+  //   }
+  // };
 
   const handleSaveEditClick = async () => {
     setIsSaving(true);
@@ -350,46 +365,8 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
 
   return (
     <div className="flex flex-col h-screen">
-      <ResearchHeader
-        projectTitle={projectTitle}
-        projectDescription={projectDescription}
-        sourceDocuments={sourceDocuments}
-        savedDocuments={savedDocuments}
-        handleEditClick={handleEditClick}
-      />
-
-      <div className="flex space-x-4 flex-1 overflow-hidden">
-        <div className="w-3/4 flex flex-col">
-          <div className="flex mb-4 space-x-4">
-            <div className="flex-1">
-              <UserIntent
-                userIntent={userIntent}
-                updateUserIntent={updateUserIntent}
-                handleGenerateIntent={handleGenerateIntent}
-                messages={chatProps?.messages || []}
-              />
-            </div>
-            {!!followUpQuestions?.length && (
-              <div className="flex-1">
-                <FollowUpQuestions
-                  followUpQuestions={followUpQuestions}
-                  handleFollowUpQuestion={handleFollowUpQuestionWrapper}
-                />
-              </div>
-            )}
-          </div>
-
-          {!isLoading && chatProps && chatflowid ? (
-            <ChatFullPage
-              {...chatProps}
-              chatflowid={chatflowid}
-              className="w-full flex-1 chatbot"
-            />
-          ) : (
-            <div>Loading chat...</div>
-          )}
-        </div>
-        <div className="w-1/4 p-4 bg-gray-100 overflow-y-auto rounded-md">
+      <div className="flex space-x-4 flex-1">
+        <div className="w-1/4 p-4 bg-gray-100 overflow-y-auto rounded-md flex flex-col gap-2">
           {/* {hasFilters && (
             <Card className="mb-4">
               <CardContent>
@@ -436,14 +413,30 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
               </CardContent>
             </Card>
           )} */}
-          <Tabs defaultValue="cited" className="w-full">
+          <ResearchHeader
+            projectTitle={projectTitle}
+            projectDescription={projectDescription}
+            sourceDocuments={sourceDocuments}
+            // savedDocuments={savedDocuments}
+            handleEditClick={handleEditClick}
+          />
+
+          <Tabs defaultValue="intent" className="w-full">
             <TabsList className="grid w-full grid-cols-2">
+              <TabsTrigger
+                value="intent"
+                className="text-xs data-[state=inactive]:text-gray-500"
+              >
+                User Intent
+              </TabsTrigger>
+
               <TabsTrigger
                 value="cited"
                 className="text-xs data-[state=inactive]:text-gray-500"
               >
                 Cited Sources
               </TabsTrigger>
+
               {/* <TabsTrigger
                 value="saved"
                 className="text-xs data-[state=inactive]:text-gray-500"
@@ -451,6 +444,16 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
                 Saved Documents
               </TabsTrigger> */}
             </TabsList>
+
+            <TabsContent value="intent">
+              <UserIntent
+                userIntent={userIntent}
+                updateUserIntent={updateUserIntent}
+                handleGenerateIntent={handleGenerateIntent}
+                messages={chatProps?.messages || []}
+              />
+            </TabsContent>
+
             <TabsContent value="cited">
               <CitedSources
                 groupedSources={groupedSources}
@@ -461,10 +464,36 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
                 handleSaveExcerpt={handleSaveExcerpt}
               />
             </TabsContent>
+
             {/* <TabsContent value="saved">
               <SavedDocuments savedExcerpts={savedExcerpts} />
             </TabsContent> */}
           </Tabs>
+        </div>
+
+        <div className="w-3/4 flex flex-grow h-full">
+          {!isLoading && chatProps && chatflowid ? (
+            <div className="flex flex-col w-full gap-4">
+              <div className="w-full flex-grow">
+                <ChatFullPage
+                  {...chatProps}
+                  chatflowid={chatflowid}
+                  className="w-full chatbot inline-block "
+                />
+              </div>
+
+              <div className="w-full h-full flex-grow">
+                {!!followUpQuestions?.length && (
+                  <FollowUpQuestions
+                    followUpQuestions={followUpQuestions}
+                    handleFollowUpQuestion={handleFollowUpQuestionWrapper}
+                  />
+                )}
+              </div>
+            </div>
+          ) : (
+            <div>Loading chat...</div>
+          )}
         </div>
       </div>
 
@@ -473,11 +502,13 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
           <DialogHeader>
             <DialogTitle>Edit Research Project</DialogTitle>
           </DialogHeader>
+
           <div className="grid gap-4 py-4">
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="title" className="text-right">
                 Title
               </Label>
+
               <Input
                 id="title"
                 value={editedTitle}
@@ -485,10 +516,12 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
                 className="col-span-3"
               />
             </div>
+
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="description" className="text-right">
                 Description
               </Label>
+
               <Textarea
                 id="description"
                 value={editedDescription}
@@ -496,8 +529,10 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
                 className="col-span-3"
               />
             </div>
+
             <div className="grid grid-cols-4 items-center gap-4">
               <Label className="text-right">Visibility</Label>
+
               <RadioGroup
                 value={editedVisibility}
                 onValueChange={(value: string) =>
@@ -509,6 +544,7 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
                   <RadioGroupItem value="PRIVATE" id="private" />
                   <Label htmlFor="private">Private</Label>
                 </div>
+
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="PUBLIC" id="public" />
                   <Label htmlFor="public">Public</Label>
@@ -516,6 +552,7 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
               </RadioGroup>
             </div>
           </div>
+
           <DialogFooter>
             <div className="text-right">
               <Button variant="outline" size="sm" onClick={handleSaveEditClick}>
@@ -525,8 +562,9 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
                   "Save changes"
                 )}
               </Button>
+
               {errorMessage && (
-                <div className="text-red-500 mt-2 text-xs">{errorMessage}</div> // Display error message
+                <div className="text-red-500 mt-2 text-xs">{errorMessage}</div>
               )}
             </div>
           </DialogFooter>
@@ -540,13 +578,16 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
         <AlertDialogContent className={cn("alert-dialog-content")}>
           <AlertDialogHeader>
             <AlertDialogTitle>Make Project Public?</AlertDialogTitle>
+
             <AlertDialogDescription>
               Making your project public will allow anyone to view it. Are you
               sure you want to proceed?
             </AlertDialogDescription>
           </AlertDialogHeader>
+
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
+
             <AlertDialogAction onClick={handlePublicConfirmation}>
               Confirm
             </AlertDialogAction>

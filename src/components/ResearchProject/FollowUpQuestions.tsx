@@ -5,7 +5,7 @@ import {
   CardSubTitle,
   CardContent,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 interface FollowUpQuestionsProps {
   followUpQuestions: string[];
@@ -20,22 +20,21 @@ const FollowUpQuestions: React.FC<FollowUpQuestionsProps> = ({
 
   return (
     <Card>
-      <CardHeader className="mb-2">
+      <CardHeader className="mb-4">
         <CardSubTitle>Suggested Follow-up Questions</CardSubTitle>
       </CardHeader>
-      <CardContent>
-        <div className="flex flex-wrap gap-2">
-          {followUpQuestions.map((question, index) => (
-            <Badge
-              key={index}
-              variant="secondary"
-              className="cursor-pointer hover:bg-secondary/80 transition-colors"
-              onClick={() => handleFollowUpQuestion(question)}
-            >
-              {question}
-            </Badge>
-          ))}
-        </div>
+      <CardContent className="flex flex-col gap-2">
+        {followUpQuestions.map((question, index) => (
+          <Button
+            key={index}
+            size="xs"
+            variant="ghost"
+            className="cursor-pointer text-left"
+            onClick={() => handleFollowUpQuestion(question)}
+          >
+            {question}
+          </Button>
+        ))}
       </CardContent>
     </Card>
   );

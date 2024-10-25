@@ -9,19 +9,15 @@ import {
 import { Button } from "@/components/ui/button";
 // import { Progress } from "@/components/ui/progress";
 
-interface ResearchHeaderProps {
-  projectTitle: string;
-  projectDescription: string;
-  sourceDocuments: any[];
-  savedDocuments: any[];
+import type { ResearchProject } from "@/types";
+
+interface ResearchHeaderProps extends ResearchProject {
   handleEditClick: () => void;
-  createdAt?: string;
-  updatedAt?: string;
 }
 
 const ResearchHeader: React.FC<ResearchHeaderProps> = ({
-  projectTitle,
-  projectDescription,
+  title: projectTitle,
+  description: projectDescription,
   // sourceDocuments,
   // savedDocuments,
   handleEditClick,

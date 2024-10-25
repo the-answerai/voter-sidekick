@@ -9,7 +9,7 @@ interface CitedSourcesProps {
   selectedDocument: any;
   currentExcerptIndex: number;
   handleExcerptNavigation: (direction: "prev" | "next") => void;
-  handleSaveExcerpt: (sourceId: string, chunk: string) => void; // New prop
+  handleSaveExcerpt: (sourceId: string, chunk: string) => void;
 }
 
 const CitedSources: React.FC<CitedSourcesProps> = ({
@@ -18,7 +18,8 @@ const CitedSources: React.FC<CitedSourcesProps> = ({
   selectedDocument,
   currentExcerptIndex,
   handleExcerptNavigation,
-  handleSaveExcerpt, // Destructure the new prop
+  handleSaveExcerpt,
+  researchProject,
 }) => {
   return (
     <>
@@ -31,6 +32,7 @@ const CitedSources: React.FC<CitedSourcesProps> = ({
             currentExcerptIndex={currentExcerptIndex}
             handleExcerptNavigation={handleExcerptNavigation}
             handleSaveExcerpt={handleSaveExcerpt}
+            researchProject={researchProject}
           />
         </ScrollArea>
       ) : (

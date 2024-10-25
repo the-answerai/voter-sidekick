@@ -158,3 +158,22 @@ interface ChatflowConfig {
   responsePrompt: string;
   pineconeMetadataFilter?: Partial<PineconeMetadataFilter>;
 }
+
+//Add these to the ResearchProject as typescript
+export interface ResearchProject {
+  id: number;
+  title: string;
+  description?: string;
+  createdAt: Date;
+  updatedAt: Date;
+  intent?: string;
+  // userId?: number;
+  // user?: User;
+  savedDocuments: string[]; // Array of Bill IDs
+  savedExcerpts: any[]; // Array of JSON objects, using 'any' for JSON
+  overrideConfig?: any; // New field for full chatbot configuration, using 'any' for JSON
+  tags: string[];
+  // visibility: Visibility; // Assuming Visibility is an enum or type
+  chatflowid: string;
+  hasFilters: boolean;
+}

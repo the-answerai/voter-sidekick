@@ -50,7 +50,7 @@ const defaultConfig: ChatFullPageProps = {
         "Hello! Welcome to the chatbot! This is a custom welcome message",
       errorMessage: "This is a custom error message",
       backgroundColor: themeColors.chatWindowBackgroundColor,
-      height: 700,
+      height: -1,
       width: -1,
       //fontSize,
       poweredByTextColor: themeColors.chatWindowPoweredByTextColor,
