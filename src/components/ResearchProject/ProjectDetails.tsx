@@ -373,6 +373,7 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
                 <div className="space-y-4">
                   <PineconeMetadataFilterSelect
                     options={congressSessions}
+                    
                     updateFilter={updateFiltersInDatabaseWrapper}
                     filterKey="congress"
                     placeholder="Select Congress"
