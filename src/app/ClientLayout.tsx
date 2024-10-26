@@ -25,9 +25,9 @@ export default function ClientLayout({
 
   return (
     <ChatProvider>
-      <div className="min-h-screen bg-secondary-50 dark:bg-secondary-900 transition-colors duration-300">
-        <header className="w-full bg-white dark:bg-secondary-800 shadow-sm">
-          <nav className="w-full px-4 sm:px-6 lg:px-8">
+      <div className="max-h-screen overflow-none bg-secondary-50 dark:bg-secondary-900 transition-colors duration-300">
+        <header className="w-full bg-white dark:bg-secondary-800 shadow-sm ">
+          <nav className="w-full px-4 sm:px-6 lg:px-8 h-[5vh]">
             <div className="flex justify-between items-center h-16">
               <div className="flex-shrink-0">
                 <Link href="/" aria-label="Go to homepage">
@@ -96,8 +96,8 @@ export default function ClientLayout({
             </div>
           </nav>
         </header>
-        <main className="w-full min-h-screen">
-          <div className="px-4 py-6 sm:px-6 lg:px-8">
+        <main className="w-full max-h-[94vh] overflow-hidden">
+          <div className="px-4 py-6 sm:px-6 lg:px-8 overflow-scroll max-h-full">
             <div className="prose dark:prose-dark max-w-none">{children}</div>
           </div>
         </main>

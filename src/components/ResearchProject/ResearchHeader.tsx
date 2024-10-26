@@ -6,22 +6,24 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
 import { Button } from "@/components/ui/button";
 // import { Progress } from "@/components/ui/progress";
 
+import { EditIcon } from "lucide-react";
+
+// import type { SourceDocument } from "@/types";
+
 interface ResearchHeaderProps {
-  projectTitle: string;
-  projectDescription: string;
-  sourceDocuments: any[];
-  savedDocuments: any[];
+  title: string;
+  description?: string;
   handleEditClick: () => void;
-  createdAt?: string;
-  updatedAt?: string;
+  // sourceDocuments?: SourceDocument[];
 }
 
 const ResearchHeader: React.FC<ResearchHeaderProps> = ({
-  projectTitle,
-  projectDescription,
+  title,
+  description,
   // sourceDocuments,
   // savedDocuments,
   handleEditClick,
@@ -29,15 +31,20 @@ const ResearchHeader: React.FC<ResearchHeaderProps> = ({
   return (
     <Card className="mb-4">
       <CardHeader className="flex items-center justify-between">
-        <div className="flex items-center justify-between w-full">
+        <div className="flex items-start justify-between w-full">
           <div>
-            <CardTitle>{projectTitle}</CardTitle>
+            <CardTitle>{title}</CardTitle>
             <CardDescription>
-              <div className="text-gray-500">{projectDescription}</div>
+              <div className="text-gray-500">{description}</div>
             </CardDescription>
           </div>
-          <Button variant="outline" size="sm" onClick={handleEditClick}>
-            Edit Project
+          <Button
+            variant="ghost"
+            size="xs"
+            className="p-0"
+            onClick={handleEditClick}
+          >
+            <EditIcon className="w-4 h-4 " />
           </Button>
         </div>
       </CardHeader>

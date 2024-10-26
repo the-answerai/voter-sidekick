@@ -12,19 +12,28 @@ const ChatFullPage: React.FC<ChatFullPageProps> = ({
   if (!chatflowid || !apiHost) return null;
 
   return (
-    <div data-testid="ChatFullPage" className="flex flex-col">
-      <div className="flex-grow flex flex-col">
-        <div className="flex-grow">
-          <FullPageChat
-            chatflowid={chatflowid}
-            apiHost={apiHost}
-            {...restProps}
-            // @ts-expect-error theme is not typed
-            theme={theme}
-          />
-        </div>
-      </div>
+    <div data-testid="ChatFullPage" className="w-full inline-block ">
+      <FullPageChat
+        chatflowid={chatflowid}
+        apiHost={apiHost}
+        {...restProps}
+        // @ts-expect-error theme is not typed
+        theme={theme}
+      />
     </div>
+    // <div data-testid="ChatFullPage" className="flex flex-col h-full">
+    //   <div className="flex-grow flex flex-col">
+    //     <div className="flex-grow">
+    //       <FullPageChat
+    //         chatflowid={chatflowid}
+    //         apiHost={apiHost}
+    //         {...restProps}
+    //         // @ts-expect-error theme is not typed
+    //         theme={theme}
+    //       />
+    //     </div>
+    //   </div>
+    // </div>
   );
 };
 

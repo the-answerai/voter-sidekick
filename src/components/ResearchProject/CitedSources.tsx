@@ -1,6 +1,7 @@
 import React from "react";
 import SourceDocumentsSidebar from "../SourceDocumentsSidebar";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { ResearchProject } from "@/types";
 // import { getBill } from "@/utils/supabaseClient";
 
 interface CitedSourcesProps {
@@ -9,7 +10,8 @@ interface CitedSourcesProps {
   selectedDocument: any;
   currentExcerptIndex: number;
   handleExcerptNavigation: (direction: "prev" | "next") => void;
-  handleSaveExcerpt: (sourceId: string, chunk: string) => void; // New prop
+  handleSaveExcerpt: (sourceId: string, chunk: string) => void;
+  researchProject?: ResearchProject;
 }
 
 const CitedSources: React.FC<CitedSourcesProps> = ({
@@ -18,7 +20,8 @@ const CitedSources: React.FC<CitedSourcesProps> = ({
   selectedDocument,
   currentExcerptIndex,
   handleExcerptNavigation,
-  handleSaveExcerpt, // Destructure the new prop
+  handleSaveExcerpt,
+  researchProject,
 }) => {
   return (
     <>
@@ -31,6 +34,7 @@ const CitedSources: React.FC<CitedSourcesProps> = ({
             currentExcerptIndex={currentExcerptIndex}
             handleExcerptNavigation={handleExcerptNavigation}
             handleSaveExcerpt={handleSaveExcerpt}
+            researchProject={researchProject}
           />
         </ScrollArea>
       ) : (
