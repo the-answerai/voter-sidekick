@@ -100,19 +100,19 @@ await getBillsFromCongress(118, "hr");
 ```
 
 ## Roadmap
-
-- [ ] User authentication and profiles
-- [ ] Integration of state and local government data
-- [ ] Social sharing features
-- [ ] Integration of campaign finance data
-- [ ] Desktop app development for private research
-- [ ] Multi-language support
+- [ ] Connect Voter Sidekick to Public Court Records for Swing States
+- [ ] User authentication and profiles to save chats
+- [ ] Direct integration of state and local government data
+- [ ] Social sharing features to help dispell lies and manipulation
+- [ ] Integration of campaign finance data to follow the money and see who benifits 
+- [ ] Desktop app development for private research so your data and questions stay with you
+- [ ] Multi-language support to help encourage more people around the world 
 
 ## Live Coding Sessions
 
-We will be live streaming coding sessions every day from now until the election. Our goal is to provide the electorate with a free tool they can use to get information about politicians, ballot initiatives, and most importantly, who is behind them and what their motivations are.
+I built this in public and live streamed the entire process on my YouTube Channel [Digital At Scale](https://www.youtube.com/watch?v=5UH0B9elBa8&list=PLfkQz1-GoNNJk-aESloPbD0UPM0Sz_7tX) so that any of my methods and methodoligies could be challenges and improved upon. 
 
-Join us in our mission to create a more informed and engaged citizenry!
+I believe in a transparent and open system of improving ourselves and our government, not a system that rewards tearing each other down.  Join us in our mission to create a more informed and engaged citizenry!
 
 ## Contributing
 
