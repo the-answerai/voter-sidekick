@@ -86,45 +86,101 @@ const Homepage: React.FC = () => {
   return (
     <div className="flex h-screen flex-col">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-bold">Research Projects</h1>
         {isAdmin && (
           <Dialog>
             <DialogTrigger asChild>
               <Button variant="outline" size="sm">
-                New Research Project
+                New Sidekick
               </Button>
             </DialogTrigger>
-            <DialogContent>
+            <DialogContent className="max-w-2xl">
               <DialogHeader>
-                <DialogTitle>Create New Research Project</DialogTitle>
+                <DialogTitle>Create New Sidekick</DialogTitle>
               </DialogHeader>
-              <div className="space-y-4">
-                <Input
-                  placeholder="Project Title"
-                  value={newProjectTitle}
-                  onChange={(e) => setNewProjectTitle(e.target.value)}
-                />
-                <Textarea
-                  placeholder="Project Description"
-                  value={newProjectDescription}
-                  onChange={(e) => setNewProjectDescription(e.target.value)}
-                />
-                <Input
-                  placeholder="Chatflow ID"
-                  value={newProjectChatflowId}
-                  onChange={(e) => setNewProjectChatflowId(e.target.value)}
-                />
-                <div className="flex items-center space-x-2">
-                  <Checkbox
-                    id="hasFilters"
-                    checked={newProjectHasFilters}
-                    onCheckedChange={(checked) =>
-                      setNewProjectHasFilters(checked as boolean)
-                    }
-                  />
-                  <label htmlFor="hasFilters">Has Filters</label>
+              <div className="space-y-6">
+                <div className="space-y-4">
+                  <h3 className="font-semibold">
+                    How to Create a New Sidekick:
+                  </h3>
+
+                  <div className="space-y-2">
+                    <h4 className="font-medium">
+                      1. Submit a Sidekick Request
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      Fill out our project request form and we'll help set it up
+                      for you.{" "}
+                      <a
+                        href="[YOUR_FORM_LINK]"
+                        className="text-blue-600 hover:underline"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Submit request →
+                      </a>
+                    </p>
+                  </div>
+
+                  <div className="space-y-2">
+                    <h4 className="font-medium">2. Create Your Own (Free)</h4>
+                    <p className="text-sm text-gray-600">
+                      Create your own AI chatflow at theanswer.ai - it's
+                      completely free!{" "}
+                      <a
+                        href="https://theanswer.ai"
+                        className="text-blue-600 hover:underline"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Create chatflow →
+                      </a>
+                    </p>
+                  </div>
+
+                  <div className="space-y-2">
+                    <h4 className="font-medium">
+                      3. Contribute to the Project
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      This is an open-source project. You can contribute
+                      directly to the codebase.{" "}
+                      <a
+                        href="[YOUR_GITHUB_LINK]"
+                        className="text-blue-600 hover:underline"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View on GitHub →
+                      </a>
+                    </p>
+                  </div>
                 </div>
-                <Button onClick={handleCreateProject}>Create Project</Button>
+
+                <div className="border-t pt-4">
+                  <h3 className="font-semibold mb-4">
+                    Already have a chatflow? Add it here:
+                  </h3>
+                  <div className="space-y-4">
+                    <Input
+                      placeholder="Project Title"
+                      value={newProjectTitle}
+                      onChange={(e) => setNewProjectTitle(e.target.value)}
+                    />
+                    <Textarea
+                      placeholder="Project Description"
+                      value={newProjectDescription}
+                      onChange={(e) => setNewProjectDescription(e.target.value)}
+                    />
+                    <Input
+                      placeholder="Chatflow ID from theanswer.ai"
+                      value={newProjectChatflowId}
+                      onChange={(e) => setNewProjectChatflowId(e.target.value)}
+                    />
+                    <Button onClick={handleCreateProject}>
+                      Create Project
+                    </Button>
+                  </div>
+                </div>
               </div>
             </DialogContent>
           </Dialog>

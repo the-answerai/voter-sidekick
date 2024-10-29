@@ -16,6 +16,10 @@
   color: hsl(var(--popover-foreground)) !important;
 }
 
+.logo-header {
+  font-size: 5.5rem;
+  font-weight: bold;
+}
 .chatbot {
   zoom: 1;
 }

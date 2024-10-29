@@ -26,13 +26,24 @@ export default function ClientLayout({
   return (
     <ChatProvider>
       <div className="max-h-screen overflow-none bg-secondary-50 dark:bg-secondary-900 transition-colors duration-300">
+        <div className="bg-red-500/80 text-white text-center py-2">
+          <a
+            href="https://www.usa.gov/find-polling-place"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            🗳️ Make sure you&apos;re registered to vote! Click here to check
+            your registration status and polling location.
+          </a>
+        </div>
         <header className="w-full bg-white dark:bg-secondary-800 shadow-sm ">
           <nav className="w-full px-4 sm:px-6 lg:px-8 h-[5vh]">
             <div className="flex justify-between items-center h-16">
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 logo-header">
                 <Link href="/" aria-label="Go to homepage">
                   <Image
-                    src="/logo.png" // Update this path to your actual logo file
+                    src="/voter-sidekick.png" // Update this path to your actual logo file
                     alt="AI Policy Researcher Logo"
                     width={200} // Adjust the width as needed
                     height={40} // Adjust the height as needed
