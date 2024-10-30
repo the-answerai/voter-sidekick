@@ -44,7 +44,7 @@ export default function ClientLayout({
                 <Link href="/" aria-label="Go to homepage">
                   <Image
                     src="/voter-sidekick.png" // Update this path to your actual logo file
-                    alt="AI Policy Researcher Logo"
+                    alt="Voter Sidekick Logo"
                     width={200} // Adjust the width as needed
                     height={40} // Adjust the height as needed
                     className="h-10 w-auto" // Adjust the class as needed for proper sizing

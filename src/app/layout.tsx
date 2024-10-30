@@ -3,7 +3,7 @@ import "./globals.css";
 import ClientLayout from "./ClientLayout";
 
 export const metadata: Metadata = {
-  title: "AI Policy Researcher",
+  title: "Voter Sidekick",
   description:
     "A policy research tool focused on Project 2025, Congress, Immigration, and San Francisco supervisors",
 };

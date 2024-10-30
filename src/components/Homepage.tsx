@@ -70,7 +70,7 @@ const Homepage: React.FC = () => {
         console.error("Error creating project:", error);
         // You might want to show an error message to the user here
       } else {
-        console.log("Project created successfully:", data);
+        // console.log("Project created successfully:", data);
         setNewProjectTitle("");
         setNewProjectDescription("");
         setNewProjectChatflowId("");
@@ -108,10 +108,10 @@ const Homepage: React.FC = () => {
                       1. Submit a Sidekick Request
                     </h4>
                     <p className="text-sm text-gray-600">
-                      Fill out our project request form and we'll help set it up
-                      for you.{" "}
+                      Fill out our project request form and we&apos;ll help set
+                      it up for you.{" "}
                       <a
-                        href="[YOUR_FORM_LINK]"
+                        href="https://airtable.com/app7EPzlq7OvwUQP1/pagivGSTAmPKfw6q7/form"
                         className="text-blue-600 hover:underline"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -124,7 +124,7 @@ const Homepage: React.FC = () => {
                   <div className="space-y-2">
                     <h4 className="font-medium">2. Create Your Own (Free)</h4>
                     <p className="text-sm text-gray-600">
-                      Create your own AI chatflow at theanswer.ai - it's
+                      Create your own AI chatflow at theanswer.ai - it&apos;s
                       completely free!{" "}
                       <a
                         href="https://theanswer.ai"
@@ -145,7 +145,7 @@ const Homepage: React.FC = () => {
                       This is an open-source project. You can contribute
                       directly to the codebase.{" "}
                       <a
-                        href="[YOUR_GITHUB_LINK]"
+                        href="https://github.com/the-answerai/voter-sidekick"
                         className="text-blue-600 hover:underline"
                         target="_blank"
                         rel="noopener noreferrer"

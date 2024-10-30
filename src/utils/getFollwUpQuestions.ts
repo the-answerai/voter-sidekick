@@ -1,6 +1,6 @@
 const getFollowUpQuestions = async (chatHistory: any[], latestMessage: string) => {
   try {
-    const response = await fetch('https://public.flowise.theanswer.ai/api/v1/prediction/b072dc55-dbb3-4859-b5df-a1b81ab9c41d', {
+    const response = await fetch('https://prod.studio.theanswer.ai/api/v1/prediction/51cba762-f50f-4228-a42b-ba50397292a9', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

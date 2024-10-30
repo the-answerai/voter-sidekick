@@ -23,12 +23,12 @@ const FollowUpQuestions: React.FC<FollowUpQuestionsProps> = ({
       <CardHeader className="mb-4">
         <CardSubTitle>Suggested Follow-up Questions</CardSubTitle>
       </CardHeader>
-      <CardContent className="flex flex-col gap-2">
+      <CardContent className="flex  gap-2">
         {followUpQuestions.map((question, index) => (
           <Button
             key={index}
             size="xs"
-            variant="ghost"
+            variant="outline"
             className="cursor-pointer text-left"
             onClick={() => handleFollowUpQuestion(question)}
           >

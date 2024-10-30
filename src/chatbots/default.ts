@@ -16,7 +16,7 @@ const defaultMetaDataFilters: PineconeMetadataFilter = {
 const defaultConfig: ChatFullPageProps = {
   chatflowid: "9ee4eee1-931d-4007-bc9f-b1431ddabfa9",
   // chatflowid: "5d6a7f89-3133-40bb-a0f6-30f75ae43a69", // Tool Call
-  apiHost: "https://public.flowise.theanswer.ai",
+  apiHost: "https://prod.studio.theanswer.ai",
   chatflowConfig: getChatflowConfig(defaultMetaDataFilters),
   observersConfig: {
     //   observeUserInput: (userInput: string) => {
@@ -26,11 +26,12 @@ const defaultConfig: ChatFullPageProps = {
     //     // console.log("Loading state observed:", loading);
     //   },
     observeMessages: (messages) => {
-      console.log("Messages observed again:", messages);
+      console.log("Messages observed againss:", messages);
     },
   },
   style: {},
   className: "w-full",
+
   theme: {
     button: {
       size: "medium",
@@ -40,18 +41,21 @@ const defaultConfig: ChatFullPageProps = {
       bottom: 10,
       right: 10,
     },
+    // starterPrompts: ["How can I help you?", "What are you looking for?"],
+    // starterPromptFontSize: 12,
     chatWindow: {
-      // showTitle: false,
-      // title: "Default Bot Here",
+      showTitle: true,
       // titleAvatarSrc:
       //   "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
       showAgentMessages: true,
+      starterPromptFontSize: 12,
       welcomeMessage:
-        "Hello! Welcome to the chatbot! This is a custom welcome message",
+        "📢 Quick Disclaimer: While AI can sometimes make mistakes, just like politicians do (though perhaps not quite as often!), I strive for accuracy. This tool is for educational and entertainment purposes only. Please do your own research and verify information from original sources.",
       errorMessage: "This is a custom error message",
       backgroundColor: themeColors.chatWindowBackgroundColor,
       height: -1,
       width: -1,
+      // starterPrompts: ["hello 2"],
       //fontSize,
       poweredByTextColor: themeColors.chatWindowPoweredByTextColor,
       botMessage: {

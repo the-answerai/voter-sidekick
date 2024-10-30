@@ -51,7 +51,7 @@ const UserIntent: React.FC<UserIntentProps> = ({
     <Card className="w-full">
       <CardHeader>
         <CardSubTitle className="flex text-center items-center justify-between">
-          User Intent
+          Goals
           <Button
             variant="ghost"
             size="sm"
