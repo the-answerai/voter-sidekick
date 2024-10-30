@@ -20,7 +20,7 @@ const supabase = createClient(
 
 // Initialize TheAnswer API client
 const theAnswerApi = axios.create({
-  baseURL: "https://public.flowise.theanswer.ai",
+  baseURL: "https://prod.studio.theanswer.ai",
   headers: {
     "Content-Type": "application/json",
   },

@@ -1,6 +1,6 @@
 const getUserIntentGoal = async (chatHistory: any[], latestMessage: string) => {
   try {
-    const response = await fetch('https://public.flowise.theanswer.ai/api/v1/prediction/046d001b-7d42-4a83-bc0b-c1298ecc6604', {
+    const response = await fetch('https://prod.studio.theanswer.ai/api/v1/prediction/046d001b-7d42-4a83-bc0b-c1298ecc6604', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

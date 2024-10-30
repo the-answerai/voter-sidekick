@@ -351,21 +351,21 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
               Cited Sources
             </TabsTrigger>
 
-            <TabsTrigger
+            {/* <TabsTrigger
               value="intent"
               className="text-xs data-[state=inactive]:text-gray-500"
             >
               My Goals
-            </TabsTrigger>
+            </TabsTrigger> */}
           </TabsList>
-          <TabsContent value="intent">
+          {/* <TabsContent value="intent">
             <UserIntent
               userIntent={userIntent}
               updateUserIntent={updateUserIntent}
               handleGenerateIntent={handleGenerateIntent}
               messages={chatProps?.messages || []}
             />
-          </TabsContent>
+          </TabsContent> */}
           <TabsContent value="cited">
             <CitedSources
               groupedSources={groupedSources}
