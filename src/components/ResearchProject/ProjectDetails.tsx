@@ -57,7 +57,8 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
   const [groupedSources, setGroupedSources] = useState<Record<string, any>>({});
   const [selectedDocument, setSelectedDocument] = useState<any>(null);
   const [currentExcerptIndex, setCurrentExcerptIndex] = useState(0);
-
+  const [mainSourceUrl, setMainSourceUrl] = useState<string>("");
+  const [imageUrl, setImageUrl] = useState<string>("");
   const [projectTitle, setProjectTitle] = useState("Loading...");
   const [projectDescription, setProjectDescription] = useState("");
 
@@ -94,6 +95,8 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
         const projectDetails = await fetchProjectDetails(projectId);
         setProjectTitle(projectDetails.title);
         setProjectDescription(projectDetails.description);
+        setMainSourceUrl(projectDetails.mainSourceUrl || "");
+        setImageUrl(projectDetails.imageUrl || "");
         setUserIntent(projectDetails.intent || "");
         setChatflowID(projectDetails.chatflowid);
         // setHasFilters(projectDetails.hasFilters);
@@ -339,7 +342,9 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
       <div className="col-span-3 row-span-2 p-4 bg-gray-100 overflow-y-auto rounded-md flex flex-col gap-2 sticky top-0 max-h-full">
         <ResearchHeader
           title={projectTitle}
+          imageUrl={imageUrl}
           description={projectDescription}
+          mainSourceUrl={mainSourceUrl}
           handleEditClick={handleEditClick}
         />
         <Tabs defaultValue="cited" className="w-full">

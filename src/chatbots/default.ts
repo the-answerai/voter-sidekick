@@ -45,6 +45,7 @@ const defaultConfig: ChatFullPageProps = {
     // starterPromptFontSize: 12,
     chatWindow: {
       showTitle: true,
+      title: "Voter Sidekick",
       // titleAvatarSrc:
       //   "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
       showAgentMessages: true,

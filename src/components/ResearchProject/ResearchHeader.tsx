@@ -10,13 +10,16 @@ import {
 import { Button } from "@/components/ui/button";
 // import { Progress } from "@/components/ui/progress";
 
-import { EditIcon } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 // import type { SourceDocument } from "@/types";
+import Image from "next/image";
 
 interface ResearchHeaderProps {
   title: string;
   description?: string;
+  imageUrl?: string;
+  mainSourceUrl?: string;
   handleEditClick: () => void;
   // sourceDocuments?: SourceDocument[];
 }
@@ -24,12 +27,17 @@ interface ResearchHeaderProps {
 const ResearchHeader: React.FC<ResearchHeaderProps> = ({
   title,
   description,
-  // sourceDocuments,
-  // savedDocuments,
+  mainSourceUrl,
+  imageUrl,
   handleEditClick,
 }) => {
   return (
     <Card className="mb-4">
+      {imageUrl && (
+        <div className="relative w-full h-48">
+          <Image src={imageUrl} alt={title} fill className="object-cover" />
+        </div>
+      )}
       <CardHeader className="flex items-center justify-between">
         <div className="flex items-start justify-between w-full">
           <div>
@@ -38,13 +46,14 @@ const ResearchHeader: React.FC<ResearchHeaderProps> = ({
               <div className="text-gray-500">{description}</div>
             </CardDescription>
           </div>
-          <Button
-            variant="ghost"
-            size="xs"
-            className="p-0"
-            onClick={handleEditClick}
-          >
-            <EditIcon className="w-4 h-4 " />
+          <Button variant="ghost" size="xs" className="p-0" asChild>
+            <a
+              href={mainSourceUrl || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Source <ExternalLink className="w-4 h-4" />
+            </a>
           </Button>
         </div>
       </CardHeader>
