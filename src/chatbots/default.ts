@@ -26,11 +26,12 @@ const defaultConfig: ChatFullPageProps = {
     //     // console.log("Loading state observed:", loading);
     //   },
     observeMessages: (messages) => {
-      console.log("Messages observed again:", messages);
+      console.log("Messages observed againss:", messages);
     },
   },
   style: {},
   className: "w-full",
+
   theme: {
     button: {
       size: "medium",
@@ -40,18 +41,25 @@ const defaultConfig: ChatFullPageProps = {
       bottom: 10,
       right: 10,
     },
+    // starterPrompts: ["How can I help you?", "What are you looking for?"],
+    // starterPromptFontSize: 12,
     chatWindow: {
       // showTitle: false,
       // title: "Default Bot Here",
       // titleAvatarSrc:
       //   "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
       showAgentMessages: true,
+      starterPrompts: [{ "How can I help you?": "How can I help you?" }, {
+        "What are you looking for?": "What are you looking for?",
+      }],
+      starterPromptFontSize: 12,
       welcomeMessage:
-        "Hello! Welcome to the chatbot! This is a custom welcome message",
+        "Hello! Welcome to the chatbot! This is a custom welcome messages",
       errorMessage: "This is a custom error message",
       backgroundColor: themeColors.chatWindowBackgroundColor,
       height: -1,
       width: -1,
+      // starterPrompts: ["hello 2"],
       //fontSize,
       poweredByTextColor: themeColors.chatWindowPoweredByTextColor,
       botMessage: {

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useChatContext } from "../../contexts/ChatContext";
 
 import ChatFullPage from "../ChatFullPage";
@@ -85,6 +85,8 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
   const [isSaving, setIsSaving] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
+  const chatContainerRef = useRef<HTMLDivElement | null>(null);
+
   useEffect(() => {
     const loadProjectDetails = async () => {
       setIsLoading(true);
@@ -126,6 +128,11 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
           );
         setCitedSources(citedSources);
         setFollowUpQuestions(followUpQuestions);
+
+        if (chatContainerRef.current) {
+          chatContainerRef.current.scrollTop =
+            chatContainerRef.current.scrollHeight;
+        }
       } catch (error) {
         console.error("Error in message observation:", error);
       }
@@ -335,19 +342,20 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
           description={projectDescription}
           handleEditClick={handleEditClick}
         />
-        <Tabs defaultValue="intent" className="w-full">
+        <Tabs defaultValue="cited" className="w-full">
           <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger
-              value="intent"
-              className="text-xs data-[state=inactive]:text-gray-500"
-            >
-              User Intent
-            </TabsTrigger>
             <TabsTrigger
               value="cited"
               className="text-xs data-[state=inactive]:text-gray-500"
             >
               Cited Sources
+            </TabsTrigger>
+
+            <TabsTrigger
+              value="intent"
+              className="text-xs data-[state=inactive]:text-gray-500"
+            >
+              My Goals
             </TabsTrigger>
           </TabsList>
           <TabsContent value="intent">
@@ -371,7 +379,10 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
         </Tabs>
       </div>
 
-      <div className="col-span-9 row-span-1 overflow-scroll max-h-full">
+      <div
+        className="col-span-9 row-span-1 overflow-scroll max-h-full"
+        ref={chatContainerRef}
+      >
         {!isLoading && chatProps && chatflowid ? (
           <div className="flex flex-col w-full gap-4">
             <div className="h-full w-full">

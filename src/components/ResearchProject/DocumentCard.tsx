@@ -81,6 +81,25 @@ const formatValue = (value: any) => {
       return date.toLocaleDateString(); // Returns YYYY-MM-DD
     }
 
+    // Check for dates in the format "D:20240727122813-04'00'"
+    const dateMatch = value.match(
+      /^D:(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/
+    );
+    if (dateMatch) {
+      const [_, year, month, day, hour, minute, second] = dateMatch;
+      const formattedDate = new Date(
+        Date.UTC(
+          parseInt(year),
+          parseInt(month) - 1,
+          parseInt(day),
+          parseInt(hour),
+          parseInt(minute),
+          parseInt(second)
+        )
+      );
+      return formattedDate.toLocaleDateString(); // Adjust as needed for your locale
+    }
+
     // Check if the string is a URL
     try {
       const url = new URL(value);
@@ -127,17 +146,28 @@ const renderMetadata = (source: any, showAll?: boolean) => {
   );
 };
 
+// Utility function to extract the first sequence of numbers from a string
+const extractFirstNumber = (text: string): number | null => {
+  const match = text.match(/\d+/);
+  return match ? parseInt(match[0], 10) : null;
+};
+
 const DocumentCard: React.FC<DocumentCardProps> = ({
   document,
   researchProject,
   onDocumentClick,
-  // onSaveExcerpt,
   isSaved = false,
-  // onRemoveExcerpt,
 }) => {
   const [currentExcerptIndex, setCurrentExcerptIndex] = useState(0);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [suggestedQuestions, setSuggestedQuestions] = useState<string[]>([]);
+  const [documentUrl, setDocumentUrl] = useState(
+    document.sourceUrl ||
+      "https://static.project2025.org/2025_MandateForLeadership_FULL.pdf"
+  );
+  const [pageNumber, setPageNumber] = useState(
+    (document as any)["loc.pageNumber"] || "1"
+  );
 
   useEffect(() => {
     const fetchSuggestedQuestions = async () => {
@@ -173,13 +203,21 @@ const DocumentCard: React.FC<DocumentCardProps> = ({
 
   const nextExcerpt = () => {
     if (document?.chunks && currentExcerptIndex < document.chunks.length - 1) {
-      setCurrentExcerptIndex(currentExcerptIndex + 1);
+      const newIndex = currentExcerptIndex + 1;
+      setCurrentExcerptIndex(newIndex);
+      setPageNumber(
+        extractFirstNumber(document?.chunks?.[newIndex] || "") || "1"
+      );
     }
   };
 
   const prevExcerpt = () => {
     if (currentExcerptIndex > 0) {
-      setCurrentExcerptIndex(currentExcerptIndex - 1);
+      const newIndex = currentExcerptIndex - 1;
+      setCurrentExcerptIndex(newIndex);
+      setPageNumber(
+        extractFirstNumber(document?.chunks?.[newIndex] || "") || "1"
+      );
     }
   };
 
@@ -250,8 +288,8 @@ const DocumentCard: React.FC<DocumentCardProps> = ({
                     {!document.sourceUrl && (
                       <div className="w-3/5 flex-grow">
                         <iframe
-                          // src={`${document.sourceUrl}#page=5`}
-                          src="https://static.project2025.org/2025_MandateForLeadership_FULL.pdf#page=2"
+                          key={`${documentUrl}#page=${pageNumber}`}
+                          src={`${documentUrl}#page=${pageNumber}`}
                           className="w-full h-full flex-grow"
                           title={document.title}
                           style={{ height: "100%" }} // Ensure iframe is 100% height

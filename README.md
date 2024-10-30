@@ -1,14 +1,14 @@
-# AI Policy Researcher: Empowering an Informed Electorate
+# Voter Sidekick: Empowering an Informed Electorate
 
 ## Introduction
 
-In an era of information overload and media bias, the AI Policy Researcher aims to solve a critical problem: making it easy for everyone to research laws and government representatives without the need for the lens of the media. This tool empowers citizens to actually do their own research and make informed decisions about their governance.
+In an era of information overload and media bias, the Voter Sidekick aims to solve a critical problem: making it easy for everyone to research laws and government representatives without the need for the lens of the media. This tool empowers citizens to actually do their own research and make informed decisions about their governance.
 
 > "An educated citizenry is a vital requisite for our survival as a free people." - Thomas Jefferson
 
 > "A republic, if you can keep it." - Benjamin Franklin
 
-Franklin's quote reminds us of the responsibility we bear in maintaining our democratic system. The AI Policy Researcher is designed to help citizens fulfill this responsibility by providing easy access to unbiased, comprehensive information about laws and representatives.
+Franklin's quote reminds us of the responsibility we bear in maintaining our democratic system. The Voter Sidekick is designed to help citizens fulfill this responsibility by providing easy access to unbiased, comprehensive information about laws and representatives.
 
 ## Current Capabilities
 

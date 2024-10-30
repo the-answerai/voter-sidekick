@@ -70,7 +70,7 @@ const Homepage: React.FC = () => {
         console.error("Error creating project:", error);
         // You might want to show an error message to the user here
       } else {
-        console.log("Project created successfully:", data);
+        // console.log("Project created successfully:", data);
         setNewProjectTitle("");
         setNewProjectDescription("");
         setNewProjectChatflowId("");

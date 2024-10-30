@@ -54,8 +54,8 @@ importers:
         specifier: ^2.45.3
         version: 2.45.3
       aai-embed-react:
-        specifier: ^1.0.7
-        version: 1.0.7(@types/node@20.16.5)(aai-embed@1.2.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4)
+        specifier: ^1.0.8
+        version: 1.0.8(@types/node@20.16.5)(aai-embed@1.2.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4)
       axios:
         specifier: ^1.7.7
         version: 1.7.7
@@ -1681,8 +1681,8 @@ packages:
     peerDependencies:
       vite: ^4.1.0-beta.0
 
-  aai-embed-react@1.0.7:
-    resolution: {integrity: sha512-o+Zn8bnurvn3DYk5WRBwJ1dSR7UsbcT7FCPcLD0eX1EdW0RAA14oYYWfvjnJ3m0ogbGvrb8NyIOlqBK/Yk2jMA==}
+  aai-embed-react@1.0.8:
+    resolution: {integrity: sha512-lZ/C3oh22nWaDlVEfZd/ayIqRkERPGCbfVEV0uaZSneSOvt50aTjyXMDia3Bvb8WPr/hvFHH5RVtJ+i/BagwYQ==}
     peerDependencies:
       aai-embed: '*'
       react: 18.x
@@ -5657,7 +5657,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  aai-embed-react@1.0.7(@types/node@20.16.5)(aai-embed@1.2.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4):
+  aai-embed-react@1.0.8(@types/node@20.16.5)(aai-embed@1.2.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4):
     dependencies:
       '@ladle/react': 2.5.1(@types/node@20.16.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4)
       aai-embed: 1.2.4

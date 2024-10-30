@@ -28,7 +28,7 @@
     "@radix-ui/react-tabs": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.2",
     "@supabase/supabase-js": "^2.45.3",
-    "aai-embed-react": "^1.0.7",
+    "aai-embed-react": "^1.0.8",
     "axios": "^1.7.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",

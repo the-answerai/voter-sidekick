@@ -14,27 +14,45 @@ export function handleFollowUpQuestion(question: string, chatProps: any) {
         throw new Error("Shadow DOM not found for the chatbot element");
       }
 
-      const inputElement = shadowRoot.querySelector('input[type="text"]') as HTMLInputElement;
+      const inputElement = shadowRoot.querySelector(
+        'input[type="text"]',
+      ) as HTMLInputElement;
       if (!inputElement) {
         throw new Error("Input element not found in the chatbot shadow DOM");
       }
 
       inputElement.value = question;
-      inputElement.dispatchEvent(new Event("input", { bubbles: true }));
+      inputElement.dispatchEvent(
+        new Event("input", { bubbles: true, composed: true }),
+      );
 
-      const sendButton = shadowRoot.querySelector('button[type="submit"]') as HTMLButtonElement;
-      if (sendButton) {
-        sendButton.click();
-      } else {
-        const form = shadowRoot.querySelector("form");
-        if (form) {
-          form.dispatchEvent(new Event("submit", { bubbles: true }));
-        } else {
-          throw new Error("No send button or form found in the chatbot shadow DOM");
-        }
-      }
+      inputElement.dispatchEvent(
+        new KeyboardEvent("keydown", {
+          bubbles: true,
+          key: "Enter",
+          composed: true,
+        }),
+      );
 
-      setTimeout(() => focusInputAndMoveCursor(inputElement), 0);
+      // const sendButton = shadowRoot.querySelector(
+      //   'button[type="submit"]',
+      // ) as HTMLButtonElement;
+      // if (sendButton) {
+      //   sendButton.click();
+      // } else {
+      //   const form = shadowRoot.querySelector("form");
+      //   if (form) {
+      //     form.dispatchEvent(
+      //       new Event("submit", { bubbles: true, composed: true }),
+      //     );
+      //   } else {
+      //     throw new Error(
+      //       "No send button or form found in the chatbot shadow DOM",
+      //     );
+      //   }
+      // }
+
+      // setTimeout(() => focusInputAndMoveCursor(inputElement), 0);
     }
 
     if (chatProps?.chatflowConfig?.handleUserMessage) {
@@ -50,7 +68,9 @@ function focusInput(chatbotElement: Element) {
   setTimeout(() => {
     const shadowRoot = (chatbotElement as any).shadowRoot;
     if (shadowRoot) {
-      const inputElement = shadowRoot.querySelector('input[type="text"]') as HTMLInputElement;
+      const inputElement = shadowRoot.querySelector(
+        'input[type="text"]',
+      ) as HTMLInputElement;
       if (inputElement) {
         focusInputAndMoveCursor(inputElement);
       }
