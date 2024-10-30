@@ -20,11 +20,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { supabase } from "@/utils/supabaseClient";
+import Image from "next/image";
 
 interface ResearchProject {
   id: number;
   title: string;
   description: string | null;
+  imageUrl: string | null;
   chatflowid: string | null;
   hasFilters: boolean;
 }
@@ -33,6 +35,7 @@ const Homepage: React.FC = () => {
   const [projects, setProjects] = useState<ResearchProject[]>([]);
   const [newProjectTitle, setNewProjectTitle] = useState("");
   const [newProjectDescription, setNewProjectDescription] = useState("");
+  const [newProjectImageUrl, setNewProjectImageUrl] = useState("");
   const [newProjectChatflowId, setNewProjectChatflowId] = useState("");
   const [newProjectHasFilters, setNewProjectHasFilters] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
@@ -60,6 +63,7 @@ const Homepage: React.FC = () => {
           {
             title: newProjectTitle,
             description: newProjectDescription,
+            imageUrl: newProjectImageUrl,
             chatflowid: newProjectChatflowId,
             hasFilters: newProjectHasFilters,
           },
@@ -73,6 +77,7 @@ const Homepage: React.FC = () => {
         // console.log("Project created successfully:", data);
         setNewProjectTitle("");
         setNewProjectDescription("");
+        setNewProjectImageUrl("");
         setNewProjectChatflowId("");
         setNewProjectHasFilters(false);
         fetchProjects();
@@ -188,32 +193,37 @@ const Homepage: React.FC = () => {
       </div>
       <div className="grid grid-cols-2 gap-4">
         {projects.map((project) => (
-          <Card key={project.id}>
-            <CardHeader>
-              <CardTitle>
-                <Link href={`/research-projects/${project.id}`}>
+          <Card key={project.id} className="flex flex-col">
+            <Link
+              href={`/research-projects/${project.id}`}
+              className="flex-grow"
+            >
+              <div className="relative w-full h-48">
+                <Image
+                  src={project.imageUrl || ""}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle>
                   <span className="text-xl font-semibold text-blue-600 hover:underline">
                     {project.title}
                   </span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm">{project.description}</p>
+              </CardContent>
+            </Link>
+            <CardFooter className="justify-end">
+              <Button asChild variant="secondary">
+                <Link href={`/research-projects/${project.id}`}>
+                  Do Your Research →
                 </Link>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm">{project.description}</p>
-            </CardContent>
-
-            {isAdmin && (
-              <CardFooter>
-                <div className="mt-2">
-                  <p className="text-xs text-gray-500">
-                    Chatflow ID: {project.chatflowid || "Not set"}
-                  </p>
-                  <p className="text-xs text-gray-500">
-                    Has Filters: {project.hasFilters ? "Yes" : "No"}
-                  </p>
-                </div>
-              </CardFooter>
-            )}
+              </Button>
+            </CardFooter>
           </Card>
         ))}
       </div>

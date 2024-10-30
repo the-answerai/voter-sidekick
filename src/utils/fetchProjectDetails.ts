@@ -24,6 +24,8 @@ export async function fetchProjectDetails(projectId: number) {
       description: project.description || "",
       intent: project.intent || "",
       chatflowid: project.chatflowid || null,
+      mainSourceUrl: project.mainSourceUrl || null,
+      imageUrl: project.imageUrl || null,
       hasFilters: project.hasFilters,
       savedExcerpts: project.savedExcerpts || [],
       filters,
