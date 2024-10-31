@@ -1,8 +1,9 @@
-import { CitedSource, SourceDocument } from "../types";
+import { type Message } from "@/chatbots/default";
+import { type CitedSource, SourceDocument } from "../types";
 import getFollowUpQuestions from "./getFollwUpQuestions";
 
 export async function handleMessageObservation(
-  messages: any[],
+  messages: Message[],
   addSourceDocuments: (docs: SourceDocument[]) => void,
   clearSourceDocuments: () => void,
 ) {
@@ -13,7 +14,7 @@ export async function handleMessageObservation(
     }
 
     const latestMessage = messages[messages.length - 1];
-    console.log({ latestMessage });
+
     if (
       latestMessage.type === "apiMessage" &&
       Array.isArray(latestMessage?.sourceDocuments) &&
@@ -23,7 +24,7 @@ export async function handleMessageObservation(
       const newCitedSources: CitedSource[] = latestMessage.sourceDocuments.map(
         (doc: SourceDocument) => {
           const { id, title, ...otherMetadata } = doc.metadata;
-          // console.log({ doc });
+
           return {
             id: id || "Unknown ID",
             title: title || "Unknown Title",
@@ -34,7 +35,7 @@ export async function handleMessageObservation(
       );
 
       const followUpQuestions = await getFollowUpQuestions(
-        messages.slice(0, -1),
+        latestMessage,
         latestMessage.message,
       );
 

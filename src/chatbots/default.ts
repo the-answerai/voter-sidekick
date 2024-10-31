@@ -13,9 +13,22 @@ const defaultMetaDataFilters: PineconeMetadataFilter = {
 
 // const fontSize = 16;
 
+type messageType =
+  | "apiMessage"
+  | "userMessage"
+  | "usermessagewaiting"
+  | "leadCaptureMessage";
+
 export interface Message {
+  messageId?: string;
   message: string;
-  type: string;
+  type: messageType;
+  sourceDocuments?: any;
+  fileAnnotations?: any;
+  // fileUploads?: Partial<FileUpload>[];
+  // agentReasoning?: IAgentReasoning[];
+  // action?: IAction | null;
+  // rating?: FeedbackRatingType;
 }
 
 const defaultConfig: CBotProps = {
@@ -23,23 +36,25 @@ const defaultConfig: CBotProps = {
   // chatflowid: "5d6a7f89-3133-40bb-a0f6-30f75ae43a69", // Tool Call
   apiHost: "https://prod.studio.theanswer.ai",
   chatflowConfig: getChatflowConfig(defaultMetaDataFilters),
-  observersConfig: {
-    observeUserInput: (userInput: string) => {
-      // Add default callback here
-    },
-    observeLoading: (loading: boolean) => {
-      // Add default callback here
-    },
-    observeMessages: (messages?: Message[]) => {
-      // Add default callback here
-    },
-
-    observeStreamEnd: (messages?: Message[]) => {
-      // Add default callback here
-    },
-  },
-  isFullPage: true,
+  // observersConfig: {
+  //   observeUserInput: (userInput: string) => {
+  //     // Add default callback here
+  //   },
+  //   observeLoading: (loading: boolean) => {
+  //     // Add default callback here
+  //   },
+  //   observeMessages: (messages?: Message[]) => {
+  //     console.log("observeMessages", messages);
+  //     // Add default callback here
+  //   },
+  //   // observeStreamEnd: (messages?: Message[]) => {
+  //   //   console.log("observeStreamEnd", messages);
+  //   //   // Add default callback here
+  //   // },
+  // },
+  // isFullPage: true,
   theme: {
+    // isFullPage: true,
     button: {
       size: "medium",
       backgroundColor: themeColors.buttonBackgroundColor,
@@ -53,8 +68,7 @@ const defaultConfig: CBotProps = {
     chatWindow: {
       showTitle: true,
       title: "Voter Sidekick",
-      // titleAvatarSrc:
-      //   "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
+      sourceDocsTitle: "hello",
       showAgentMessages: false,
       welcomeMessage:
         "📢 Quick Disclaimer: While AI can sometimes make mistakes, just like politicians do (though perhaps not quite as often!), I strive for accuracy. This tool is for educational and entertainment purposes only. Please do your own research and verify information from original sources.",
@@ -62,36 +76,28 @@ const defaultConfig: CBotProps = {
       backgroundColor: themeColors.chatWindowBackgroundColor,
       height: -1,
       width: -1,
-      // starterPrompts: ["hello 2"],
-      //fontSize,
+
       poweredByTextColor: themeColors.chatWindowPoweredByTextColor,
       botMessage: {
         backgroundColor: themeColors.botMessageBackgroundColor,
         textColor: themeColors.botMessageTextColor,
         showAvatar: false,
-        //fontSize,
-        avatarSrc:
-          "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png",
       },
       userMessage: {
         backgroundColor: themeColors.userMessageBackgroundColor,
         textColor: themeColors.userMessageTextColor,
         showAvatar: false,
-        //fontSize,
-        avatarSrc:
-          "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
       },
       textInput: {
         placeholder: "Type your message...",
         backgroundColor: themeColors.textInputBackgroundColor,
         textColor: themeColors.textInputTextColor,
-        sendButtonColor: themeColors.textInputSendButtonColor,
+        sendButtonColor: themeColors.userMessageBackgroundColor,
         maxChars: 200,
-        //fontSize,
         maxCharsWarningMessage: "You have exceeded the character limit.",
         autoFocus: true,
-        sendMessageSound: true,
-        receiveMessageSound: true,
+        sendMessageSound: false,
+        receiveMessageSound: false,
       },
       feedback: {
         color: themeColors.feedbackColor,

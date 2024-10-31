@@ -1,6 +1,6 @@
 import { VisibilityOptions } from "@/utils/supabaseClient";
 
-import type { BotProps } from "aai-embed";
+import type { BubbleProps } from "aai-embed";
 
 export interface PineconeMetadataFilter {
   topic?: metaDataFilters.topic;
@@ -25,12 +25,23 @@ type ExpandRecursive<T> = T extends object
   : never
   : T;
 
-// export type CBotProps = ExpandRecursive<BotProps>;
+//  interface ThemeProps
+// extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
 
 export interface CBotProps {
   chatflowid: string;
   apiHost: string;
-  theme: ExpandRecursive<BotProps>;
+  messages?: Message[];
+  observersConfig?: any;
+
+  chatflowConfig?: {
+    pineconeMetadataFilter?: PineconeMetadataFilter;
+    pineconeNamespace?: string;
+    handleUserMessage?: (userMessage: string) => void;
+  };
+  handleUserMessage?: (userMessage: string) => void;
+  theme?: BubbleProps["theme"];
+  // theme?: ExpandRecursive<BubbleProps>;
 }
 // export interface CBotProps {
 //   chatflowid: string;

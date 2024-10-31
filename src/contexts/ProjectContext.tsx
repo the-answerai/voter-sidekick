@@ -7,8 +7,14 @@ import React, {
   useCallback,
   ReactNode,
 } from "react";
-import { SourceDocument, CBotProps } from "../types";
-import defaultChatProps, { Message } from "../chatbots/default";
+// import { updateFilter } from "../utils/updateFilter";
+
+import type {
+  SourceDocument,
+  //   PineconeMetadataFilter,
+  CBotProps,
+} from "../types";
+import defaultChatProps, { type Message } from "../chatbots/default";
 import { fetchProjectDetails } from "@/utils/fetchProjectDetails";
 import { updateResearchProject } from "@/utils/updateResearchProject";
 import type { ProjectDetails, Document } from "@/types";
@@ -31,7 +37,7 @@ interface ProjectContextType {
 
   // Chat Configuration
   chatProps: CBotProps | null;
-  overrideConfig: any;
+  //   overrideConfig: any;
 
   // Document State
   currentDocument: Document | null;
@@ -49,7 +55,11 @@ interface ProjectContextType {
   setSelectedDocument: (doc: any) => void;
   setCurrentExcerptIndex: (index: number) => void;
   setFollowUpQuestions: (questions: string[]) => void;
-
+  //   updateMetadataFilter: (
+  //     key: string,
+  //     value: string | number | string[]
+  //   ) => void;
+  //   updateTopK: (value: number) => void;
   // Project Loading
   loadProjectDetails: (projectId: number) => Promise<void>;
 }
@@ -81,15 +91,19 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
     chatflowConfig: {
       ...defaultChatProps.chatflowConfig,
       pineconeNamespace: process.env.NEXT_PUBLIC_PINECONE_NAMESPACE,
+      pineconeMetadataFilter: {
+        ...defaultChatProps.chatflowConfig?.pineconeMetadataFilter,
+      },
     },
     observersConfig: {
-      ...defaultChatProps.observersConfig,
-      //   observeMessages: async (messages?: Message[]) => {},
       observeStreamEnd: async (messages?: Message[]) => {
-        console.log("Stream End 2:", messages);
+        console.log("Stream End 6:", messages);
         if (defaultChatProps?.observersConfig?.observeStreamEnd) {
           await defaultChatProps?.observersConfig.observeStreamEnd(messages);
         }
+
+        if (!messages?.length) return;
+
         try {
           const { citedSources, followUpQuestions } =
             await handleMessageObservation(
@@ -97,11 +111,8 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
               addSourceDocuments,
               clearSourceDocuments
             );
-
-          console.log({ citedSources, followUpQuestions });
-
-          memoizedSetCitedSources(citedSources);
-          memoizedSetFollowUpQuestions(followUpQuestions);
+          memoizedSetCitedSources(citedSources || []);
+          memoizedSetFollowUpQuestions(followUpQuestions || []);
         } catch (error) {
           console.error("Error in message observation:", error);
         }
@@ -109,7 +120,7 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
     },
   }));
 
-  const [overrideConfig, setOverrideConfig] = useState({});
+  //   const [overrideConfig, setOverrideConfig] = useState({});
 
   // Document State
   const [currentDocument, setCurrentDocument] = useState<Document | null>(null);
@@ -124,7 +135,11 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
       if (details) {
         setProjectDetails({
           ...details,
-          visibility: details.visibility || VisibilityOptions.PRIVATE,
+          id: projectId,
+          visibility:
+            ("visibility" in details &&
+              (details.visibility as VisibilityOptions)) ||
+            VisibilityOptions.PRIVATE,
           savedExcerpts: details.savedExcerpts || [],
         });
       }
@@ -201,6 +216,39 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
     setFollowUpQuestions(questions);
   }, []);
 
+  //   const updateMetadataFilter = useCallback(
+  //     (key: string, value: string | number | string[]) => {
+  //         setChatProps((prevProps) => {
+  //           if (!prevProps) return null;
+  //           const prevFilter = (prevProps.chatflowConfig?.pineconeMetadataFilter ||
+  //             {}) as PineconeMetadataFilter;
+  //           const formattedValue = Array.isArray(value) ? { $in: value } : value;
+  //           const updatedFilter = updateFilter(prevFilter, key, formattedValue);
+  //           return {
+  //             ...prevProps,
+  //             chatflowConfig: {
+  //               ...prevProps.chatflowConfig,
+  //               pineconeMetadataFilter: updatedFilter,
+  //             },
+  //           };
+  //         });
+  //     },
+  //     []
+  //   );
+
+  //   const updateTopK = useCallback((value: number) => {
+  //     // setChatProps((prevProps) => {
+  //     //   if (!prevProps) return null;
+  //     //   return {
+  //     //     ...prevProps,
+  //     //     chatflowConfig: {
+  //     //       ...prevProps.chatflowConfig,
+  //     //       topK: value,
+  //     //     },
+  //     //   };
+  //     // });
+  //   }, []);
+
   return (
     <ProjectContext.Provider
       value={{
@@ -214,7 +262,7 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
         currentExcerptIndex,
         followUpQuestions,
         chatProps,
-        overrideConfig,
+        // overrideConfig,
         currentDocument,
         setCurrentDocument,
         setProjectDetails,
