@@ -65,6 +65,12 @@ export default function ClientLayout({
                   >
                     Volunteer
                   </Link>
+                  <Link
+                    href="https://github.com/the-answerai/voter-sidekick"
+                    className="text-gray-600 hover:text-gray-900"
+                  >
+                    Github
+                  </Link>
                 </div>
               </div>
             </div>

@@ -74,17 +74,14 @@ export default function AboutPage() {
               Addressing the AI Elephant in the Room
             </h3>
             <p className="text-sm text-yellow-700">
-              Yes, AI can make things up. We&apos;ve all heard about
+              Yes, AI can and will make things up. We&apos;ve all heard about
               hallucination in AI models. But here&apos;s the difference: Voter
               Sidekick isn&apos;t asking AI to generate information—it&apos;s
               using AI to find and present information that already exists in
-              verified documents. Every response includes direct citations,
-              allowing users to verify the information themselves. Think of it
-              this way: courts are the last remaining guardrail where standards
-              of evidence still matter. What&apos;s said in a courtroom, under
-              evidence still matter. What&apos;s said in a courtroom, under
-              oath, carries different weight than what&apos;s posted on social
-              media. Our tool helps highlight these crucial differences.
+              verified documents. Our tool is meant to help you verify the
+              information yourself. However, AI can still hallucinate and
+              provide false information, so please always verify the information
+              form the original source. 🤖
             </p>
           </div>
 
