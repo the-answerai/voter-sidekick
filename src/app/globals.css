@@ -31,33 +31,17 @@
   transform-origin: top left; */
 }
 
-/* @media (min-width: 768px) {
- 
-  .chatbot {
-    zoom: 0.6;
-  }
-}
-
-@media (min-width: 1024px) {
- 
-  .chatbot {
-    zoom: 0.7;
-  }
-}
-
 @media (min-width: 1280px) {
- 
   .chatbot {
     zoom: 0.8;
   }
 }
 
 @media (min-width: 1536px) {
- 
   .chatbot {
     zoom: 0.9;
   }
-} */
+}
 
 /* Override alert dialog background */
 /* .alert-dialog-content,

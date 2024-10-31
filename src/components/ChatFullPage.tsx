@@ -29,7 +29,7 @@ const ChatFullPage: React.FC<ChatFullPageProps> = ({
         // isFullPage={true}
         // chatflowConfig={botProps.chatflowConfig}
         // observersConfig={botProps.observersConfig}
-        className={`w-full inline-block chatbot-wrap`}
+        className={`w-full inline-block chatbot`}
       />
     </div>
   );
