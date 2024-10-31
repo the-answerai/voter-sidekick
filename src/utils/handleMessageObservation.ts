@@ -31,8 +31,9 @@ export async function handleMessageObservation(
       addSourceDocuments(latestMessage.sourceDocuments);
       const newCitedSources: CitedSource[] = latestMessage.sourceDocuments.map(
         (doc: SourceDocument) => {
-          const id = doc.metadata.id || doc.metadata.url ||
-            doc.metadata.sourceUrl || "Unknown ID";
+          const url = doc.metadata.url ||
+            doc.metadata.sourceUrl || doc.metadata.soureUrl;
+          const id = doc.metadata.id || url || "Unknown ID";
           const pageNumber = doc.metadata["loc.pageNumber"] || "1";
           const title = doc.metadata.title || "Unknown Title";
 
@@ -40,6 +41,7 @@ export async function handleMessageObservation(
             ...doc.metadata,
             id,
             title,
+            sourceUrl: url,
             chunks: [{ pageNumber, text: doc.pageContent }],
           };
         },

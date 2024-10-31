@@ -107,10 +107,6 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
   const [currentExcerpt, setCurrentExcerpt] = useState<SourceDocument>();
   const [followUpQuestions, setFollowUpQuestions] = useState<string[]>([]);
 
-  const getCitedSources = () => {
-    return citedSources;
-  };
-
   // Function to run when currentExcerpt changes
   const handleCurrentExcerptChange = (source: SourceDocument | undefined) => {
     if (source) {
@@ -136,8 +132,8 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
           setCurrentExcerptIndex(0);
         }
       } catch (error) {
+        console.log({ source });
         console.error("Error handling current excerpt change:", error);
-        throw error;
       }
     }
   };
@@ -146,10 +142,6 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
   useEffect(() => {
     handleCurrentExcerptChange(currentExcerpt);
   }, [currentExcerpt]);
-
-  const onSourceClick = (source: SourceDocument) => {
-    setCurrentExcerpt(source);
-  };
 
   // Chat Configuration State
   const [chatProps, setChatProps] = useState<CBotProps | null>(() => {
@@ -226,7 +218,15 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
               );
             },
             onSourceClick: (source: any) => {
-              onSourceClick(source);
+              if (source?.metadata) {
+                const url =
+                  source.metadata.url ||
+                  source.metadata.sourceUrl ||
+                  source.metadata.soureUrl;
+                source.metadata.sourceUrl = url;
+              }
+              console.log(source);
+              setCurrentExcerpt(source);
             },
           },
           poweredByTextColor: themeColors.chatWindowPoweredByTextColor,
@@ -345,8 +345,9 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
 
       if (sources.length > 0) {
         const grouped = sources.reduce<Record<string, any>>((acc, source) => {
+          const url = source.url || source.sourceUrl || source.soureUrl;
           if (!acc[source.id]) {
-            acc[source.id] = { ...source, chunks: [] };
+            acc[source.id] = { ...source, chunks: [], sourceUrl: url };
           }
           acc[source.id].chunks.push(...source.chunks);
           return acc;
