@@ -13,16 +13,17 @@ export async function handleMessageObservation(
     }
 
     const latestMessage = messages[messages.length - 1];
+    console.log({ latestMessage });
     if (
       latestMessage.type === "apiMessage" &&
-      latestMessage.sourceDocuments &&
-      Array.isArray(latestMessage.sourceDocuments)
+      Array.isArray(latestMessage?.sourceDocuments) &&
+      !!latestMessage.sourceDocuments.length
     ) {
       addSourceDocuments(latestMessage.sourceDocuments);
       const newCitedSources: CitedSource[] = latestMessage.sourceDocuments.map(
         (doc: SourceDocument) => {
           const { id, title, ...otherMetadata } = doc.metadata;
-          console.log({ doc });
+          // console.log({ doc });
           return {
             id: id || "Unknown ID",
             title: title || "Unknown Title",

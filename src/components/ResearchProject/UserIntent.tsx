@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Card,
   CardHeader,
@@ -8,27 +8,17 @@ import {
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Wand2, Loader } from "lucide-react";
+import getUserIntent from "@/utils/getUserIntentGoal";
+import { useProjectContext } from "@/contexts/ProjectContext";
 
-interface UserIntentProps {
-  userIntent: string;
-  updateUserIntent: (intent: string) => Promise<void>;
-  handleGenerateIntent: () => Promise<void>;
-  messages: any[];
-}
-
-const UserIntent: React.FC<UserIntentProps> = ({
-  userIntent,
-  updateUserIntent,
-  handleGenerateIntent,
-  messages,
-}) => {
+const UserIntent: React.FC = () => {
+  const { projectDetails, updateProjectDetails, chatProps } =
+    useProjectContext();
   const [isEditingIntent, setIsEditingIntent] = useState(false);
-  const [editedIntent, setEditedIntent] = useState(userIntent);
+  const [editedIntent, setEditedIntent] = useState(
+    projectDetails?.intent || ""
+  );
   const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    setEditedIntent(userIntent);
-  }, [userIntent]);
 
   const handleIntentChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setEditedIntent(e.target.value);
@@ -36,15 +26,27 @@ const UserIntent: React.FC<UserIntentProps> = ({
 
   const handleIntentBlur = async () => {
     setIsEditingIntent(false);
-    if (editedIntent !== userIntent) {
-      await updateUserIntent(editedIntent);
+    if (editedIntent !== projectDetails?.intent) {
+      await updateProjectDetails({ intent: editedIntent });
     }
   };
 
-  const handleGenerateIntentClick = async () => {
+  const handleGenerateIntent = async () => {
     setIsLoading(true);
-    await handleGenerateIntent();
-    setIsLoading(false);
+    try {
+      const messages = chatProps?.messages || [];
+      const latestMessage = messages[messages.length - 1];
+      const intent = await getUserIntent(
+        messages.slice(0, -1),
+        latestMessage?.message
+      );
+      await updateProjectDetails({ intent });
+      setEditedIntent(intent);
+    } catch (error) {
+      console.error("Error generating intent:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -56,7 +58,7 @@ const UserIntent: React.FC<UserIntentProps> = ({
             variant="ghost"
             size="sm"
             className="p-0"
-            onClick={handleGenerateIntentClick}
+            onClick={handleGenerateIntent}
             title="Generate new intent"
           >
             {isLoading ? (

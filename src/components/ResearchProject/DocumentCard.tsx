@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import React from "react";
+import { useProjectContext } from "@/contexts/ProjectContext";
 
 import {
   Card,
@@ -31,27 +32,8 @@ import getFollowUpQuestions from "@/utils/getFollwUpQuestions";
 import { formatText } from "@/utils/formatText";
 import { truncateTitle } from "@/utils/truncateTitle";
 import { uncamelCaseAndTitleCase } from "@/utils/uncamelCaseAndTitleCase";
-import { ResearchProject } from "@/types";
 
-interface Excerpt {
-  id: string;
-  text: string;
-  page: number;
-  suggestedQuestions: string[];
-}
-
-interface Document {
-  id: string;
-  title: string;
-  author: string;
-  date: string;
-  isValid: boolean;
-  relevance: number;
-  chunks?: string[];
-  pdfUrl?: string;
-  sourceUrl?: string;
-  url?: string;
-}
+import { type Document } from "@/types";
 
 // interface ResearchProject {
 //   id: string;
@@ -61,13 +43,6 @@ interface Document {
 
 interface DocumentCardProps {
   document: Document;
-  researchProject?: ResearchProject;
-  onDocumentClick: (documentId: string) => void;
-  onSaveExcerpt?: (excerpt: string) => void;
-  isSaved?: boolean;
-  onRemoveExcerpt?: (excerptId: string) => void;
-  customIcon?: React.ReactNode;
-  customButtonText?: string;
 }
 
 const formatValue = (value: any) => {
@@ -124,6 +99,8 @@ const formatValue = (value: any) => {
 
 // Helper function to render metadata fields
 const renderMetadata = (source: any, showAll?: boolean) => {
+  if (!source) return null;
+
   const excludeFields = ["id", "chunks", "title"];
   const metadataEntries = Object.entries(source).filter(
     ([key, value]) =>
@@ -138,7 +115,7 @@ const renderMetadata = (source: any, showAll?: boolean) => {
   return (
     <div className="flex flex-col space-y-1">
       {visibleMetadata.map(([key, value]) => (
-        <p key={key} className="text-xs text-gray-600">
+        <p key={key} id={key} className="text-xs text-gray-600">
           <strong>{uncamelCaseAndTitleCase(key)}:</strong> {formatValue(value)}
         </p>
       ))}
@@ -152,33 +129,66 @@ const extractFirstNumber = (text: string): number | null => {
   return match ? parseInt(match[0], 10) : null;
 };
 
-const DocumentCard: React.FC<DocumentCardProps> = ({
-  document,
-  researchProject,
-  onDocumentClick,
-  isSaved = false,
-}) => {
-  const [currentExcerptIndex, setCurrentExcerptIndex] = useState(0);
+const constructDocumentUrl = (baseUrl: string, pageNumber?: string) => {
+  try {
+    const url = new URL(baseUrl);
+    const hash = `#page=${pageNumber}`;
+    const queryString = url.search; // Preserve existing query string
+    url.search = ""; // Clear the search to append hash first
+    url.hash = hash; // Append the hash
+    url.search = queryString; // Re-append the query string if it exists
+    return url.toString();
+  } catch (error) {
+    console.error("Invalid URL:", error);
+    return baseUrl;
+  }
+};
+
+const DocumentCard: React.FC<DocumentCardProps> = ({ document }) => {
+  const {
+    projectDetails,
+    currentDocument,
+    setCurrentDocument,
+    currentExcerptIndex,
+    setCurrentExcerptIndex,
+  } = useProjectContext();
+
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [suggestedQuestions, setSuggestedQuestions] = useState<string[]>([]);
-  const [documentUrl, setDocumentUrl] = useState(
-    document.sourceUrl ||
-      "https://static.project2025.org/2025_MandateForLeadership_FULL.pdf"
-  );
   const [pageNumber, setPageNumber] = useState(
     (document as any)["loc.pageNumber"] || "1"
   );
 
+  const [documentUrl, setDocumentUrl] = useState(
+    constructDocumentUrl(
+      document.sourceUrl ||
+        "https://static.project2025.org/2025_MandateForLeadership_FULL.pdf",
+      pageNumber
+    )
+  );
+
+  useEffect(() => {
+    setDocumentUrl(
+      constructDocumentUrl(
+        document.sourceUrl ||
+          "https://static.project2025.org/2025_MandateForLeadership_FULL.pdf",
+        pageNumber
+      )
+    );
+  }, [pageNumber, document.sourceUrl]);
+
   useEffect(() => {
     const fetchSuggestedQuestions = async () => {
-      const excerpt = document?.chunks?.[currentExcerptIndex];
+      if (!currentDocument) return;
+
+      const excerpt = currentDocument.chunks?.[currentExcerptIndex];
 
       const chatHistory = [
         {
           role: "system",
-          content: `Research Project: ${researchProject?.title}\nDescription: ${researchProject?.description}`,
+          content: `Research Project: ${projectDetails?.title}\nDescription: ${projectDetails?.description}`,
         },
-        { role: "user", content: excerpt }, // Use excerpt.text
+        { role: "user", content: excerpt },
       ];
 
       if (!!excerpt) {
@@ -190,23 +200,25 @@ const DocumentCard: React.FC<DocumentCardProps> = ({
     };
 
     if (
-      !researchProject ||
+      !projectDetails ||
       !isDialogOpen ||
       !currentExcerptIndex ||
-      !document?.chunks?.length
+      !currentDocument?.chunks?.length
     ) {
       return;
     }
 
     fetchSuggestedQuestions();
-  }, [isDialogOpen, currentExcerptIndex, document, researchProject]);
+  }, [isDialogOpen, currentExcerptIndex, currentDocument, projectDetails]);
 
   const nextExcerpt = () => {
-    if (document?.chunks && currentExcerptIndex < document.chunks.length - 1) {
+    if (!currentDocument?.chunks) return;
+
+    if (currentExcerptIndex < currentDocument.chunks.length - 1) {
       const newIndex = currentExcerptIndex + 1;
       setCurrentExcerptIndex(newIndex);
       setPageNumber(
-        extractFirstNumber(document?.chunks?.[newIndex] || "") || "1"
+        extractFirstNumber(currentDocument.chunks[newIndex] || "") || "1"
       );
     }
   };
@@ -216,26 +228,15 @@ const DocumentCard: React.FC<DocumentCardProps> = ({
       const newIndex = currentExcerptIndex - 1;
       setCurrentExcerptIndex(newIndex);
       setPageNumber(
-        extractFirstNumber(document?.chunks?.[newIndex] || "") || "1"
+        extractFirstNumber(currentDocument?.chunks?.[newIndex] || "") || "1"
       );
     }
   };
 
-  // const handleSaveOrRemove = () => {
-  //   if (
-  //     !document?.chunks?.length ||
-  //     !currentExcerptIndex ||
-  //     !document?.chunks?.[currentExcerptIndex]
-  //   ) {
-  //     return;
-  //   }
-
-  //   if (isSaved && onRemoveExcerpt) {
-  //     onRemoveExcerpt(document.chunks[currentExcerptIndex].id);
-  //   } else if (!isSaved && onSaveExcerpt) {
-  //     onSaveExcerpt(document.chunks[currentExcerptIndex].text);
-  //   }
-  // };
+  const handleDocumentClick = () => {
+    setCurrentDocument(document);
+    setCurrentExcerptIndex(0);
+  };
 
   return (
     <>
@@ -244,7 +245,7 @@ const DocumentCard: React.FC<DocumentCardProps> = ({
           <p className="font-semibold text-xs mb-2">
             {truncateTitle(document.title)}
           </p>
-          {renderMetadata(document)}
+          <div className="hidden xl:block">{renderMetadata(document)}</div>
         </CardHeader>
 
         <CardContent>
@@ -254,24 +255,22 @@ const DocumentCard: React.FC<DocumentCardProps> = ({
                 <Button
                   variant="outline"
                   size="xs"
-                  onClick={() => {
-                    onDocumentClick(document.id);
-                  }}
+                  onClick={handleDocumentClick}
                 >
-                  View Excerpts
+                  View <span className="hidden xl:inline">Excerpts</span>
                 </Button>
               </DialogTrigger>
 
               <DialogContent className="h-full sm:max-w-[90vw] max-h-[90vh] overflow-auto flex flex-col">
                 <DialogHeader>
                   <DialogTitle className="flex align-center h-auto min-h-auto">
-                    <div className="self-center">{document.title}</div>
+                    <div className="self-center">{document.title} here</div>
                     <Button
                       variant="ghost"
                       size="sm"
                       onClick={() =>
                         window.open(
-                          `${document.url}#page=5`,
+                          `${documentUrl}`,
                           "_blank",
                           "noopener,noreferrer"
                         )
@@ -285,11 +284,11 @@ const DocumentCard: React.FC<DocumentCardProps> = ({
 
                 <div className="bg-white h-full">
                   <div className="flex space-x-4 justify-between h-full">
-                    {!document.sourceUrl && (
+                    {documentUrl && (
                       <div className="w-3/5 flex-grow">
                         <iframe
-                          key={`${documentUrl}#page=${pageNumber}`}
-                          src={`${documentUrl}#page=${pageNumber}`}
+                          key={documentUrl}
+                          src={documentUrl}
                           className="w-full h-full flex-grow"
                           title={document.title}
                           style={{ height: "100%" }} // Ensure iframe is 100% height
@@ -337,9 +336,9 @@ const DocumentCard: React.FC<DocumentCardProps> = ({
                                       size="xs"
                                       onClick={nextExcerpt}
                                       disabled={
-                                        !document?.chunks?.length ||
+                                        !currentDocument?.chunks?.length ||
                                         currentExcerptIndex ===
-                                          document?.chunks?.length - 1
+                                          currentDocument?.chunks?.length - 1
                                       }
                                     >
                                       <ChevronRight className="w-4 h-4" />
@@ -351,7 +350,7 @@ const DocumentCard: React.FC<DocumentCardProps> = ({
                                       onClick={onSaveExcerpt}
                                       disabled={
                                         currentExcerptIndex ===
-                                        document?.chunks.length - 1
+                                        currentDocument?.chunks.length - 1
                                       }
                                     >
                                       <Bookmark className="w-4 h-4" />
@@ -361,12 +360,12 @@ const DocumentCard: React.FC<DocumentCardProps> = ({
 
                                 <CardContent>
                                   {!!currentExcerptIndex &&
-                                    !!document?.chunks?.[
+                                    !!currentDocument?.chunks?.[
                                       currentExcerptIndex
                                     ] && (
                                       <pre className="text-sm whitespace-pre-wrap font-sans">
                                         {formatText(
-                                          document?.chunks?.[
+                                          currentDocument?.chunks?.[
                                             currentExcerptIndex
                                           ]
                                         )}
@@ -379,7 +378,7 @@ const DocumentCard: React.FC<DocumentCardProps> = ({
                         </TabsContent>
 
                         <TabsContent value="info">
-                          {renderMetadata(document, true)}
+                          {renderMetadata(currentDocument, true)}
                         </TabsContent>
                       </Tabs>
                     </div>

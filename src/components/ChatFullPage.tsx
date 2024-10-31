@@ -1,39 +1,32 @@
 "use client";
 import React from "react";
-import { ChatFullPageProps } from "../types";
+import { CBotProps } from "../types";
 import { FullPageChat } from "aai-embed-react";
 
+// Extend CBotProps to include wrapperClassName
+interface ChatFullPageProps {
+  botProps: CBotProps;
+  wrapperClassName?: string;
+}
+
 const ChatFullPage: React.FC<ChatFullPageProps> = ({
-  chatflowid,
-  apiHost,
-  theme,
-  ...restProps // Collect additional props
+  botProps,
+  wrapperClassName,
+  ...restProps
 }) => {
-  if (!chatflowid || !apiHost) return null;
+  if (!botProps?.chatflowid || !botProps?.apiHost) return null;
 
   return (
-    <div data-testid="ChatFullPage" className="w-full inline-block ">
+    <div
+      data-testid="ChatFullPage"
+      {...restProps}
+      className={`w-full inline-block chatbot-wrap ${wrapperClassName || ""}`}
+    >
       <FullPageChat
-        chatflowid={chatflowid}
-        apiHost={apiHost}
-        {...restProps}
-        // @ts-expect-error theme is not typed
-        theme={theme}
+        {...botProps}
+        className={`w-full inline-block chatbot-wrap`}
       />
     </div>
-    // <div data-testid="ChatFullPage" className="flex flex-col h-full">
-    //   <div className="flex-grow flex flex-col">
-    //     <div className="flex-grow">
-    //       <FullPageChat
-    //         chatflowid={chatflowid}
-    //         apiHost={apiHost}
-    //         {...restProps}
-    //         // @ts-expect-error theme is not typed
-    //         theme={theme}
-    //       />
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 

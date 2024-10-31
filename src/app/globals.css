@@ -20,9 +20,44 @@
   font-size: 5.5rem;
   font-weight: bold;
 }
+
+/* .chatbot-container {
+  container-type: inline-size;
+} */
 .chatbot {
-  zoom: 1;
+  zoom: 0.7;
+  /* zoom: 2cqi; */
+  /* transform: scale(calc(0.5 * 1cqh));
+  transform-origin: top left; */
 }
+
+/* @media (min-width: 768px) {
+ 
+  .chatbot {
+    zoom: 0.6;
+  }
+}
+
+@media (min-width: 1024px) {
+ 
+  .chatbot {
+    zoom: 0.7;
+  }
+}
+
+@media (min-width: 1280px) {
+ 
+  .chatbot {
+    zoom: 0.8;
+  }
+}
+
+@media (min-width: 1536px) {
+ 
+  .chatbot {
+    zoom: 0.9;
+  }
+} */
 
 /* Override alert dialog background */
 /* .alert-dialog-content,

@@ -1,4 +1,4 @@
-import type { ChatFullPageProps, PineconeMetadataFilter } from "../types";
+import type { CBotProps, PineconeMetadataFilter } from "../types";
 import generateThemeColors from "../utils/generateThemeColors";
 import { getChatflowConfig } from "./config/chatflowConfig";
 
@@ -13,25 +13,32 @@ const defaultMetaDataFilters: PineconeMetadataFilter = {
 
 // const fontSize = 16;
 
-const defaultConfig: ChatFullPageProps = {
+export interface Message {
+  message: string;
+  type: string;
+}
+
+const defaultConfig: CBotProps = {
   chatflowid: "9ee4eee1-931d-4007-bc9f-b1431ddabfa9",
   // chatflowid: "5d6a7f89-3133-40bb-a0f6-30f75ae43a69", // Tool Call
   apiHost: "https://prod.studio.theanswer.ai",
   chatflowConfig: getChatflowConfig(defaultMetaDataFilters),
   observersConfig: {
-    //   observeUserInput: (userInput: string) => {
-    //     // console.log("User input observed:", userInput);
-    //   },
-    //xw   observeLoading: (loading: boolean) => {
-    //     // console.log("Loading state observed:", loading);
-    //   },
-    observeMessages: (messages) => {
-      console.log("Messages observed againss:", messages);
+    observeUserInput: (userInput: string) => {
+      // Add default callback here
+    },
+    observeLoading: (loading: boolean) => {
+      // Add default callback here
+    },
+    observeMessages: (messages?: Message[]) => {
+      // Add default callback here
+    },
+
+    observeStreamEnd: (messages?: Message[]) => {
+      // Add default callback here
     },
   },
-  style: {},
-  className: "w-full",
-
+  isFullPage: true,
   theme: {
     button: {
       size: "medium",
@@ -48,8 +55,7 @@ const defaultConfig: ChatFullPageProps = {
       title: "Voter Sidekick",
       // titleAvatarSrc:
       //   "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
-      showAgentMessages: true,
-      starterPromptFontSize: 12,
+      showAgentMessages: false,
       welcomeMessage:
         "📢 Quick Disclaimer: While AI can sometimes make mistakes, just like politicians do (though perhaps not quite as often!), I strive for accuracy. This tool is for educational and entertainment purposes only. Please do your own research and verify information from original sources.",
       errorMessage: "This is a custom error message",

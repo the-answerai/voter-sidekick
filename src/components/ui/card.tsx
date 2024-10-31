@@ -1,4 +1,5 @@
 import * as React from "react";
+import Image from "next/image";
 
 import { cn } from "@/utils/tailwindMerge";
 
@@ -78,6 +79,20 @@ const CardContent = React.forwardRef<
 ));
 CardContent.displayName = "CardContent";
 
+interface CardMediaProps extends React.HTMLAttributes<HTMLElement> {
+  src: string;
+  alt: string;
+}
+
+const CardMedia = React.forwardRef<HTMLElement, CardMediaProps>(
+  ({ className, src, alt, ...props }, ref) => (
+    <div className="relative w-full h-48">
+      <Image fill className="object-cover" src={src} alt={alt} {...props} />
+    </div>
+  )
+);
+CardMedia.displayName = "CardMedia";
+
 const CardFooter = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -98,4 +113,5 @@ export {
   CardSubTitle,
   CardDescription,
   CardContent,
+  CardMedia,
 };
