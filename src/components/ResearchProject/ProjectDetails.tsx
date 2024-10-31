@@ -25,7 +25,7 @@ const ResearchProject: React.FC<{ projectId: number }> = ({ projectId }) => {
   const chatContainerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (projectId && !projectDetails?.id) {
+    if (projectId && projectId !== projectDetails?.id) {
       loadProjectDetails(projectId);
     }
   }, [projectId, projectDetails?.id, loadProjectDetails]);

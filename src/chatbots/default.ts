@@ -21,10 +21,12 @@ type messageType =
 
 export interface Message {
   messageId?: string;
-  message: string;
-  type: messageType;
+  message?: string;
+  type?: messageType;
   sourceDocuments?: any;
   fileAnnotations?: any;
+  role?: string;
+  content?: string;
   // fileUploads?: Partial<FileUpload>[];
   // agentReasoning?: IAgentReasoning[];
   // action?: IAction | null;

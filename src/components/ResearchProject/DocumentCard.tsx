@@ -28,12 +28,13 @@ import {
   ExternalLink,
 } from "lucide-react";
 
-import getFollowUpQuestions from "@/utils/getFollwUpQuestions";
+import getFollowUpQuestions from "@/utils/getFollowUpQuestions";
 import { formatText } from "@/utils/formatText";
 import { truncateTitle } from "@/utils/truncateTitle";
 import { uncamelCaseAndTitleCase } from "@/utils/uncamelCaseAndTitleCase";
 
 import { type Document } from "@/types";
+import { Message } from "@/chatbots/default";
 
 // interface ResearchProject {
 //   id: string;
@@ -183,7 +184,7 @@ const DocumentCard: React.FC<DocumentCardProps> = ({ document }) => {
 
       const excerpt = currentDocument.chunks?.[currentExcerptIndex];
 
-      const chatHistory = [
+      const chatHistory: Message[] = [
         {
           role: "system",
           content: `Research Project: ${projectDetails?.title}\nDescription: ${projectDetails?.description}`,
@@ -193,7 +194,7 @@ const DocumentCard: React.FC<DocumentCardProps> = ({ document }) => {
 
       if (!!excerpt) {
         const questions = await getFollowUpQuestions(chatHistory, excerpt);
-        setSuggestedQuestions(questions);
+        setSuggestedQuestions(questions || []);
       } else {
         setSuggestedQuestions([]);
       }

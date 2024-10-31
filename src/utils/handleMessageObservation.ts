@@ -1,19 +1,28 @@
 import { type Message } from "@/chatbots/default";
 import { type CitedSource, SourceDocument } from "../types";
-import getFollowUpQuestions from "./getFollwUpQuestions";
+import getFollowUpQuestions from "./getFollowUpQuestions";
+
+type ObservationResult = {
+  citedSources: CitedSource[];
+  followUpQuestions: string[];
+};
 
 export async function handleMessageObservation(
   messages: Message[],
   addSourceDocuments: (docs: SourceDocument[]) => void,
   clearSourceDocuments: () => void,
-) {
+): Promise<ObservationResult> {
   try {
     if (messages.length === 1) {
       clearSourceDocuments();
       return { citedSources: [], followUpQuestions: [] };
     }
 
-    const latestMessage = messages[messages.length - 1];
+    const latestMessage: Message = messages[messages.length - 1];
+
+    if (!latestMessage?.message) {
+      return { citedSources: [], followUpQuestions: [] };
+    }
 
     if (
       latestMessage.type === "apiMessage" &&
@@ -35,7 +44,7 @@ export async function handleMessageObservation(
       );
 
       const followUpQuestions = await getFollowUpQuestions(
-        latestMessage,
+        messages,
         latestMessage.message,
       );
 
