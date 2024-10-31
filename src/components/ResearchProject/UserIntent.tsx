@@ -35,7 +35,13 @@ const UserIntent: React.FC = () => {
     setIsLoading(true);
     try {
       const messages = chatProps?.messages || [];
+      if (!messages?.length) throw new Error("No Messages Found");
+
       const latestMessage = messages[messages.length - 1];
+
+      if (!latestMessage?.message)
+        throw new Error("No message found in latest message");
+
       const intent = await getUserIntent(
         messages.slice(0, -1),
         latestMessage?.message

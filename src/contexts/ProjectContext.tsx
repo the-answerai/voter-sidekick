@@ -6,6 +6,7 @@ import React, {
   useContext,
   useCallback,
   ReactNode,
+  useEffect,
 } from "react";
 // import { updateFilter } from "../utils/updateFilter";
 
@@ -13,15 +14,21 @@ import type {
   SourceDocument,
   //   PineconeMetadataFilter,
   CBotProps,
+  PineconeMetadataFilter,
+  CitedSource,
+  CitedSourceChunk,
+  Message,
 } from "../types";
-import defaultChatProps, { type Message } from "../chatbots/default";
+
 import { fetchProjectDetails } from "@/utils/fetchProjectDetails";
 import { updateResearchProject } from "@/utils/updateResearchProject";
 import type { ProjectDetails, Document } from "@/types";
 import { handleMessageObservation } from "@/utils/handleMessageObservation";
 import { VisibilityOptions } from "@/utils/supabaseClient";
+import { getChatflowConfig } from "@/chatbots/config/chatflowConfig";
+import getThemeColors from "@/chatbots/getThemeColors";
 
-interface ProjectContextType {
+export interface ProjectContextType {
   // Project Details State
   projectDetails: ProjectDetails | null;
   isLoading: boolean;
@@ -67,6 +74,20 @@ interface ProjectContextType {
 // Define the context before using it
 const ProjectContext = createContext<ProjectContextType | undefined>(undefined);
 
+// const findCitedSourceByUrlAndPage = (
+//   documents: SourceDocument[],
+//   sourceUrl: string,
+//   pageNumber: string
+// ): SourceDocumentMetadata | undefined => {
+//   return documents.find(
+//     (doc: SourceDocument) =>
+//       sourceUrl &&
+//       pageNumber &&
+//       doc.sourceUrl === sourceUrl &&
+//       doc?.["loc.pageNumber"] === pageNumber
+//   );
+// };
+
 export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
@@ -83,42 +104,165 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
   const [groupedSources, setGroupedSources] = useState<Record<string, any>>({});
   const [selectedDocument, setSelectedDocument] = useState<any>(null);
   const [currentExcerptIndex, setCurrentExcerptIndex] = useState(0);
+  const [currentExcerpt, setCurrentExcerpt] = useState<SourceDocument>();
   const [followUpQuestions, setFollowUpQuestions] = useState<string[]>([]);
 
+  const getCitedSources = () => {
+    return citedSources;
+  };
+
+  // Function to run when currentExcerpt changes
+  const handleCurrentExcerptChange = (source: SourceDocument | undefined) => {
+    if (source) {
+      try {
+        const id = source?.metadata?.url || source?.metadata?.sourceUrl;
+        if (!id) throw new Error("Source ID is missing");
+
+        const pageNumber = source?.metadata?.["loc.pageNumber"]?.toString();
+        if (!pageNumber) throw new Error("Page number is missing");
+
+        const matchingDocument = groupedSources[id];
+        if (!matchingDocument) throw new Error("Matching document not found");
+
+        setCurrentDocument(matchingDocument);
+
+        const excerptIndex = matchingDocument.chunks.findIndex(
+          (item: CitedSourceChunk) => item.pageNumber.toString() === pageNumber
+        );
+
+        if (excerptIndex !== -1) {
+          setCurrentExcerptIndex(excerptIndex);
+        } else {
+          setCurrentExcerptIndex(0);
+        }
+      } catch (error) {
+        console.error("Error handling current excerpt change:", error);
+        throw error;
+      }
+    }
+  };
+
+  // useEffect to watch for changes in currentExcerpt
+  useEffect(() => {
+    handleCurrentExcerptChange(currentExcerpt);
+  }, [currentExcerpt]);
+
+  const onSourceClick = (source: SourceDocument) => {
+    setCurrentExcerpt(source);
+  };
+
   // Chat Configuration State
-  const [chatProps, setChatProps] = useState<CBotProps | null>(() => ({
-    ...defaultChatProps,
-    chatflowConfig: {
-      ...defaultChatProps.chatflowConfig,
-      pineconeNamespace: process.env.NEXT_PUBLIC_PINECONE_NAMESPACE,
-      pineconeMetadataFilter: {
-        ...defaultChatProps.chatflowConfig?.pineconeMetadataFilter,
-      },
-    },
-    observersConfig: {
-      observeStreamEnd: async (messages?: Message[]) => {
-        // console.log("Stream End 6:", messages);
-        if (defaultChatProps?.observersConfig?.observeStreamEnd) {
-          await defaultChatProps?.observersConfig.observeStreamEnd(messages);
-        }
+  const [chatProps, setChatProps] = useState<CBotProps | null>(() => {
+    const defaultMetaDataFilters: PineconeMetadataFilter = {
+      // url: "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240SB1047",
+      // source: "https://s3.theanswer.ai/sb1047",
+    };
 
-        if (!messages?.length) return;
+    const themeColors = getThemeColors("rgb(107, 114, 128)");
 
-        try {
-          const { citedSources, followUpQuestions } =
-            await handleMessageObservation(
-              messages,
-              addSourceDocuments,
-              clearSourceDocuments
-            );
-          memoizedSetCitedSources(citedSources || []);
-          memoizedSetFollowUpQuestions(followUpQuestions || []);
-        } catch (error) {
-          console.error("Error in message observation:", error);
-        }
+    const defaultProps: CBotProps = {
+      chatflowid: "9ee4eee1-931d-4007-bc9f-b1431ddabfa9",
+      apiHost: "https://prod.studio.theanswer.ai",
+      chatflowConfig: {
+        ...getChatflowConfig(defaultMetaDataFilters),
+        pineconeNamespace: process.env.NEXT_PUBLIC_PINECONE_NAMESPACE,
       },
-    },
-  }));
+      observersConfig: {
+        observeUserInput: async (_userInput: string) => {
+          // Do something here
+        },
+
+        observeLoading: async (_loading: boolean) => {
+          // Do something here
+        },
+
+        observeMessages: async (_messages: string) => {
+          // Do something here
+        },
+
+        observeStreamEnd: async (messages?: Message[]) => {
+          if (!messages?.length) return;
+
+          try {
+            const { citedSources, followUpQuestions } =
+              await handleMessageObservation(
+                messages,
+                addSourceDocuments,
+                clearSourceDocuments
+              );
+            memoizedSetCitedSources(citedSources || []);
+            memoizedSetFollowUpQuestions(followUpQuestions || []);
+          } catch (error) {
+            console.error("Error in message observation:", error);
+          }
+        },
+      },
+      theme: {
+        button: {
+          size: "medium",
+          backgroundColor: themeColors.buttonBackgroundColor,
+          iconColor: themeColors.buttonIconColor,
+          customIconSrc: "https://example.com/icon.png",
+          bottom: 10,
+          right: 10,
+        },
+        chatWindow: {
+          showTitle: true,
+          title: "Voter Sidekick",
+          showAgentMessages: false,
+          welcomeMessage:
+            "📢 Quick Disclaimer: While AI can sometimes make mistakes, just like politicians do (though perhaps not quite as often!), I strive for accuracy. This tool is for educational and entertainment purposes only. Please do your own research and verify information from original sources.",
+          errorMessage: "This is a custom error message",
+          backgroundColor: themeColors.chatWindowBackgroundColor,
+          height: -1,
+          width: -1,
+          sourceBubble: {
+            hideSources: false,
+            getLabel: (source: any) => {
+              return (
+                source?.metadata["loc.pageNumber"] ||
+                source?.metadata?.["pdf.info.Title"] ||
+                source?.metadata?.congress
+              );
+            },
+            onSourceClick: (source: any) => {
+              onSourceClick(source);
+            },
+          },
+          poweredByTextColor: themeColors.chatWindowPoweredByTextColor,
+          botMessage: {
+            backgroundColor: themeColors.botMessageBackgroundColor,
+            textColor: themeColors.botMessageTextColor,
+            showAvatar: false,
+          },
+          userMessage: {
+            backgroundColor: themeColors.userMessageBackgroundColor,
+            textColor: themeColors.userMessageTextColor,
+            showAvatar: false,
+          },
+          textInput: {
+            placeholder: "Type your message...",
+            backgroundColor: themeColors.textInputBackgroundColor,
+            textColor: themeColors.textInputTextColor,
+            sendButtonColor: themeColors.userMessageBackgroundColor,
+            maxChars: 200,
+            maxCharsWarningMessage: "You have exceeded the character limit.",
+            autoFocus: true,
+            sendMessageSound: false,
+            receiveMessageSound: false,
+          },
+          feedback: {
+            color: themeColors.feedbackColor,
+          },
+          footer: {
+            textColor: themeColors.footerTextColor,
+          },
+        },
+      },
+    };
+
+    return defaultProps;
+  });
 
   //   const [overrideConfig, setOverrideConfig] = useState({});
 
@@ -175,7 +319,8 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
       newDocuments.forEach((newDoc) => {
         const existingDocIndex = updatedDocuments.findIndex(
           (doc) =>
-            doc.metadata.url === newDoc.metadata.url &&
+            (doc.metadata.url === newDoc.metadata.url ||
+              doc.metadata.sourceUrl === newDoc.metadata.sourceUrl) &&
             doc.metadata["loc.pageNumber"] === newDoc.metadata["loc.pageNumber"]
         );
 
@@ -195,7 +340,7 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
 
   const memoizedSetCitedSources = useCallback(
     (sources: any[]) => {
-      //   console.log({ sources });
+      console.log({ cited: sources });
       setCitedSources(sources);
 
       if (sources.length > 0) {

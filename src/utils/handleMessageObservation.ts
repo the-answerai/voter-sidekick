@@ -1,5 +1,4 @@
-import { type Message } from "@/chatbots/default";
-import { type CitedSource, SourceDocument } from "../types";
+import type { CitedSource, Message, SourceDocument } from "../types";
 import getFollowUpQuestions from "./getFollowUpQuestions";
 
 type ObservationResult = {
@@ -32,13 +31,16 @@ export async function handleMessageObservation(
       addSourceDocuments(latestMessage.sourceDocuments);
       const newCitedSources: CitedSource[] = latestMessage.sourceDocuments.map(
         (doc: SourceDocument) => {
-          const { id, title, ...otherMetadata } = doc.metadata;
+          const id = doc.metadata.id || doc.metadata.url ||
+            doc.metadata.sourceUrl || "Unknown ID";
+          const pageNumber = doc.metadata["loc.pageNumber"] || "1";
+          const title = doc.metadata.title || "Unknown Title";
 
           return {
-            id: id || "Unknown ID",
-            title: title || "Unknown Title",
-            ...otherMetadata,
-            chunks: [doc.pageContent],
+            ...doc.metadata,
+            id,
+            title,
+            chunks: [{ pageNumber, text: doc.pageContent }],
           };
         },
       );

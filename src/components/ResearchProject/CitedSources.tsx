@@ -2,64 +2,9 @@ import React from "react";
 import DocumentCard from "./DocumentCard";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useProjectContext } from "@/contexts/ProjectContext";
-import { getBill } from "@/utils/supabaseClient";
-import { Excerpt } from "@/types";
 
 const CitedSources: React.FC = () => {
-  const {
-    groupedSources,
-    selectedDocument,
-    setSelectedDocument,
-    currentExcerptIndex,
-    setCurrentExcerptIndex,
-    projectDetails,
-    updateProjectDetails,
-  } = useProjectContext();
-
-  const handleDocumentClick = async (documentId: string) => {
-    const data = await getBill(documentId);
-    setSelectedDocument(data);
-    setCurrentExcerptIndex(0);
-  };
-
-  const handleSaveExcerpt = async (sourceId: string, chunk: string) => {
-    if (!projectDetails) return;
-
-    const excerpt: Excerpt = {
-      sourceId,
-      chunk,
-      savedAt: new Date().toISOString(),
-    };
-
-    const exists = projectDetails.savedExcerpts.some(
-      (ex: Excerpt) => ex?.sourceId === sourceId && ex?.chunk === chunk
-    );
-
-    if (!!exists) {
-      alert("This excerpt is already saved.");
-      return;
-    }
-
-    const updatedSavedExcerpts = [...projectDetails.savedExcerpts, excerpt];
-    await updateProjectDetails({ savedExcerpts: updatedSavedExcerpts });
-  };
-
-  const handleExcerptNavigation = (direction: "prev" | "next") => {
-    if (!selectedDocument) return;
-
-    const totalExcerpts = groupedSources[selectedDocument.id].chunks.length;
-
-    let newIndex = currentExcerptIndex;
-    if (direction === "prev") {
-      newIndex =
-        currentExcerptIndex > 0 ? currentExcerptIndex - 1 : totalExcerpts - 1;
-    } else {
-      newIndex =
-        currentExcerptIndex < totalExcerpts - 1 ? currentExcerptIndex + 1 : 0;
-    }
-
-    setCurrentExcerptIndex(newIndex);
-  };
+  const { groupedSources } = useProjectContext();
 
   return (
     <>

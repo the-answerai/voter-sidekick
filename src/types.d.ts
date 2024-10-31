@@ -176,26 +176,55 @@ export interface User {
   submissions: UserSubmission[];
 }
 
+type messageType =
+  | "apiMessage"
+  | "userMessage"
+  | "usermessagewaiting"
+  | "leadCaptureMessage";
+
+export interface Message {
+  messageId?: string;
+  message?: string;
+  type?: messageType;
+  sourceDocuments?: any;
+  fileAnnotations?: any;
+  role?: string;
+  content?: string;
+  // fileUploads?: Partial<FileUpload>[];
+  // agentReasoning?: IAgentReasoning[];
+  // action?: IAction | null;
+  // rating?: FeedbackRatingType;
+}
+
+interface CitedSourceChunk {
+  pageNumber: string;
+  text: string;
+}
+
 interface CitedSource {
   id: string;
   title: string;
   congress: string;
   url?: string;
   policyArea: string;
-  chunks: string[];
+  chunks: CitedSourceChunk[];
+}
+
+export interface SourceDocumentMetadata {
+  id: string;
+  title: string;
+  congress: string;
+  url?: string;
+  sourceUrl?: string;
+  policyArea: string;
+  chunks: CitedSourceChunk[];
+  "loc.pageNumber"?: string;
+  [key: string]: any;
 }
 
 export interface SourceDocument {
   pageContent: string;
-  metadata: {
-    id: string;
-    title: string;
-    congress: string;
-    url?: string;
-    policyArea: string;
-    chunks: string[];
-    "loc.pageNumber"?: number;
-  };
+  metadata: SourceDocumentMetadata;
 }
 
 interface ChatflowConfig {
@@ -239,7 +268,7 @@ export interface Document {
   date: string;
   isValid: boolean;
   relevance: number;
-  chunks?: string[];
+  chunks?: CitedSourceChunk[];
   pdfUrl?: string;
   sourceUrl?: string;
   url?: string;

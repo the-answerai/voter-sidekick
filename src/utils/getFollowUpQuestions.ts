@@ -1,4 +1,4 @@
-import { type Message } from "@/chatbots/default";
+import type { Message } from "@/types";
 
 const getFollowUpQuestions = async (
     chatHistory: Message[],

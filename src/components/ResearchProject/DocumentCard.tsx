@@ -33,14 +33,7 @@ import { formatText } from "@/utils/formatText";
 import { truncateTitle } from "@/utils/truncateTitle";
 import { uncamelCaseAndTitleCase } from "@/utils/uncamelCaseAndTitleCase";
 
-import { type Document } from "@/types";
-import { Message } from "@/chatbots/default";
-
-// interface ResearchProject {
-//   id: string;
-//   title: string;
-//   description: string;
-// }
+import type { Document, Message } from "@/types";
 
 interface DocumentCardProps {
   document: Document;
@@ -124,12 +117,6 @@ const renderMetadata = (source: any, showAll?: boolean) => {
   );
 };
 
-// Utility function to extract the first sequence of numbers from a string
-const extractFirstNumber = (text: string): number | null => {
-  const match = text.match(/\d+/);
-  return match ? parseInt(match[0], 10) : null;
-};
-
 const constructDocumentUrl = (baseUrl: string, pageNumber?: string) => {
   try {
     const url = new URL(baseUrl);
@@ -154,28 +141,18 @@ const DocumentCard: React.FC<DocumentCardProps> = ({ document }) => {
     setCurrentExcerptIndex,
   } = useProjectContext();
 
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isDialogOpen, setIsDialogOpen] = useState(true);
   const [suggestedQuestions, setSuggestedQuestions] = useState<string[]>([]);
   const [pageNumber, setPageNumber] = useState(
-    (document as any)["loc.pageNumber"] || "1"
+    document?.chunks?.[currentExcerptIndex]?.pageNumber || "1"
   );
 
   const [documentUrl, setDocumentUrl] = useState(
-    constructDocumentUrl(
-      document.sourceUrl ||
-        "https://static.project2025.org/2025_MandateForLeadership_FULL.pdf",
-      pageNumber
-    )
+    constructDocumentUrl(document.sourceUrl || "", pageNumber)
   );
 
   useEffect(() => {
-    setDocumentUrl(
-      constructDocumentUrl(
-        document.sourceUrl ||
-          "https://static.project2025.org/2025_MandateForLeadership_FULL.pdf",
-        pageNumber
-      )
-    );
+    setDocumentUrl(constructDocumentUrl(document.sourceUrl || "", pageNumber));
   }, [pageNumber, document.sourceUrl]);
 
   useEffect(() => {
@@ -184,16 +161,16 @@ const DocumentCard: React.FC<DocumentCardProps> = ({ document }) => {
 
       const excerpt = currentDocument.chunks?.[currentExcerptIndex];
 
-      const chatHistory: Message[] = [
-        {
-          role: "system",
-          content: `Research Project: ${projectDetails?.title}\nDescription: ${projectDetails?.description}`,
-        },
-        { role: "user", content: excerpt },
-      ];
+      if (!!excerpt?.text) {
+        const chatHistory: Message[] = [
+          {
+            role: "system",
+            content: `Research Project: ${projectDetails?.title}\nDescription: ${projectDetails?.description}`,
+          },
+          { role: "user", content: excerpt.text },
+        ];
 
-      if (!!excerpt) {
-        const questions = await getFollowUpQuestions(chatHistory, excerpt);
+        const questions = await getFollowUpQuestions(chatHistory, excerpt.text);
         setSuggestedQuestions(questions || []);
       } else {
         setSuggestedQuestions([]);
@@ -212,25 +189,30 @@ const DocumentCard: React.FC<DocumentCardProps> = ({ document }) => {
     fetchSuggestedQuestions();
   }, [isDialogOpen, currentExcerptIndex, currentDocument, projectDetails]);
 
+  useEffect(() => {
+    if (
+      !currentDocument?.chunks?.length ||
+      !currentExcerptIndex ||
+      currentDocument?.chunks?.length <= currentExcerptIndex
+    ) {
+      return;
+    }
+
+    const pageNumber = currentDocument.chunks[currentExcerptIndex]?.pageNumber;
+    if (pageNumber) setPageNumber(pageNumber);
+  }, [currentExcerptIndex, currentDocument]);
+
   const nextExcerpt = () => {
     if (!currentDocument?.chunks) return;
 
     if (currentExcerptIndex < currentDocument.chunks.length - 1) {
-      const newIndex = currentExcerptIndex + 1;
-      setCurrentExcerptIndex(newIndex);
-      setPageNumber(
-        extractFirstNumber(currentDocument.chunks[newIndex] || "") || "1"
-      );
+      setCurrentExcerptIndex(currentExcerptIndex + 1);
     }
   };
 
   const prevExcerpt = () => {
     if (currentExcerptIndex > 0) {
-      const newIndex = currentExcerptIndex - 1;
-      setCurrentExcerptIndex(newIndex);
-      setPageNumber(
-        extractFirstNumber(currentDocument?.chunks?.[newIndex] || "") || "1"
-      );
+      setCurrentExcerptIndex(currentExcerptIndex - 1);
     }
   };
 
@@ -251,14 +233,22 @@ const DocumentCard: React.FC<DocumentCardProps> = ({ document }) => {
 
         <CardContent>
           <div className="mt-2 flex space-x-1 items-center">
-            <Dialog>
+            <Dialog
+              open={!!currentDocument && currentExcerptIndex !== -1}
+              onOpenChange={(isOpen) => {
+                if (!isOpen) {
+                  setCurrentDocument(null);
+                  setCurrentExcerptIndex(-1);
+                }
+              }}
+            >
               <DialogTrigger asChild>
                 <Button
                   variant="outline"
                   size="xs"
                   onClick={handleDocumentClick}
                 >
-                  View <span className="hidden xl:inline">Excerpts</span>
+                  View <span className="hidden xl:inline">&nbsp;Excerpts</span>
                 </Button>
               </DialogTrigger>
 
@@ -368,7 +358,7 @@ const DocumentCard: React.FC<DocumentCardProps> = ({ document }) => {
                                         {formatText(
                                           currentDocument?.chunks?.[
                                             currentExcerptIndex
-                                          ]
+                                          ]?.text
                                         )}
                                       </pre>
                                     )}
