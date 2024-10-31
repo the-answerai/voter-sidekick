@@ -14,7 +14,7 @@ export function handleFollowUpQuestion(question: string, chatProps: any) {
         throw new Error("Shadow DOM not found for the chatbot element");
       }
 
-      let inputElement = shadowRoot.querySelector(
+      const inputElement = shadowRoot.querySelector(
         'input[type="text"]',
       ) as HTMLInputElement || shadowRoot.querySelector(
         "textarea",
