@@ -1,7 +1,7 @@
 export function handleFollowUpQuestionLoading(
     questions: string[],
 ) {
-    console.log({ questions });
+    // console.log({ questions });
     try {
         const chatbotElement = document.querySelector("aai-fullchatbot");
         if (!chatbotElement) {

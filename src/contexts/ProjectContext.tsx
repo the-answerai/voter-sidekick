@@ -97,7 +97,7 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
     },
     observersConfig: {
       observeStreamEnd: async (messages?: Message[]) => {
-        console.log("Stream End 6:", messages);
+        // console.log("Stream End 6:", messages);
         if (defaultChatProps?.observersConfig?.observeStreamEnd) {
           await defaultChatProps?.observersConfig.observeStreamEnd(messages);
         }
@@ -195,7 +195,7 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
 
   const memoizedSetCitedSources = useCallback(
     (sources: any[]) => {
-      console.log({ sources });
+      //   console.log({ sources });
       setCitedSources(sources);
 
       if (sources.length > 0) {
