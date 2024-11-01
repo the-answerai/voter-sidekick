@@ -23,6 +23,24 @@ const Header: React.FC = () => {
             </Link>
           </div>
 
+          <div className="hidden md:flex space-x-4">
+            <Link href="/about" className="text-gray-600 hover:text-gray-900">
+              About
+            </Link>
+            <Link
+              href="/volunteer"
+              className="text-gray-600 hover:text-gray-900"
+            >
+              Volunteer
+            </Link>
+            <Link
+              href="https://github.com/the-answerai/voter-sidekick"
+              className="text-gray-600 hover:text-gray-900"
+            >
+              Github
+            </Link>
+          </div>
+
           <div className="flex items-center">
             {isAdmin && <NewSidekickDialog />}
           </div>
