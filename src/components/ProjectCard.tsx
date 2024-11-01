@@ -22,32 +22,32 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <Card className="flex flex-col p-0">
-      <div className="relative w-full h-48">
-        <Image
-          src={project.imageUrl || ""}
-          alt={project.title}
-          fill
-          className="object-cover"
-        />
-      </div>
+    <Link href={`/research-projects/${project.id}`}>
+      <Card className="flex flex-col p-0 cursor-pointer">
+        <div className="relative w-full h-48">
+          <Image
+            src={project.imageUrl || ""}
+            alt={project.title}
+            fill
+            className="object-cover"
+          />
+        </div>
 
-      <CardHeader className="my-2 mx-4">
-        <CardTitle className="text-lg">{project.title}</CardTitle>
-      </CardHeader>
+        <CardHeader className="my-2 mx-4">
+          <CardTitle className="text-lg">{project.title}</CardTitle>
+        </CardHeader>
 
-      <CardContent className="my-2 mx-4">
-        <p className="text-xs text-gray-500">{project.description}</p>
-      </CardContent>
+        <CardContent className="my-2 mx-4">
+          <p className="text-xs text-gray-500">{project.description}</p>
+        </CardContent>
 
-      <CardFooter className="justify-end my-2 mx-4 flex-grow">
-        <Button variant="outline" size="xs">
-          <Link href={`/research-projects/${project.id}`}>
+        <CardFooter className="justify-end my-2 mx-4 flex-grow">
+          <Button variant="outline" size="xs">
             Do Your Research →
-          </Link>
-        </Button>
-      </CardFooter>
-    </Card>
+          </Button>
+        </CardFooter>
+      </Card>
+    </Link>
   );
 };
 

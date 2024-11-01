@@ -107,6 +107,12 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
   const [currentExcerpt, setCurrentExcerpt] = useState<SourceDocument>();
   const [followUpQuestions, setFollowUpQuestions] = useState<string[]>([]);
 
+  // New state variable for loading status
+  const [isLoadingState, setIsLoadingState] = useState<boolean>(false);
+
+  // New state variable for stream end status
+  const [isStreamEnded, setIsStreamEnded] = useState<boolean>(false);
+
   // Function to run when currentExcerpt changes
   const handleCurrentExcerptChange = (source: SourceDocument | undefined) => {
     if (source) {
@@ -143,6 +149,23 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
     handleCurrentExcerptChange(currentExcerpt);
   }, [currentExcerpt]);
 
+  const setSourcesAndQuestions = async (messages?: Message[]) => {
+    if (!messages?.length) return;
+
+    try {
+      const { citedSources, followUpQuestions } =
+        await handleMessageObservation(
+          messages,
+          addSourceDocuments,
+          clearSourceDocuments
+        );
+      memoizedSetCitedSources(citedSources || []);
+      memoizedSetFollowUpQuestions(followUpQuestions || []);
+    } catch (error) {
+      console.error("Error in message observation:", error);
+    }
+  };
+
   // Chat Configuration State
   const [chatProps, setChatProps] = useState<CBotProps | null>(() => {
     const defaultMetaDataFilters: PineconeMetadataFilter = {
@@ -165,28 +188,22 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
         },
 
         observeLoading: async (_loading: boolean) => {
-          // Do something here
+          setIsLoadingState(_loading); // Useful if we want to use this state to change UI.   Also used for initial load of old chat in observeMessages
         },
 
-        observeMessages: async (_messages: string) => {
-          // Do something here
+        observeMessages: async (messages?: Message[]) => {
+          if ((messages?.length || 0) <= 1) return;
+
+          if (!isLoadingState && !isStreamEnded) {
+            await setSourcesAndQuestions(messages);
+          }
         },
 
         observeStreamEnd: async (messages?: Message[]) => {
-          if (!messages?.length) return;
+          setIsStreamEnded(true); // Set for the first time it was actually streamed
+          if ((messages?.length || 0) <= 1) return;
 
-          try {
-            const { citedSources, followUpQuestions } =
-              await handleMessageObservation(
-                messages,
-                addSourceDocuments,
-                clearSourceDocuments
-              );
-            memoizedSetCitedSources(citedSources || []);
-            memoizedSetFollowUpQuestions(followUpQuestions || []);
-          } catch (error) {
-            console.error("Error in message observation:", error);
-          }
+          await setSourcesAndQuestions(messages);
         },
       },
       theme: {

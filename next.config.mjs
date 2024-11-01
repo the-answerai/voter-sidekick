@@ -13,11 +13,11 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: "/:path*",
+        source: "/volunteer",
         headers: [
           {
             key: "Content-Security-Policy",
-            value: "frame-src 'self' https://airtable.com; kamalaharris.com",
+            value: "frame-src 'self' https://airtable.com;",
           },
         ],
       },
