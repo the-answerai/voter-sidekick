@@ -292,6 +292,9 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
 
     setIsLoading(true);
     try {
+      setGroupedSources([]);
+      setCitedSources([]);
+      setFollowUpQuestions([]);
       const details = await fetchProjectDetails(projectId);
       if (details) {
         setProjectDetails({
@@ -357,7 +360,6 @@ export const ProjectProvider: React.FC<{ children: ReactNode }> = ({
 
   const memoizedSetCitedSources = useCallback(
     (sources: any[]) => {
-      console.log({ cited: sources });
       setCitedSources(sources);
 
       if (sources.length > 0) {
