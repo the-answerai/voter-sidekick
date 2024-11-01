@@ -1,91 +1,57 @@
 import React from "react";
 import {
   Card,
-  // CardContent,
   CardDescription,
   CardHeader,
+  CardMedia,
   CardTitle,
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
-// import { Progress } from "@/components/ui/progress";
-
 import { ExternalLink } from "lucide-react";
-
-// import type { SourceDocument } from "@/types";
-import Image from "next/image";
+import { useProjectContext } from "@/contexts/ProjectContext";
 
 interface ResearchHeaderProps {
-  title: string;
-  description?: string;
-  imageUrl?: string;
-  mainSourceUrl?: string;
   handleEditClick: () => void;
-  // sourceDocuments?: SourceDocument[];
 }
 
-const ResearchHeader: React.FC<ResearchHeaderProps> = ({
-  title,
-  description,
-  mainSourceUrl,
-  imageUrl,
-  handleEditClick,
-}) => {
+const ResearchHeader: React.FC<ResearchHeaderProps> = ({ handleEditClick }) => {
+  const { projectDetails } = useProjectContext();
+
+  if (!projectDetails) return null;
+
   return (
-    <Card className="mb-4">
-      {imageUrl && (
-        <div className="relative w-full h-48">
-          <Image src={imageUrl} alt={title} fill className="object-cover" />
+    <Card className="p-0 border-0 border-none">
+      {!!projectDetails?.imageUrl && (
+        <div className="hidden xl:block">
+          <CardMedia src={projectDetails.imageUrl} alt={projectDetails.title} />
         </div>
       )}
+
       <CardHeader className="flex items-center justify-between">
         <div className="flex items-start justify-between w-full">
-          <div>
-            <CardTitle>{title}</CardTitle>
-            <CardDescription>
-              <div className="text-gray-500">{description}</div>
-            </CardDescription>
-          </div>
-          <Button variant="ghost" size="xs" className="p-0" asChild>
-            <a
-              href={mainSourceUrl || "#"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Source <ExternalLink className="w-4 h-4" />
-            </a>
-          </Button>
+          <div></div>
         </div>
       </CardHeader>
 
-      {/* <CardContent className="flex items-center justify-between py-4">
-        <div className="flex space-x-8">
-          <div className="text-center">
-            <p className="text-sm text-gray-500">Reviewed</p>
-            <p className="text-lg font-semibold">{sourceDocuments.length}</p>
-          </div>
-          <div className="text-center">
-            <p className="text-sm text-gray-500">Documents Saved</p>
-            <p className="text-lg font-semibold">{savedDocuments.length}</p>
-          </div>
-          <div className="text-center">
-            <p className="text-sm text-gray-500">Key Excerpts</p>
-            <p className="text-lg font-semibold">
-              {sourceDocuments.length * 2}
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-sm text-gray-500">Overall Progress</p>
-            <p className="text-lg font-semibold">85%</p>
-          </div>
-        </div>
-        <div className="ml-8 flex-shrink-0">
-          <Progress value={sourceDocuments.length * 10} className="w-40" />
-          <p className="text-sm mt-1">
-            {sourceDocuments.length} of 10 recommended documents added
-          </p>
-        </div>
-      </CardContent> */}
+      <CardTitle className="text-sm p-2">
+        {projectDetails.title}{" "}
+        <Button variant="outline" size="xs" className="p-0" asChild>
+          <a
+            href={projectDetails.mainSourceUrl || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ExternalLink className="w-4 h-4" />
+          </a>
+        </Button>
+      </CardTitle>
+
+      {!!projectDetails?.description && (
+        <CardDescription className="hidden xl:block text-xs text-gray-500  p-2">
+          {projectDetails.description}
+        </CardDescription>
+      )}
     </Card>
   );
 };
