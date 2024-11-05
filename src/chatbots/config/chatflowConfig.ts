@@ -1,16 +1,16 @@
-import { PineconeMetadataFilter, ChatflowConfig } from "@/types";
-import { getUniquePolicyAreas } from '@/utils/supabaseClient';
-import { getPolicyAreaSlug } from '@/utils/getPolicyAreaSlug';
-export const topics = new Map<string, string>();
+import type { ChatflowConfig, PineconeMetadataFilter } from "@/types";
+// import { getUniquePolicyAreas } from '@/utils/supabaseClient';
+// import { getPolicyAreaSlug } from '@/utils/getPolicyAreaSlug';
+// export const topics = new Map<string, string>();
 
-export async function initializeTopics() {
-  const policyAreas = await getUniquePolicyAreas();
-  const topicsMap = new Map<string, string>();
-  policyAreas.forEach(area => {
-    topicsMap.set(getPolicyAreaSlug(area), area);
-  });
-  return topicsMap;
-}
+// export async function initializeTopics() {
+//   const policyAreas = await getUniquePolicyAreas();
+//   const topicsMap = new Map<string, string>();
+//   policyAreas.forEach(area => {
+//     topicsMap.set(getPolicyAreaSlug(area), area);
+//   });
+//   return topicsMap;
+// }
 
 export const congressSessions = new Map([
   ["118", "118th Congress (2023-2025)"],
@@ -25,10 +25,14 @@ export const getChatflowConfig = (metaDataFilters: PineconeMetadataFilter) => {
   // Only add non-empty filter values
   Object.entries(metaDataFilters).forEach(([key, value]) => {
     if (value && value.trim() !== "") {
-      if (key === 'introducedDate' || key === 'lastUpdatedDate') {
-        pineconeMetadataFilter[key as keyof PineconeMetadataFilter] = new Date(value);
-      } else if (key === 'congress') {
-        pineconeMetadataFilter[key as keyof PineconeMetadataFilter] = Number(value);
+      if (key === "introducedDate" || key === "lastUpdatedDate") {
+        pineconeMetadataFilter[key as keyof PineconeMetadataFilter] = new Date(
+          value,
+        );
+      } else if (key === "congress") {
+        pineconeMetadataFilter[key as keyof PineconeMetadataFilter] = Number(
+          value,
+        );
       } else {
         pineconeMetadataFilter[key as keyof PineconeMetadataFilter] = value;
       }

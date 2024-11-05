@@ -3,18 +3,23 @@ import { getResearchProject } from "./supabaseClient";
 export async function fetchProjectDetails(projectId: number) {
   try {
     const project = await getResearchProject(projectId);
+
     if (!project) {
       throw new Error("Project not found");
     }
 
     const filters: { [key: string]: string[] } = {};
+
     if (project.overrideConfig?.pineconeMetadataFilter) {
-      Object.entries(project.overrideConfig.pineconeMetadataFilter).forEach(([key, value]) => {
-        if (value && typeof value === "object" && "$in" in value) {
-          filters[key] = value.$in as string[];
-        }
-      });
+      Object.entries(project.overrideConfig.pineconeMetadataFilter).forEach(
+        ([key, value]) => {
+          if (value && typeof value === "object" && "$in" in value) {
+            filters[key] = value.$in as string[];
+          }
+        },
+      );
     }
+
     if (project.overrideConfig?.topK) {
       filters.topK = [project.overrideConfig.topK.toString()];
     }
